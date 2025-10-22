@@ -48,9 +48,15 @@ class Control(object):
         self.state.startup(self.current_time, persist)
         self.state.previous = previous
 
-
+    def set_key(self, key):
+        self.RL_key_press = True
+        self.pressed_key = key
+        
     def event_loop(self):
         for event in pg.event.get():
+            if self.RL_key_press:
+                self.keys = self.pressed_key
+                self.RL_key_press = False
             if event.type == pg.QUIT:
                 self.done = True
             elif event.type == pg.KEYDOWN:
