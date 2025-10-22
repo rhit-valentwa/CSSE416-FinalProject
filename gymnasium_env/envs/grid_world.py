@@ -11,7 +11,6 @@ class Actions(Enum):
     left = 2
     down = 3
 
-
 class GridWorldEnv(gym.Env):
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 4}
 
