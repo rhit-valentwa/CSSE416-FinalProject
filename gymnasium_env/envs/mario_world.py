@@ -15,18 +15,10 @@ RIGHT_KEYS = (pg.K_RIGHT,)
 LEFT_KEYS  = (pg.K_LEFT,)
 DUCK_KEYS  = (pg.K_DOWN, pg.K_s)
 
-class Actions(Enum):
-    NO_ACTION = 0
-    RIGHT = 1
-    JUMP = 3
-    LEFT = 4
-    DUCK = 5
-
 COMBO_ACTIONS = [
-    set(RIGHT_KEYS),                              # 1: Right
-    set(RIGHT_KEYS) | set(JUMP_KEYS),             # 2: Right+Jump
-    set(JUMP_KEYS),                               # 3: Jump
-    set(LEFT_KEYS),                               # 4: Left
+    set(RIGHT_KEYS),                              # 0: Right
+    set(JUMP_KEYS),                               # 1: Jump
+    set(LEFT_KEYS),                               # 2: Left
 ]
 
 
