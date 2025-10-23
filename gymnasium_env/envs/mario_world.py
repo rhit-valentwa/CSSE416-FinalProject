@@ -10,7 +10,7 @@ from mario_game.data.states.level1 import Level1
 from mario_game.data import constants as c
 from mario_game.data import setup
 
-JUMP_KEYS = (pg.K_SPACE, pg.K_z, pg.K_a, pg.K_UP, pg.K_w)
+JUMP_KEYS = (pg.K_a)
 RIGHT_KEYS = (pg.K_RIGHT,)
 LEFT_KEYS  = (pg.K_LEFT,)
 DUCK_KEYS  = (pg.K_DOWN, pg.K_s)
@@ -23,7 +23,6 @@ class Actions(Enum):
     DUCK = 5
 
 COMBO_ACTIONS = [
-    set(),                                        # 0: NO_ACTION
     set(RIGHT_KEYS),                              # 1: Right
     set(RIGHT_KEYS) | set(JUMP_KEYS),             # 2: Right+Jump
     set(JUMP_KEYS),                               # 3: Jump
@@ -56,7 +55,7 @@ class MarioLevelEnv(gym.Env):
         self.max_steps = int(max_steps)
         self.frame_skip = int(frame_skip)
 
-        self.action_space = spaces.Discrete(len(COMBO_ACTIONS))
+        self.action_space = spaces.MultiBinary(len(COMBO_ACTIONS))
         self.observation_space = spaces.Box(low=0, high=255, shape=(self.height, self.width, 1), dtype=np.uint8)
 
         self.rw = {
