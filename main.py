@@ -11,8 +11,8 @@ for ep in range(1, num_episodes + 1):
 
     while not (done or trunc):
         action = env.action_space.sample()
-        obs, r, done, trunc, info = env.step(action)
-        ep_return += r
+        obs, rew, done, trunc, info = env.step(action)
+        ep_return += rew
 
     print(f"Episode {ep}: total reward = {ep_return:.2f}")
 env.close()

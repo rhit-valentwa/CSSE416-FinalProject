@@ -10,7 +10,7 @@ from mario_game.data.states.level1 import Level1
 from mario_game.data import constants as c
 from mario_game.data import setup
 
-JUMP_KEYS = (pg.K_a)
+JUMP_KEYS = (pg.K_a,)
 RIGHT_KEYS = (pg.K_RIGHT,)
 LEFT_KEYS  = (pg.K_LEFT,)
 DUCK_KEYS  = (pg.K_DOWN, pg.K_s)
@@ -113,7 +113,10 @@ class MarioLevelEnv(gym.Env):
         total_reward = 0.0
         terminated = False
 
-        pressed = set(COMBO_ACTIONS[int(action)])
+        pressed = set()
+        for i, v in enumerate(action):
+            if v:
+                pressed.update(COMBO_ACTIONS[i])
         is_jump_pressed = any(k in pressed for k in JUMP_KEYS)
 
         for i in range(self.frame_skip):
