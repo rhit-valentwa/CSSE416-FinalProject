@@ -9,10 +9,12 @@ from gymnasium import spaces
 from mario_game.data.states.level1 import Level1
 from mario_game.data import constants as c
 from mario_game.data import setup
+import torch
+import torch.nn.functional as F
 
 JUMP_KEYS = (pg.K_a,)
 RIGHT_KEYS = (pg.K_RIGHT,)
-LEFT_KEYS  = (pg.K_LEFT,)
+LEFT_KEYS  = (pg.K_RIGHT,)
 DUCK_KEYS  = (pg.K_DOWN, pg.K_s)
 
 COMBO_ACTIONS = [
@@ -34,10 +36,10 @@ class MarioLevelEnv(gym.Env):
 
     def __init__(
         self,
-        render_mode: str | None = None,
+        render_mode: str = "rgb_array",
         width: int = 800,
         height: int = 600,
-        max_steps: int = 50_000,
+        max_steps: int = 4000,
         frame_skip: int = 4,              # repeat each action this many frames
         reward_cfg: dict | None = None,
     ):
@@ -52,11 +54,11 @@ class MarioLevelEnv(gym.Env):
 
         self.rw = {
             "dx_scale": 0.05,
-            "score_scale": 0.01,
-            "death_penalty": -50.0,
+            "score_scale": 0.1,
+            "death_penalty": 0, #-50.0,
             "win_bonus": 100.0,
-            "jump_tap_cost": -0.9,
-            "jump_hold_cost": -0.1,
+            "jump_tap_cost": 0,#-0.9,
+            "jump_hold_cost": 0,#-0.1
         }
         if reward_cfg:
             self.rw.update(reward_cfg)
@@ -70,7 +72,7 @@ class MarioLevelEnv(gym.Env):
         if self.render_mode == "human":
             self.display = pg.display.set_mode((self.width, self.height))
         else:
-            self.display = pg.Surface((self.width, self.height))
+             self.display = pg.Surface((self.width, self.height))
         self.surface = self.display
         self.clock = pg.time.Clock()
 
@@ -187,9 +189,31 @@ class MarioLevelEnv(gym.Env):
         return _KeysProxy(pressed)
 
     def _frame(self) -> np.ndarray:
-        rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
-        gray = (0.299*rgb[...,0] + 0.587*rgb[...,1] + 0.114*rgb[...,2]).astype(np.uint8) # had to look up what a "lumeance conversion" is
-        return gray[..., None]
+        rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))  # HWC
+        rgb = rgb.astype(np.float32) / 255.0
+        tensor = torch.from_numpy(rgb).permute(2, 0, 1).unsqueeze(0)  # 1xCxHxW
+        # Downscale using bilinear interpolation
+        tensor_small = F.interpolate(tensor, size=(60, 80), mode='bilinear', align_corners=False)
+        # Convert to grayscale
+        weights = torch.tensor([0.299, 0.587, 0.114]).view(1, 3, 1, 1)
+        gray = (tensor_small * weights).sum(dim=1, keepdim=True)
+        gray = (gray * 255).byte().numpy()[0].transpose(1, 2, 0)  # HWC, uint8
+        return gray
+
+        # rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))  # HWC
+        # rgb = rgb.astype(np.float32) / 255.0
+        # tensor = torch.from_numpy(rgb).permute(2, 0, 1).unsqueeze(0).cuda()  # 1xCxHxW
+        # # Downscale using bilinear interpolation
+        # tensor_small = F.interpolate(tensor, size=(self.height, self.width), mode='bilinear', align_corners=False)
+        # # Convert to grayscale
+        # weights = torch.tensor([0.299, 0.587, 0.114], device=tensor_small.device).view(1, 3, 1, 1)
+        # gray = (tensor_small * weights).sum(dim=1, keepdim=True)
+        # gray = (gray * 255).byte().cpu().numpy()[0].transpose(1, 2, 0)  # HWC, uint8
+        # return gray
+    
+        # rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
+        # gray = (0.299*rgb[...,0] + 0.587*rgb[...,1] + 0.114*rgb[...,2]).astype(np.uint8) # had to look up what a "lumeance conversion" is
+        # return gray[..., None]
 
     def _info(self, terminated: bool, truncated: bool) -> dict:
         return {

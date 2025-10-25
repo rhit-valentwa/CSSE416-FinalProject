@@ -9,7 +9,7 @@ class Agent:
 
         rewards_per_episode = []
 
-        policy_dqn = DQN(state_size=num_states, action_size=num_actions)
+        # policy_dqn = DQN(state_size=num_states, action_size=num_actions)
 
         for ep in range(1, num_episodes + 1):
             obs, info = env.reset()

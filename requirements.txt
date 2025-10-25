@@ -2,3 +2,4 @@ pygame==1.9.1release
 swig
 gymnasium
 copier
+torch
