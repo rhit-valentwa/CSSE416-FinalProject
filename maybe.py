@@ -75,17 +75,17 @@ q_network = DQN(action_size).to(device)
 target_network = DQN(action_size).to(device)
 target_network.load_state_dict(q_network.state_dict())
 
-optimizer = optim.Adam(q_network.parameters(), lr=1e-4)
+optimizer = optim.Adam(q_network.parameters(), lr=1e-3)
 replay_buffer = ReplayBuffer(10000)
 
-checkpoint = torch.load('checkpoint_episode_1000.pth')
-q_network.load_state_dict(checkpoint['q_network_state_dict'])
-target_network.load_state_dict(checkpoint['target_network_state_dict'])
-optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+# checkpoint = torch.load('checkpoint_episode_1000.pth')
+# q_network.load_state_dict(checkpoint['q_network_state_dict'])
+# target_network.load_state_dict(checkpoint['target_network_state_dict'])
+# optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 
 gamma = 0.99  # discount factor
-epsilon = 0  # exploration rate
-epsilon_decay = 0.95
+epsilon = 1  # exploration rate
+epsilon_decay = 0.995
 epsilon_min = 0.25
 batch_size = 32
 
