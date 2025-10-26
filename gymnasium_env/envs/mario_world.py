@@ -40,7 +40,7 @@ class MarioLevelEnv(gym.Env):
         render_mode: str = "rgb_array",
         width: int = 800,
         height: int = 600,
-        max_steps: int = 4000,
+        max_steps: int = 10000,
         frame_skip: int = 4,
         number_of_sequential_frames: int = 4,
         reward_cfg: dict | None = None,
@@ -56,7 +56,7 @@ class MarioLevelEnv(gym.Env):
 
         self.rw = {
             "dx_scale": 0.5,
-            "score_scale": 1,
+            "score_scale": 0.1,
             "death_penalty": -500.0,
             "win_bonus": 1000.0,
             "jump_tap_cost": 0,
@@ -119,7 +119,7 @@ class MarioLevelEnv(gym.Env):
         return np.stack(self.frame_buf, axis=0), info
 
     def step(self, action: int):
-        total_reward = 0.0
+        total_reward = -1
         terminated = False
 
         action_tuple = tuple(action)
