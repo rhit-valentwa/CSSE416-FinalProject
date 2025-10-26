@@ -11,26 +11,27 @@ print(f"Using device: {device}")
 
 # Simple Q-network
 class DQN(nn.Module):
-    def __init__(self, state_size, action_size):
+    def __init__(self, action_size):
         super().__init__()
         self.fc = nn.Sequential(
-            nn.Conv2d(in_channels=4, out_channels=3, kernel_size=5, padding='same'),
+            nn.Conv2d(in_channels=4, out_channels=32, kernel_size=3, padding='same'),
             nn.ReLU(),
-            nn.Conv2d(in_channels=3, out_channels=3, kernel_size=5, padding='same'),
-            nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2, stride=2),
-            nn.Conv2d(in_channels=3, out_channels=3, kernel_size=5, padding='same'),
-            nn.ReLU(),
-            nn.Conv2d(in_channels=3, out_channels=1, kernel_size=5, padding='same'),
+            nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, padding='same'),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding='same'),
             nn.ReLU(),
+            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, padding='same'),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.ReLU(),
+            nn.Conv2d(64, 64, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(2, 2),
             nn.Flatten(),
-            nn.Linear(300, 32),
+            nn.Linear(4480, 512),
             nn.ReLU(),
-            nn.Linear(32, 16),
-            nn.ReLU(),
-            nn.Linear(16, action_size)
+            nn.Linear(512, action_size)
         )
     
     def forward(self, x):
@@ -65,61 +66,54 @@ def index_to_multibinary(index):
 
 # Training loop
 env = MarioLevelEnv(render_mode="human")
-state_size = 75*100 # env.observation_space.shape[0]
+# state_size = 75*100 # env.observation_space.shape[0]
 action_size = 8 # env.action_space.n
 
 
 
-q_network = DQN(state_size, action_size).to(device)
-target_network = DQN(state_size, action_size).to(device)
+q_network = DQN(action_size).to(device)
+target_network = DQN(action_size).to(device)
 target_network.load_state_dict(q_network.state_dict())
 
 optimizer = optim.Adam(q_network.parameters(), lr=1e-4)
 replay_buffer = ReplayBuffer(10000)
 
-checkpoint = torch.load('checkpoint_episode_9800.pth')
-q_network.load_state_dict(checkpoint['q_network_state_dict'])
-target_network.load_state_dict(checkpoint['target_network_state_dict'])
-optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+# checkpoint = torch.load('checkpoint_episode_9800.pth')
+# q_network.load_state_dict(checkpoint['q_network_state_dict'])
+# target_network.load_state_dict(checkpoint['target_network_state_dict'])
+# optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 
 gamma = 0.99  # discount factor
-epsilon = 0.1  # exploration rate
-epsilon_decay = 0.90
-epsilon_min = 0.1
-batch_size = 1
+epsilon = 0.9  # exploration rate
+epsilon_decay = 0.95
+epsilon_min = 0.25
+batch_size = 32
 
 for episode in range(10000):
     state, _ = env.reset()
-    state = torch.FloatTensor(state).squeeze(1).to(device)  # Add batch and channel dimensions
+    state = torch.FloatTensor(state).to(device)  # Add batch and channel dimensions
+    # print("State initial:",state.shape)
     total_reward = 0
-    # print("State:", state.shape)
     while True:
         # Epsilon-greedy action selection
+        # print("State before action selection:", state.shape)
         if random.random() < epsilon:
             action = env.action_space.sample()
         else:
             with torch.no_grad():
-                q_values = q_network(state)  # shape: [1, 8]
+                q_values = q_network(state.unsqueeze(0))  # shape: [1, 8]
                 action_idx = q_values.argmax().item()
                 action = index_to_multibinary(action_idx)
-                # action = q_network(state) # .argmax().item()
-                # print("action:", action)
-                # print("argmax:", action.argmax())
-                # print("item:", action.argmax().item())
-        
-        # Take action
-        # print(action)
+
         next_state, reward, terminated, truncated, info = env.step(action)
         done = terminated or truncated
-        # print("next state before torch", next_state.shape)
         next_state = torch.FloatTensor(next_state).to(device)
-        # print("next state after torch", next_state.shape)
         
+        # print("Before push:", state.shape)
         # Store in replay buffer
-        action_idx = multibinary_to_index(action)
         replay_buffer.push(
-            state.squeeze(0).cpu().numpy(),
-            action_idx, 
+            state.cpu().numpy(),
+            multibinary_to_index(action), 
             reward, 
             next_state.cpu().numpy(),
             done
@@ -128,18 +122,14 @@ for episode in range(10000):
         # Train if enough samples
         if len(replay_buffer) > batch_size:
             batch = replay_buffer.sample(batch_size)
-            states = torch.stack([torch.FloatTensor(s).unsqueeze(0) for s, _, _, _, _ in batch]).to(device)
+            states = torch.FloatTensor(np.array([s for s, _, _, _, _ in batch])).to(device)
             actions = torch.LongTensor([a for _, a, _, _, _ in batch]).to(device)
             rewards = torch.FloatTensor([r for _, _, r, _, _ in batch]).to(device)
-            next_states = torch.stack([torch.FloatTensor(s) for _, _, _, s, _ in batch]).to(device)
+            next_states = torch.FloatTensor(np.array([s for _, _, _, s, _ in batch])).to(device)
             dones = torch.FloatTensor([d for _, _, _, _, d in batch]).to(device)
                         
-            # Current Q values
-            # print(states.shape)
-            # print(actions.unsqueeze(1))
-            # print(q_network(states))
-            # current_q = q_network(states)#.gather(3, actions.unsqueeze(1))
-            current_q_all = q_network(states.squeeze(1))  # [batch_size, 8]
+            # print("States batch shape:", states.shape)
+            current_q_all = q_network(states)  # [batch_size, 8]
             current_q = current_q_all.gather(1, actions.unsqueeze(1)).squeeze(1)
             
             # Target Q values
@@ -155,7 +145,7 @@ for episode in range(10000):
             optimizer.step()
         
         total_reward += reward
-        state = torch.FloatTensor(next_state.cpu().numpy()).unsqueeze(0).to(device)
+        state = next_state # torch.FloatTensor(next_state.cpu().numpy()).unsqueeze(0).to(device)
         
         if done:
             break
