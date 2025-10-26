@@ -9,33 +9,38 @@ from gymnasium_env.envs.mario_world import MarioLevelEnv
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
-# Simple Q-network
+# Deep Q-Network
+# This is the very same network structure used in the DQN paper
+# https://arxiv.org/abs/1312.5602
 class DQN(nn.Module):
     def __init__(self, action_size):
         super().__init__()
+        self.conv = nn.Sequential(
+            nn.Conv2d(4, 32, kernel_size=8, stride=4),
+            nn.ReLU(),
+            nn.Conv2d(32, 64, kernel_size=4, stride=2),
+            nn.ReLU(),
+            nn.Conv2d(64, 64, kernel_size=3, stride=1),
+            nn.ReLU()
+        )
+        
+        # Automatically calculate flattened size
+        conv_out_size = self._get_conv_out((4, 60, 80))
+        
         self.fc = nn.Sequential(
-            nn.Conv2d(in_channels=4, out_channels=32, kernel_size=3, padding='same'),
-            nn.ReLU(),
-            nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, padding='same'),
-            nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2, stride=2),
-            nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding='same'),
-            nn.ReLU(),
-            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, padding='same'),
-            nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2, stride=2),
-            nn.ReLU(),
-            nn.Conv2d(64, 64, kernel_size=3, padding=1),
-            nn.ReLU(),
-            nn.MaxPool2d(2, 2),
-            nn.Flatten(),
-            nn.Linear(4480, 512),
+            nn.Linear(conv_out_size, 512),
             nn.ReLU(),
             nn.Linear(512, action_size)
         )
     
+    def _get_conv_out(self, shape):
+        o = self.conv(torch.zeros(1, *shape))
+        return int(np.prod(o.size()))
+    
     def forward(self, x):
-        return self.fc(x)
+        conv_out = self.conv(x)
+        conv_out = conv_out.view(x.size(0), -1)  # Flatten
+        return self.fc(conv_out)
 
 # Replay buffer
 class ReplayBuffer:
@@ -78,15 +83,15 @@ target_network.load_state_dict(q_network.state_dict())
 optimizer = optim.Adam(q_network.parameters(), lr=1e-3)
 replay_buffer = ReplayBuffer(10000)
 
-checkpoint = torch.load('checkpoint_episode_400.pth')
-q_network.load_state_dict(checkpoint['q_network_state_dict'])
-target_network.load_state_dict(checkpoint['target_network_state_dict'])
-optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+# checkpoint = torch.load('checkpoint_episode_400.pth')
+# q_network.load_state_dict(checkpoint['q_network_state_dict'])
+# target_network.load_state_dict(checkpoint['target_network_state_dict'])
+# optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 
 gamma = 0.99  # discount factor
-epsilon = 0.1  # exploration rate
+epsilon = 1  # exploration rate
 epsilon_decay = 0.995
-epsilon_min = 0.1
+epsilon_min = 0.15
 batch_size = 32
 
 for episode in range(10000):
@@ -170,6 +175,6 @@ for episode in range(10000):
             'target_network_state_dict': target_network.state_dict(),
             'optimizer_state_dict': optimizer.state_dict(),
             'epsilon': epsilon,
-        }, f'checkpoint_episode_{episode}.pth')
+        }, f'atari_dqn_episode_{episode}.pth')
     
     print(f"Episode {episode}, Total Reward: {total_reward}, Epsilon: {epsilon:.3f}")
