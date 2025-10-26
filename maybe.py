@@ -16,18 +16,17 @@ class DQN(nn.Module):
         self.fc = nn.Sequential(
             nn.Conv2d(in_channels=4, out_channels=3, kernel_size=5, padding='same'),
             nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Conv2d(in_channels=3, out_channels=3, kernel_size=5, padding='same'),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Conv2d(in_channels=3, out_channels=3, kernel_size=5, padding='same'),
             nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2, stride=2),
             nn.Conv2d(in_channels=3, out_channels=1, kernel_size=5, padding='same'),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.ReLU(),
             nn.Flatten(),
-            nn.Linear(1850, 32),
+            nn.Linear(300, 32),
             nn.ReLU(),
             nn.Linear(32, 16),
             nn.ReLU(),
@@ -77,14 +76,14 @@ optimizer = optim.Adam(q_network.parameters(), lr=1e-2)
 replay_buffer = ReplayBuffer(10000)
 
 gamma = 0.99  # discount factor
-epsilon = 0.4  # exploration rate
-epsilon_decay = 0.80
+epsilon = 0.7  # exploration rate
+epsilon_decay = 0.90
 epsilon_min = 0.1
 batch_size = 1
 
 for episode in range(1000):
     state, _ = env.reset()
-    state = torch.FloatTensor(state).unsqueeze(0).unsqueeze(0).to(device)  # Add batch and channel dimensions
+    state = torch.FloatTensor(state).squeeze(1).to(device)  # Add batch and channel dimensions
     total_reward = 0
     # print("State:", state.shape)
     while True:
@@ -106,7 +105,7 @@ for episode in range(1000):
         next_state, reward, terminated, truncated, info = env.step(action)
         done = terminated or truncated
         # print("next state before torch", next_state.shape)
-        next_state = torch.FloatTensor(next_state).unsqueeze(0).to(device)
+        next_state = torch.FloatTensor(next_state).to(device)
         # print("next state after torch", next_state.shape)
         
         # Store in replay buffer

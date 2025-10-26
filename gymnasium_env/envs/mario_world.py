@@ -41,7 +41,7 @@ class MarioLevelEnv(gym.Env):
         width: int = 800,
         height: int = 600,
         max_steps: int = 4000,
-        frame_skip: int = 2,
+        frame_skip: int = 4,
         number_of_sequential_frames: int = 4,
         reward_cfg: dict | None = None,
     ):
@@ -49,6 +49,7 @@ class MarioLevelEnv(gym.Env):
         self.width, self.height = int(width), int(height)
         self.max_steps = int(max_steps)
         self.frame_skip = int(frame_skip)
+        self.number_of_sequential_frames = number_of_sequential_frames
 
         self.action_space = spaces.MultiBinary(len(COMBO_ACTIONS))
         self.observation_space = spaces.Box(low=0, high=255, shape=(self.number_of_sequential_frames, self.height, self.width), dtype=np.uint8)
@@ -83,13 +84,15 @@ class MarioLevelEnv(gym.Env):
         self.step_count = 0
         self.ticks_ms = 0
         self.frame_buf = deque(maxlen=self.number_of_sequential_frames)
-        self.prev_action = None  # Track previous action
+        
+        # Sticky keys: track currently held action
+        self.held_action = None  # Action that's currently being held
 
     def reset(self, seed: int | None = None, options: dict | None = None):
         super().reset(seed=seed)
         self.step_count = 0
         self.ticks_ms = 0
-        self.prev_action = None  # Reset previous action
+        self.held_action = None  # Reset held action
 
         self.persist = {
             c.SCORE: 0,
@@ -109,37 +112,36 @@ class MarioLevelEnv(gym.Env):
 
         for _ in range(self.number_of_sequential_frames):
             self.frame_buf.append(self._frame())
-
-
         
         info = self._info(False, False)
         if self.render_mode == "human":
             self.render()
-        return list(self.frame_buf), info
+        return np.stack(self.frame_buf, axis=0), info
 
     def step(self, action: int):
         total_reward = 0.0
         terminated = False
 
+        action_tuple = tuple(action)
+        
+        # Update held action if new action is provided
+        # Action [0,0,0] means "keep holding current action"
+        if any(action):  # If any key is pressed
+            self.held_action = action_tuple
+        # If action is [0,0,0] and we have a held action, keep it
+        # Otherwise use the current action
+        
+        if self.held_action is None:
+            self.held_action = action_tuple
+        
+        # Use the held action for this step
         pressed = set()
-        for i, v in enumerate(action):
+        for i, v in enumerate(self.held_action):
             if v:
                 pressed.update(COMBO_ACTIONS[i])
         
-        # Check if action is same as previous
-        action_tuple = tuple(action)
-        is_same_action = (self.prev_action is not None and 
-                         action_tuple == self.prev_action)
-        
-        is_jump_pressed = any(k in pressed for k in JUMP_KEYS)
-        
-        # Determine frame range based on whether action is repeated
-        frame_range = self.frame_skip
-        if is_same_action:
-            # Continue holding - no gap between actions
-            frame_range = self.frame_skip
-        
-        for i in range(frame_range):
+        # Execute the held action for frame_skip frames
+        for i in range(self.frame_skip):
             self.step_count += 1
             self.ticks_ms += int(1000 / self.metadata["render_fps"])
             self.level.update(self.surface, _KeysProxy(pressed), self.ticks_ms)
@@ -153,12 +155,6 @@ class MarioLevelEnv(gym.Env):
             r += self.rw["score_scale"] * dscore
             if dx < 0:
                 r -= 0.02 * abs(dx)
-
-            # if is_jump_pressed:
-            #     if i == 0 and not is_same_action:  # Only penalize on first press
-            #         r += self.rw["jump_tap_cost"]
-            #     else:
-            #         r += self.rw["jump_hold_cost"]
 
             mario_dead = self.persist.get(c.MARIO_DEAD, False) or getattr(self.level.mario, "dead", False)
             level_done = bool(getattr(self.level, "done", False))
@@ -176,11 +172,7 @@ class MarioLevelEnv(gym.Env):
             if terminated or self.step_count >= self.max_steps:
                 break
 
-        # Store current action for next step
-        self.prev_action = action_tuple
-
         truncated = self.step_count >= self.max_steps
-        # obs = self._frame()
         info = self._info(terminated, truncated)
 
         self.frame_buf.append(self._frame())
@@ -188,7 +180,7 @@ class MarioLevelEnv(gym.Env):
         if self.render_mode == "human":
             self.render()
 
-        return list(self.frame_buf), float(total_reward), terminated, truncated, info
+        return np.stack(self.frame_buf, axis=0), float(total_reward), terminated, truncated, info
 
     def render(self):
         if self.render_mode == "human":
@@ -220,7 +212,7 @@ class MarioLevelEnv(gym.Env):
         # Convert to grayscale
         weights = torch.tensor([0.299, 0.587, 0.114]).view(1, 3, 1, 1)
         gray = (tensor_small * weights).sum(dim=1, keepdim=True)
-        gray = (gray * 255).byte().numpy()[0].transpose(1, 2, 0)  # HWC, uint8
+        gray = (gray * 255).byte().numpy()[0].squeeze(0) # HWC, uint8
         return gray
 
         # rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
