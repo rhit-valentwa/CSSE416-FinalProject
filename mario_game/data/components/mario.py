@@ -458,10 +458,10 @@ class Mario(pg.sprite.Sprite):
             self.state = c.WALK
         elif keys[tools.keybinding['jump']]:
             if self.allow_jump:
-                if self.big:
-                    setup.SFX['big_jump'].play()
-                else:
-                    setup.SFX['small_jump'].play()
+                # if self.big:
+                #     # setup.sfx['big_jump'].play()
+                # else:
+                #     # setup.sfx['small_jump'].play()
                 self.state = c.JUMP
                 self.y_vel = c.JUMP_VEL
         else:
@@ -499,7 +499,7 @@ class Mario(pg.sprite.Sprite):
 
     def shoot_fireball(self, powerup_group):
         """Shoots fireball, allowing no more than two to exist at once"""
-        setup.SFX['fireball'].play()
+        # # setup.sfx['fireball'].play()
         self.fireball_count = self.count_number_of_fireballs(powerup_group)
 
         if (self.current_time - self.last_fireball_time) > 200:
@@ -559,10 +559,10 @@ class Mario(pg.sprite.Sprite):
 
         if keys[tools.keybinding['jump']]:
             if self.allow_jump:
-                if self.big:
-                    setup.SFX['big_jump'].play()
-                else:
-                    setup.SFX['small_jump'].play()
+                # if self.big:
+                #     # setup.sfx['big_jump'].play()
+                # else:
+                #     # setup.sfx['small_jump'].play()
                 self.state = c.JUMP
                 if self.x_vel > 4.5 or self.x_vel < -4.5:
                     self.y_vel = c.JUMP_VEL - .5

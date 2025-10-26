@@ -68,20 +68,27 @@ env = MarioLevelEnv(render_mode="human")
 state_size = 75*100 # env.observation_space.shape[0]
 action_size = 8 # env.action_space.n
 
+
+
 q_network = DQN(state_size, action_size).to(device)
 target_network = DQN(state_size, action_size).to(device)
 target_network.load_state_dict(q_network.state_dict())
 
-optimizer = optim.Adam(q_network.parameters(), lr=1e-2)
+optimizer = optim.Adam(q_network.parameters(), lr=1e-4)
 replay_buffer = ReplayBuffer(10000)
 
+checkpoint = torch.load('checkpoint_episode_9800.pth')
+q_network.load_state_dict(checkpoint['q_network_state_dict'])
+target_network.load_state_dict(checkpoint['target_network_state_dict'])
+optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+
 gamma = 0.99  # discount factor
-epsilon = 0.7  # exploration rate
+epsilon = 0.1  # exploration rate
 epsilon_decay = 0.90
 epsilon_min = 0.1
 batch_size = 1
 
-for episode in range(1000):
+for episode in range(10000):
     state, _ = env.reset()
     state = torch.FloatTensor(state).squeeze(1).to(device)  # Add batch and channel dimensions
     total_reward = 0
@@ -166,7 +173,7 @@ for episode in range(1000):
         import gc
         gc.collect()  # Force garbage collection
 
-    if episode % 50 == 0:  # Save every 50 episodes
+    if episode % 200 == 0:  # Save every 200 episodes
         torch.save({
             'episode': episode,
             'q_network_state_dict': q_network.state_dict(),

@@ -4,7 +4,7 @@ from __future__ import division
 import pygame as pg
 from .. import setup, tools
 from .. import constants as c
-from .. import game_sound
+# from .. import game_sound
 from .. components import mario
 from .. components import collider
 from .. components import bricks
@@ -37,7 +37,7 @@ class Level1(tools._State):
 
         self.moving_score_list = []
         self.overhead_info_display = info.OverheadInfo(self.game_info, c.LEVEL)
-        self.sound_manager = game_sound.Sound(self.overhead_info_display)
+        # self.sound_manager = game_sound.Sound(self.overhead_info_display)
 
         self.setup_background()
         self.setup_ground()
@@ -374,7 +374,7 @@ class Level1(tools._State):
         self.handle_states(keys)
         self.check_if_time_out()
         self.blit_everything(surface)
-        self.sound_manager.update(self.game_info, self.mario)
+        # self.sound_manager.update(self.game_info, self.mario)
 
 
 
@@ -556,7 +556,7 @@ class Level1(tools._State):
 
         elif enemy:
             if self.mario.invincible:
-                setup.SFX['kick'].play()
+                # setup.sfx['kick'].play()
                 self.game_info[c.SCORE] += 100
                 self.moving_score_list.append(
                     score.Score(self.mario.rect.right - self.viewport.x,
@@ -565,7 +565,7 @@ class Level1(tools._State):
                 enemy.start_death_jump(c.RIGHT)
                 self.sprites_about_to_die_group.add(enemy)
             elif self.mario.big:
-                setup.SFX['pipe'].play()
+                # setup.sfx['pipe'].play()
                 self.mario.fire = False
                 self.mario.y_vel = -1
                 self.mario.state = c.BIG_TO_SMALL
@@ -589,7 +589,7 @@ class Level1(tools._State):
                 self.mario.invincible = True
                 self.mario.invincible_start_timer = self.current_time
             elif powerup.name == c.MUSHROOM:
-                setup.SFX['powerup'].play()
+                # setup.sfx['powerup'].play()
                 self.game_info[c.SCORE] += 1000
                 self.moving_score_list.append(
                     score.Score(self.mario.rect.centerx - self.viewport.x,
@@ -606,9 +606,9 @@ class Level1(tools._State):
                                 c.ONEUP))
 
                 self.game_info[c.LIVES] += 1
-                setup.SFX['one_up'].play()
+                # setup.sfx['one_up'].play()
             elif powerup.name == c.FIREFLOWER:
-                setup.SFX['powerup'].play()
+                # setup.sfx['powerup'].play()
                 self.game_info[c.SCORE] += 1000
                 self.moving_score_list.append(
                     score.Score(self.mario.rect.centerx - self.viewport.x,
@@ -719,7 +719,7 @@ class Level1(tools._State):
 
         elif enemy:
             if self.mario.invincible:
-                setup.SFX['kick'].play()
+                # setup.sfx['kick'].play()
                 enemy.kill()
                 self.sprites_about_to_die_group.add(enemy)
                 enemy.start_death_jump(c.RIGHT)
@@ -731,7 +731,7 @@ class Level1(tools._State):
 
         elif powerup:
             if powerup.name == c.STAR:
-                setup.SFX['powerup'].play()
+                # setup.sfx['powerup'].play()
                 powerup.kill()
                 self.mario.invincible = True
                 self.mario.invincible_start_timer = self.current_time
@@ -771,7 +771,7 @@ class Level1(tools._State):
 
             elif coin_box.state == c.OPENED:
                 pass
-            setup.SFX['bump'].play()
+            # setup.sfx['bump'].play()
             self.mario.y_vel = 7
             self.mario.rect.y = coin_box.rect.bottom
             self.mario.state = c.FALL
@@ -786,7 +786,7 @@ class Level1(tools._State):
         if self.mario.rect.y > brick.rect.y:
             if brick.state == c.RESTING:
                 if self.mario.big and brick.contents is None:
-                    setup.SFX['brick_smash'].play()
+                    # setup.sfx['brick_smash'].play()
                     self.check_if_enemy_on_brick(brick)
                     brick.kill()
                     self.brick_pieces_group.add(
@@ -803,14 +803,14 @@ class Level1(tools._State):
                                                brick.rect.y,
                                                2, -6))
                 else:
-                    setup.SFX['bump'].play()
+                    # setup.sfx['bump'].play()
                     if brick.coin_total > 0:
                         self.game_info[c.COIN_TOTAL] += 1
                         self.game_info[c.SCORE] += 200
                     self.check_if_enemy_on_brick(brick)
                     brick.start_bump(self.moving_score_list)
-            elif brick.state == c.OPENED:
-                setup.SFX['bump'].play()
+            # elif brick.state == c.OPENED:
+                # setup.sfx['bump'].play()
             self.mario.y_vel = 7
             self.mario.rect.y = brick.rect.bottom
             self.mario.state = c.FALL
@@ -828,7 +828,7 @@ class Level1(tools._State):
         enemy = pg.sprite.spritecollideany(brick, self.enemy_group)
 
         if enemy:
-            setup.SFX['kick'].play()
+            # setup.sfx['kick'].play()
             self.game_info[c.SCORE] += 100
             self.moving_score_list.append(
                 score.Score(enemy.rect.centerx - self.viewport.x,
@@ -889,7 +889,7 @@ class Level1(tools._State):
     def adjust_mario_for_y_enemy_collisions(self, enemy):
         """Mario collisions with all enemies on the y-axis"""
         if self.mario.y_vel > 0:
-            setup.SFX['stomp'].play()
+            # setup.sfx['stomp'].play()
             self.game_info[c.SCORE] += 100
             self.moving_score_list.append(
                 score.Score(enemy.rect.centerx - self.viewport.x,
@@ -916,7 +916,7 @@ class Level1(tools._State):
                 score.Score(self.mario.rect.centerx - self.viewport.x,
                             self.mario.rect.y, 400))
             if shell.state == c.JUMPED_ON:
-                setup.SFX['kick'].play()
+                # setup.sfx['kick'].play()
                 shell.state = c.SHELL_SLIDE
                 if self.mario.rect.centerx < shell.rect.centerx:
                     shell.direction = c.RIGHT
@@ -1064,7 +1064,7 @@ class Level1(tools._State):
         enemy = pg.sprite.spritecollideany(shell, self.enemy_group)
 
         if collider:
-            setup.SFX['bump'].play()
+            # setup.sfx['bump'].play()
             if shell.x_vel > 0:
                 shell.direction = c.LEFT
                 shell.rect.right = collider.rect.left
@@ -1073,7 +1073,7 @@ class Level1(tools._State):
                 shell.rect.left = collider.rect.right
 
         if enemy:
-            setup.SFX['kick'].play()
+            # setup.sfx['kick'].play()
             self.game_info[c.SCORE] += 100
             self.moving_score_list.append(
                 score.Score(enemy.rect.right - self.viewport.x,
@@ -1280,7 +1280,7 @@ class Level1(tools._State):
 
     def fireball_kill(self, fireball, enemy):
         """Kills enemy if hit with fireball"""
-        setup.SFX['kick'].play()
+        # setup.sfx['kick'].play()
         self.game_info[c.SCORE] += 100
         self.moving_score_list.append(
             score.Score(enemy.rect.centerx - self.viewport.x,
@@ -1423,7 +1423,7 @@ class Level1(tools._State):
         elif (self.current_time - self.flag_timer) > 2000:
             self.set_game_info_values()
             self.next = c.GAME_OVER
-            self.sound_manager.stop_music()
+            # self.sound_manager.stop_music()
             self.done = True
 
 
