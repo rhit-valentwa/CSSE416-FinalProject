@@ -125,29 +125,29 @@ checkpoint_files = [
 ]
 
 checkpoint_loaded = False
-for checkpoint_file in checkpoint_files:
-    if os.path.exists(checkpoint_file):
-        print(f"Found checkpoint: {checkpoint_file}")
-        try:
-            checkpoint = torch.load(checkpoint_file, map_location=device)
+# for checkpoint_file in checkpoint_files:
+#     if os.path.exists(checkpoint_file):
+#         print(f"Found checkpoint: {checkpoint_file}")
+#         try:
+#             checkpoint = torch.load(checkpoint_file, map_location=device)
             
-            # Try to load the state dict
-            q_network.load_state_dict(checkpoint['q_network_state_dict'])
-            target_network.load_state_dict(checkpoint['target_network_state_dict'])
-            optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-            start_episode = checkpoint.get('episode', 0)
-            epsilon = checkpoint.get('epsilon', 1.0)
+#             # Try to load the state dict
+#             q_network.load_state_dict(checkpoint['q_network_state_dict'])
+#             target_network.load_state_dict(checkpoint['target_network_state_dict'])
+#             optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+#             start_episode = checkpoint.get('episode', 0)
+#             epsilon = checkpoint.get('epsilon', 1.0)
             
-            print(f"✓ Successfully loaded checkpoint from episode {start_episode}")
-            checkpoint_loaded = True
-            break
+#             print(f"✓ Successfully loaded checkpoint from episode {start_episode}")
+#             checkpoint_loaded = True
+#             break
             
-        except RuntimeError as e:
-            print(f"✗ Checkpoint incompatible with current architecture: {checkpoint_file}")
-            print(f"  Error: {str(e)[:100]}...")
-            print(f"  This checkpoint was created with a different network architecture.")
-            print(f"  Skipping and trying next checkpoint...")
-            continue
+#         except RuntimeError as e:
+#             print(f"✗ Checkpoint incompatible with current architecture: {checkpoint_file}")
+#             print(f"  Error: {str(e)[:100]}...")
+#             print(f"  This checkpoint was created with a different network architecture.")
+#             print(f"  Skipping and trying next checkpoint...")
+#             continue
 
 if not checkpoint_loaded:
     print("\n" + "="*60)
@@ -161,7 +161,7 @@ gamma = 0.99
 epsilon_min = 0.1
 epsilon_decay = 0.9995
 batch_size = 32
-target_update_freq = 1000
+target_update_freq = 5000
 steps = 0
 
 print(f"Training configuration:")
@@ -269,7 +269,7 @@ for episode in range(start_episode, 10000):
     print(f"{render_indicator} Ep {episode:4d} | Steps: {episode_steps:4d} | Reward: {total_reward:6.0f} | X-pos: {x_pos:4d} | ε: {epsilon:.4f} | Buffer: {len(replay_buffer):6d}")
     
     # Save checkpoint periodically (always save latest)
-    if episode > 0 and episode % 50 == 0:
+    if episode > 0 and episode % 200 == 0:
         checkpoint_path = f'mario_dqn_episode_{episode}.pth'
         torch.save({
             'episode': episode,
