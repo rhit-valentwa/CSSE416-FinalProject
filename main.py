@@ -12,7 +12,7 @@ import cv2
 # ============================================================
 # RENDERING CONTROL
 # ============================================================
-ENABLE_RENDERING = True  # Set to False to train faster without rendering
+ENABLE_RENDERING = False  # Set to False to train faster without rendering
 RENDER_EVERY_N_EPISODES = 1  # Render every N episodes (set to 1 to render all)
 # ============================================================
 
