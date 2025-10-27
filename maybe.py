@@ -17,10 +17,13 @@ class DQN(nn.Module):
         super().__init__()
         self.conv = nn.Sequential(
             nn.Conv2d(4, 32, kernel_size=8, stride=4),
+            nn.BatchNorm2d(32),
             nn.ReLU(),
             nn.Conv2d(32, 64, kernel_size=4, stride=2),
+            nn.BatchNorm2d(64),
             nn.ReLU(),
             nn.Conv2d(64, 64, kernel_size=3, stride=1),
+            nn.BatchNorm2d(64),
             nn.ReLU()
         )
         
@@ -28,9 +31,10 @@ class DQN(nn.Module):
         conv_out_size = self._get_conv_out((4, 60, 80))
         
         self.fc = nn.Sequential(
-            nn.Linear(conv_out_size, 512),
+            nn.Linear(conv_out_size, 256),
+            nn.Dropout(0.2),
             nn.ReLU(),
-            nn.Linear(512, action_size)
+            nn.Linear(256, action_size)
         )
     
     def _get_conv_out(self, shape):
@@ -84,21 +88,23 @@ q_network = DQN(action_size).to(device)
 target_network = DQN(action_size).to(device)
 target_network.load_state_dict(q_network.state_dict())
 
-optimizer = optim.Adam(q_network.parameters(), lr=1e-4)
+optimizer = optim.Adam(q_network.parameters(), lr=1e-5)
 # scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=1000, gamma=0.9)
 replay_buffer = ReplayBuffer(50000)
 
-checkpoint = torch.load('oct_26_night_episode_1500.pth')
-q_network.load_state_dict(checkpoint['q_network_state_dict'])
-target_network.load_state_dict(checkpoint['target_network_state_dict'])
-optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+# checkpoint = torch.load('oct_26_night_episode_500.pth')
+# q_network.load_state_dict(checkpoint['q_network_state_dict'])
+# target_network.load_state_dict(checkpoint['target_network_state_dict'])
+# optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 
 gamma = 0.99  # discount factor
 epsilon = 0.5  # exploration rate
 epsilon_decay = 0.5
-epsilon_min = 0.05
-batch_size = 64
+epsilon_min = 0.1
+batch_size = 32
 
+N = 100
+reward_history = deque(maxlen=N)
 step = 0
 for episode in range(10000):
     state, _ = env.reset()
@@ -147,7 +153,12 @@ for episode in range(10000):
             with torch.no_grad():
                 max_next_q = target_network(next_states).max(1)[0]
                 target_q = rewards + gamma * max_next_q * (1 - dones)
-            
+                # avg_q = q_network(states)
+                # max_q = q_network(states).max().item()
+
+            # if(episode > 25):
+            #     print(f"Q: {avg_q}, Max Q: {max_q:.2f}, target: {target_q}")
+
             # Compute loss and update
             loss = nn.MSELoss()(current_q, target_q) # possibly need to change this part?
             optimizer.zero_grad()
@@ -164,7 +175,10 @@ for episode in range(10000):
     
     # Decay exploration
     epsilon = max(epsilon_min, epsilon * epsilon_decay)
-    
+    reward_history.append(total_reward)
+    if( len(reward_history) == N):
+        avg_reward = sum(reward_history)/N
+        print(f"Episode {episode}; Average Reward: {avg_reward}")
     # Update target network periodically
     if episode % 10 == 0 and step > 5000:
         # target_network.load_state_dict(q_network.state_dict())
@@ -187,4 +201,4 @@ for episode in range(10000):
             'epsilon': epsilon,
         }, f'oct_26_night_episode_{episode}.pth')
     
-    print(f"Episode {episode}, Total Reward: {total_reward}, Epsilon: {epsilon:.3f}")
+    # print(f"Episode {episode}, Total Reward: {total_reward}, Epsilon: {epsilon:.3f}")

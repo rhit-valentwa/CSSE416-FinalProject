@@ -58,7 +58,7 @@ class MarioLevelEnv(gym.Env):
 
         self.rw = {
             "dx_scale": 0.05,
-            "score_scale": 0.0005,
+            "score_scale": 0.0001,
             "death_penalty": 0,
             "win_bonus": 2.0,
             "jump_tap_cost": 0,
