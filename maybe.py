@@ -166,13 +166,13 @@ for episode in range(10000):
         import gc
         gc.collect()  # Force garbage collection
 
-    if episode % 200 == 0:  # Save every 200 episodes
+    if episode % 500 == 0:  # Save every 500 episodes
         torch.save({
             'episode': episode,
             'q_network_state_dict': q_network.state_dict(),
             'target_network_state_dict': target_network.state_dict(),
             'optimizer_state_dict': optimizer.state_dict(),
             'epsilon': epsilon,
-        }, f'atari_dqn_episode_{episode}.pth')
+        }, f'oct_26_night_episode_{episode}.pth')
     
     print(f"Episode {episode}, Total Reward: {total_reward}, Epsilon: {epsilon:.3f}")
