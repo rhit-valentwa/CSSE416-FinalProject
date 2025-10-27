@@ -59,22 +59,30 @@ class ReplayBuffer:
     def __len__(self):
         return len(self.buffer)
 
+master_dict = [
+
+    [0,0],  # 0
+    [1,0],  # 1
+    [0,1],  # 2
+    [1,1],  # 3
+    
+]
+
 def multibinary_to_index(action):
-    """Convert [a, b, c] to single index 0-7"""
-    return action[0] * 4 + action[1] * 2 + action[2]
+    """Convert [a, b, c] to index in master_dict"""
+    for idx, act in enumerate(master_dict):
+        if list(action) == act:
+            return idx
+    raise ValueError(f"Action {action} not found in master_dict")
 
 def index_to_multibinary(index):
-    """Convert index 0-7 to [a, b, c]"""
-    return np.array([
-        (index >> 2) & 1,
-        (index >> 1) & 1,
-        index & 1
-    ])
+    """Convert index in master_dict to [a, b, c]"""
+    return np.array(master_dict[index])
 
 # Training loop
 env = MarioLevelEnv(render_mode="human")
 # state_size = 75*100 # env.observation_space.shape[0]
-action_size = 8 # env.action_space.n
+action_size = 4 # env.action_space.n
 
 
 
@@ -83,18 +91,18 @@ target_network = DQN(action_size).to(device)
 target_network.load_state_dict(q_network.state_dict())
 
 optimizer = optim.Adam(q_network.parameters(), lr=1e-4)
-replay_buffer = ReplayBuffer(10000)
+replay_buffer = ReplayBuffer(20000)
 
-checkpoint = torch.load('atari_dqn_episode_200.pth')
-q_network.load_state_dict(checkpoint['q_network_state_dict'])
-target_network.load_state_dict(checkpoint['target_network_state_dict'])
-optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+# checkpoint = torch.load('atari_dqn_episode_200.pth')
+# q_network.load_state_dict(checkpoint['q_network_state_dict'])
+# target_network.load_state_dict(checkpoint['target_network_state_dict'])
+# optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 
 gamma = 0.99  # discount factor
 epsilon = 0.5  # exploration rate
-epsilon_decay = 0.5
+epsilon_decay = 0.9
 epsilon_min = 0.05
-batch_size = 32
+batch_size = 64
 
 for episode in range(10000):
     state, _ = env.reset()

@@ -20,8 +20,8 @@ DUCK_KEYS  = (pg.K_DOWN, pg.K_s)
 
 COMBO_ACTIONS = [
     set(RIGHT_KEYS),                              # 0: Right
-    set(JUMP_KEYS),                               # 1: Jump
-    set(LEFT_KEYS),                               # 2: Left
+    set(JUMP_KEYS),                             # 1: Jump
+    # set(LEFT_KEYS),                               # 2: Left
 ]
 
 
