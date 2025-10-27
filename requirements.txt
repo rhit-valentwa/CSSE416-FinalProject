@@ -1,5 +1,7 @@
 pygame
 swig
-gymnasium
+gym==0.25.1
 copier
 torch
+gym-super-mario-bros==7.4.0
+opencv-python
