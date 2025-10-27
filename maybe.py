@@ -30,9 +30,7 @@ class DQN(nn.Module):
         self.fc = nn.Sequential(
             nn.Linear(conv_out_size, 512),
             nn.ReLU(),
-            nn.Linear(512, 16),
-            nn.ReLU(),
-            nn.Linear(16, action_size)
+            nn.Linear(512, action_size)
         )
     
     def _get_conv_out(self, shape):
@@ -59,30 +57,22 @@ class ReplayBuffer:
     def __len__(self):
         return len(self.buffer)
 
-master_dict = [
-
-    [0,0],  # 0
-    [1,0],  # 1
-    [0,1],  # 2
-    [1,1],  # 3
-    
-]
-
 def multibinary_to_index(action):
-    """Convert [a, b, c] to index in master_dict"""
-    for idx, act in enumerate(master_dict):
-        if list(action) == act:
-            return idx
-    raise ValueError(f"Action {action} not found in master_dict")
+    """Convert [a, b, c] to single index 0-7"""
+    return action[0] * 4 + action[1] * 2 + action[2]
 
 def index_to_multibinary(index):
-    """Convert index in master_dict to [a, b, c]"""
-    return np.array(master_dict[index])
+    """Convert index 0-7 to [a, b, c]"""
+    return np.array([
+        (index >> 2) & 1,
+        (index >> 1) & 1,
+        index & 1
+    ])
 
 # Training loop
 env = MarioLevelEnv(render_mode="human")
 # state_size = 75*100 # env.observation_space.shape[0]
-action_size = 4 # env.action_space.n
+action_size = 8 # env.action_space.n
 
 
 
@@ -90,16 +80,16 @@ q_network = DQN(action_size).to(device)
 target_network = DQN(action_size).to(device)
 target_network.load_state_dict(q_network.state_dict())
 
-optimizer = optim.Adam(q_network.parameters(), lr=1e-4)
-replay_buffer = ReplayBuffer(20000)
+optimizer = optim.Adam(q_network.parameters(), lr=2.5e-4)
+replay_buffer = ReplayBuffer(100000)
 
-# checkpoint = torch.load('atari_dqn_episode_200.pth')
+# checkpoint = torch.load('checkpoint_episode_400.pth')
 # q_network.load_state_dict(checkpoint['q_network_state_dict'])
 # target_network.load_state_dict(checkpoint['target_network_state_dict'])
 # optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 
 gamma = 0.99  # discount factor
-epsilon = 0.5  # exploration rate
+epsilon = 0.4  # exploration rate
 epsilon_decay = 0.9
 epsilon_min = 0.05
 batch_size = 64
@@ -110,8 +100,6 @@ for episode in range(10000):
     # print("State initial:",state.shape)
     total_reward = 0
     while True:
-        # Epsilon-greedy action selection
-        # print("State before action selection:", state.shape)
         if random.random() < epsilon:
             action = env.action_space.sample()
         else:
@@ -178,7 +166,7 @@ for episode in range(10000):
         import gc
         gc.collect()  # Force garbage collection
 
-    if episode % 200 == 0 and episode > 300:  # Save every 200 episodes
+    if episode % 200 == 0:  # Save every 200 episodes
         torch.save({
             'episode': episode,
             'q_network_state_dict': q_network.state_dict(),

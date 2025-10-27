@@ -21,8 +21,10 @@ DUCK_KEYS  = (pg.K_DOWN, pg.K_s)
 COMBO_ACTIONS = [
     set(RIGHT_KEYS),                              # 0: Right
     set(JUMP_KEYS),                             # 1: Jump
-    # set(LEFT_KEYS),                               # 2: Left
+    set(LEFT_KEYS),                               # 2: Left
 ]
+GRAY_WEIGHTS = torch.tensor([0.299, 0.587, 0.114], dtype=torch.float32).view(1, 3, 1, 1)
+
 
 
 class _KeysProxy: # Mimics pygame.key.get_pressed()
@@ -55,10 +57,10 @@ class MarioLevelEnv(gym.Env):
         self.observation_space = spaces.Box(low=0, high=255, shape=(self.number_of_sequential_frames, self.height, self.width), dtype=np.uint8)
 
         self.rw = {
-            "dx_scale": 0.5,
+            "dx_scale": 0.05,
             "score_scale": 0.01,
-            "death_penalty": -100.0,
-            "win_bonus": 1000.0,
+            "death_penalty": -1.0,
+            "win_bonus": 4.0,
             "jump_tap_cost": 0,
             "jump_hold_cost": 0,
         }
@@ -139,23 +141,12 @@ class MarioLevelEnv(gym.Env):
         for i, v in enumerate(self.held_action):
             if v:
                 pressed.update(COMBO_ACTIONS[i])
-        
+        self.step_count += 1
         # Execute the held action for frame_skip frames
+        r = 0.0
         for i in range(self.frame_skip):
-            self.step_count += 1
             self.ticks_ms += int(1000 / self.metadata["render_fps"])
             self.level.update(self.surface, _KeysProxy(pressed), self.ticks_ms)
-            x = self.level.mario.rect.x
-            dx = x - self.prev_x
-            score = self.persist[c.SCORE]
-            dscore = score - self.prev_score
-
-            r = 0.0
-            r += self.rw["dx_scale"] * dx
-            r += self.rw["score_scale"] * dscore
-            if dx < 0:
-                r -= 0.02 * abs(dx)
-
             mario_dead = self.persist.get(c.MARIO_DEAD, False) or getattr(self.level.mario, "dead", False)
             level_done = bool(getattr(self.level, "done", False))
             if mario_dead:
@@ -164,13 +155,23 @@ class MarioLevelEnv(gym.Env):
             elif level_done:
                 r += self.rw["win_bonus"]
                 terminated = True
-
-            total_reward += r
-            self.prev_x = x
-            self.prev_score = score
-
             if terminated or self.step_count >= self.max_steps:
                 break
+
+        x = self.level.mario.rect.x
+        dx = x - self.prev_x
+        score = self.persist[c.SCORE]
+        dscore = score - self.prev_score
+        r += self.rw["dx_scale"] * dx
+        r += self.rw["score_scale"] * dscore
+
+
+        total_reward += r
+        if r > 10 or r < -10:
+            r = 0
+        self.prev_x = x
+        self.prev_score = score
+
 
         truncated = self.step_count >= self.max_steps
         info = self._info(terminated, truncated)
@@ -204,20 +205,25 @@ class MarioLevelEnv(gym.Env):
         return _KeysProxy(pressed)
 
     def _frame(self) -> np.ndarray:
-        rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))  # HWC
-        rgb = rgb.astype(np.float32) / 255.0
-        tensor = torch.from_numpy(rgb).permute(2, 0, 1).unsqueeze(0)  # 1xCxHxW
-        # Downscale using bilinear interpolation
-        tensor_small = F.interpolate(tensor, size=(60, 80), mode='bilinear', align_corners=False)
-        # Convert to grayscale
-        weights = torch.tensor([0.299, 0.587, 0.114]).view(1, 3, 1, 1)
-        gray = (tensor_small * weights).sum(dim=1, keepdim=True)
-        gray = (gray * 255).byte().numpy()[0].squeeze(0) # HWC, uint8
-        return gray
+        # (H, W, 3) uint8 from pygame
+        rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
 
-        # rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
-        # gray = (0.299*rgb[...,0] + 0.587*rgb[...,1] + 0.114*rgb[...,2]).astype(np.uint8)
-        # return gray
+        # -> float32 [0,1], CHW, add batch
+        t = torch.from_numpy(rgb).to(torch.float32).div_(255.0).permute(2, 0, 1).unsqueeze(0)  # (1,3,H,W)
+
+        # resize to (60, 80)
+        t_small = F.interpolate(t, size=(60, 80), mode='bilinear', align_corners=False)        # (1,3,60,80)
+
+        # grayscale in [0,1]
+        w = GRAY_WEIGHTS.to(t_small.device)
+        gray = (t_small * w).sum(dim=1, keepdim=True)                                          # (1,1,60,80)
+
+        # return (60,80) float32, normalized
+        return gray.squeeze(0).squeeze(0).cpu().numpy()
+
+            # rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
+            # gray = (0.299*rgb[...,0] + 0.587*rgb[...,1] + 0.114*rgb[...,2]).astype(np.uint8)
+            # return gray
 
     def _info(self, terminated: bool, truncated: bool) -> dict:
         return {
