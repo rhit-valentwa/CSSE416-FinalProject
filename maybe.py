@@ -45,17 +45,21 @@ class DQN(nn.Module):
 # Replay buffer
 class ReplayBuffer:
     def __init__(self, capacity=1000):
-        self.buffer = deque(maxlen=capacity)
+        capacity = capacity//2
+        self.buffer_neg = deque(maxlen=capacity)
+        self.buffer_pos = deque(maxlen=capacity)
     
     def push(self, state, action, reward, next_state, done):
-        self.buffer.append((state, action, reward, next_state, done))
+        if reward < 0:
+            self.buffer_neg.append((state, action, reward, next_state, done))
+        else:
+            self.buffer_pos.append((state, action, reward, next_state, done))
     
     def sample(self, batch_size):
         #return list(self.buffer)[-batch_size:]
-        return random.sample(self.buffer, batch_size)
-    
+        return random.sample(self.buffer_neg, batch_size//2) + random.sample(self.buffer_pos, batch_size//2)
     def __len__(self):
-        return len(self.buffer)
+        return min(len(self.buffer_neg), len(self.buffer_pos))
 
 def multibinary_to_index(action):
     """Convert [a, b, c] to single index 0-7"""
@@ -80,26 +84,29 @@ q_network = DQN(action_size).to(device)
 target_network = DQN(action_size).to(device)
 target_network.load_state_dict(q_network.state_dict())
 
-optimizer = optim.Adam(q_network.parameters(), lr=2.5e-4)
-replay_buffer = ReplayBuffer(100000)
+optimizer = optim.Adam(q_network.parameters(), lr=1e-4)
+# scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=1000, gamma=0.9)
+replay_buffer = ReplayBuffer(50000)
 
-# checkpoint = torch.load('checkpoint_episode_400.pth')
-# q_network.load_state_dict(checkpoint['q_network_state_dict'])
-# target_network.load_state_dict(checkpoint['target_network_state_dict'])
-# optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+checkpoint = torch.load('oct_26_night_episode_1500.pth')
+q_network.load_state_dict(checkpoint['q_network_state_dict'])
+target_network.load_state_dict(checkpoint['target_network_state_dict'])
+optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 
 gamma = 0.99  # discount factor
-epsilon = 0.4  # exploration rate
-epsilon_decay = 0.9
+epsilon = 0.5  # exploration rate
+epsilon_decay = 0.5
 epsilon_min = 0.05
 batch_size = 64
 
+step = 0
 for episode in range(10000):
     state, _ = env.reset()
     state = torch.FloatTensor(state).to(device)  # Add batch and channel dimensions
     # print("State initial:",state.shape)
     total_reward = 0
     while True:
+        step += 1
         if random.random() < epsilon:
             action = env.action_space.sample()
         else:
@@ -111,7 +118,8 @@ for episode in range(10000):
         next_state, reward, terminated, truncated, info = env.step(action)
         done = terminated or truncated
         next_state = torch.FloatTensor(next_state).to(device)
-        
+        # if( step % 10 == 0):
+        #     print(f"Reward: {reward}")
         # print("Before push:", state.shape)
         # Store in replay buffer
         replay_buffer.push(
@@ -146,6 +154,7 @@ for episode in range(10000):
             loss.backward()
             torch.nn.utils.clip_grad_norm_(q_network.parameters(), max_norm=1.0)
             optimizer.step()
+            # scheduler.step()
         
         total_reward += reward
         state = next_state # torch.FloatTensor(next_state.cpu().numpy()).unsqueeze(0).to(device)
@@ -157,11 +166,14 @@ for episode in range(10000):
     epsilon = max(epsilon_min, epsilon * epsilon_decay)
     
     # Update target network periodically
-    if episode % 10 == 0:
-        target_network.load_state_dict(q_network.state_dict())
+    if episode % 10 == 0 and step > 5000:
+        # target_network.load_state_dict(q_network.state_dict())
+        step = 0
+        tau = 0.005  # Small value = slower updates
+        for target_param, param in zip(target_network.parameters(), q_network.parameters()):
+            target_param.data.copy_(tau * param.data + (1 - tau) * target_param.data)
 
     if episode % 2 == 0:
-        # target_network.load_state_dict(q_network.state_dict())
         torch.cuda.empty_cache()  # Clear CUDA cache
         import gc
         gc.collect()  # Force garbage collection

@@ -43,7 +43,7 @@ class MarioLevelEnv(gym.Env):
         width: int = 800,
         height: int = 600,
         max_steps: int = 20000,
-        frame_skip: int = 2,
+        frame_skip: int = 4,
         number_of_sequential_frames: int = 4,
         reward_cfg: dict | None = None,
     ):
@@ -58,9 +58,9 @@ class MarioLevelEnv(gym.Env):
 
         self.rw = {
             "dx_scale": 0.05,
-            "score_scale": 0.01,
-            "death_penalty": -1.0,
-            "win_bonus": 4.0,
+            "score_scale": 0.0005,
+            "death_penalty": 0,
+            "win_bonus": 2.0,
             "jump_tap_cost": 0,
             "jump_hold_cost": 0,
         }
@@ -128,8 +128,8 @@ class MarioLevelEnv(gym.Env):
         
         # Update held action if new action is provided
         # Action [0,0,0] means "keep holding current action"
-        if any(action):  # If any key is pressed
-            self.held_action = action_tuple
+        # if any(action):  # If any key is pressed
+        self.held_action = action_tuple
         # If action is [0,0,0] and we have a held action, keep it
         # Otherwise use the current action
         
@@ -143,7 +143,7 @@ class MarioLevelEnv(gym.Env):
                 pressed.update(COMBO_ACTIONS[i])
         self.step_count += 1
         # Execute the held action for frame_skip frames
-        r = 0.0
+        r = -0.01
         for i in range(self.frame_skip):
             self.ticks_ms += int(1000 / self.metadata["render_fps"])
             self.level.update(self.surface, _KeysProxy(pressed), self.ticks_ms)
@@ -164,11 +164,12 @@ class MarioLevelEnv(gym.Env):
         dscore = score - self.prev_score
         r += self.rw["dx_scale"] * dx
         r += self.rw["score_scale"] * dscore
+        # print(f"dx: {dx}, dscore: {dscore}, reward: {r}")
 
+        if r > 5 or r < -5:
+            r = 0
 
         total_reward += r
-        if r > 10 or r < -10:
-            r = 0
         self.prev_x = x
         self.prev_score = score
 
@@ -181,7 +182,7 @@ class MarioLevelEnv(gym.Env):
         if self.render_mode == "human":
             self.render()
 
-        return np.stack(self.frame_buf, axis=0), float(total_reward), terminated, truncated, info
+        return np.stack(self.frame_buf, axis=0), float(r), terminated, truncated, info
 
     def render(self):
         if self.render_mode == "human":
