@@ -1704,3 +1704,1863 @@ Training configuration:
   → Target network updated at step 1127000
    Ep  554 | Steps: 1743 | Reward:   1953 | X-pos:  690 | ε: 0.1000 | Buffer: 100000
   → Target network updated at step 1128000
+  → Target network updated at step 1129000
+   Ep  555 | Steps: 1633 | Reward:   1426 | X-pos: 1408 | ε: 0.1000 | Buffer: 100000
+   Ep  556 | Steps:  483 | Reward:    675 | X-pos:  302 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1130000
+  → Target network updated at step 1131000
+  → Target network updated at step 1132000
+  → Target network updated at step 1133000
+  → Target network updated at step 1134000
+   Ep  557 | Steps: 4942 | Reward:   2691 | X-pos: 2472 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1135000
+  → Target network updated at step 1136000
+  → Target network updated at step 1137000
+  → Target network updated at step 1138000
+   Ep  558 | Steps: 3559 | Reward:   2193 | X-pos: 1433 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1139000
+  → Target network updated at step 1140000
+   Ep  559 | Steps: 1927 | Reward:   1959 | X-pos:  699 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1141000
+   Ep  560 | Steps:  785 | Reward:   1065 | X-pos:  316 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1142000
+  → Target network updated at step 1143000
+   Ep  561 | Steps: 2569 | Reward:   2022 | X-pos: 1125 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1144000
+  → Target network updated at step 1145000
+  → Target network updated at step 1146000
+  → Target network updated at step 1147000
+   Ep  562 | Steps: 3753 | Reward:   2057 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1148000
+  → Target network updated at step 1149000
+  → Target network updated at step 1150000
+   Ep  563 | Steps: 2654 | Reward:   1582 | X-pos: 1427 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1151000
+  → Target network updated at step 1152000
+   Ep  564 | Steps: 2551 | Reward:   1631 | X-pos:  822 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1153000
+   Ep  565 | Steps:  893 | Reward:   1055 | X-pos:  686 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1154000
+  → Target network updated at step 1155000
+  → Target network updated at step 1156000
+  → Target network updated at step 1157000
+  → Target network updated at step 1158000
+   Ep  566 | Steps: 4707 | Reward:   2868 | X-pos: 1433 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1159000
+  → Target network updated at step 1160000
+  → Target network updated at step 1161000
+  → Target network updated at step 1162000
+   Ep  567 | Steps: 4439 | Reward:   2146 | X-pos: 1130 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1163000
+   Ep  568 | Steps:  679 | Reward:   1086 | X-pos:  305 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1164000
+  → Target network updated at step 1165000
+   Ep  569 | Steps: 2308 | Reward:   2721 | X-pos: 1959 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1166000
+   Ep  570 | Steps: 1204 | Reward:   1439 | X-pos: 1417 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1167000
+  → Target network updated at step 1168000
+  → Target network updated at step 1169000
+   Ep  571 | Steps: 2890 | Reward:   2618 | X-pos:  695 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1170000
+  → Target network updated at step 1171000
+   Ep  572 | Steps: 1662 | Reward:   1415 | X-pos: 1407 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1172000
+   Ep  573 | Steps:  819 | Reward:   1470 | X-pos:  689 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1173000
+  → Target network updated at step 1174000
+   Ep  574 | Steps: 1993 | Reward:   2346 | X-pos: 1239 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1175000
+   Ep  575 | Steps: 1282 | Reward:   1487 | X-pos:  293 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1176000
+  → Target network updated at step 1177000
+   Ep  576 | Steps: 2136 | Reward:   2038 | X-pos:  315 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1178000
+  → Target network updated at step 1179000
+  → Target network updated at step 1180000
+   Ep  577 | Steps: 2943 | Reward:   1865 | X-pos: 1399 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1181000
+   Ep  578 | Steps:  989 | Reward:   1042 | X-pos:  299 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1182000
+   Ep  579 | Steps:  449 | Reward:    714 | X-pos:  312 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1183000
+  → Target network updated at step 1184000
+   Ep  580 | Steps: 2234 | Reward:   2580 | X-pos: 1152 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1185000
+   Ep  581 | Steps: 1595 | Reward:   2071 | X-pos: 1518 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1186000
+  → Target network updated at step 1187000
+  → Target network updated at step 1188000
+  → Target network updated at step 1189000
+  → Target network updated at step 1190000
+   Ep  582 | Steps: 4156 | Reward:   2319 | X-pos: 1407 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1191000
+   Ep  583 | Steps: 1761 | Reward:   1853 | X-pos:  686 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1192000
+  → Target network updated at step 1193000
+   Ep  584 | Steps: 1553 | Reward:   1437 | X-pos: 1415 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1194000
+   Ep  585 | Steps:  713 | Reward:   1110 | X-pos:  711 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1195000
+  → Target network updated at step 1196000
+  → Target network updated at step 1197000
+   Ep  586 | Steps: 2956 | Reward:   2620 | X-pos: 1437 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1198000
+   Ep  587 | Steps: 1143 | Reward:   1831 | X-pos:  676 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1199000
+   Ep  588 | Steps: 1416 | Reward:   1528 | X-pos: 1432 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1200000
+   Ep  589 | Steps:  557 | Reward:   1089 | X-pos:  313 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1201000
+   Ep  590 | Steps: 1865 | Reward:   1953 | X-pos: 1408 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1202000
+  → Target network updated at step 1203000
+  → Target network updated at step 1204000
+  → Target network updated at step 1205000
+   Ep  591 | Steps: 3057 | Reward:   2100 | X-pos: 1438 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1206000
+  → Target network updated at step 1207000
+   Ep  592 | Steps: 2385 | Reward:   2003 | X-pos: 2021 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1208000
+  → Target network updated at step 1209000
+   Ep  593 | Steps: 2081 | Reward:   1202 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1210000
+  → Target network updated at step 1211000
+  → Target network updated at step 1212000
+   Ep  594 | Steps: 3151 | Reward:   2129 | X-pos: 1666 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1213000
+  → Target network updated at step 1214000
+   Ep  595 | Steps: 2037 | Reward:   1111 | X-pos:  789 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1215000
+  → Target network updated at step 1216000
+  → Target network updated at step 1217000
+   Ep  596 | Steps: 2671 | Reward:   2215 | X-pos:  675 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1218000
+  → Target network updated at step 1219000
+  → Target network updated at step 1220000
+   Ep  597 | Steps: 3562 | Reward:   2257 | X-pos: 1422 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1221000
+  → Target network updated at step 1222000
+   Ep  598 | Steps: 1983 | Reward:   1785 | X-pos: 1433 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1223000
+  → Target network updated at step 1224000
+  → Target network updated at step 1225000
+   Ep  599 | Steps: 2160 | Reward:   1629 | X-pos:  276 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1226000
+  → Target network updated at step 1227000
+  → Target network updated at step 1228000
+  → Target network updated at step 1229000
+  → Target network updated at step 1230000
+   Ep  600 | Steps: 5028 | Reward:   3785 | X-pos:  181 | ε: 0.1000 | Buffer: 100000
+  ✓ Checkpoint saved: mario_dqn_episode_600.pth
+  → Target network updated at step 1231000
+  → Target network updated at step 1232000
+   Ep  601 | Steps: 2381 | Reward:   2516 | X-pos:  696 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1233000
+  → Target network updated at step 1234000
+  → Target network updated at step 1235000
+   Ep  602 | Steps: 2631 | Reward:   1983 | X-pos:  309 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1236000
+  → Target network updated at step 1237000
+   Ep  603 | Steps: 2774 | Reward:   2206 | X-pos:  705 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1238000
+  → Target network updated at step 1239000
+   Ep  604 | Steps: 1607 | Reward:   1590 | X-pos:  682 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1240000
+   Ep  605 | Steps: 1261 | Reward:   1604 | X-pos: 1232 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1241000
+  → Target network updated at step 1242000
+  → Target network updated at step 1243000
+   Ep  606 | Steps: 2907 | Reward:   1498 | X-pos: 1436 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1244000
+  → Target network updated at step 1245000
+  → Target network updated at step 1246000
+   Ep  607 | Steps: 3300 | Reward:   2044 | X-pos:  864 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1247000
+  → Target network updated at step 1248000
+  → Target network updated at step 1249000
+   Ep  608 | Steps: 2463 | Reward:   2297 | X-pos: 1780 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1250000
+  → Target network updated at step 1251000
+   Ep  609 | Steps: 1735 | Reward:   2270 | X-pos: 1138 | ε: 0.1000 | Buffer: 100000
+   Ep  610 | Steps:  711 | Reward:   1078 | X-pos:  314 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1252000
+  → Target network updated at step 1253000
+   Ep  611 | Steps: 1795 | Reward:   1459 | X-pos: 1131 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1254000
+  → Target network updated at step 1255000
+   Ep  612 | Steps: 1835 | Reward:   1744 | X-pos: 1397 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1256000
+  → Target network updated at step 1257000
+   Ep  613 | Steps: 1543 | Reward:   2120 | X-pos: 1513 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1258000
+   Ep  614 | Steps: 1049 | Reward:   1214 | X-pos:  297 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1259000
+   Ep  615 | Steps: 1709 | Reward:   1977 | X-pos:  670 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1260000
+  → Target network updated at step 1261000
+  → Target network updated at step 1262000
+   Ep  616 | Steps: 3071 | Reward:   2210 | X-pos: 1139 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1263000
+   Ep  617 | Steps:  949 | Reward:   1216 | X-pos:  295 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1264000
+  → Target network updated at step 1265000
+  → Target network updated at step 1266000
+  → Target network updated at step 1267000
+   Ep  618 | Steps: 3532 | Reward:   2353 | X-pos: 1134 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1268000
+   Ep  619 | Steps: 1369 | Reward:   1644 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1269000
+  → Target network updated at step 1270000
+  → Target network updated at step 1271000
+  → Target network updated at step 1272000
+  → Target network updated at step 1273000
+  → Target network updated at step 1274000
+  → Target network updated at step 1275000
+  → Target network updated at step 1276000
+   Ep  620 | Steps: 7971 | Reward:   2781 | X-pos: 1428 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1277000
+  → Target network updated at step 1278000
+   Ep  621 | Steps: 2074 | Reward:   1639 | X-pos:  304 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1279000
+  → Target network updated at step 1280000
+  → Target network updated at step 1281000
+   Ep  622 | Steps: 2531 | Reward:   1716 | X-pos: 1410 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1282000
+  → Target network updated at step 1283000
+  → Target network updated at step 1284000
+  → Target network updated at step 1285000
+   Ep  623 | Steps: 3873 | Reward:   4335 | X-pos:  675 | ε: 0.1000 | Buffer: 100000
+   Ep  624 | Steps:  687 | Reward:   1064 | X-pos:  293 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1286000
+  → Target network updated at step 1287000
+  → Target network updated at step 1288000
+   Ep  625 | Steps: 2667 | Reward:   1905 | X-pos: 1420 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1289000
+  → Target network updated at step 1290000
+   Ep  626 | Steps: 1586 | Reward:   2263 | X-pos:  707 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1291000
+   Ep  627 | Steps: 1155 | Reward:   1619 | X-pos: 1406 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1292000
+   Ep  628 | Steps:  875 | Reward:   1443 | X-pos:  662 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1293000
+  → Target network updated at step 1294000
+  → Target network updated at step 1295000
+  → Target network updated at step 1296000
+  → Target network updated at step 1297000
+  → Target network updated at step 1298000
+  → Target network updated at step 1299000
+  → Target network updated at step 1300000
+   Ep  629 | Steps: 8721 | Reward:   2455 | X-pos: 1402 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1301000
+  → Target network updated at step 1302000
+   Ep  630 | Steps: 1140 | Reward:   1605 | X-pos: 1411 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1303000
+  → Target network updated at step 1304000
+   Ep  631 | Steps: 2120 | Reward:   2550 | X-pos:  302 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1305000
+  → Target network updated at step 1306000
+   Ep  632 | Steps: 2009 | Reward:   1753 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1307000
+   Ep  633 | Steps: 1521 | Reward:   1486 | X-pos:  286 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1308000
+  → Target network updated at step 1309000
+  → Target network updated at step 1310000
+   Ep  634 | Steps: 2613 | Reward:   2013 | X-pos:  275 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1311000
+  → Target network updated at step 1312000
+   Ep  635 | Steps: 2138 | Reward:   2654 | X-pos: 1125 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1313000
+  → Target network updated at step 1314000
+  → Target network updated at step 1315000
+   Ep  636 | Steps: 3085 | Reward:   2745 | X-pos: 1126 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1316000
+  → Target network updated at step 1317000
+   Ep  637 | Steps: 1686 | Reward:   1431 | X-pos: 1409 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1318000
+  → Target network updated at step 1319000
+   Ep  638 | Steps: 2379 | Reward:   2606 | X-pos: 1424 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1320000
+  → Target network updated at step 1321000
+   Ep  639 | Steps: 1534 | Reward:   1744 | X-pos: 1400 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1322000
+   Ep  640 | Steps: 1631 | Reward:   1461 | X-pos:  310 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1323000
+  → Target network updated at step 1324000
+   Ep  641 | Steps: 1703 | Reward:   1962 | X-pos:  871 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1325000
+  → Target network updated at step 1326000
+  → Target network updated at step 1327000
+   Ep  642 | Steps: 3371 | Reward:   2332 | X-pos:  685 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1328000
+   Ep  643 | Steps:  799 | Reward:   1033 | X-pos:  309 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1329000
+  → Target network updated at step 1330000
+   Ep  644 | Steps: 1485 | Reward:   2089 | X-pos:  833 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1331000
+   Ep  645 | Steps: 1679 | Reward:   1450 | X-pos:  301 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1332000
+   Ep  646 | Steps: 1205 | Reward:   1432 | X-pos:  715 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1333000
+  → Target network updated at step 1334000
+   Ep  647 | Steps: 1591 | Reward:   1544 | X-pos:  862 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1335000
+  → Target network updated at step 1336000
+   Ep  648 | Steps: 1763 | Reward:   1981 | X-pos:  298 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1337000
+   Ep  649 | Steps: 1418 | Reward:   1577 | X-pos: 1443 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1338000
+  → Target network updated at step 1339000
+  → Target network updated at step 1340000
+  → Target network updated at step 1341000
+   Ep  650 | Steps: 3450 | Reward:   2858 | X-pos: 1413 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1342000
+  → Target network updated at step 1343000
+   Ep  651 | Steps: 2267 | Reward:   1990 | X-pos:  813 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1344000
+  → Target network updated at step 1345000
+   Ep  652 | Steps: 2380 | Reward:   1730 | X-pos:  303 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1346000
+   Ep  653 | Steps:  955 | Reward:   1283 | X-pos:  313 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1347000
+  → Target network updated at step 1348000
+   Ep  654 | Steps: 1242 | Reward:   1796 | X-pos: 1406 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1349000
+   Ep  655 | Steps: 1541 | Reward:   1784 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1350000
+  → Target network updated at step 1351000
+  → Target network updated at step 1352000
+   Ep  656 | Steps: 3078 | Reward:   2718 | X-pos: 1790 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1353000
+  → Target network updated at step 1354000
+   Ep  657 | Steps: 1796 | Reward:   1887 | X-pos:  308 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1355000
+  → Target network updated at step 1356000
+  → Target network updated at step 1357000
+  → Target network updated at step 1358000
+   Ep  658 | Steps: 3549 | Reward:   3159 | X-pos: 1537 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1359000
+  → Target network updated at step 1360000
+  → Target network updated at step 1361000
+   Ep  659 | Steps: 3269 | Reward:   2140 | X-pos:  680 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1362000
+  → Target network updated at step 1363000
+  → Target network updated at step 1364000
+   Ep  660 | Steps: 3347 | Reward:   1881 | X-pos: 1129 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1365000
+   Ep  661 | Steps:  839 | Reward:   1448 | X-pos:  312 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1366000
+  → Target network updated at step 1367000
+   Ep  662 | Steps: 1825 | Reward:   1505 | X-pos: 1409 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1368000
+  → Target network updated at step 1369000
+   Ep  663 | Steps: 2259 | Reward:   1507 | X-pos:  841 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1370000
+  → Target network updated at step 1371000
+   Ep  664 | Steps: 2155 | Reward:   2233 | X-pos: 1519 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1372000
+  → Target network updated at step 1373000
+  → Target network updated at step 1374000
+   Ep  665 | Steps: 3195 | Reward:   2030 | X-pos: 1424 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1375000
+  → Target network updated at step 1376000
+   Ep  666 | Steps: 1181 | Reward:   1553 | X-pos:  296 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1377000
+  → Target network updated at step 1378000
+   Ep  667 | Steps: 2725 | Reward:   1960 | X-pos: 1422 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1379000
+  → Target network updated at step 1380000
+   Ep  668 | Steps: 1533 | Reward:   1545 | X-pos:  674 | ε: 0.1000 | Buffer: 100000
+   Ep  669 | Steps:  445 | Reward:    700 | X-pos:  298 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1381000
+  → Target network updated at step 1382000
+  → Target network updated at step 1383000
+   Ep  670 | Steps: 3009 | Reward:   1360 | X-pos: 1410 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1384000
+  → Target network updated at step 1385000
+   Ep  671 | Steps: 2146 | Reward:   1780 | X-pos:  288 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1386000
+   Ep  672 | Steps:  985 | Reward:   1438 | X-pos:  696 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1387000
+  → Target network updated at step 1388000
+  → Target network updated at step 1389000
+  → Target network updated at step 1390000
+   Ep  673 | Steps: 3593 | Reward:   2467 | X-pos: 1415 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1391000
+   Ep  674 | Steps:  809 | Reward:   1241 | X-pos:  316 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1392000
+   Ep  675 | Steps: 1555 | Reward:   1806 | X-pos:  660 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1393000
+  → Target network updated at step 1394000
+  → Target network updated at step 1395000
+  → Target network updated at step 1396000
+  → Target network updated at step 1397000
+   Ep  676 | Steps: 4917 | Reward:   2375 | X-pos: 1516 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1398000
+   Ep  677 | Steps:  683 | Reward:   1074 | X-pos:  296 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1399000
+  → Target network updated at step 1400000
+   Ep  678 | Steps: 2090 | Reward:   1859 | X-pos:  706 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1401000
+  → Target network updated at step 1402000
+   Ep  679 | Steps: 2081 | Reward:   1460 | X-pos:  310 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1403000
+   Ep  680 | Steps:  553 | Reward:    606 | X-pos:  254 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1404000
+  → Target network updated at step 1405000
+   Ep  681 | Steps: 2053 | Reward:   1164 | X-pos:  867 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1406000
+   Ep  682 | Steps: 1039 | Reward:   1275 | X-pos:  312 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1407000
+  → Target network updated at step 1408000
+  → Target network updated at step 1409000
+   Ep  683 | Steps: 2864 | Reward:   2095 | X-pos:  799 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1410000
+  → Target network updated at step 1411000
+   Ep  684 | Steps: 1885 | Reward:   2288 | X-pos:  709 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1412000
+  → Target network updated at step 1413000
+   Ep  685 | Steps: 2637 | Reward:   1905 | X-pos: 1241 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1414000
+  → Target network updated at step 1415000
+  → Target network updated at step 1416000
+  → Target network updated at step 1417000
+   Ep  686 | Steps: 3485 | Reward:   2514 | X-pos: 1433 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1418000
+  → Target network updated at step 1419000
+   Ep  687 | Steps: 2757 | Reward:   2907 | X-pos: 1412 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1420000
+  → Target network updated at step 1421000
+  → Target network updated at step 1422000
+   Ep  688 | Steps: 2880 | Reward:   2218 | X-pos: 1126 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1423000
+  → Target network updated at step 1424000
+   Ep  689 | Steps: 1653 | Reward:   1978 | X-pos:  708 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1425000
+  → Target network updated at step 1426000
+  → Target network updated at step 1427000
+  → Target network updated at step 1428000
+  → Target network updated at step 1429000
+   Ep  690 | Steps: 4709 | Reward:   2259 | X-pos: 1132 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1430000
+  → Target network updated at step 1431000
+   Ep  691 | Steps: 2355 | Reward:   2086 | X-pos: 1941 | ε: 0.1000 | Buffer: 100000
+   Ep  692 | Steps:  379 | Reward:    725 | X-pos:  311 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1432000
+   Ep  693 | Steps:  627 | Reward:   1097 | X-pos:  309 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1433000
+  → Target network updated at step 1434000
+  → Target network updated at step 1435000
+   Ep  694 | Steps: 3043 | Reward:   2222 | X-pos: 1130 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1436000
+  → Target network updated at step 1437000
+  → Target network updated at step 1438000
+   Ep  695 | Steps: 2588 | Reward:   2164 | X-pos:  702 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1439000
+  → Target network updated at step 1440000
+   Ep  696 | Steps: 2287 | Reward:   1803 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1441000
+   Ep  697 | Steps:  903 | Reward:   1434 | X-pos:  691 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1442000
+  → Target network updated at step 1443000
+   Ep  698 | Steps: 2201 | Reward:   1466 | X-pos: 1401 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1444000
+  → Target network updated at step 1445000
+   Ep  699 | Steps: 2235 | Reward:   1780 | X-pos: 1412 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1446000
+  → Target network updated at step 1447000
+   Ep  700 | Steps: 1449 | Reward:   1884 | X-pos: 1131 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1448000
+  → Target network updated at step 1449000
+  → Target network updated at step 1450000
+  → Target network updated at step 1451000
+   Ep  701 | Steps: 4714 | Reward:   2867 | X-pos: 1434 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1452000
+  → Target network updated at step 1453000
+  → Target network updated at step 1454000
+   Ep  702 | Steps: 2165 | Reward:   2377 | X-pos: 1123 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1455000
+   Ep  703 | Steps: 1411 | Reward:   1914 | X-pos:  678 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1456000
+  → Target network updated at step 1457000
+   Ep  704 | Steps: 2189 | Reward:   1447 | X-pos: 1128 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1458000
+   Ep  705 | Steps:  871 | Reward:   1086 | X-pos:  312 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1459000
+  → Target network updated at step 1460000
+   Ep  706 | Steps: 1493 | Reward:   1851 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1461000
+  → Target network updated at step 1462000
+  → Target network updated at step 1463000
+   Ep  707 | Steps: 3151 | Reward:   2528 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1464000
+  → Target network updated at step 1465000
+   Ep  708 | Steps: 2519 | Reward:   2110 | X-pos: 1432 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1466000
+   Ep  709 | Steps:  991 | Reward:   1511 | X-pos:  305 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1467000
+  → Target network updated at step 1468000
+  → Target network updated at step 1469000
+   Ep  710 | Steps: 2371 | Reward:   1597 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1470000
+   Ep  711 | Steps: 1837 | Reward:   1617 | X-pos:  310 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1471000
+  → Target network updated at step 1472000
+  → Target network updated at step 1473000
+  → Target network updated at step 1474000
+   Ep  712 | Steps: 3086 | Reward:   2097 | X-pos: 1419 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1475000
+   Ep  713 | Steps: 1580 | Reward:   2111 | X-pos: 1517 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1476000
+   Ep  714 | Steps:  709 | Reward:   1069 | X-pos:  665 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1477000
+   Ep  715 | Steps: 1268 | Reward:   1855 | X-pos: 1409 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1478000
+  → Target network updated at step 1479000
+   Ep  716 | Steps: 1481 | Reward:   2219 | X-pos: 1430 | ε: 0.1000 | Buffer: 100000
+   Ep  717 | Steps:  407 | Reward:    726 | X-pos:  314 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1480000
+   Ep  718 | Steps: 1245 | Reward:   1613 | X-pos:  295 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1481000
+  → Target network updated at step 1482000
+   Ep  719 | Steps: 1604 | Reward:   1869 | X-pos: 1137 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1483000
+  → Target network updated at step 1484000
+   Ep  720 | Steps: 1765 | Reward:   1977 | X-pos:  306 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1485000
+  → Target network updated at step 1486000
+   Ep  721 | Steps: 2435 | Reward:   2271 | X-pos: 1237 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1487000
+  → Target network updated at step 1488000
+   Ep  722 | Steps: 2324 | Reward:   2423 | X-pos: 1416 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1489000
+   Ep  723 | Steps:  457 | Reward:    676 | X-pos:  292 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1490000
+   Ep  724 | Steps: 1071 | Reward:   1494 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1491000
+  → Target network updated at step 1492000
+  → Target network updated at step 1493000
+  → Target network updated at step 1494000
+   Ep  725 | Steps: 3697 | Reward:   2658 | X-pos: 1423 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1495000
+  → Target network updated at step 1496000
+   Ep  726 | Steps: 1942 | Reward:   1524 | X-pos: 1516 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1497000
+   Ep  727 | Steps: 1009 | Reward:   1221 | X-pos:  287 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1498000
+  → Target network updated at step 1499000
+   Ep  728 | Steps: 2480 | Reward:   2986 | X-pos: 2015 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1500000
+  → Target network updated at step 1501000
+   Ep  729 | Steps: 2386 | Reward:   2394 | X-pos: 1414 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1502000
+   Ep  730 | Steps:  401 | Reward:    717 | X-pos:  303 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1503000
+  → Target network updated at step 1504000
+  → Target network updated at step 1505000
+   Ep  731 | Steps: 3279 | Reward:   3013 | X-pos: 1676 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1506000
+   Ep  732 | Steps:  661 | Reward:   1078 | X-pos:  313 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1507000
+  → Target network updated at step 1508000
+   Ep  733 | Steps: 1898 | Reward:   1390 | X-pos: 1429 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1509000
+   Ep  734 | Steps:  903 | Reward:   1076 | X-pos:  312 | ε: 0.1000 | Buffer: 100000
+   Ep  735 | Steps:  847 | Reward:   1066 | X-pos:  295 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1510000
+   Ep  736 | Steps:  395 | Reward:    715 | X-pos:  310 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1511000
+   Ep  737 | Steps: 1691 | Reward:   1996 | X-pos:  686 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1512000
+  → Target network updated at step 1513000
+  → Target network updated at step 1514000
+   Ep  738 | Steps: 2366 | Reward:   1962 | X-pos:  674 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1515000
+  → Target network updated at step 1516000
+  → Target network updated at step 1517000
+   Ep  739 | Steps: 2887 | Reward:   2472 | X-pos:  825 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1518000
+  → Target network updated at step 1519000
+  → Target network updated at step 1520000
+   Ep  740 | Steps: 3749 | Reward:   2436 | X-pos:  850 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1521000
+  → Target network updated at step 1522000
+   Ep  741 | Steps: 1196 | Reward:   1542 | X-pos: 1411 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1523000
+  → Target network updated at step 1524000
+  → Target network updated at step 1525000
+  → Target network updated at step 1526000
+  → Target network updated at step 1527000
+   Ep  742 | Steps: 5485 | Reward:   2951 | X-pos: 1141 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1528000
+   Ep  743 | Steps:  851 | Reward:   1225 | X-pos:  303 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1529000
+   Ep  744 | Steps: 1324 | Reward:   1522 | X-pos: 1411 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1530000
+  → Target network updated at step 1531000
+  → Target network updated at step 1532000
+   Ep  745 | Steps: 2191 | Reward:   2236 | X-pos: 1134 | ε: 0.1000 | Buffer: 100000
+   Ep  746 | Steps:  449 | Reward:    713 | X-pos:  308 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1533000
+  → Target network updated at step 1534000
+   Ep  747 | Steps: 1742 | Reward:   1986 | X-pos:  815 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1535000
+   Ep  748 | Steps: 1425 | Reward:   1631 | X-pos:  855 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1536000
+  → Target network updated at step 1537000
+  → Target network updated at step 1538000
+   Ep  749 | Steps: 2429 | Reward:   2614 | X-pos: 1410 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1539000
+   Ep  750 | Steps: 1901 | Reward:   1846 | X-pos: 1128 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1540000
+   Ep  751 | Steps:  897 | Reward:   1098 | X-pos:  302 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1541000
+   Ep  752 | Steps:  641 | Reward:   1061 | X-pos:  666 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1542000
+   Ep  753 | Steps:  623 | Reward:   1099 | X-pos:  309 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1543000
+   Ep  754 | Steps: 1184 | Reward:   1831 | X-pos: 1411 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1544000
+  → Target network updated at step 1545000
+   Ep  755 | Steps: 2146 | Reward:   2337 | X-pos:  806 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1546000
+   Ep  756 | Steps: 1188 | Reward:   1510 | X-pos:  312 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1547000
+  → Target network updated at step 1548000
+   Ep  757 | Steps: 1747 | Reward:   1482 | X-pos:  311 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1549000
+  → Target network updated at step 1550000
+   Ep  758 | Steps: 2377 | Reward:   1560 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1551000
+   Ep  759 | Steps:  791 | Reward:   1081 | X-pos:  311 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1552000
+  → Target network updated at step 1553000
+   Ep  760 | Steps: 2201 | Reward:   2145 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1554000
+  → Target network updated at step 1555000
+   Ep  761 | Steps: 1591 | Reward:   1494 | X-pos:  720 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1556000
+   Ep  762 | Steps: 1632 | Reward:   1626 | X-pos: 1432 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1557000
+  → Target network updated at step 1558000
+  → Target network updated at step 1559000
+  → Target network updated at step 1560000
+   Ep  763 | Steps: 3225 | Reward:   2585 | X-pos: 1115 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1561000
+  → Target network updated at step 1562000
+   Ep  764 | Steps: 1954 | Reward:   1447 | X-pos: 1151 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1563000
+  → Target network updated at step 1564000
+   Ep  765 | Steps: 2568 | Reward:   2338 | X-pos: 1386 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1565000
+  → Target network updated at step 1566000
+  → Target network updated at step 1567000
+   Ep  766 | Steps: 2283 | Reward:   1453 | X-pos:  770 | ε: 0.1000 | Buffer: 100000
+   Ep  767 | Steps:  405 | Reward:    716 | X-pos:  309 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1568000
+  → Target network updated at step 1569000
+  → Target network updated at step 1570000
+   Ep  768 | Steps: 2804 | Reward:   1383 | X-pos: 1413 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1571000
+  → Target network updated at step 1572000
+  → Target network updated at step 1573000
+  → Target network updated at step 1574000
+  → Target network updated at step 1575000
+   Ep  769 | Steps: 5241 | Reward:   2385 | X-pos: 1127 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1576000
+  → Target network updated at step 1577000
+  → Target network updated at step 1578000
+  → Target network updated at step 1579000
+   Ep  770 | Steps: 4232 | Reward:   2281 | X-pos: 1240 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1580000
+  → Target network updated at step 1581000
+  → Target network updated at step 1582000
+   Ep  771 | Steps: 2909 | Reward:   2118 | X-pos: 2015 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1583000
+  → Target network updated at step 1584000
+  → Target network updated at step 1585000
+  → Target network updated at step 1586000
+  → Target network updated at step 1587000
+   Ep  772 | Steps: 4460 | Reward:   2108 | X-pos:  677 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1588000
+   Ep  773 | Steps: 1521 | Reward:   1571 | X-pos:  797 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1589000
+  → Target network updated at step 1590000
+  → Target network updated at step 1591000
+   Ep  774 | Steps: 2575 | Reward:   1533 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1592000
+   Ep  775 | Steps: 1105 | Reward:   1415 | X-pos: 1408 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1593000
+  → Target network updated at step 1594000
+  → Target network updated at step 1595000
+   Ep  776 | Steps: 3324 | Reward:   2361 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1596000
+   Ep  777 | Steps: 1143 | Reward:   1466 | X-pos:  678 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1597000
+   Ep  778 | Steps:  825 | Reward:   1504 | X-pos:  710 | ε: 0.1000 | Buffer: 100000
+   Ep  779 | Steps:  429 | Reward:    730 | X-pos:  312 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1598000
+  → Target network updated at step 1599000
+   Ep  780 | Steps: 1855 | Reward:   1709 | X-pos:  792 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1600000
+  → Target network updated at step 1601000
+  → Target network updated at step 1602000
+   Ep  781 | Steps: 2827 | Reward:   2248 | X-pos:  653 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1603000
+  → Target network updated at step 1604000
+   Ep  782 | Steps: 1944 | Reward:   2024 | X-pos: 1935 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1605000
+  → Target network updated at step 1606000
+  → Target network updated at step 1607000
+   Ep  783 | Steps: 2794 | Reward:   2196 | X-pos: 1155 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1608000
+  → Target network updated at step 1609000
+  → Target network updated at step 1610000
+   Ep  784 | Steps: 3286 | Reward:   2210 | X-pos: 1423 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1611000
+   Ep  785 | Steps:  635 | Reward:   1110 | X-pos:  311 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1612000
+  → Target network updated at step 1613000
+  → Target network updated at step 1614000
+  → Target network updated at step 1615000
+  → Target network updated at step 1616000
+   Ep  786 | Steps: 4805 | Reward:   2543 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1617000
+  → Target network updated at step 1618000
+   Ep  787 | Steps: 2427 | Reward:   1846 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1619000
+  → Target network updated at step 1620000
+   Ep  788 | Steps: 1621 | Reward:   2376 | X-pos: 2019 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1621000
+  → Target network updated at step 1622000
+   Ep  789 | Steps: 2499 | Reward:   1364 | X-pos: 1410 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1623000
+  → Target network updated at step 1624000
+  → Target network updated at step 1625000
+  → Target network updated at step 1626000
+  → Target network updated at step 1627000
+   Ep  790 | Steps: 5260 | Reward:   2711 | X-pos: 1126 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1628000
+   Ep  791 | Steps:  939 | Reward:   1056 | X-pos:  308 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1629000
+  → Target network updated at step 1630000
+  → Target network updated at step 1631000
+  → Target network updated at step 1632000
+  → Target network updated at step 1633000
+  → Target network updated at step 1634000
+   Ep  792 | Steps: 5327 | Reward:   2710 | X-pos: 1243 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1635000
+  → Target network updated at step 1636000
+  → Target network updated at step 1637000
+  → Target network updated at step 1638000
+  → Target network updated at step 1639000
+  → Target network updated at step 1640000
+  → Target network updated at step 1641000
+   Ep  793 | Steps: 7094 | Reward:   4044 | X-pos:   70 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1642000
+  → Target network updated at step 1643000
+  → Target network updated at step 1644000
+  → Target network updated at step 1645000
+   Ep  794 | Steps: 4133 | Reward:   2213 | X-pos:  834 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1646000
+   Ep  795 | Steps: 1213 | Reward:   1617 | X-pos:  314 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1647000
+  → Target network updated at step 1648000
+  → Target network updated at step 1649000
+   Ep  796 | Steps: 2730 | Reward:   2501 | X-pos:  825 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1650000
+  → Target network updated at step 1651000
+   Ep  797 | Steps: 1991 | Reward:   1827 | X-pos: 1651 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1652000
+  → Target network updated at step 1653000
+   Ep  798 | Steps: 2571 | Reward:   2035 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1654000
+  → Target network updated at step 1655000
+   Ep  799 | Steps: 1763 | Reward:   1663 | X-pos:  312 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1656000
+   Ep  800 | Steps:  821 | Reward:   1117 | X-pos:  305 | ε: 0.1000 | Buffer: 100000
+  ✓ Checkpoint saved: mario_dqn_episode_800.pth
+  → Target network updated at step 1657000
+   Ep  801 | Steps: 1271 | Reward:   1489 | X-pos:  315 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1658000
+  → Target network updated at step 1659000
+  → Target network updated at step 1660000
+  → Target network updated at step 1661000
+  → Target network updated at step 1662000
+  → Target network updated at step 1663000
+   Ep  802 | Steps: 5276 | Reward:   2534 | X-pos:  691 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1664000
+  → Target network updated at step 1665000
+   Ep  803 | Steps: 2197 | Reward:   1393 | X-pos:  665 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1666000
+  → Target network updated at step 1667000
+  → Target network updated at step 1668000
+   Ep  804 | Steps: 3429 | Reward:   1607 | X-pos:  808 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1669000
+  → Target network updated at step 1670000
+   Ep  805 | Steps: 1906 | Reward:   2411 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1671000
+  → Target network updated at step 1672000
+   Ep  806 | Steps: 1925 | Reward:   1522 | X-pos:  287 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1673000
+  → Target network updated at step 1674000
+  → Target network updated at step 1675000
+   Ep  807 | Steps: 2541 | Reward:   1798 | X-pos: 1113 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1676000
+  → Target network updated at step 1677000
+   Ep  808 | Steps: 2833 | Reward:   2840 | X-pos: 1653 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1678000
+  → Target network updated at step 1679000
+  → Target network updated at step 1680000
+   Ep  809 | Steps: 2301 | Reward:   1598 | X-pos: 1426 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1681000
+   Ep  810 | Steps: 1079 | Reward:   1092 | X-pos:  308 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1682000
+  → Target network updated at step 1683000
+   Ep  811 | Steps: 2397 | Reward:   2573 | X-pos: 1436 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1684000
+  → Target network updated at step 1685000
+  → Target network updated at step 1686000
+   Ep  812 | Steps: 2911 | Reward:   2757 | X-pos: 1510 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1687000
+   Ep  813 | Steps: 1111 | Reward:   1500 | X-pos: 1122 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1688000
+  → Target network updated at step 1689000
+  → Target network updated at step 1690000
+  → Target network updated at step 1691000
+   Ep  814 | Steps: 4291 | Reward:   2548 | X-pos: 1417 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1692000
+  → Target network updated at step 1693000
+  → Target network updated at step 1694000
+   Ep  815 | Steps: 2497 | Reward:   2394 | X-pos: 1130 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1695000
+  → Target network updated at step 1696000
+   Ep  816 | Steps: 2281 | Reward:   2215 | X-pos: 1414 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1697000
+  → Target network updated at step 1698000
+   Ep  817 | Steps: 1771 | Reward:   1765 | X-pos:  655 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1699000
+   Ep  818 | Steps: 1159 | Reward:   1463 | X-pos:  685 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1700000
+  → Target network updated at step 1701000
+  → Target network updated at step 1702000
+   Ep  819 | Steps: 2939 | Reward:   1929 | X-pos:  294 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1703000
+   Ep  820 | Steps:  853 | Reward:   1205 | X-pos:  827 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1704000
+  → Target network updated at step 1705000
+   Ep  821 | Steps: 2139 | Reward:   1522 | X-pos: 1428 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1706000
+   Ep  822 | Steps:  429 | Reward:    699 | X-pos:  310 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1707000
+  → Target network updated at step 1708000
+  → Target network updated at step 1709000
+   Ep  823 | Steps: 3095 | Reward:   1697 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1710000
+  → Target network updated at step 1711000
+  → Target network updated at step 1712000
+   Ep  824 | Steps: 2867 | Reward:   2534 | X-pos: 1434 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1713000
+  → Target network updated at step 1714000
+   Ep  825 | Steps: 2215 | Reward:   1888 | X-pos: 1149 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1715000
+  → Target network updated at step 1716000
+  → Target network updated at step 1717000
+   Ep  826 | Steps: 2801 | Reward:   2237 | X-pos: 1129 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1718000
+  → Target network updated at step 1719000
+  → Target network updated at step 1720000
+  → Target network updated at step 1721000
+   Ep  827 | Steps: 4199 | Reward:   2646 | X-pos:  677 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1722000
+  → Target network updated at step 1723000
+  → Target network updated at step 1724000
+   Ep  828 | Steps: 2870 | Reward:   2139 | X-pos: 1435 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1725000
+  → Target network updated at step 1726000
+  → Target network updated at step 1727000
+  → Target network updated at step 1728000
+   Ep  829 | Steps: 4482 | Reward:   2408 | X-pos:  840 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1729000
+   Ep  830 | Steps: 1343 | Reward:   1543 | X-pos:  689 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1730000
+  → Target network updated at step 1731000
+  → Target network updated at step 1732000
+   Ep  831 | Steps: 2657 | Reward:   1810 | X-pos:  686 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1733000
+  → Target network updated at step 1734000
+  → Target network updated at step 1735000
+   Ep  832 | Steps: 2929 | Reward:   2348 | X-pos: 1122 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1736000
+  → Target network updated at step 1737000
+   Ep  833 | Steps: 2335 | Reward:   2094 | X-pos:  819 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1738000
+   Ep  834 | Steps:  771 | Reward:   1062 | X-pos:  310 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1739000
+  → Target network updated at step 1740000
+   Ep  835 | Steps: 1719 | Reward:   1833 | X-pos: 1512 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1741000
+   Ep  836 | Steps: 1373 | Reward:   1427 | X-pos:  663 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1742000
+  → Target network updated at step 1743000
+  → Target network updated at step 1744000
+   Ep  837 | Steps: 2741 | Reward:   1491 | X-pos:  664 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1745000
+  → Target network updated at step 1746000
+   Ep  838 | Steps: 2195 | Reward:   2120 | X-pos: 1422 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1747000
+  → Target network updated at step 1748000
+  → Target network updated at step 1749000
+   Ep  839 | Steps: 3165 | Reward:   2690 | X-pos: 1538 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1750000
+  → Target network updated at step 1751000
+   Ep  840 | Steps: 1819 | Reward:   2037 | X-pos:  688 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1752000
+  → Target network updated at step 1753000
+  → Target network updated at step 1754000
+  → Target network updated at step 1755000
+   Ep  841 | Steps: 3978 | Reward:   1862 | X-pos:  304 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1756000
+  → Target network updated at step 1757000
+   Ep  842 | Steps: 1723 | Reward:   2173 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1758000
+  → Target network updated at step 1759000
+   Ep  843 | Steps: 1913 | Reward:   1571 | X-pos:  310 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1760000
+  → Target network updated at step 1761000
+   Ep  844 | Steps: 2435 | Reward:   2605 | X-pos: 1505 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1762000
+  → Target network updated at step 1763000
+   Ep  845 | Steps: 1585 | Reward:   1735 | X-pos:  662 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1764000
+   Ep  846 | Steps: 1057 | Reward:   1233 | X-pos:  869 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1765000
+  → Target network updated at step 1766000
+  → Target network updated at step 1767000
+  → Target network updated at step 1768000
+   Ep  847 | Steps: 3800 | Reward:   2989 | X-pos:  815 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1769000
+   Ep  848 | Steps: 1855 | Reward:   2229 | X-pos:  663 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1770000
+  → Target network updated at step 1771000
+   Ep  849 | Steps: 1738 | Reward:   1805 | X-pos: 1427 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1772000
+   Ep  850 | Steps: 1095 | Reward:   1446 | X-pos:  695 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1773000
+   Ep  851 | Steps:  425 | Reward:    700 | X-pos:  302 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1774000
+   Ep  852 | Steps: 1639 | Reward:   1827 | X-pos:  693 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1775000
+  → Target network updated at step 1776000
+   Ep  853 | Steps: 1417 | Reward:   1670 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1777000
+  → Target network updated at step 1778000
+  → Target network updated at step 1779000
+   Ep  854 | Steps: 2819 | Reward:   2720 | X-pos:  814 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1780000
+  → Target network updated at step 1781000
+  → Target network updated at step 1782000
+   Ep  855 | Steps: 3189 | Reward:   2221 | X-pos: 1132 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1783000
+  → Target network updated at step 1784000
+   Ep  856 | Steps: 1799 | Reward:   1634 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1785000
+  → Target network updated at step 1786000
+  → Target network updated at step 1787000
+   Ep  857 | Steps: 3465 | Reward:   1537 | X-pos:  684 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1788000
+  → Target network updated at step 1789000
+   Ep  858 | Steps: 2287 | Reward:   2131 | X-pos:  841 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1790000
+  → Target network updated at step 1791000
+  → Target network updated at step 1792000
+  → Target network updated at step 1793000
+  → Target network updated at step 1794000
+  → Target network updated at step 1795000
+   Ep  859 | Steps: 5938 | Reward:   1754 | X-pos:  797 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1796000
+  → Target network updated at step 1797000
+   Ep  860 | Steps: 1473 | Reward:   1765 | X-pos:  308 | ε: 0.1000 | Buffer: 100000
+   Ep  861 | Steps:  709 | Reward:   1039 | X-pos:  665 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1798000
+  → Target network updated at step 1799000
+  → Target network updated at step 1800000
+   Ep  862 | Steps: 2909 | Reward:   1811 | X-pos:  279 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1801000
+  → Target network updated at step 1802000
+  → Target network updated at step 1803000
+  → Target network updated at step 1804000
+  → Target network updated at step 1805000
+   Ep  863 | Steps: 4551 | Reward:   1702 | X-pos:  680 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1806000
+  → Target network updated at step 1807000
+  → Target network updated at step 1808000
+   Ep  864 | Steps: 2902 | Reward:   1416 | X-pos:  296 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1809000
+  → Target network updated at step 1810000
+  → Target network updated at step 1811000
+   Ep  865 | Steps: 3203 | Reward:   3009 | X-pos: 2476 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1812000
+  → Target network updated at step 1813000
+  → Target network updated at step 1814000
+  → Target network updated at step 1815000
+  → Target network updated at step 1816000
+  → Target network updated at step 1817000
+   Ep  866 | Steps: 6332 | Reward:   1772 | X-pos: 1402 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1818000
+  → Target network updated at step 1819000
+  → Target network updated at step 1820000
+  → Target network updated at step 1821000
+  → Target network updated at step 1822000
+  → Target network updated at step 1823000
+   Ep  867 | Steps: 5167 | Reward:   2534 | X-pos:  699 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1824000
+   Ep  868 | Steps: 1607 | Reward:   1885 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1825000
+  → Target network updated at step 1826000
+  → Target network updated at step 1827000
+   Ep  869 | Steps: 2755 | Reward:   1925 | X-pos:  692 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1828000
+  → Target network updated at step 1829000
+   Ep  870 | Steps: 1861 | Reward:   1453 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1830000
+  → Target network updated at step 1831000
+  → Target network updated at step 1832000
+   Ep  871 | Steps: 3071 | Reward:   1736 | X-pos:  295 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1833000
+  → Target network updated at step 1834000
+  → Target network updated at step 1835000
+   Ep  872 | Steps: 2762 | Reward:   2516 | X-pos: 1413 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1836000
+  → Target network updated at step 1837000
+   Ep  873 | Steps: 2333 | Reward:   1383 | X-pos: 1415 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1838000
+  → Target network updated at step 1839000
+  → Target network updated at step 1840000
+   Ep  874 | Steps: 2697 | Reward:   1976 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1841000
+  → Target network updated at step 1842000
+  → Target network updated at step 1843000
+  → Target network updated at step 1844000
+   Ep  875 | Steps: 4344 | Reward:   2834 | X-pos: 1660 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1845000
+  → Target network updated at step 1846000
+  → Target network updated at step 1847000
+  → Target network updated at step 1848000
+  → Target network updated at step 1849000
+  → Target network updated at step 1850000
+   Ep  876 | Steps: 6231 | Reward:   2388 | X-pos: 1127 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1851000
+  → Target network updated at step 1852000
+  → Target network updated at step 1853000
+  → Target network updated at step 1854000
+   Ep  877 | Steps: 3791 | Reward:   1440 | X-pos: 1429 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1855000
+  → Target network updated at step 1856000
+  → Target network updated at step 1857000
+  → Target network updated at step 1858000
+  → Target network updated at step 1859000
+  → Target network updated at step 1860000
+  → Target network updated at step 1861000
+   Ep  878 | Steps: 6672 | Reward:   2639 | X-pos: 1126 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1862000
+  → Target network updated at step 1863000
+  → Target network updated at step 1864000
+   Ep  879 | Steps: 3815 | Reward:   2142 | X-pos:  696 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1865000
+   Ep  880 | Steps:  449 | Reward:    685 | X-pos:  290 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1866000
+  → Target network updated at step 1867000
+   Ep  881 | Steps: 2253 | Reward:   1758 | X-pos:  698 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1868000
+  → Target network updated at step 1869000
+   Ep  882 | Steps: 1455 | Reward:   1403 | X-pos: 1408 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1870000
+  → Target network updated at step 1871000
+  → Target network updated at step 1872000
+  → Target network updated at step 1873000
+   Ep  883 | Steps: 4632 | Reward:   2517 | X-pos: 1153 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1874000
+  → Target network updated at step 1875000
+  → Target network updated at step 1876000
+   Ep  884 | Steps: 2624 | Reward:   2472 | X-pos: 1434 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1877000
+  → Target network updated at step 1878000
+  → Target network updated at step 1879000
+   Ep  885 | Steps: 2686 | Reward:   1419 | X-pos:  315 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1880000
+   Ep  886 | Steps: 1043 | Reward:   1453 | X-pos:  679 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1881000
+  → Target network updated at step 1882000
+  → Target network updated at step 1883000
+   Ep  887 | Steps: 3503 | Reward:   1803 | X-pos:  807 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1884000
+   Ep  888 | Steps:  521 | Reward:   1088 | X-pos:  303 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1885000
+  → Target network updated at step 1886000
+   Ep  889 | Steps: 1941 | Reward:   1106 | X-pos:  312 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1887000
+  → Target network updated at step 1888000
+   Ep  890 | Steps: 1931 | Reward:   1997 | X-pos: 1117 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1889000
+  → Target network updated at step 1890000
+   Ep  891 | Steps: 2793 | Reward:   2174 | X-pos: 2014 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1891000
+   Ep  892 | Steps:  877 | Reward:   1439 | X-pos:  300 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1892000
+  → Target network updated at step 1893000
+  → Target network updated at step 1894000
+  → Target network updated at step 1895000
+   Ep  893 | Steps: 4228 | Reward:   2054 | X-pos: 1414 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1896000
+  → Target network updated at step 1897000
+  → Target network updated at step 1898000
+  → Target network updated at step 1899000
+   Ep  894 | Steps: 3103 | Reward:   2102 | X-pos: 1646 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1900000
+  → Target network updated at step 1901000
+  → Target network updated at step 1902000
+  → Target network updated at step 1903000
+  → Target network updated at step 1904000
+   Ep  895 | Steps: 5285 | Reward:   2175 | X-pos: 2018 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1905000
+  → Target network updated at step 1906000
+  → Target network updated at step 1907000
+   Ep  896 | Steps: 3265 | Reward:   2463 | X-pos: 1674 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1908000
+  → Target network updated at step 1909000
+  → Target network updated at step 1910000
+  → Target network updated at step 1911000
+  → Target network updated at step 1912000
+  → Target network updated at step 1913000
+   Ep  897 | Steps: 5687 | Reward:   1837 | X-pos:  803 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1914000
+  → Target network updated at step 1915000
+   Ep  898 | Steps: 1783 | Reward:   1242 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1916000
+   Ep  899 | Steps: 1851 | Reward:   1946 | X-pos:  817 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1917000
+  → Target network updated at step 1918000
+  → Target network updated at step 1919000
+  → Target network updated at step 1920000
+  → Target network updated at step 1921000
+  → Target network updated at step 1922000
+  → Target network updated at step 1923000
+   Ep  900 | Steps: 6809 | Reward:   2373 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1924000
+  → Target network updated at step 1925000
+   Ep  901 | Steps: 1591 | Reward:   1878 | X-pos:  695 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1926000
+  → Target network updated at step 1927000
+   Ep  902 | Steps: 2243 | Reward:   2092 | X-pos: 1403 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1928000
+  → Target network updated at step 1929000
+  → Target network updated at step 1930000
+   Ep  903 | Steps: 2955 | Reward:   1403 | X-pos: 1125 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1931000
+  → Target network updated at step 1932000
+   Ep  904 | Steps: 2103 | Reward:   2551 | X-pos: 1436 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1933000
+  → Target network updated at step 1934000
+  → Target network updated at step 1935000
+   Ep  905 | Steps: 3149 | Reward:   2290 | X-pos: 1430 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1936000
+  → Target network updated at step 1937000
+  → Target network updated at step 1938000
+   Ep  906 | Steps: 2874 | Reward:   2464 | X-pos: 1402 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1939000
+  → Target network updated at step 1940000
+   Ep  907 | Steps: 2303 | Reward:   1949 | X-pos: 1122 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1941000
+  → Target network updated at step 1942000
+   Ep  908 | Steps: 1194 | Reward:   1507 | X-pos:  311 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1943000
+  → Target network updated at step 1944000
+  → Target network updated at step 1945000
+  → Target network updated at step 1946000
+  → Target network updated at step 1947000
+   Ep  909 | Steps: 5311 | Reward:   1589 | X-pos:  841 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1948000
+  → Target network updated at step 1949000
+  → Target network updated at step 1950000
+  → Target network updated at step 1951000
+  → Target network updated at step 1952000
+   Ep  910 | Steps: 5080 | Reward:   3016 | X-pos: 1415 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1953000
+  → Target network updated at step 1954000
+  → Target network updated at step 1955000
+   Ep  911 | Steps: 3159 | Reward:   2180 | X-pos: 1114 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1956000
+  → Target network updated at step 1957000
+  → Target network updated at step 1958000
+  → Target network updated at step 1959000
+   Ep  912 | Steps: 4057 | Reward:   2980 | X-pos: 1519 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1960000
+  → Target network updated at step 1961000
+  → Target network updated at step 1962000
+  → Target network updated at step 1963000
+  → Target network updated at step 1964000
+  → Target network updated at step 1965000
+  → Target network updated at step 1966000
+  → Target network updated at step 1967000
+   Ep  913 | Steps: 7332 | Reward:   2317 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+   Ep  914 | Steps:  617 | Reward:   1086 | X-pos:  303 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1968000
+   Ep  915 | Steps:  453 | Reward:    694 | X-pos:  306 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1969000
+   Ep  916 | Steps: 1553 | Reward:   1139 | X-pos:  797 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1970000
+  → Target network updated at step 1971000
+  → Target network updated at step 1972000
+  → Target network updated at step 1973000
+  → Target network updated at step 1974000
+   Ep  917 | Steps: 4986 | Reward:   2234 | X-pos:  696 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1975000
+  → Target network updated at step 1976000
+   Ep  918 | Steps: 1810 | Reward:   1445 | X-pos:  305 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1977000
+  → Target network updated at step 1978000
+  → Target network updated at step 1979000
+  → Target network updated at step 1980000
+   Ep  919 | Steps: 4418 | Reward:   2469 | X-pos: 1429 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1981000
+  → Target network updated at step 1982000
+   Ep  920 | Steps: 1363 | Reward:   1503 | X-pos:  307 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1983000
+  → Target network updated at step 1984000
+   Ep  921 | Steps: 2599 | Reward:   1795 | X-pos:  685 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1985000
+  → Target network updated at step 1986000
+  → Target network updated at step 1987000
+  → Target network updated at step 1988000
+   Ep  922 | Steps: 3998 | Reward:   2480 | X-pos: 1433 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1989000
+  → Target network updated at step 1990000
+  → Target network updated at step 1991000
+  → Target network updated at step 1992000
+   Ep  923 | Steps: 4045 | Reward:   1501 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1993000
+  → Target network updated at step 1994000
+  → Target network updated at step 1995000
+  → Target network updated at step 1996000
+   Ep  924 | Steps: 3868 | Reward:   2618 | X-pos: 1709 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1997000
+  → Target network updated at step 1998000
+   Ep  925 | Steps: 1886 | Reward:   1654 | X-pos: 1422 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 1999000
+  → Target network updated at step 2000000
+   Ep  926 | Steps: 1517 | Reward:   1881 | X-pos:  719 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2001000
+  → Target network updated at step 2002000
+  → Target network updated at step 2003000
+   Ep  927 | Steps: 3644 | Reward:   1920 | X-pos:  855 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2004000
+  → Target network updated at step 2005000
+   Ep  928 | Steps: 1784 | Reward:   2052 | X-pos: 1403 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2006000
+  → Target network updated at step 2007000
+  → Target network updated at step 2008000
+  → Target network updated at step 2009000
+   Ep  929 | Steps: 3623 | Reward:   2208 | X-pos: 1139 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2010000
+   Ep  930 | Steps: 1017 | Reward:   1428 | X-pos:  690 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2011000
+  → Target network updated at step 2012000
+   Ep  931 | Steps: 2194 | Reward:   1840 | X-pos: 1137 | ε: 0.1000 | Buffer: 100000
+   Ep  932 | Steps:  397 | Reward:    713 | X-pos:  296 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2013000
+  → Target network updated at step 2014000
+  → Target network updated at step 2015000
+  → Target network updated at step 2016000
+  → Target network updated at step 2017000
+  → Target network updated at step 2018000
+   Ep  933 | Steps: 5238 | Reward:   2700 | X-pos: 1119 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2019000
+   Ep  934 | Steps: 1021 | Reward:   1268 | X-pos:  886 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2020000
+   Ep  935 | Steps: 1852 | Reward:   1515 | X-pos: 1515 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2021000
+  → Target network updated at step 2022000
+   Ep  936 | Steps: 1119 | Reward:   1650 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+   Ep  937 | Steps:  661 | Reward:   1458 | X-pos:  678 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2023000
+  → Target network updated at step 2024000
+  → Target network updated at step 2025000
+   Ep  938 | Steps: 3263 | Reward:   1690 | X-pos:  851 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2026000
+  → Target network updated at step 2027000
+   Ep  939 | Steps: 1439 | Reward:   1843 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2028000
+  → Target network updated at step 2029000
+  → Target network updated at step 2030000
+   Ep  940 | Steps: 2989 | Reward:   2254 | X-pos: 1139 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2031000
+  → Target network updated at step 2032000
+   Ep  941 | Steps: 2271 | Reward:   2375 | X-pos: 1135 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2033000
+  → Target network updated at step 2034000
+  → Target network updated at step 2035000
+  → Target network updated at step 2036000
+   Ep  942 | Steps: 3816 | Reward:   2671 | X-pos:  811 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2037000
+  → Target network updated at step 2038000
+  → Target network updated at step 2039000
+   Ep  943 | Steps: 3197 | Reward:   1889 | X-pos: 1656 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2040000
+  → Target network updated at step 2041000
+   Ep  944 | Steps: 2234 | Reward:   1752 | X-pos:  306 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2042000
+  → Target network updated at step 2043000
+   Ep  945 | Steps: 1629 | Reward:   1480 | X-pos:  298 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2044000
+   Ep  946 | Steps: 1163 | Reward:   1470 | X-pos:  303 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2045000
+  → Target network updated at step 2046000
+  → Target network updated at step 2047000
+   Ep  947 | Steps: 2989 | Reward:   1786 | X-pos: 1141 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2048000
+  → Target network updated at step 2049000
+  → Target network updated at step 2050000
+  → Target network updated at step 2051000
+   Ep  948 | Steps: 3386 | Reward:   2441 | X-pos: 1126 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2052000
+  → Target network updated at step 2053000
+   Ep  949 | Steps: 2218 | Reward:   2478 | X-pos: 1431 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2054000
+   Ep  950 | Steps:  833 | Reward:   1065 | X-pos:  288 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2055000
+  → Target network updated at step 2056000
+  → Target network updated at step 2057000
+  → Target network updated at step 2058000
+   Ep  951 | Steps: 3892 | Reward:   2825 | X-pos: 1406 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2059000
+  → Target network updated at step 2060000
+   Ep  952 | Steps: 2283 | Reward:   1945 | X-pos:  681 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2061000
+   Ep  953 | Steps: 1363 | Reward:   1845 | X-pos: 1815 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2062000
+  → Target network updated at step 2063000
+   Ep  954 | Steps: 2209 | Reward:   2015 | X-pos:  278 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2064000
+  → Target network updated at step 2065000
+   Ep  955 | Steps: 1973 | Reward:   1889 | X-pos:  806 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2066000
+  → Target network updated at step 2067000
+   Ep  956 | Steps: 1510 | Reward:   1857 | X-pos: 1122 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2068000
+   Ep  957 | Steps: 1467 | Reward:   1229 | X-pos:  303 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2069000
+  → Target network updated at step 2070000
+   Ep  958 | Steps: 1751 | Reward:   1836 | X-pos: 1131 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2071000
+   Ep  959 | Steps: 1292 | Reward:   1498 | X-pos:  301 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2072000
+  → Target network updated at step 2073000
+   Ep  960 | Steps: 2045 | Reward:   2004 | X-pos:  681 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2074000
+  → Target network updated at step 2075000
+  → Target network updated at step 2076000
+   Ep  961 | Steps: 2574 | Reward:   2320 | X-pos: 1125 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2077000
+   Ep  962 | Steps: 1468 | Reward:   1891 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2078000
+  → Target network updated at step 2079000
+  → Target network updated at step 2080000
+  → Target network updated at step 2081000
+   Ep  963 | Steps: 4041 | Reward:   2063 | X-pos: 1416 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2082000
+  → Target network updated at step 2083000
+  → Target network updated at step 2084000
+  → Target network updated at step 2085000
+   Ep  964 | Steps: 3304 | Reward:   2543 | X-pos:  855 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2086000
+  → Target network updated at step 2087000
+  → Target network updated at step 2088000
+  → Target network updated at step 2089000
+  → Target network updated at step 2090000
+   Ep  965 | Steps: 4838 | Reward:   2570 | X-pos: 1131 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2091000
+  → Target network updated at step 2092000
+   Ep  966 | Steps: 2061 | Reward:   1933 | X-pos:  820 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2093000
+  → Target network updated at step 2094000
+   Ep  967 | Steps: 1920 | Reward:   1918 | X-pos: 1789 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2095000
+   Ep  968 | Steps: 1019 | Reward:   1245 | X-pos:  313 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2096000
+   Ep  969 | Steps: 1726 | Reward:   1867 | X-pos: 1129 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2097000
+   Ep  970 | Steps: 1097 | Reward:   1044 | X-pos:  702 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2098000
+  → Target network updated at step 2099000
+  → Target network updated at step 2100000
+  → Target network updated at step 2101000
+  → Target network updated at step 2102000
+   Ep  971 | Steps: 4172 | Reward:   2308 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2103000
+  → Target network updated at step 2104000
+   Ep  972 | Steps: 2303 | Reward:   2542 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2105000
+  → Target network updated at step 2106000
+  → Target network updated at step 2107000
+   Ep  973 | Steps: 3154 | Reward:   2040 | X-pos: 1412 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2108000
+  → Target network updated at step 2109000
+   Ep  974 | Steps: 1610 | Reward:   1899 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2110000
+   Ep  975 | Steps: 1513 | Reward:   1181 | X-pos:  837 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2111000
+  → Target network updated at step 2112000
+  → Target network updated at step 2113000
+  → Target network updated at step 2114000
+   Ep  976 | Steps: 4155 | Reward:   1407 | X-pos: 1427 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2115000
+   Ep  977 | Steps:  982 | Reward:   1448 | X-pos: 1410 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2116000
+  → Target network updated at step 2117000
+  → Target network updated at step 2118000
+   Ep  978 | Steps: 2500 | Reward:   2590 | X-pos: 1628 | ε: 0.1000 | Buffer: 100000
+   Ep  979 | Steps:  639 | Reward:   1125 | X-pos:  306 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2119000
+  → Target network updated at step 2120000
+  → Target network updated at step 2121000
+   Ep  980 | Steps: 2135 | Reward:   2118 | X-pos: 1411 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2122000
+  → Target network updated at step 2123000
+   Ep  981 | Steps: 2349 | Reward:   2569 | X-pos: 2017 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2124000
+  → Target network updated at step 2125000
+   Ep  982 | Steps: 2475 | Reward:   1563 | X-pos: 1434 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2126000
+  → Target network updated at step 2127000
+  → Target network updated at step 2128000
+  → Target network updated at step 2129000
+  → Target network updated at step 2130000
+  → Target network updated at step 2131000
+  → Target network updated at step 2132000
+  → Target network updated at step 2133000
+   Ep  983 | Steps: 7985 | Reward:   2336 | X-pos: 1515 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2134000
+  → Target network updated at step 2135000
+   Ep  984 | Steps: 2045 | Reward:   2008 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2136000
+  → Target network updated at step 2137000
+  → Target network updated at step 2138000
+   Ep  985 | Steps: 2150 | Reward:   2245 | X-pos: 2022 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2139000
+   Ep  986 | Steps: 1302 | Reward:   2006 | X-pos: 1414 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2140000
+  → Target network updated at step 2141000
+   Ep  987 | Steps: 1649 | Reward:   1778 | X-pos:  661 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2142000
+  → Target network updated at step 2143000
+   Ep  988 | Steps: 2230 | Reward:   1771 | X-pos:  242 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2144000
+   Ep  989 | Steps: 1379 | Reward:   1538 | X-pos: 1421 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2145000
+  → Target network updated at step 2146000
+  → Target network updated at step 2147000
+   Ep  990 | Steps: 2496 | Reward:   2008 | X-pos:  680 | ε: 0.1000 | Buffer: 100000
+   Ep  991 | Steps:  401 | Reward:    716 | X-pos:  299 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2148000
+  → Target network updated at step 2149000
+   Ep  992 | Steps: 2329 | Reward:   1928 | X-pos: 1126 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2150000
+  → Target network updated at step 2151000
+  → Target network updated at step 2152000
+   Ep  993 | Steps: 2768 | Reward:   2254 | X-pos: 1140 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2153000
+   Ep  994 | Steps:  375 | Reward:    725 | X-pos:  309 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2154000
+   Ep  995 | Steps: 1523 | Reward:   1988 | X-pos: 1419 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2155000
+  → Target network updated at step 2156000
+  → Target network updated at step 2157000
+   Ep  996 | Steps: 2677 | Reward:   1542 | X-pos:  709 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2158000
+   Ep  997 | Steps: 1633 | Reward:   1616 | X-pos:  670 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2159000
+  → Target network updated at step 2160000
+  → Target network updated at step 2161000
+  → Target network updated at step 2162000
+  → Target network updated at step 2163000
+  → Target network updated at step 2164000
+   Ep  998 | Steps: 5319 | Reward:   1966 | X-pos: 1420 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2165000
+  → Target network updated at step 2166000
+   Ep  999 | Steps: 2046 | Reward:   2226 | X-pos: 1409 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2167000
+   Ep 1000 | Steps:  835 | Reward:   1100 | X-pos:  301 | ε: 0.1000 | Buffer: 100000
+  ✓ Checkpoint saved: mario_dqn_episode_1000.pth
+   Ep 1001 | Steps:  755 | Reward:   1043 | X-pos:  271 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2168000
+  → Target network updated at step 2169000
+   Ep 1002 | Steps: 2059 | Reward:   1539 | X-pos:  668 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2170000
+  → Target network updated at step 2171000
+  → Target network updated at step 2172000
+   Ep 1003 | Steps: 2498 | Reward:   2542 | X-pos: 1437 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2173000
+   Ep 1004 | Steps:  629 | Reward:   1090 | X-pos:  310 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2174000
+  → Target network updated at step 2175000
+  → Target network updated at step 2176000
+   Ep 1005 | Steps: 3749 | Reward:   2585 | X-pos:  690 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2177000
+  → Target network updated at step 2178000
+  → Target network updated at step 2179000
+   Ep 1006 | Steps: 2329 | Reward:   1920 | X-pos: 1410 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2180000
+   Ep 1007 | Steps: 1705 | Reward:   1423 | X-pos: 1416 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2181000
+  → Target network updated at step 2182000
+  → Target network updated at step 2183000
+   Ep 1008 | Steps: 2864 | Reward:   2484 | X-pos: 1402 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2184000
+  → Target network updated at step 2185000
+  → Target network updated at step 2186000
+  → Target network updated at step 2187000
+  → Target network updated at step 2188000
+   Ep 1009 | Steps: 5228 | Reward:   3545 | X-pos: 2470 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2189000
+  → Target network updated at step 2190000
+  → Target network updated at step 2191000
+  → Target network updated at step 2192000
+   Ep 1010 | Steps: 3263 | Reward:   2975 | X-pos: 1513 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2193000
+  → Target network updated at step 2194000
+  → Target network updated at step 2195000
+  → Target network updated at step 2196000
+  → Target network updated at step 2197000
+   Ep 1011 | Steps: 5042 | Reward:   2009 | X-pos: 1404 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2198000
+  → Target network updated at step 2199000
+  → Target network updated at step 2200000
+   Ep 1012 | Steps: 3130 | Reward:   1485 | X-pos: 1368 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2201000
+  → Target network updated at step 2202000
+   Ep 1013 | Steps: 1945 | Reward:   1436 | X-pos: 1428 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2203000
+  → Target network updated at step 2204000
+  → Target network updated at step 2205000
+  → Target network updated at step 2206000
+  → Target network updated at step 2207000
+   Ep 1014 | Steps: 5131 | Reward:   2827 | X-pos: 1414 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2208000
+   Ep 1015 | Steps: 1375 | Reward:   1443 | X-pos: 1437 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2209000
+  → Target network updated at step 2210000
+   Ep 1016 | Steps: 1620 | Reward:   2000 | X-pos: 1438 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2211000
+  → Target network updated at step 2212000
+   Ep 1017 | Steps: 1892 | Reward:   1832 | X-pos: 1122 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2213000
+  → Target network updated at step 2214000
+  → Target network updated at step 2215000
+   Ep 1018 | Steps: 2830 | Reward:   2381 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2216000
+   Ep 1019 | Steps: 1481 | Reward:   1732 | X-pos:  889 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2217000
+  → Target network updated at step 2218000
+  → Target network updated at step 2219000
+   Ep 1020 | Steps: 2964 | Reward:   1989 | X-pos:  288 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2220000
+  → Target network updated at step 2221000
+   Ep 1021 | Steps: 1457 | Reward:   2036 | X-pos: 1429 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2222000
+  → Target network updated at step 2223000
+   Ep 1022 | Steps: 2595 | Reward:   2140 | X-pos: 1800 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2224000
+  → Target network updated at step 2225000
+  → Target network updated at step 2226000
+  → Target network updated at step 2227000
+   Ep 1023 | Steps: 3987 | Reward:   2625 | X-pos: 1430 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2228000
+  → Target network updated at step 2229000
+  → Target network updated at step 2230000
+  → Target network updated at step 2231000
+   Ep 1024 | Steps: 4026 | Reward:   2073 | X-pos: 1113 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2232000
+  → Target network updated at step 2233000
+   Ep 1025 | Steps: 1613 | Reward:   2071 | X-pos: 1436 | ε: 0.1000 | Buffer: 100000
+   Ep 1026 | Steps:  717 | Reward:   1051 | X-pos:  308 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2234000
+  → Target network updated at step 2235000
+  → Target network updated at step 2236000
+  → Target network updated at step 2237000
+   Ep 1027 | Steps: 3101 | Reward:   1561 | X-pos: 1443 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2238000
+  → Target network updated at step 2239000
+   Ep 1028 | Steps: 2685 | Reward:   1351 | X-pos: 1411 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2240000
+  → Target network updated at step 2241000
+  → Target network updated at step 2242000
+   Ep 1029 | Steps: 2791 | Reward:   1181 | X-pos:  882 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2243000
+  → Target network updated at step 2244000
+  → Target network updated at step 2245000
+  → Target network updated at step 2246000
+  → Target network updated at step 2247000
+   Ep 1030 | Steps: 4580 | Reward:   2220 | X-pos:  697 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2248000
+   Ep 1031 | Steps: 1793 | Reward:   2027 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2249000
+  → Target network updated at step 2250000
+  → Target network updated at step 2251000
+  → Target network updated at step 2252000
+   Ep 1032 | Steps: 3993 | Reward:   2338 | X-pos: 1436 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2253000
+  → Target network updated at step 2254000
+   Ep 1033 | Steps: 1899 | Reward:   1877 | X-pos:  308 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2255000
+  → Target network updated at step 2256000
+  → Target network updated at step 2257000
+   Ep 1034 | Steps: 2683 | Reward:   1529 | X-pos: 1415 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2258000
+  → Target network updated at step 2259000
+  → Target network updated at step 2260000
+  → Target network updated at step 2261000
+   Ep 1035 | Steps: 3689 | Reward:   1977 | X-pos:  845 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2262000
+  → Target network updated at step 2263000
+  → Target network updated at step 2264000
+  → Target network updated at step 2265000
+   Ep 1036 | Steps: 3949 | Reward:   1647 | X-pos:  818 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2266000
+  → Target network updated at step 2267000
+  → Target network updated at step 2268000
+   Ep 1037 | Steps: 3134 | Reward:   2056 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2269000
+  → Target network updated at step 2270000
+  → Target network updated at step 2271000
+  → Target network updated at step 2272000
+  → Target network updated at step 2273000
+   Ep 1038 | Steps: 5316 | Reward:   2631 | X-pos: 1408 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2274000
+  → Target network updated at step 2275000
+  → Target network updated at step 2276000
+  → Target network updated at step 2277000
+   Ep 1039 | Steps: 3835 | Reward:   2119 | X-pos:  813 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2278000
+  → Target network updated at step 2279000
+  → Target network updated at step 2280000
+   Ep 1040 | Steps: 2607 | Reward:   1936 | X-pos: 1952 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2281000
+  → Target network updated at step 2282000
+  → Target network updated at step 2283000
+  → Target network updated at step 2284000
+   Ep 1041 | Steps: 4971 | Reward:   2290 | X-pos: 1440 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2285000
+  → Target network updated at step 2286000
+  → Target network updated at step 2287000
+  → Target network updated at step 2288000
+  → Target network updated at step 2289000
+   Ep 1042 | Steps: 4580 | Reward:   2496 | X-pos: 1655 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2290000
+  → Target network updated at step 2291000
+   Ep 1043 | Steps: 1681 | Reward:   1164 | X-pos:  311 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2292000
+   Ep 1044 | Steps: 1689 | Reward:   1615 | X-pos: 1443 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2293000
+  → Target network updated at step 2294000
+  → Target network updated at step 2295000
+  → Target network updated at step 2296000
+   Ep 1045 | Steps: 3275 | Reward:   1818 | X-pos: 1128 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2297000
+  → Target network updated at step 2298000
+   Ep 1046 | Steps: 1877 | Reward:   2166 | X-pos:  842 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2299000
+  → Target network updated at step 2300000
+   Ep 1047 | Steps: 2902 | Reward:   2077 | X-pos:  829 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2301000
+  → Target network updated at step 2302000
+  → Target network updated at step 2303000
+   Ep 1048 | Steps: 2828 | Reward:   2178 | X-pos:  703 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2304000
+  → Target network updated at step 2305000
+  → Target network updated at step 2306000
+  → Target network updated at step 2307000
+  → Target network updated at step 2308000
+   Ep 1049 | Steps: 4365 | Reward:   2970 | X-pos: 1410 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2309000
+  → Target network updated at step 2310000
+   Ep 1050 | Steps: 2778 | Reward:   2195 | X-pos:  680 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2311000
+  → Target network updated at step 2312000
+   Ep 1051 | Steps: 1173 | Reward:   1476 | X-pos:  683 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2313000
+   Ep 1052 | Steps: 1843 | Reward:   1826 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2314000
+  → Target network updated at step 2315000
+  → Target network updated at step 2316000
+  → Target network updated at step 2317000
+   Ep 1053 | Steps: 3467 | Reward:   1718 | X-pos:  898 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2318000
+  → Target network updated at step 2319000
+  → Target network updated at step 2320000
+  → Target network updated at step 2321000
+  → Target network updated at step 2322000
+   Ep 1054 | Steps: 5059 | Reward:   2714 | X-pos: 1124 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2323000
+  → Target network updated at step 2324000
+   Ep 1055 | Steps: 1581 | Reward:   1237 | X-pos:  306 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2325000
+  → Target network updated at step 2326000
+  → Target network updated at step 2327000
+   Ep 1056 | Steps: 3408 | Reward:   2156 | X-pos:  697 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2328000
+  → Target network updated at step 2329000
+  → Target network updated at step 2330000
+  → Target network updated at step 2331000
+   Ep 1057 | Steps: 3990 | Reward:   2401 | X-pos:  849 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2332000
+  → Target network updated at step 2333000
+  → Target network updated at step 2334000
+  → Target network updated at step 2335000
+   Ep 1058 | Steps: 3783 | Reward:   2404 | X-pos: 1516 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2336000
+  → Target network updated at step 2337000
+   Ep 1059 | Steps: 2191 | Reward:   1812 | X-pos: 1127 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2338000
+  → Target network updated at step 2339000
+  → Target network updated at step 2340000
+  → Target network updated at step 2341000
+   Ep 1060 | Steps: 4300 | Reward:   2033 | X-pos: 1437 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2342000
+   Ep 1061 | Steps:  901 | Reward:   1465 | X-pos:  679 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2343000
+   Ep 1062 | Steps:  773 | Reward:   1043 | X-pos:  300 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2344000
+  → Target network updated at step 2345000
+   Ep 1063 | Steps: 2016 | Reward:   2114 | X-pos: 1425 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2346000
+  → Target network updated at step 2347000
+   Ep 1064 | Steps: 1603 | Reward:   1967 | X-pos:  668 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2348000
+  → Target network updated at step 2349000
+   Ep 1065 | Steps: 2020 | Reward:   1416 | X-pos: 1423 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2350000
+  → Target network updated at step 2351000
+   Ep 1066 | Steps: 2044 | Reward:   2020 | X-pos: 1127 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2352000
+   Ep 1067 | Steps: 1120 | Reward:   1504 | X-pos:  300 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2353000
+  → Target network updated at step 2354000
+  → Target network updated at step 2355000
+  → Target network updated at step 2356000
+  → Target network updated at step 2357000
+   Ep 1068 | Steps: 5630 | Reward:   2502 | X-pos: 1131 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2358000
+   Ep 1069 | Steps:  853 | Reward:   1220 | X-pos:  839 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2359000
+  → Target network updated at step 2360000
+   Ep 1070 | Steps: 2047 | Reward:   1017 | X-pos:  294 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2361000
+  → Target network updated at step 2362000
+  → Target network updated at step 2363000
+   Ep 1071 | Steps: 2730 | Reward:   1793 | X-pos:  304 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2364000
+  → Target network updated at step 2365000
+  → Target network updated at step 2366000
+   Ep 1072 | Steps: 2697 | Reward:   1540 | X-pos:  678 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2367000
+  → Target network updated at step 2368000
+  → Target network updated at step 2369000
+  → Target network updated at step 2370000
+   Ep 1073 | Steps: 3846 | Reward:   2908 | X-pos: 1404 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2371000
+  → Target network updated at step 2372000
+  → Target network updated at step 2373000
+  → Target network updated at step 2374000
+  → Target network updated at step 2375000
+  → Target network updated at step 2376000
+   Ep 1074 | Steps: 6631 | Reward:   3637 | X-pos:  194 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2377000
+  → Target network updated at step 2378000
+   Ep 1075 | Steps: 1326 | Reward:   1979 | X-pos: 1430 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2379000
+  → Target network updated at step 2380000
+  → Target network updated at step 2381000
+   Ep 1076 | Steps: 3114 | Reward:   1396 | X-pos: 1442 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2382000
+   Ep 1077 | Steps: 1124 | Reward:   1436 | X-pos: 1407 | ε: 0.1000 | Buffer: 100000
+   Ep 1078 | Steps:  531 | Reward:    672 | X-pos:  314 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2383000
+  → Target network updated at step 2384000
+   Ep 1079 | Steps: 2145 | Reward:   1934 | X-pos:  716 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2385000
+  → Target network updated at step 2386000
+   Ep 1080 | Steps: 2019 | Reward:   1960 | X-pos:  664 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2387000
+  → Target network updated at step 2388000
+  → Target network updated at step 2389000
+  → Target network updated at step 2390000
+  → Target network updated at step 2391000
+   Ep 1081 | Steps: 4836 | Reward:   2991 | X-pos: 1403 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2392000
+  → Target network updated at step 2393000
+   Ep 1082 | Steps: 1277 | Reward:   1831 | X-pos:  686 | ε: 0.1000 | Buffer: 100000
+   Ep 1083 | Steps:  563 | Reward:   1089 | X-pos:  310 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2394000
+   Ep 1084 | Steps:  649 | Reward:   1114 | X-pos:  312 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2395000
+   Ep 1085 | Steps: 1601 | Reward:   1497 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2396000
+  → Target network updated at step 2397000
+   Ep 1086 | Steps: 1497 | Reward:   1511 | X-pos:  809 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2398000
+  → Target network updated at step 2399000
+  → Target network updated at step 2400000
+   Ep 1087 | Steps: 2874 | Reward:   1954 | X-pos:  842 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2401000
+  → Target network updated at step 2402000
+   Ep 1088 | Steps: 1998 | Reward:   2007 | X-pos: 1429 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2403000
+  → Target network updated at step 2404000
+   Ep 1089 | Steps: 2345 | Reward:   2230 | X-pos:  691 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2405000
+  → Target network updated at step 2406000
+  → Target network updated at step 2407000
+  → Target network updated at step 2408000
+  → Target network updated at step 2409000
+  → Target network updated at step 2410000
+  → Target network updated at step 2411000
+  → Target network updated at step 2412000
+  → Target network updated at step 2413000
+   Ep 1090 | Steps: 8945 | Reward:   1677 | X-pos:  699 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2414000
+  → Target network updated at step 2415000
+  → Target network updated at step 2416000
+  → Target network updated at step 2417000
+   Ep 1091 | Steps: 3529 | Reward:   2315 | X-pos:  722 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2418000
+  → Target network updated at step 2419000
+  → Target network updated at step 2420000
+   Ep 1092 | Steps: 3140 | Reward:   2248 | X-pos: 1148 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2421000
+   Ep 1093 | Steps: 1116 | Reward:   1465 | X-pos: 1437 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2422000
+  → Target network updated at step 2423000
+   Ep 1094 | Steps: 2401 | Reward:   1501 | X-pos:  853 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2424000
+  → Target network updated at step 2425000
+  → Target network updated at step 2426000
+   Ep 1095 | Steps: 2708 | Reward:   2245 | X-pos:  308 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2427000
+  → Target network updated at step 2428000
+  → Target network updated at step 2429000
+   Ep 1096 | Steps: 2880 | Reward:   1498 | X-pos:  687 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2430000
+  → Target network updated at step 2431000
+  → Target network updated at step 2432000
+  → Target network updated at step 2433000
+   Ep 1097 | Steps: 4010 | Reward:   2058 | X-pos: 1434 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2434000
+  → Target network updated at step 2435000
+  → Target network updated at step 2436000
+  → Target network updated at step 2437000
+  → Target network updated at step 2438000
+  → Target network updated at step 2439000
+   Ep 1098 | Steps: 6236 | Reward:   3173 | X-pos: 1415 | ε: 0.1000 | Buffer: 100000
+  → Target network updated at step 2440000
+  → Target network updated at step 2441000
