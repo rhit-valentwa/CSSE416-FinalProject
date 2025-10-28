@@ -14,19 +14,19 @@ PRINT_DEVICE = True
 NUMBER_OF_SEQUENTIAL_FRAMES = 6
 REPLAY_BUFFER_SIZE = 50000
 BATCH_SIZE = 32
-LEARNING_RATE = 5e-6
+LEARNING_RATE = 1e-4  # Increased from 5e-6
 GAMMA = 0.99
-EPSILON_START = 0.5
-EPSILON_DECAY = 0.5
-EPSILON_MIN = 0.1
-TAU = 0.005
+EPSILON_START = 1.0  # Start with full exploration
+EPSILON_DECAY = 0.9  # Much slower decay (reaches 0.1 after ~4600 episodes)
+EPSILON_MIN = 0.05  # Allow more exploration even late in training
+TAU = 0.001  # Slightly slower soft updates
 N_EPISODES = 10000
-TARGET_UPDATE_FREQ = 10
 REWARD_HISTORY_SIZE = 100
 CHECKPOINT_FREQ = 500
 LOG_REWARD_DIR = "logs/rew"
 CHECKPOINT_DIR = "checkpoints"
 ACTION_SIZE = 8
+MIN_REPLAY_SIZE = 1000  # Don't train until we have enough diverse experiences
 
 if PRINT_DEVICE:
     print(f"Using device: {DEVICE}")
@@ -39,20 +39,16 @@ class DQN(nn.Module):
         super().__init__()
         self.conv = nn.Sequential(
             nn.Conv2d(NUMBER_OF_SEQUENTIAL_FRAMES, 32, kernel_size=8, stride=4),
-            nn.BatchNorm2d(32),
             nn.ReLU(),
             nn.Conv2d(32, 64, kernel_size=4, stride=2),
-            nn.BatchNorm2d(64),
             nn.ReLU(),
             nn.Conv2d(64, 64, kernel_size=3, stride=1),
-            nn.BatchNorm2d(64),
             nn.ReLU()
         )
         # Automatically calculate flattened size
         conv_out_size = self._get_conv_out((NUMBER_OF_SEQUENTIAL_FRAMES, 60, 80))
         self.fc = nn.Sequential(
             nn.Linear(conv_out_size, 512),
-            nn.Dropout(0.2),
             nn.ReLU(),
             nn.Linear(512, action_size)
         )
@@ -68,21 +64,17 @@ class DQN(nn.Module):
 
 # Replay buffer
 class ReplayBuffer:
-    def __init__(self, capacity=1000):
-        capacity = capacity//2
-        self.buffer_neg = deque(maxlen=capacity)
-        self.buffer_pos = deque(maxlen=capacity)
+    def __init__(self, capacity=50000):
+        self.buffer = deque(maxlen=capacity)
     
     def push(self, state, action, reward, next_state, done):
-        if reward < 0:
-            self.buffer_neg.append((state, action, reward, next_state, done))
-        else:
-            self.buffer_pos.append((state, action, reward, next_state, done))
+        self.buffer.append((state, action, reward, next_state, done))
     
     def sample(self, batch_size):
-        return random.sample(self.buffer_neg, batch_size//2) + random.sample(self.buffer_pos, batch_size//2)
+        return random.sample(self.buffer, batch_size)
+    
     def __len__(self):
-        return min(len(self.buffer_neg), len(self.buffer_pos))
+        return len(self.buffer)
 
 def multibinary_to_index(action):
     """Convert [a, b, c] to single index 0-7"""
@@ -183,39 +175,55 @@ env = MarioLevelEnv(render_mode="human", number_of_sequential_frames=NUMBER_OF_S
 agent = DQNAgent(ACTION_SIZE, DEVICE)
 
 reward_history = deque(maxlen=REWARD_HISTORY_SIZE)
-step = 0
+
 for episode in range(N_EPISODES):
     state, _ = env.reset()
     state = torch.FloatTensor(state).to(DEVICE)
     total_reward = 0
+    steps_in_episode = 0
+    
     while True:
-        step += 1
+        steps_in_episode += 1
         action = agent.select_action(state, env)
         next_state, reward, terminated, truncated, info = env.step(action)
         done = terminated or truncated
         next_state = torch.FloatTensor(next_state).to(DEVICE)
+        
         agent.store_transition(state, action, reward, next_state, done)
-        agent.train_step()
-        agent.update_target_network()  # Soft update every step
+        
+        # Only train if we have enough experiences
+        if len(agent.replay_buffer) >= MIN_REPLAY_SIZE:
+            agent.train_step()
+            agent.update_target_network()  # Soft update every step
+        
         total_reward += reward
         state = next_state
+        
         if done:
             break
-    print(f"Episode {episode} finished with reward {total_reward}")
+    
+    # Decay epsilon AFTER each episode
     agent.decay_epsilon()
+    
     reward_history.append(total_reward)
+    
+    # Print every episode for debugging
+    print(f"Episode {episode}: Reward={total_reward:.2f}, Steps={steps_in_episode}, Epsilon={agent.epsilon:.4f}")
+    
     if len(reward_history) == REWARD_HISTORY_SIZE:
         avg_reward = sum(reward_history)/REWARD_HISTORY_SIZE
-        print(f"Episode {episode}; Average Reward: {avg_reward}")
-        # Save average reward to logs/rew directory
+        print(f"Episode {episode}; Average Reward: {avg_reward:.2f}")
+        
         import os
         os.makedirs(LOG_REWARD_DIR, exist_ok=True)
         log_path = os.path.join(LOG_REWARD_DIR, "avg_reward.txt")
         with open(log_path, "a") as f:
-            f.write(f"Episode {episode}; Average Reward: {avg_reward}\n")
-    if episode % 2 == 0:
+            f.write(f"Episode {episode}; Average Reward: {avg_reward:.2f}\n")
+    
+    if episode % 10 == 0:
         torch.cuda.empty_cache()
         import gc
         gc.collect()
-    if episode % CHECKPOINT_FREQ == 0:
+    
+    if episode % CHECKPOINT_FREQ == 0 and episode > 0:
         agent.save(episode)
