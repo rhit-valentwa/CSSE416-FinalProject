@@ -343,15 +343,17 @@ class Level1(tools._State):
         # check8 = checkpoint.Checkpoint(random.randint(510,8775), '8')
         # check9 = checkpoint.Checkpoint(random.randint(510,8775), '9')
         # check10 = checkpoint.Checkpoint(random.randint(510,8775), '10')
-        check11 = checkpoint.Checkpoint(8504, '11', 5, 6)
-        check12 = checkpoint.Checkpoint(8775, '12')
+        # check11 = checkpoint.Checkpoint(8504, '11', 5, 6)
+        # check12 = checkpoint.Checkpoint(8775, '12')
         # check13 = checkpoint.Checkpoint(2740, 'secret_mushroom', 360, 40, 12)
 
-        self.check_point_group = pg.sprite.Group(check1, check2, check3,
-                                                 check4, check5, check6,
-                                                 check7, check8, check9,
-                                                 check10, check11, check12,
-                                                 check13)
+        respawn_mid = checkpoint.Checkpoint(1000, 'respawn_mid', 10, 260)
+
+        self.check_point_group = pg.sprite.Group(
+            check1, check2, check3, check4, check5, check6,
+            check7, check8, check9, check10, check11, check12, check13,
+            respawn_mid
+        )
 
 
     def setup_spritegroups(self):
@@ -450,6 +452,16 @@ class Level1(tools._State):
                                                  self.check_point_group)
         if checkpoint:
             checkpoint.kill()
+
+            # --- NEW: NES-style respawn checkpoint ---
+            if checkpoint.name.startswith('respawn'):
+                print("Respawn checkpoint reached at x =", checkpoint.rect.x)
+                # Where the camera should open next time.
+                # Use the cp.x minus where you place Mario at load (+110).
+                target = max(0, checkpoint.rect.x)  # camera's left edge
+                # One-way: only move the respawn forward, never backward.
+                if self.game_info[c.CAMERA_START_X] < target:
+                    self.game_info[c.CAMERA_START_X] = target
 
             for i in range(1,11):
                 if checkpoint.name == str(i):

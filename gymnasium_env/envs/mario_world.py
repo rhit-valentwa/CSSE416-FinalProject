@@ -44,7 +44,7 @@ class MarioLevelEnv(gym.Env):
         height: int = 600,
         max_steps: int = 20000,
         frame_skip: int = 4,
-        number_of_sequential_frames: int = 16,
+        number_of_sequential_frames: int = 6,
         reward_cfg: dict | None = None,
     ):
         self.render_mode = render_mode
@@ -85,7 +85,7 @@ class MarioLevelEnv(gym.Env):
         self.prev_score = 0
         self.step_count = 0
         self.ticks_ms = 0
-        self.frame_buf = deque(maxlen=self.number_of_sequential_frames)
+        self.frame_buf = deque(maxlen=self.number_of_sequential_frames * 10)
         
         # Sticky keys: track currently held action
         self.held_action = None  # Action that's currently being held
@@ -118,7 +118,7 @@ class MarioLevelEnv(gym.Env):
         info = self._info(False, False)
         if self.render_mode == "human":
             self.render()
-        return np.stack(self.frame_buf, axis=0), info
+        return np.stack(list(self.frame_buf)[-self.number_of_sequential_frames:], axis=0), info
 
     def step(self, action: int):
         total_reward = -0.01
@@ -184,7 +184,12 @@ class MarioLevelEnv(gym.Env):
         if self.render_mode == "human":
             self.render()
 
-        return np.stack(self.frame_buf, axis=0), float(r), terminated, truncated, info
+        temp = list(self.frame_buf)[-4:]
+        temp.append( list(self.frame_buf)[29] if len(self.frame_buf) > 29 else self.frame_buf[-5])
+        temp.append( self.frame_buf[0])
+
+
+        return np.stack(temp, axis=0), float(r), terminated, truncated, info
 
     def render(self):
         if self.render_mode == "human":

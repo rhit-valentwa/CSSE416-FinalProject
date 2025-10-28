@@ -16,7 +16,7 @@ class DQN(nn.Module):
     def __init__(self, action_size):
         super().__init__()
         self.conv = nn.Sequential(
-            nn.Conv2d(16, 32, kernel_size=8, stride=4),
+            nn.Conv2d(6, 32, kernel_size=8, stride=4),
             nn.BatchNorm2d(32),
             nn.ReLU(),
             nn.Conv2d(32, 64, kernel_size=4, stride=2),
@@ -28,7 +28,7 @@ class DQN(nn.Module):
         )
         
         # Automatically calculate flattened size
-        conv_out_size = self._get_conv_out((16, 60, 80))
+        conv_out_size = self._get_conv_out((6, 60, 80))
         
         self.fc = nn.Sequential(
             nn.Linear(conv_out_size, 512),
@@ -88,7 +88,7 @@ q_network = DQN(action_size).to(device)
 target_network = DQN(action_size).to(device)
 target_network.load_state_dict(q_network.state_dict())
 
-optimizer = optim.Adam(q_network.parameters(), lr=1e-5)
+optimizer = optim.Adam(q_network.parameters(), lr=5e-6)
 # scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=1000, gamma=0.9)
 replay_buffer = ReplayBuffer(50000)
 
