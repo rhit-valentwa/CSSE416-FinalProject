@@ -9,6 +9,8 @@ from gymnasium_env.envs.mario_world import MarioLevelEnv
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
+NUMBER_OF_SEQUENTIAL_FRAMES = 6
+
 # Deep Q-Network
 # This is the very same network structure used in the DQN paper
 # https://arxiv.org/abs/1312.5602
@@ -16,7 +18,7 @@ class DQN(nn.Module):
     def __init__(self, action_size):
         super().__init__()
         self.conv = nn.Sequential(
-            nn.Conv2d(16, 32, kernel_size=8, stride=4),
+            nn.Conv2d(NUMBER_OF_SEQUENTIAL_FRAMES, 32, kernel_size=8, stride=4),
             nn.BatchNorm2d(32),
             nn.ReLU(),
             nn.Conv2d(32, 64, kernel_size=4, stride=2),
@@ -28,7 +30,7 @@ class DQN(nn.Module):
         )
         
         # Automatically calculate flattened size
-        conv_out_size = self._get_conv_out((16, 60, 80))
+        conv_out_size = self._get_conv_out((NUMBER_OF_SEQUENTIAL_FRAMES, 60, 80))
         
         self.fc = nn.Sequential(
             nn.Linear(conv_out_size, 512),
@@ -78,7 +80,7 @@ def index_to_multibinary(index):
     ])
 
 # Training loop
-env = MarioLevelEnv(render_mode="human")
+env = MarioLevelEnv(render_mode="human", number_of_sequential_frames=NUMBER_OF_SEQUENTIAL_FRAMES)
 # state_size = 75*100 # env.observation_space.shape[0]
 action_size = 8 # env.action_space.n
 

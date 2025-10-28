@@ -44,7 +44,7 @@ class MarioLevelEnv(gym.Env):
         height: int = 600,
         max_steps: int = 20000,
         frame_skip: int = 4,
-        number_of_sequential_frames: int = 16,
+        number_of_sequential_frames: int = 4,
         reward_cfg: dict | None = None,
     ):
         self.render_mode = render_mode
