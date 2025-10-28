@@ -44,7 +44,7 @@ class MarioLevelEnv(gym.Env):
         height: int = 600,
         max_steps: int = 20000,
         frame_skip: int = 4,
-        number_of_sequential_frames: int = 4,
+        number_of_sequential_frames: int = 16,
         reward_cfg: dict | None = None,
     ):
         self.render_mode = render_mode
@@ -150,8 +150,10 @@ class MarioLevelEnv(gym.Env):
             mario_dead = self.persist.get(c.MARIO_DEAD, False) or getattr(self.level.mario, "dead", False)
             level_done = bool(getattr(self.level, "done", False))
             if mario_dead:
-                r += self.rw["death_penalty"]
-                terminated = True
+                self.persist[c.LIVES] -= 1
+                if( self.persist[c.LIVES] <= 0):
+                    r += self.rw["death_penalty"]
+                    terminated = True
             elif level_done:
                 r += self.rw["win_bonus"]
                 terminated = True

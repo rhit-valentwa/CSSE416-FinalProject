@@ -343,8 +343,8 @@ class Level1(tools._State):
         # check8 = checkpoint.Checkpoint(random.randint(510,8775), '8')
         # check9 = checkpoint.Checkpoint(random.randint(510,8775), '9')
         # check10 = checkpoint.Checkpoint(random.randint(510,8775), '10')
-        # check11 = checkpoint.Checkpoint(8504, '11', 5, 6)
-        # check12 = checkpoint.Checkpoint(8775, '12')
+        check11 = checkpoint.Checkpoint(8504, '11', 5, 6)
+        check12 = checkpoint.Checkpoint(8775, '12')
         # check13 = checkpoint.Checkpoint(2740, 'secret_mushroom', 360, 40, 12)
 
         self.check_point_group = pg.sprite.Group(check1, check2, check3,
