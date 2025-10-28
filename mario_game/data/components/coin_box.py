@@ -129,9 +129,9 @@ class Coin_box(pg.sprite.Sprite):
             self.group.add(coin.Coin(self.rect.centerx,
                                      self.rect.y,
                                      score_group))
-            setup.SFX['coin'].play()
-        else:
-            setup.SFX['powerup_appears'].play()
+            # setup.SFX['coin'].play()
+        # else:
+            # setup.SFX['powerup_appears'].play()
 
 
     def opened(self):

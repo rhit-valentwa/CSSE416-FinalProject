@@ -9,6 +9,9 @@ from gymnasium import spaces
 from mario_game.data.states.level1 import Level1
 from mario_game.data import constants as c
 from mario_game.data import setup
+import torch
+import torch.nn.functional as F
+from collections import deque
 
 JUMP_KEYS = (pg.K_a,)
 RIGHT_KEYS = (pg.K_RIGHT,)
@@ -17,9 +20,11 @@ DUCK_KEYS  = (pg.K_DOWN, pg.K_s)
 
 COMBO_ACTIONS = [
     set(RIGHT_KEYS),                              # 0: Right
-    set(JUMP_KEYS),                               # 1: Jump
+    set(JUMP_KEYS),                             # 1: Jump
     set(LEFT_KEYS),                               # 2: Left
 ]
+GRAY_WEIGHTS = torch.tensor([0.299, 0.587, 0.114], dtype=torch.float32).view(1, 3, 1, 1)
+
 
 
 class _KeysProxy: # Mimics pygame.key.get_pressed()
@@ -34,34 +39,34 @@ class MarioLevelEnv(gym.Env):
 
     def __init__(
         self,
-        render_mode: str | None = None,
+        render_mode: str = "rgb_array",
         width: int = 800,
         height: int = 600,
-        max_steps: int = 50_000,
-        frame_skip: int = 4,              # repeat each action this many frames
+        max_steps: int = 20000,
+        frame_skip: int = 4,
+        number_of_sequential_frames: int = 16,
         reward_cfg: dict | None = None,
     ):
-        assert render_mode in (None, "human", "rgb_array")
         self.render_mode = render_mode
         self.width, self.height = int(width), int(height)
         self.max_steps = int(max_steps)
         self.frame_skip = int(frame_skip)
+        self.number_of_sequential_frames = number_of_sequential_frames
 
         self.action_space = spaces.MultiBinary(len(COMBO_ACTIONS))
-        self.observation_space = spaces.Box(low=0, high=255, shape=(self.height, self.width, 1), dtype=np.uint8)
+        self.observation_space = spaces.Box(low=0, high=255, shape=(self.number_of_sequential_frames, self.height, self.width), dtype=np.uint8)
 
         self.rw = {
             "dx_scale": 0.05,
-            "score_scale": 0.01,
-            "death_penalty": -50.0,
-            "win_bonus": 100.0,
-            "jump_tap_cost": -0.9,
-            "jump_hold_cost": -0.1,
+            "score_scale": 0.0001,
+            "death_penalty": 0,
+            "win_bonus": 2.0,
+            "jump_tap_cost": 0,
+            "jump_hold_cost": 0,
         }
         if reward_cfg:
             self.rw.update(reward_cfg)
 
-        # Headless safety when not rendering a window
         if self.render_mode != "human":
             os.environ.setdefault("SDL_VIDEODRIVER", "dummy")
 
@@ -70,7 +75,7 @@ class MarioLevelEnv(gym.Env):
         if self.render_mode == "human":
             self.display = pg.display.set_mode((self.width, self.height))
         else:
-            self.display = pg.Surface((self.width, self.height))
+             self.display = pg.Surface((self.width, self.height))
         self.surface = self.display
         self.clock = pg.time.Clock()
 
@@ -80,11 +85,16 @@ class MarioLevelEnv(gym.Env):
         self.prev_score = 0
         self.step_count = 0
         self.ticks_ms = 0
+        self.frame_buf = deque(maxlen=self.number_of_sequential_frames)
+        
+        # Sticky keys: track currently held action
+        self.held_action = None  # Action that's currently being held
 
     def reset(self, seed: int | None = None, options: dict | None = None):
         super().reset(seed=seed)
         self.step_count = 0
         self.ticks_ms = 0
+        self.held_action = None  # Reset held action
 
         self.persist = {
             c.SCORE: 0,
@@ -102,68 +112,79 @@ class MarioLevelEnv(gym.Env):
         self.prev_x = self.level.mario.rect.x
         self.prev_score = self.persist[c.SCORE]
 
-        obs = self._frame()
+        for _ in range(self.number_of_sequential_frames):
+            self.frame_buf.append(self._frame())
+        
         info = self._info(False, False)
         if self.render_mode == "human":
             self.render()
-        return obs, info
+        return np.stack(self.frame_buf, axis=0), info
 
     def step(self, action: int):
-
-        total_reward = 0.0
+        total_reward = -0.01
         terminated = False
 
+        action_tuple = tuple(action)
+        
+        # Update held action if new action is provided
+        # Action [0,0,0] means "keep holding current action"
+        # if any(action):  # If any key is pressed
+        self.held_action = action_tuple
+        # If action is [0,0,0] and we have a held action, keep it
+        # Otherwise use the current action
+        
+        if self.held_action is None:
+            self.held_action = action_tuple
+        
+        # Use the held action for this step
         pressed = set()
-        for i, v in enumerate(action):
+        for i, v in enumerate(self.held_action):
             if v:
                 pressed.update(COMBO_ACTIONS[i])
-        is_jump_pressed = any(k in pressed for k in JUMP_KEYS)
-
+        self.step_count += 1
+        # Execute the held action for frame_skip frames
+        r = -0.01
         for i in range(self.frame_skip):
-            self.step_count += 1
             self.ticks_ms += int(1000 / self.metadata["render_fps"])
             self.level.update(self.surface, _KeysProxy(pressed), self.ticks_ms)
-            x = self.level.mario.rect.x
-            dx = x - self.prev_x
-            score = self.persist[c.SCORE]
-            dscore = score - self.prev_score
-
-            r = 0.0
-            r += self.rw["dx_scale"] * dx
-            r += self.rw["score_scale"] * dscore
-            if dx < 0:
-                r -= 0.02 * abs(dx)
-
-            if is_jump_pressed:
-                if i == 0:
-                    r += self.rw["jump_tap_cost"]
-                else:
-                    r += self.rw["jump_hold_cost"]
-
             mario_dead = self.persist.get(c.MARIO_DEAD, False) or getattr(self.level.mario, "dead", False)
             level_done = bool(getattr(self.level, "done", False))
             if mario_dead:
-                r += self.rw["death_penalty"]
-                terminated = True
+                self.persist[c.LIVES] -= 1
+                if( self.persist[c.LIVES] <= 0):
+                    r += self.rw["death_penalty"]
+                    terminated = True
             elif level_done:
                 r += self.rw["win_bonus"]
                 terminated = True
-
-            total_reward += r
-            self.prev_x = x
-            self.prev_score = score
-
             if terminated or self.step_count >= self.max_steps:
                 break
 
+        x = self.level.mario.rect.x
+        dx = x - self.prev_x
+        score = self.persist[c.SCORE]
+        dscore = score - self.prev_score
+        r += self.rw["dx_scale"] * dx
+        r += self.rw["score_scale"] * dscore
+        # print(f"dx: {dx}, dscore: {dscore}, reward: {r}")
+
+        if r > 5 or r < -5:
+            r = 0
+
+        total_reward += r
+        self.prev_x = x
+        self.prev_score = score
+
+
         truncated = self.step_count >= self.max_steps
-        obs = self._frame()
         info = self._info(terminated, truncated)
+
+        self.frame_buf.append(self._frame())
 
         if self.render_mode == "human":
             self.render()
 
-        return obs, float(total_reward), terminated, truncated, info
+        return np.stack(self.frame_buf, axis=0), float(r), terminated, truncated, info
 
     def render(self):
         if self.render_mode == "human":
@@ -187,9 +208,25 @@ class MarioLevelEnv(gym.Env):
         return _KeysProxy(pressed)
 
     def _frame(self) -> np.ndarray:
+        # (H, W, 3) uint8 from pygame
         rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
-        gray = (0.299*rgb[...,0] + 0.587*rgb[...,1] + 0.114*rgb[...,2]).astype(np.uint8) # had to look up what a "lumeance conversion" is
-        return gray[..., None]
+
+        # -> float32 [0,1], CHW, add batch
+        t = torch.from_numpy(rgb).to(torch.float32).div_(255.0).permute(2, 0, 1).unsqueeze(0)  # (1,3,H,W)
+
+        # resize to (60, 80)
+        t_small = F.interpolate(t, size=(60, 80), mode='bilinear', align_corners=False)        # (1,3,60,80)
+
+        # grayscale in [0,1]
+        w = GRAY_WEIGHTS.to(t_small.device)
+        gray = (t_small * w).sum(dim=1, keepdim=True)                                          # (1,1,60,80)
+
+        # return (60,80) float32, normalized
+        return gray.squeeze(0).squeeze(0).cpu().numpy()
+
+            # rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
+            # gray = (0.299*rgb[...,0] + 0.587*rgb[...,1] + 0.114*rgb[...,2]).astype(np.uint8)
+            # return gray
 
     def _info(self, terminated: bool, truncated: bool) -> dict:
         return {

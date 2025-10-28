@@ -1,18 +1,31 @@
 from gymnasium_env.envs.mario_world import MarioLevelEnv
 
-env = MarioLevelEnv(render_mode="human")
-num_episodes = 25
+class Agent:
+    def run(self):
+        env = MarioLevelEnv(render_mode="human")
+        num_episodes = 25
+        num_states = env.observation_space.shape[0]
+        num_actions = env.action_space.n
 
-for ep in range(1, num_episodes + 1):
-    obs, info = env.reset()
-    done = False
-    trunc = False
-    ep_return = 0.0
+        rewards_per_episode = []
 
-    while not (done or trunc):
-        action = env.action_space.sample()
-        obs, rew, done, trunc, info = env.step(action)
-        ep_return += rew
+        # policy_dqn = DQN(state_size=num_states, action_size=num_actions)
 
-    print(f"Episode {ep}: total reward = {ep_return:.2f}")
-env.close()
+        for ep in range(1, num_episodes + 1):
+            obs, info = env.reset()
+            done = False
+            trunc = False
+            ep_reward = 0.0
+
+            while not (done or trunc):
+                action = env.action_space.sample()
+                obs, reward, done, trunc, info = env.step(action)
+                ep_reward += reward
+
+            print(f"Episode {ep}: total reward = {ep_reward:.2f}")
+            rewards_per_episode.append(ep_reward)
+        env.close()
+
+if __name__ == "__main__":
+    agent = Agent()
+    agent.run()

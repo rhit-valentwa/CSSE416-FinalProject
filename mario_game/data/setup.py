@@ -16,8 +16,8 @@ SCREEN = pg.display.set_mode(c.SCREEN_SIZE)
 SCREEN_RECT = SCREEN.get_rect()
 
 FONTS = tools.load_all_fonts(os.path.join("mario_game", "resources","fonts"))
-MUSIC = tools.load_all_music(os.path.join("mario_game", "resources","music"))
+# MUSIC = tools.load_all_music(os.path.join("mario_game", "resources","music"))
 GFX   = tools.load_all_gfx(os.path.join("mario_game", "resources","graphics"))
-SFX   = tools.load_all_sfx(os.path.join("mario_game", "resources","sound"))
+# SFX   = tools.load_all_sfx(os.path.join("mario_game", "resources","sound"))
 
 
