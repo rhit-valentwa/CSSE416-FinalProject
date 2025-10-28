@@ -35,7 +35,7 @@ class _KeysProxy: # Mimics pygame.key.get_pressed()
 
 
 class MarioLevelEnv(gym.Env):
-    metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 30}
+    metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 60}
 
     def __init__(
         self,
@@ -44,7 +44,7 @@ class MarioLevelEnv(gym.Env):
         height: int = 600,
         max_steps: int = 20000,
         frame_skip: int = 4,
-        number_of_sequential_frames: int = 4,
+        number_of_sequential_frames: int = 6,
         reward_cfg: dict | None = None,
     ):
         self.render_mode = render_mode
@@ -85,7 +85,7 @@ class MarioLevelEnv(gym.Env):
         self.prev_score = 0
         self.step_count = 0
         self.ticks_ms = 0
-        self.frame_buf = deque(maxlen=self.number_of_sequential_frames)
+        self.frame_buf = deque(maxlen=self.number_of_sequential_frames * 10)
         
         # Sticky keys: track currently held action
         self.held_action = None  # Action that's currently being held
@@ -118,21 +118,7 @@ class MarioLevelEnv(gym.Env):
         info = self._info(False, False)
         if self.render_mode == "human":
             self.render()
-        return np.stack(self.frame_buf, axis=0), info
-    
-    def _restart_level(self):
-        """Restart Level1 in-place (same persist) for death respawn."""
-        # Make sure pygame draws into the same surface
-        setup.SCREEN = self.surface
-
-        # Recreate the level using the SAME persist dict
-        self.level = Level1()
-        self.level.startup(current_time=self.ticks_ms, persist=self.persist)
-
-        # Clear death flags the level may have set
-        self.persist[c.MARIO_DEAD] = False
-        if hasattr(self.level.mario, "dead"):
-            self.level.mario.dead = False
+        return np.stack(list(self.frame_buf)[-self.number_of_sequential_frames:], axis=0), info
 
     def step(self, action: int):
         total_reward = -0.01
@@ -163,35 +149,16 @@ class MarioLevelEnv(gym.Env):
             self.level.update(self.surface, _KeysProxy(pressed), self.ticks_ms)
             mario_dead = self.persist.get(c.MARIO_DEAD, False) or getattr(self.level.mario, "dead", False)
             level_done = bool(getattr(self.level, "done", False))
-            # inside the frame-skip loop, after self.level.update(...)
-            level_done = bool(getattr(self.level, "done", False))
-            if level_done:
-                nxt = getattr(self.level, "next", None)
-
-                if nxt == c.LOAD_SCREEN and self.persist.get(c.LIVES, 0) > 0:
-                    # Death with lives left → restart level (respawn)
-                    self._restart_level()
-                    self.persist[c.MARIO_DEAD] = False
-                    if hasattr(self.level.mario, "dead"):
-                        self.level.mario.dead = False
-                    self.prev_x = self.level.mario.rect.x
-                    self.prev_score = self.persist[c.SCORE]
-                    break
-
-                elif nxt == c.TIME_OUT:
-                    terminated = True
-
-                elif nxt == c.MAIN_MENU:
-                    r += self.rw["win_bonus"]
-                    terminated = True
-
-                elif nxt == c.GAME_OVER:
+            if mario_dead:
+                self.persist[c.LIVES] -= 1
+                if( self.persist[c.LIVES] <= 0):
                     r += self.rw["death_penalty"]
                     terminated = True
-
-                else:
-                    terminated = True
-
+            elif level_done:
+                r += self.rw["win_bonus"]
+                terminated = True
+            if terminated or self.step_count >= self.max_steps:
+                break
 
         x = self.level.mario.rect.x
         dx = x - self.prev_x
@@ -217,7 +184,12 @@ class MarioLevelEnv(gym.Env):
         if self.render_mode == "human":
             self.render()
 
-        return np.stack(self.frame_buf, axis=0), float(r), terminated, truncated, info
+        temp = list(self.frame_buf)[-4:]
+        temp.append( list(self.frame_buf)[29] if len(self.frame_buf) > 29 else self.frame_buf[-5])
+        temp.append( self.frame_buf[0])
+
+
+        return np.stack(temp, axis=0), float(r), terminated, truncated, info
 
     def render(self):
         if self.render_mode == "human":
