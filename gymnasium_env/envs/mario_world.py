@@ -35,7 +35,7 @@ class _KeysProxy: # Mimics pygame.key.get_pressed()
 
 
 class MarioLevelEnv(gym.Env):
-    metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 60}
+    metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 30}
 
     def __init__(
         self,

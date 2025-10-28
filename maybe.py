@@ -9,7 +9,7 @@ from gymnasium_env.envs.mario_world import MarioLevelEnv
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
-NUMBER_OF_SEQUENTIAL_FRAMES = 6
+NUMBER_OF_SEQUENTIAL_FRAMES = 4
 
 # Deep Q-Network
 # This is the very same network structure used in the DQN paper
