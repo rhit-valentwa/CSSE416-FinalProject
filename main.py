@@ -93,6 +93,7 @@ def index_to_multibinary(index):
 # DQNAgent Class
 # =============================
 class DQNAgent:
+    
     def __init__(self, action_size, device):
         self.device = device
         self.action_size = action_size
@@ -168,11 +169,21 @@ class DQNAgent:
             'epsilon': self.epsilon,
         }, checkpoint_path)
 
+
+    def load(self, checkpoint_path):
+        """Load a saved checkpoint into the agent's networks and optimizer."""
+        checkpoint = torch.load(checkpoint_path, map_location=self.device)
+        self.q_network.load_state_dict(checkpoint['q_network_state_dict'])
+        self.target_network.load_state_dict(checkpoint['target_network_state_dict'])
+        self.optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+        self.epsilon = checkpoint.get('epsilon', self.epsilon)
+
 # =============================
 # Training Loop
 # =============================
 env = MarioLevelEnv(render_mode="human", number_of_sequential_frames=NUMBER_OF_SEQUENTIAL_FRAMES)
 agent = DQNAgent(ACTION_SIZE, DEVICE)
+agent.load('checkpoints/oct_27_night_episode_1500.pth')
 
 reward_history = deque(maxlen=REWARD_HISTORY_SIZE)
 

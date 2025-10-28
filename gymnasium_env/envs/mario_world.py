@@ -159,14 +159,18 @@ class MarioLevelEnv(gym.Env):
                     break
                 elif nxt == c.TIME_OUT:
                     terminated = True
+                    print("Time out!")
                 elif nxt == c.MAIN_MENU:
                     r += self.rw["win_bonus"]
+                    print("Mario won!")
                     terminated = True
                 elif nxt == c.GAME_OVER:
                     r += self.rw["death_penalty"]
                     terminated = True
+                    print("Mario died!")
                 else:
                     terminated = True
+                    print("Level ended! (else)")
         x = self.level.mario.rect.x
         dx = x - self.prev_x
         score = self.persist[c.SCORE]
