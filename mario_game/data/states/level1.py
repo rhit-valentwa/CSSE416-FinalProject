@@ -347,7 +347,7 @@ class Level1(tools._State):
         # check12 = checkpoint.Checkpoint(8775, '12')
         # check13 = checkpoint.Checkpoint(2740, 'secret_mushroom', 360, 40, 12)
 
-        respawn_mid = checkpoint.Checkpoint(1000, 'respawn_mid', 10, 260)
+        respawn_mid = checkpoint.Checkpoint(3000, 'respawn_mid', 10, 260)
 
         self.check_point_group = pg.sprite.Group(
             check1, check2, check3, check4, check5, check6,
@@ -455,7 +455,7 @@ class Level1(tools._State):
 
             # --- NEW: NES-style respawn checkpoint ---
             if checkpoint.name.startswith('respawn'):
-                print("Respawn checkpoint reached at x =", checkpoint.rect.x)
+                # print("Respawn checkpoint reached at x =", checkpoint.rect.x)
                 # Where the camera should open next time.
                 # Use the cp.x minus where you place Mario at load (+110).
                 target = max(0, checkpoint.rect.x)  # camera's left edge
