@@ -163,9 +163,14 @@ class MarioLevelEnv(gym.Env):
             self.level.update(self.surface, _KeysProxy(pressed), self.ticks_ms)
             mario_dead = self.persist.get(c.MARIO_DEAD, False) or getattr(self.level.mario, "dead", False)
             level_done = bool(getattr(self.level, "done", False))
-            # inside the frame-skip loop, after self.level.update(...)
-            level_done = bool(getattr(self.level, "done", False))
-            if level_done:
+            st = getattr(self.level.mario, "state", None)
+            # print("state:", st)
+            if st == c.FLAGPOLE:
+                r += self.rw["win_bonus"]
+                print("Mario won!")
+                terminated = True
+                break
+            elif level_done:
                 nxt = getattr(self.level, "next", None)
 
                 if nxt == c.LOAD_SCREEN and self.persist.get(c.LIVES, 0) > 0:
@@ -181,9 +186,9 @@ class MarioLevelEnv(gym.Env):
                 elif nxt == c.TIME_OUT:
                     terminated = True
 
-                elif nxt == c.MAIN_MENU:
-                    r += self.rw["win_bonus"]
-                    terminated = True
+                # elif nxt == c.MAIN_MENU:
+                #     r += self.rw["win_bonus"]
+                #     terminated = True
 
                 elif nxt == c.GAME_OVER:
                     r += self.rw["death_penalty"]
