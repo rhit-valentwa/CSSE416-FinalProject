@@ -1,7 +1,8 @@
-from __future__ import annotations
+
+# =============================
+# Imports and Constants
+# =============================
 import os
-from enum import Enum
-from typing import Set
 import numpy as np
 import pygame as pg
 import gymnasium as gym
@@ -13,29 +14,29 @@ import torch
 import torch.nn.functional as F
 from collections import deque
 
+# Key mappings
 JUMP_KEYS = (pg.K_a,)
 RIGHT_KEYS = (pg.K_RIGHT,)
 LEFT_KEYS  = (pg.K_LEFT,)
 DUCK_KEYS  = (pg.K_DOWN, pg.K_s)
 
+# Action combinations
 COMBO_ACTIONS = [
-    set(RIGHT_KEYS),                              # 0: Right
-    set(JUMP_KEYS),                             # 1: Jump
-    set(LEFT_KEYS),                               # 2: Left
+    set(RIGHT_KEYS),  # 0: Right
+    set(JUMP_KEYS),   # 1: Jump
+    set(LEFT_KEYS),   # 2: Left
 ]
+
+# Grayscale weights for frame processing
 GRAY_WEIGHTS = torch.tensor([0.299, 0.587, 0.114], dtype=torch.float32).view(1, 3, 1, 1)
 
 
-
-class _KeysProxy: # Mimics pygame.key.get_pressed()
-    def __init__(self, pressed=None):
-        self._pressed = set(pressed or [])
-    def __getitem__(self, keycode: int) -> int:
-        return 1 if keycode in self._pressed else 0
-
-
+# =============================
+# MarioLevelEnv Class
+# =============================
 class MarioLevelEnv(gym.Env):
-    metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 30}
+    """Custom Gymnasium environment for Mario Level."""
+    metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 60}
 
     def __init__(
         self,
@@ -44,9 +45,10 @@ class MarioLevelEnv(gym.Env):
         height: int = 600,
         max_steps: int = 20000,
         frame_skip: int = 4,
-        number_of_sequential_frames: int = 4,
+        number_of_sequential_frames: int = 16,
         reward_cfg: dict | None = None,
     ):
+        """Initialize the MarioLevelEnv environment."""
         self.render_mode = render_mode
         self.width, self.height = int(width), int(height)
         self.max_steps = int(max_steps)
@@ -57,12 +59,13 @@ class MarioLevelEnv(gym.Env):
         self.observation_space = spaces.Box(low=0, high=255, shape=(self.number_of_sequential_frames, self.height, self.width), dtype=np.uint8)
 
         self.rw = {
-            "dx_scale": 0.05,
-            "score_scale": 0.0001,
-            "death_penalty": 0,
-            "win_bonus": 2.0,
+            "dx_scale": 0.1,
+            "score_scale": 0.001,
+            "death_penalty": -150,
+            "win_bonus": 500.0,
             "jump_tap_cost": 0,
             "jump_hold_cost": 0,
+            "time_penalty": -0.02,
         }
         if reward_cfg:
             self.rw.update(reward_cfg)
@@ -75,7 +78,7 @@ class MarioLevelEnv(gym.Env):
         if self.render_mode == "human":
             self.display = pg.display.set_mode((self.width, self.height))
         else:
-             self.display = pg.Surface((self.width, self.height))
+            self.display = pg.Surface((self.width, self.height))
         self.surface = self.display
         self.clock = pg.time.Clock()
 
@@ -86,15 +89,14 @@ class MarioLevelEnv(gym.Env):
         self.step_count = 0
         self.ticks_ms = 0
         self.frame_buf = deque(maxlen=self.number_of_sequential_frames)
-        
-        # Sticky keys: track currently held action
         self.held_action = None  # Action that's currently being held
 
     def reset(self, seed: int | None = None, options: dict | None = None):
+        """Reset the environment to the initial state."""
         super().reset(seed=seed)
         self.step_count = 0
         self.ticks_ms = 0
-        self.held_action = None  # Reset held action
+        self.held_action = None
 
         self.persist = {
             c.SCORE: 0,
@@ -103,80 +105,57 @@ class MarioLevelEnv(gym.Env):
             c.LIVES: 3,
             c.CAMERA_START_X: 0,
         }
-
         setup.SCREEN = self.surface
-
         self.level = Level1()
         self.level.startup(current_time=self.ticks_ms, persist=self.persist)
-
         self.prev_x = self.level.mario.rect.x
         self.prev_score = self.persist[c.SCORE]
-
         for _ in range(self.number_of_sequential_frames):
             self.frame_buf.append(self._frame())
-        
         info = self._info(False, False)
         if self.render_mode == "human":
             self.render()
-        return np.stack(self.frame_buf, axis=0), info
-    
+        obs = self._get_stacked_frames()
+        return obs, info
+
     def _restart_level(self):
         """Restart Level1 in-place (same persist) for death respawn."""
-        # Make sure pygame draws into the same surface
         setup.SCREEN = self.surface
-
-        # Recreate the level using the SAME persist dict
         self.level = Level1()
         self.level.startup(current_time=self.ticks_ms, persist=self.persist)
-
-        # Clear death flags the level may have set
         self.persist[c.MARIO_DEAD] = False
         if hasattr(self.level.mario, "dead"):
             self.level.mario.dead = False
 
     def step(self, action: int):
-        total_reward = -0.01
+        """Take an action in the environment."""
+        total_reward = self.rw["time_penalty"]
         terminated = False
-
         action_tuple = tuple(action)
-        
-        # Update held action if new action is provided
-        # Action [0,0,0] means "keep holding current action"
-        # if any(action):  # If any key is pressed
         self.held_action = action_tuple
-        # If action is [0,0,0] and we have a held action, keep it
-        # Otherwise use the current action
-        
         if self.held_action is None:
             self.held_action = action_tuple
-        
-        # Use the held action for this step
         pressed = set()
         for i, v in enumerate(self.held_action):
             if v:
                 pressed.update(COMBO_ACTIONS[i])
         self.step_count += 1
-
-        # Execute the held action for frame_skip frames
         r = -0.01
         for i in range(self.frame_skip):
-            # Slow down timer to match original Mario timing
-            self.ticks_ms += int(1000/60) #int(1000 / self.metadata["render_fps"])
+            self.ticks_ms += int(1000 / self.metadata["render_fps"])
             self.level.update(self.surface, _KeysProxy(pressed), self.ticks_ms)
             mario_dead = self.persist.get(c.MARIO_DEAD, False) or getattr(self.level.mario, "dead", False)
             level_done = bool(getattr(self.level, "done", False))
             st = getattr(self.level.mario, "state", None)
             # print("state:", st)
             if st == c.FLAGPOLE:
-                r += self.rw["win_bonus"]
-                print("Mario won!")
-                terminated = True
-                break
-            elif level_done:
+                    r += self.rw["win_bonus"]
+                    print("Mario won!")
+                    terminated = True
+                    break
+            if level_done:
                 nxt = getattr(self.level, "next", None)
-
                 if nxt == c.LOAD_SCREEN and self.persist.get(c.LIVES, 0) > 0:
-                    # Death with lives left → restart level (respawn)
                     self._restart_level()
                     self.persist[c.MARIO_DEAD] = False
                     if hasattr(self.level.mario, "dead"):
@@ -184,49 +163,58 @@ class MarioLevelEnv(gym.Env):
                     self.prev_x = self.level.mario.rect.x
                     self.prev_score = self.persist[c.SCORE]
                     break
-
                 elif nxt == c.TIME_OUT:
                     terminated = True
-
-                # elif nxt == c.MAIN_MENU:
-                #     r += self.rw["win_bonus"]
-                #     terminated = True
-
+                    print("Time out!")
                 elif nxt == c.GAME_OVER:
                     r += self.rw["death_penalty"]
                     terminated = True
-
+                    print("Mario died!")
                 else:
                     terminated = True
-
-
+                    print("Level ended! (else)")
         x = self.level.mario.rect.x
         dx = x - self.prev_x
         score = self.persist[c.SCORE]
         dscore = score - self.prev_score
         r += self.rw["dx_scale"] * dx
         r += self.rw["score_scale"] * dscore
-        # print(f"dx: {dx}, dscore: {dscore}, reward: {r}")
-
-        if r > 5 or r < -5:
-            r = 0
-
+        # if r > 5 or r < -5:
+        #     r = 0
         total_reward += r
         self.prev_x = x
         self.prev_score = score
-
-
         truncated = self.step_count >= self.max_steps
         info = self._info(terminated, truncated)
-
         self.frame_buf.append(self._frame())
-
         if self.render_mode == "human":
             self.render()
+        obs = self._get_stacked_frames()
+        return obs, float(r), terminated, truncated, info
+    
 
-        return np.stack(self.frame_buf, axis=0), float(r), terminated, truncated, info
+    def _get_stacked_frames(self):
+        """Return a stack of frames: 4 most recent, rest randomly sampled from last 64 frames."""
+        num_frames = self.number_of_sequential_frames
+        buf = list(self.frame_buf)
+        n_buf = len(buf)
+        # Always take the 4 most recent frames
+        most_recent = buf[-4:] if n_buf >= 4 else buf[:]
+        # For the rest, sample randomly from the last 64 (excluding the most recent 4)
+        sample_pool = buf[max(0, n_buf-64):max(0, n_buf-4)] if n_buf > 4 else []
+        n_sample = max(0, num_frames - len(most_recent))
+        if sample_pool and n_sample > 0:
+            idxs = np.random.choice(len(sample_pool), size=n_sample, replace=True)
+            sampled = [sample_pool[i] for i in idxs]
+        else:
+            # If not enough, repeat the oldest available
+            sampled = [buf[0]] * n_sample if buf else []
+        frames = most_recent + sampled
+        return np.stack(frames, axis=0)
+
 
     def render(self):
+        """Render the environment."""
         if self.render_mode == "human":
             for event in pg.event.get():
                 if event.type == pg.QUIT:
@@ -236,39 +224,33 @@ class MarioLevelEnv(gym.Env):
         elif self.render_mode == "rgb_array":
             return self._frame()
 
+
     def close(self):
+        """Close the environment and clean up resources."""
         try:
             pg.display.quit()
             pg.quit()
         except Exception:
             pass
 
-    def _map_action(self, a: int) -> _KeysProxy:
+
+    def _map_action(self, a: int) -> '_KeysProxy':
         pressed = set(COMBO_ACTIONS[a])
         return _KeysProxy(pressed)
 
+
     def _frame(self) -> np.ndarray:
-        # (H, W, 3) uint8 from pygame
+        """Process the current frame and return a normalized grayscale image."""
         rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
-
-        # -> float32 [0,1], CHW, add batch
-        t = torch.from_numpy(rgb).to(torch.float32).div_(255.0).permute(2, 0, 1).unsqueeze(0)  # (1,3,H,W)
-
-        # resize to (60, 80)
-        t_small = F.interpolate(t, size=(60, 80), mode='bilinear', align_corners=False)        # (1,3,60,80)
-
-        # grayscale in [0,1]
+        t = torch.from_numpy(rgb).to(torch.float32).div_(255.0).permute(2, 0, 1).unsqueeze(0)
+        t_small = F.interpolate(t, size=(60, 80), mode='bilinear', align_corners=False)
         w = GRAY_WEIGHTS.to(t_small.device)
-        gray = (t_small * w).sum(dim=1, keepdim=True)                                          # (1,1,60,80)
-
-        # return (60,80) float32, normalized
+        gray = (t_small * w).sum(dim=1, keepdim=True)
         return gray.squeeze(0).squeeze(0).cpu().numpy()
 
-            # rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
-            # gray = (0.299*rgb[...,0] + 0.587*rgb[...,1] + 0.114*rgb[...,2]).astype(np.uint8)
-            # return gray
 
     def _info(self, terminated: bool, truncated: bool) -> dict:
+        """Return info dictionary for the current state."""
         return {
             "score": int(self.persist.get(c.SCORE, 0)),
             "coins": int(self.persist.get(c.COIN_TOTAL, 0)),
@@ -277,3 +259,14 @@ class MarioLevelEnv(gym.Env):
             "terminated": terminated,
             "truncated": truncated,
         }
+
+
+# =============================
+# Utility Classes
+# =============================
+class _KeysProxy:
+    """Mimics pygame.key.get_pressed()."""
+    def __init__(self, pressed=None):
+        self._pressed = set(pressed or [])
+    def __getitem__(self, keycode: int) -> int:
+        return 1 if keycode in self._pressed else 0

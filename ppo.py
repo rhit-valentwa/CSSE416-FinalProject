@@ -13,39 +13,28 @@ class ActorCritic(nn.Module):
     def __init__(self, action_size):
         super().__init__()
         
-        # Input: (4, 60, 80) - 4 stacked grayscale frames
+        # Input: (4, 60, 80)
         self.shared = nn.Sequential(
-            nn.Conv2d(in_channels=4, out_channels=32, kernel_size=3, padding=1),
+            nn.Conv2d(in_channels=4, out_channels=32, kernel_size=8, stride=4),  # -> (32, 14, 19)
             nn.ReLU(),
-            nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, padding=1),
+            nn.Conv2d(in_channels=32, out_channels=64, kernel_size=4, stride=2),  # -> (64, 6, 8)
             nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2, stride=2),  # -> (32, 30, 40)
-            
-            nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1),
+            nn.Conv2d(64, 64, kernel_size=3, stride=1),  # -> (64, 4, 6)
             nn.ReLU(),
-            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, padding=1),
-            nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2, stride=2),  # -> (64, 15, 20)
-            
-            nn.Conv2d(64, 64, kernel_size=3, padding=1),
-            nn.ReLU(),
-            nn.MaxPool2d(2, 2),  # -> (64, 7, 10)
-            nn.Flatten(),  # -> 4480
+            nn.Flatten(),  # -> 1536
         )
         
         # Actor head (policy) - outputs logits for 8 actions
         self.actor = nn.Sequential(
-            nn.Linear(4480, 512),
+            nn.Linear(1536, 512),
             nn.ReLU(),
-            nn.Dropout(0.2),
             nn.Linear(512, action_size)
         )
         
         # Critic head (value function) - outputs state value
         self.critic = nn.Sequential(
-            nn.Linear(4480, 512),
+            nn.Linear(1536, 512),
             nn.ReLU(),
-            nn.Dropout(0.2),
             nn.Linear(512, 1)
         )
     
