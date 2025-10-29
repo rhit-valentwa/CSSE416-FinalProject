@@ -156,10 +156,12 @@ class MarioLevelEnv(gym.Env):
             if v:
                 pressed.update(COMBO_ACTIONS[i])
         self.step_count += 1
+
         # Execute the held action for frame_skip frames
         r = -0.01
         for i in range(self.frame_skip):
-            self.ticks_ms += int(1000 / self.metadata["render_fps"])
+            # Slow down timer to match original Mario timing
+            self.ticks_ms += int(1000/60) #int(1000 / self.metadata["render_fps"])
             self.level.update(self.surface, _KeysProxy(pressed), self.ticks_ms)
             mario_dead = self.persist.get(c.MARIO_DEAD, False) or getattr(self.level.mario, "dead", False)
             level_done = bool(getattr(self.level, "done", False))
