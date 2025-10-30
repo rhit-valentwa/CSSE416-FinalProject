@@ -160,7 +160,7 @@ class DQNAgent:
     def save(self, episode):
         import os
         os.makedirs(CHECKPOINT_DIR, exist_ok=True)
-        checkpoint_path = os.path.join(CHECKPOINT_DIR, f'oct_27_night_episode_{episode}.pth')
+        checkpoint_path = os.path.join(CHECKPOINT_DIR, f'oct_28_night_episode_{episode+1500}.pth')
         torch.save({
             'episode': episode,
             'q_network_state_dict': self.q_network.state_dict(),
@@ -183,7 +183,7 @@ class DQNAgent:
 # =============================
 env = MarioLevelEnv(render_mode="human", number_of_sequential_frames=NUMBER_OF_SEQUENTIAL_FRAMES)
 agent = DQNAgent(ACTION_SIZE, DEVICE)
-agent.load('checkpoints/oct_27_night_episode_1500.pth')
+agent.load('checkpoints/oct_27_night_episode_1500_save.pth')
 
 reward_history = deque(maxlen=REWARD_HISTORY_SIZE)
 
@@ -203,9 +203,9 @@ for episode in range(N_EPISODES):
         agent.store_transition(state, action, reward, next_state, done)
         
         # Only train if we have enough experiences
-        # if len(agent.replay_buffer) >= MIN_REPLAY_SIZE:
-        #     agent.train_step()
-        #     agent.update_target_network()  # Soft update every step
+        if len(agent.replay_buffer) >= MIN_REPLAY_SIZE:
+            agent.train_step()
+            agent.update_target_network()  # Soft update every step
         
         total_reward += reward
         state = next_state

@@ -65,7 +65,7 @@ class MarioLevelEnv(gym.Env):
             "win_bonus": 500.0,
             "jump_tap_cost": 0,
             "jump_hold_cost": 0,
-            "time_penalty": -0.02,
+            "time_penalty": -0.05,
         }
         if reward_cfg:
             self.rw.update(reward_cfg)
@@ -166,13 +166,16 @@ class MarioLevelEnv(gym.Env):
                 elif nxt == c.TIME_OUT:
                     terminated = True
                     print("Time out!")
+                    break
                 elif nxt == c.GAME_OVER:
                     r += self.rw["death_penalty"]
                     terminated = True
                     print("Mario died!")
+                    break
                 else:
                     terminated = True
                     print("Level ended! (else)")
+                    break
         x = self.level.mario.rect.x
         dx = x - self.prev_x
         score = self.persist[c.SCORE]
