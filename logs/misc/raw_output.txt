@@ -1007,3 +1007,880 @@ Mario died!
 Episode 2146: Reward=313.77, Steps=463, Epsilon=0.0500
 Episode 2146; Average Reward: 1154.78
 Mario won!
+Episode 2208; Average Reward: 1116.93
+Mario won!
+Episode 2209: Reward=1396.03, Steps=547, Epsilon=0.0500
+Episode 2209; Average Reward: 1123.64
+Mario died!
+Episode 2210: Reward=543.78, Steps=542, Epsilon=0.0500
+Episode 2210; Average Reward: 1113.49
+Mario won!
+Episode 2211: Reward=1333.20, Steps=460, Epsilon=0.0500
+Episode 2211; Average Reward: 1120.29
+Mario won!
+Episode 2212: Reward=1495.73, Steps=587, Epsilon=0.0500
+Episode 2212; Average Reward: 1130.08
+Mario won!
+Episode 2213: Reward=1829.92, Steps=768, Epsilon=0.0500
+Episode 2213; Average Reward: 1135.04
+Mario won!
+Episode 2214: Reward=1523.95, Steps=615, Epsilon=0.0500
+Episode 2214; Average Reward: 1142.52
+Mario died!
+Episode 2215: Reward=742.60, Steps=840, Epsilon=0.0500
+Episode 2215; Average Reward: 1136.63
+Mario won!
+Episode 2216: Reward=1604.43, Steps=737, Epsilon=0.0500
+Episode 2216; Average Reward: 1139.49
+Mario won!
+Episode 2217: Reward=1433.74, Steps=706, Epsilon=0.0500
+Episode 2217; Average Reward: 1140.50
+Mario won!
+Episode 2218: Reward=1570.82, Steps=808, Epsilon=0.0500
+Episode 2218; Average Reward: 1150.58
+Mario won!
+Episode 2219: Reward=1548.33, Steps=727, Epsilon=0.0500
+Episode 2219; Average Reward: 1158.96
+Mario won!
+Episode 2220: Reward=1657.40, Steps=1840, Epsilon=0.0500
+Episode 2220; Average Reward: 1169.33
+Mario won!
+Episode 2221: Reward=1489.18, Steps=692, Epsilon=0.0500
+Episode 2221; Average Reward: 1170.66
+Mario died!
+Episode 2222: Reward=548.96, Steps=584, Epsilon=0.0500
+Episode 2222; Average Reward: 1160.53
+Mario won!
+Episode 2223: Reward=1737.89, Steps=681, Epsilon=0.0500
+Episode 2223; Average Reward: 1172.79
+Mario won!
+Episode 2224: Reward=1619.85, Steps=705, Epsilon=0.0500
+Episode 2224; Average Reward: 1170.17
+Mario won!
+Episode 2225: Reward=1333.08, Steps=472, Epsilon=0.0500
+Episode 2225; Average Reward: 1176.83
+Mario won!
+Episode 2226: Reward=1688.74, Steps=886, Epsilon=0.0500
+Episode 2226; Average Reward: 1179.10
+Mario died!
+Episode 2227: Reward=732.11, Steps=1469, Epsilon=0.0500
+Episode 2227; Average Reward: 1173.08
+Mario won!
+Episode 2228: Reward=1459.56, Steps=544, Epsilon=0.0500
+Episode 2228; Average Reward: 1169.45
+Mario won!
+Episode 2229: Reward=1569.50, Steps=670, Epsilon=0.0500
+Episode 2229; Average Reward: 1176.88
+Mario died!
+Episode 2230: Reward=949.07, Steps=813, Epsilon=0.0500
+Episode 2230; Average Reward: 1173.03
+Mario won!
+Episode 2231: Reward=1334.52, Steps=528, Epsilon=0.0500
+Episode 2231; Average Reward: 1171.49
+Mario won!
+Episode 2232: Reward=1333.26, Steps=434, Epsilon=0.0500
+Episode 2232; Average Reward: 1176.68
+Mario won!
+Episode 2233: Reward=1333.80, Steps=410, Epsilon=0.0500
+Episode 2233; Average Reward: 1176.68
+Mario died!
+Episode 2234: Reward=794.63, Steps=1037, Epsilon=0.0500
+Episode 2234; Average Reward: 1179.09
+Mario won!
+Episode 2235: Reward=2181.74, Steps=1036, Epsilon=0.0500
+Episode 2235; Average Reward: 1197.09
+Mario died!
+Episode 2236: Reward=365.71, Steps=619, Epsilon=0.0500
+Episode 2236; Average Reward: 1183.98
+Mario won!
+Episode 2237: Reward=1450.17, Steps=613, Epsilon=0.0500
+Episode 2237; Average Reward: 1183.25
+Mario died!
+Episode 2238: Reward=577.15, Steps=555, Epsilon=0.0500
+Episode 2238; Average Reward: 1175.69
+Mario died!
+Episode 2239: Reward=802.43, Steps=3297, Epsilon=0.0500
+Episode 2239; Average Reward: 1165.78
+Mario won!
+Episode 2240: Reward=1330.95, Steps=775, Epsilon=0.0500
+Episode 2240; Average Reward: 1163.46
+Time out!
+Episode 2241: Reward=711.24, Steps=1906, Epsilon=0.0500
+Episode 2241; Average Reward: 1155.19
+Mario died!
+Episode 2242: Reward=274.95, Steps=455, Epsilon=0.0500
+Episode 2242; Average Reward: 1144.73
+Mario died!
+Episode 2243: Reward=908.60, Steps=910, Epsilon=0.0500
+Episode 2243; Average Reward: 1139.77
+Mario won!
+Episode 2244: Reward=1333.80, Steps=440, Epsilon=0.0500
+Episode 2244; Average Reward: 1139.77
+Mario died!
+Episode 2245: Reward=151.39, Steps=321, Epsilon=0.0500
+Episode 2245; Average Reward: 1127.95
+Mario died!
+Episode 2246: Reward=418.27, Steps=433, Epsilon=0.0500
+Episode 2246; Average Reward: 1129.00
+Mario won!
+Episode 2247: Reward=1357.03, Steps=477, Epsilon=0.0500
+Episode 2247; Average Reward: 1128.63
+Mario won!
+Episode 2248: Reward=1440.69, Steps=641, Epsilon=0.0500
+Episode 2248; Average Reward: 1129.71
+Mario won!
+Episode 2249: Reward=1333.64, Steps=436, Epsilon=0.0500
+Episode 2249; Average Reward: 1127.94
+Mario died!
+Episode 2250: Reward=822.68, Steps=862, Epsilon=0.0500
+Episode 2250; Average Reward: 1122.84
+Mario won!
+Episode 2251: Reward=1334.14, Steps=446, Epsilon=0.0500
+Episode 2251; Average Reward: 1132.40
+Time out!
+Episode 2252: Reward=602.45, Steps=1685, Epsilon=0.0500
+Episode 2252; Average Reward: 1124.91
+Mario won!
+Episode 2253: Reward=1333.02, Steps=458, Epsilon=0.0500
+Episode 2253; Average Reward: 1130.39
+Mario won!
+Episode 2254: Reward=1332.59, Steps=461, Epsilon=0.0500
+Episode 2254; Average Reward: 1130.39
+Mario won!
+Episode 2255: Reward=1496.09, Steps=591, Epsilon=0.0500
+Episode 2255; Average Reward: 1132.02
+Mario died!
+Episode 2256: Reward=1102.77, Steps=873, Epsilon=0.0500
+Episode 2256; Average Reward: 1136.49
+Mario won!
+Episode 2257: Reward=1333.20, Steps=420, Epsilon=0.0500
+Episode 2257; Average Reward: 1145.79
+Mario won!
+Episode 2258: Reward=1333.95, Steps=405, Epsilon=0.0500
+Episode 2258; Average Reward: 1151.25
+Mario died!
+Episode 2259: Reward=356.86, Steps=504, Epsilon=0.0500
+Episode 2259; Average Reward: 1139.42
+Mario won!
+Episode 2260: Reward=1407.29, Steps=591, Epsilon=0.0500
+Episode 2260; Average Reward: 1140.17
+Mario won!
+Episode 2261: Reward=1801.50, Steps=1500, Epsilon=0.0500
+Episode 2261; Average Reward: 1144.64
+Mario died!
+Episode 2262: Reward=834.06, Steps=744, Epsilon=0.0500
+Episode 2262; Average Reward: 1139.67
+Mario won!
+Episode 2263: Reward=1674.97, Steps=1363, Epsilon=0.0500
+Episode 2263; Average Reward: 1143.10
+Mario won!
+Episode 2264: Reward=1333.74, Steps=406, Epsilon=0.0500
+Episode 2264; Average Reward: 1149.55
+Mario won!
+Episode 2265: Reward=1334.00, Steps=420, Epsilon=0.0500
+Episode 2265; Average Reward: 1155.59
+Mario died!
+Episode 2266: Reward=479.56, Steps=524, Epsilon=0.0500
+Episode 2266; Average Reward: 1143.56
+Mario died!
+Episode 2267: Reward=843.77, Steps=693, Epsilon=0.0500
+Episode 2267; Average Reward: 1142.76
+Mario won!
+Episode 2268: Reward=1333.27, Steps=463, Epsilon=0.0500
+Episode 2268; Average Reward: 1142.10
+Time out!
+Episode 2269: Reward=233.22, Steps=1608, Epsilon=0.0500
+Episode 2269; Average Reward: 1130.91
+Mario won!
+Episode 2270: Reward=1331.72, Steps=618, Epsilon=0.0500
+Episode 2270; Average Reward: 1141.43
+Mario won!
+Episode 2271: Reward=1396.39, Steps=511, Epsilon=0.0500
+Episode 2271; Average Reward: 1148.38
+Mario died!
+Episode 2272: Reward=713.13, Steps=647, Epsilon=0.0500
+Episode 2272; Average Reward: 1142.18
+Mario died!
+Episode 2273: Reward=430.07, Steps=463, Epsilon=0.0500
+Episode 2273; Average Reward: 1139.11
+Mario won!
+Episode 2274: Reward=1561.75, Steps=735, Epsilon=0.0500
+Episode 2274; Average Reward: 1141.40
+Mario won!
+Episode 2275: Reward=1494.48, Steps=622, Epsilon=0.0500
+Episode 2275; Average Reward: 1143.02
+Mario died!
+Episode 2276: Reward=1067.25, Steps=805, Epsilon=0.0500
+Episode 2276; Average Reward: 1147.40
+Mario won!
+Episode 2277: Reward=1391.50, Steps=510, Epsilon=0.0500
+Episode 2277; Average Reward: 1156.01
+Mario won!
+Episode 2278: Reward=1323.58, Steps=492, Epsilon=0.0500
+Episode 2278; Average Reward: 1158.56
+Mario won!
+Episode 2279: Reward=1477.89, Steps=611, Epsilon=0.0500
+Episode 2279; Average Reward: 1158.80
+Mario won!
+Episode 2280: Reward=1799.31, Steps=949, Epsilon=0.0500
+Episode 2280; Average Reward: 1163.48
+Mario won!
+Episode 2281: Reward=1496.12, Steps=588, Epsilon=0.0500
+Episode 2281; Average Reward: 1171.15
+Mario won!
+Episode 2282: Reward=1330.65, Steps=715, Epsilon=0.0500
+Episode 2282; Average Reward: 1183.37
+Mario won!
+Episode 2283: Reward=1423.46, Steps=584, Epsilon=0.0500
+Episode 2283; Average Reward: 1182.22
+Mario won!
+Episode 2284: Reward=1333.39, Steps=421, Epsilon=0.0500
+Episode 2284; Average Reward: 1182.22
+Mario won!
+Episode 2285: Reward=1764.87, Steps=743, Epsilon=0.0500
+Episode 2285; Average Reward: 1192.94
+Mario died!
+Episode 2286: Reward=372.82, Steps=848, Epsilon=0.0500
+Episode 2286; Average Reward: 1179.53
+Mario won!
+Episode 2287: Reward=1561.78, Steps=732, Epsilon=0.0500
+Episode 2287; Average Reward: 1178.39
+Mario won!
+Episode 2288: Reward=1400.84, Steps=526, Epsilon=0.0500
+Episode 2288; Average Reward: 1179.11
+Mario won!
+Episode 2289: Reward=1501.82, Steps=538, Epsilon=0.0500
+Episode 2289; Average Reward: 1180.95
+Mario died!
+Episode 2290: Reward=315.97, Steps=433, Epsilon=0.0500
+Episode 2290; Average Reward: 1170.80
+Mario won!
+Episode 2291: Reward=1333.82, Steps=428, Epsilon=0.0500
+Episode 2291; Average Reward: 1179.98
+Mario died!
+Episode 2292: Reward=1090.52, Steps=1638, Epsilon=0.0500
+Episode 2292; Average Reward: 1177.60
+Mario won!
+Episode 2293: Reward=1395.27, Steps=543, Epsilon=0.0500
+Episode 2293; Average Reward: 1186.30
+Mario died!
+Episode 2294: Reward=574.74, Steps=566, Epsilon=0.0500
+Episode 2294; Average Reward: 1178.75
+Mario won!
+Episode 2295: Reward=1332.46, Steps=504, Epsilon=0.0500
+Episode 2295; Average Reward: 1176.28
+Mario won!
+Episode 2296: Reward=1333.36, Steps=444, Epsilon=0.0500
+Episode 2296; Average Reward: 1176.28
+Mario died!
+Episode 2297: Reward=478.41, Steps=519, Epsilon=0.0500
+Episode 2297; Average Reward: 1171.37
+Mario won!
+Episode 2298: Reward=1551.00, Steps=770, Epsilon=0.0500
+Episode 2298; Average Reward: 1173.56
+Mario won!
+Episode 2299: Reward=1488.48, Steps=542, Epsilon=0.0500
+Episode 2299; Average Reward: 1183.76
+Mario died!
+Episode 2300: Reward=615.16, Steps=594, Epsilon=0.0500
+Episode 2300; Average Reward: 1176.58
+Mario died!
+Episode 2301: Reward=545.68, Steps=612, Epsilon=0.0500
+Episode 2301; Average Reward: 1168.71
+Mario won!
+Episode 2302: Reward=1472.26, Steps=664, Epsilon=0.0500
+Episode 2302; Average Reward: 1170.10
+Mario won!
+Episode 2303: Reward=1332.30, Steps=490, Epsilon=0.0500
+Episode 2303; Average Reward: 1170.09
+Mario won!
+Episode 2304: Reward=1552.17, Steps=633, Epsilon=0.0500
+Episode 2304; Average Reward: 1178.08
+Mario won!
+Episode 2305: Reward=1333.19, Steps=451, Epsilon=0.0500
+Episode 2305; Average Reward: 1185.61
+Mario won!
+Episode 2306: Reward=1550.37, Steps=833, Epsilon=0.0500
+Episode 2306; Average Reward: 1185.54
+Mario won!
+Episode 2307: Reward=1333.75, Steps=415, Epsilon=0.0500
+Episode 2307; Average Reward: 1191.33
+Mario won!
+Episode 2308: Reward=1840.70, Steps=920, Epsilon=0.0500
+Episode 2308; Average Reward: 1202.07
+Mario won!
+Episode 2309: Reward=1332.92, Steps=498, Epsilon=0.0500
+Episode 2309; Average Reward: 1201.44
+Mario won!
+Episode 2310: Reward=1804.54, Steps=876, Epsilon=0.0500
+Episode 2310; Average Reward: 1214.05
+Mario won!
+Episode 2311: Reward=1329.94, Steps=826, Epsilon=0.0500
+Episode 2311; Average Reward: 1214.02
+Mario won!
+Episode 2312: Reward=1461.62, Steps=538, Epsilon=0.0500
+Episode 2312; Average Reward: 1213.68
+Mario won!
+Episode 2313: Reward=1332.33, Steps=507, Epsilon=0.0500
+Episode 2313; Average Reward: 1208.70
+Mario won!
+Episode 2314: Reward=1351.06, Steps=684, Epsilon=0.0500
+Episode 2314; Average Reward: 1206.97
+Mario won!
+Episode 2315: Reward=2182.73, Steps=1607, Epsilon=0.0500
+Episode 2315; Average Reward: 1221.37
+Mario died!
+Episode 2316: Reward=495.75, Steps=1305, Epsilon=0.0500
+Episode 2316; Average Reward: 1210.29
+Mario won!
+Episode 2317: Reward=1348.00, Steps=560, Epsilon=0.0500
+Episode 2317; Average Reward: 1209.43
+Mario won!
+Episode 2318: Reward=1333.50, Steps=460, Epsilon=0.0500
+Episode 2318; Average Reward: 1207.06
+Mario won!
+Episode 2319: Reward=1333.59, Steps=421, Epsilon=0.0500
+Episode 2319; Average Reward: 1204.91
+Mario died!
+Episode 2320: Reward=953.25, Steps=895, Epsilon=0.0500
+Episode 2320; Average Reward: 1197.87
+Time out!
+Episode 2321: Reward=584.42, Steps=1608, Epsilon=0.0500
+Episode 2321; Average Reward: 1188.82
+Time out!
+Episode 2322: Reward=131.32, Steps=1608, Epsilon=0.0500
+Episode 2322; Average Reward: 1184.64
+Time out!
+Episode 2323: Reward=797.61, Steps=1919, Epsilon=0.0500
+Episode 2323; Average Reward: 1175.24
+Mario died!
+Episode 2324: Reward=375.89, Steps=531, Epsilon=0.0500
+Episode 2324; Average Reward: 1162.80
+Mario won!
+Episode 2325: Reward=1543.42, Steps=558, Epsilon=0.0500
+Episode 2325; Average Reward: 1164.90
+Mario won!
+Episode 2326: Reward=1333.89, Steps=441, Epsilon=0.0500
+Episode 2326; Average Reward: 1161.36
+Mario died!
+Episode 2327: Reward=767.27, Steps=753, Epsilon=0.0500
+Episode 2327; Average Reward: 1161.71
+Mario won!
+Episode 2328: Reward=1329.33, Steps=837, Epsilon=0.0500
+Episode 2328; Average Reward: 1160.40
+Mario won!
+Episode 2329: Reward=1333.78, Steps=422, Epsilon=0.0500
+Episode 2329; Average Reward: 1158.05
+Mario won!
+Episode 2330: Reward=1610.75, Steps=715, Epsilon=0.0500
+Episode 2330; Average Reward: 1164.66
+Mario won!
+Episode 2331: Reward=1331.65, Steps=585, Epsilon=0.0500
+Episode 2331; Average Reward: 1164.64
+Mario won!
+Episode 2332: Reward=1333.65, Steps=405, Epsilon=0.0500
+Episode 2332; Average Reward: 1164.64
+Mario won!
+Episode 2333: Reward=1396.44, Steps=976, Epsilon=0.0500
+Episode 2333; Average Reward: 1165.27
+Mario won!
+Episode 2334: Reward=1543.02, Steps=678, Epsilon=0.0500
+Episode 2334; Average Reward: 1172.75
+Mario won!
+Episode 2335: Reward=1467.61, Steps=1419, Epsilon=0.0500
+Episode 2335; Average Reward: 1165.61
+Mario won!
+Episode 2336: Reward=1886.99, Steps=871, Epsilon=0.0500
+Episode 2336; Average Reward: 1180.82
+Mario won!
+Episode 2337: Reward=1559.07, Steps=593, Epsilon=0.0500
+Episode 2337; Average Reward: 1181.91
+Mario won!
+Episode 2338: Reward=1400.43, Steps=537, Epsilon=0.0500
+Episode 2338; Average Reward: 1190.14
+Mario died!
+Episode 2339: Reward=736.11, Steps=899, Epsilon=0.0500
+Episode 2339; Average Reward: 1189.48
+Mario won!
+Episode 2340: Reward=1334.50, Steps=430, Epsilon=0.0500
+Episode 2340; Average Reward: 1189.52
+Mario died!
+Episode 2341: Reward=820.90, Steps=1340, Epsilon=0.0500
+Episode 2341; Average Reward: 1190.61
+Mario won!
+Episode 2342: Reward=1333.99, Steps=421, Epsilon=0.0500
+Episode 2342; Average Reward: 1201.20
+Mario won!
+Episode 2343: Reward=1422.28, Steps=502, Epsilon=0.0500
+Episode 2343; Average Reward: 1206.34
+Mario died!
+Episode 2344: Reward=992.49, Steps=781, Epsilon=0.0500
+Episode 2344; Average Reward: 1202.93
+Mario won!
+Episode 2345: Reward=1333.12, Steps=448, Epsilon=0.0500
+Episode 2345; Average Reward: 1214.74
+Time out!
+Episode 2346: Reward=611.82, Steps=1608, Epsilon=0.0500
+Episode 2346; Average Reward: 1216.68
+Mario won!
+Episode 2347: Reward=1333.30, Steps=450, Epsilon=0.0500
+Episode 2347; Average Reward: 1216.44
+Mario won!
+Episode 2348: Reward=1333.27, Steps=423, Epsilon=0.0500
+Episode 2348; Average Reward: 1215.37
+Mario won!
+Episode 2349: Reward=1519.76, Steps=774, Epsilon=0.0500
+Episode 2349; Average Reward: 1217.23
+Mario died!
+Episode 2350: Reward=997.61, Steps=789, Epsilon=0.0500
+Episode 2350; Average Reward: 1218.98
+Mario died!
+Episode 2351: Reward=595.68, Steps=622, Epsilon=0.0500
+Episode 2351; Average Reward: 1211.59
+Time out!
+Episode 2352: Reward=721.42, Steps=1958, Epsilon=0.0500
+Episode 2352; Average Reward: 1212.78
+Mario won!
+Episode 2353: Reward=1495.68, Steps=592, Epsilon=0.0500
+Episode 2353; Average Reward: 1214.41
+Time out!
+Episode 2354: Reward=999.57, Steps=1963, Epsilon=0.0500
+Episode 2354; Average Reward: 1211.08
+Mario won!
+Episode 2355: Reward=1327.26, Steps=614, Epsilon=0.0500
+Episode 2355; Average Reward: 1209.39
+Mario died!
+Episode 2356: Reward=379.05, Steps=465, Epsilon=0.0500
+Episode 2356; Average Reward: 1202.15
+Mario won!
+Episode 2357: Reward=1496.07, Steps=553, Epsilon=0.0500
+Episode 2357; Average Reward: 1203.78
+Mario won!
+Episode 2358: Reward=1462.72, Steps=568, Epsilon=0.0500
+Episode 2358; Average Reward: 1205.07
+Mario won!
+Episode 2359: Reward=1332.99, Steps=531, Epsilon=0.0500
+Episode 2359; Average Reward: 1214.83
+Mario died!
+Episode 2360: Reward=159.13, Steps=327, Epsilon=0.0500
+Episode 2360; Average Reward: 1202.35
+Mario won!
+Episode 2361: Reward=1460.71, Steps=659, Epsilon=0.0500
+Episode 2361; Average Reward: 1198.94
+Mario won!
+Episode 2362: Reward=1323.67, Steps=473, Epsilon=0.0500
+Episode 2362; Average Reward: 1203.84
+Mario won!
+Episode 2363: Reward=1755.27, Steps=833, Epsilon=0.0500
+Episode 2363; Average Reward: 1204.64
+Mario won!
+Episode 2364: Reward=1535.89, Steps=691, Epsilon=0.0500
+Episode 2364; Average Reward: 1206.66
+Mario won!
+Episode 2365: Reward=1897.30, Steps=1900, Epsilon=0.0500
+Episode 2365; Average Reward: 1212.30
+Mario won!
+Episode 2366: Reward=1583.06, Steps=634, Epsilon=0.0500
+Episode 2366; Average Reward: 1223.33
+Mario died!
+Episode 2367: Reward=614.69, Steps=611, Epsilon=0.0500
+Episode 2367; Average Reward: 1221.04
+Mario died!
+Episode 2368: Reward=680.86, Steps=624, Epsilon=0.0500
+Episode 2368; Average Reward: 1214.52
+Mario won!
+Episode 2369: Reward=1323.60, Steps=520, Epsilon=0.0500
+Episode 2369; Average Reward: 1225.42
+Time out!
+Episode 2370: Reward=130.82, Steps=1608, Epsilon=0.0500
+Episode 2370; Average Reward: 1213.41
+Mario won!
+Episode 2371: Reward=1333.29, Steps=481, Epsilon=0.0500
+Episode 2371; Average Reward: 1212.78
+Mario won!
+Episode 2372: Reward=1342.25, Steps=605, Epsilon=0.0500
+Episode 2372; Average Reward: 1219.07
+Mario died!
+Episode 2373: Reward=525.20, Steps=540, Epsilon=0.0500
+Episode 2373; Average Reward: 1220.02
+Mario died!
+Episode 2374: Reward=567.25, Steps=665, Epsilon=0.0500
+Episode 2374; Average Reward: 1210.08
+Mario won!
+Episode 2375: Reward=1317.31, Steps=499, Epsilon=0.0500
+Episode 2375; Average Reward: 1208.31
+Mario won!
+Episode 2376: Reward=1334.49, Steps=441, Epsilon=0.0500
+Episode 2376; Average Reward: 1210.98
+Mario won!
+Episode 2377: Reward=1334.07, Steps=393, Epsilon=0.0500
+Episode 2377; Average Reward: 1210.40
+Mario won!
+Episode 2378: Reward=1389.86, Steps=624, Epsilon=0.0500
+Episode 2378; Average Reward: 1211.07
+Mario won!
+Episode 2379: Reward=1454.91, Steps=679, Epsilon=0.0500
+Episode 2379; Average Reward: 1210.84
+Mario died!
+Episode 2380: Reward=332.85, Steps=1065, Epsilon=0.0500
+Episode 2380; Average Reward: 1196.17
+Mario won!
+Episode 2381: Reward=1398.04, Steps=636, Epsilon=0.0500
+Episode 2381; Average Reward: 1195.19
+Mario won!
+Episode 2382: Reward=1332.36, Steps=554, Epsilon=0.0500
+Episode 2382; Average Reward: 1195.21
+Mario died!
+Episode 2383: Reward=395.17, Steps=533, Epsilon=0.0500
+Episode 2383; Average Reward: 1184.93
+Mario won!
+Episode 2384: Reward=1332.31, Steps=589, Epsilon=0.0500
+Episode 2384; Average Reward: 1184.91
+Mario won!
+Episode 2385: Reward=1333.79, Steps=431, Epsilon=0.0500
+Episode 2385; Average Reward: 1180.60
+Mario won!
+Episode 2386: Reward=1393.77, Steps=503, Epsilon=0.0500
+Episode 2386; Average Reward: 1190.81
+Mario won!
+Episode 2387: Reward=1688.84, Steps=1176, Epsilon=0.0500
+Episode 2387; Average Reward: 1192.08
+Mario died!
+Episode 2388: Reward=810.05, Steps=775, Epsilon=0.0500
+Episode 2388; Average Reward: 1186.18
+Mario won!
+Episode 2389: Reward=1332.12, Steps=518, Epsilon=0.0500
+Episode 2389; Average Reward: 1184.48
+Mario won!
+Episode 2390: Reward=1608.30, Steps=1310, Epsilon=0.0500
+Episode 2390; Average Reward: 1197.40
+Mario died!
+Episode 2391: Reward=420.37, Steps=473, Epsilon=0.0500
+Episode 2391; Average Reward: 1188.27
+Mario died!
+Episode 2392: Reward=714.98, Steps=802, Epsilon=0.0500
+Episode 2392; Average Reward: 1184.51
+Mario died!
+Episode 2393: Reward=707.20, Steps=660, Epsilon=0.0500
+Episode 2393; Average Reward: 1177.63
+Mario won!
+Episode 2394: Reward=1319.70, Steps=480, Epsilon=0.0500
+Episode 2394; Average Reward: 1185.08
+Mario won!
+Episode 2395: Reward=1333.91, Steps=419, Epsilon=0.0500
+Episode 2395; Average Reward: 1185.10
+Mario died!
+Episode 2396: Reward=479.96, Steps=484, Epsilon=0.0500
+Episode 2396; Average Reward: 1176.56
+Mario died!
+Episode 2397: Reward=727.18, Steps=592, Epsilon=0.0500
+Episode 2397; Average Reward: 1179.05
+Time out!
+Episode 2398: Reward=796.22, Steps=1608, Epsilon=0.0500
+Episode 2398; Average Reward: 1171.50
+Mario won!
+Episode 2399: Reward=1358.97, Steps=483, Epsilon=0.0500
+Episode 2399; Average Reward: 1170.21
+Mario won!
+Episode 2400: Reward=1736.66, Steps=1564, Epsilon=0.0500
+Episode 2400; Average Reward: 1181.42
+Mario won!
+Episode 2401: Reward=1398.93, Steps=537, Epsilon=0.0500
+Episode 2401; Average Reward: 1189.95
+Mario won!
+Episode 2402: Reward=1395.42, Steps=638, Epsilon=0.0500
+Episode 2402; Average Reward: 1189.19
+Mario won!
+Episode 2403: Reward=1334.41, Steps=529, Epsilon=0.0500
+Episode 2403; Average Reward: 1189.21
+Mario won!
+Episode 2404: Reward=1333.65, Steps=465, Epsilon=0.0500
+Episode 2404; Average Reward: 1187.02
+Mario won!
+Episode 2405: Reward=1333.85, Steps=405, Epsilon=0.0500
+Episode 2405; Average Reward: 1187.03
+Mario died!
+Episode 2406: Reward=520.83, Steps=497, Epsilon=0.0500
+Episode 2406; Average Reward: 1176.73
+Mario won!
+Episode 2407: Reward=1421.67, Steps=663, Epsilon=0.0500
+Episode 2407; Average Reward: 1177.61
+Mario won!
+Episode 2408: Reward=1328.64, Steps=896, Epsilon=0.0500
+Episode 2408; Average Reward: 1172.49
+Mario won!
+Episode 2409: Reward=1832.91, Steps=809, Epsilon=0.0500
+Episode 2409; Average Reward: 1177.49
+Mario died!
+Episode 2410: Reward=391.92, Steps=478, Epsilon=0.0500
+Episode 2410; Average Reward: 1163.37
+Mario died!
+Episode 2411: Reward=580.20, Steps=550, Epsilon=0.0500
+Episode 2411; Average Reward: 1155.87
+Mario won!
+Episode 2412: Reward=1321.78, Steps=522, Epsilon=0.0500
+Episode 2412; Average Reward: 1154.47
+Mario won!
+Episode 2413: Reward=1332.75, Steps=485, Epsilon=0.0500
+Episode 2413; Average Reward: 1154.47
+Mario died!
+Episode 2414: Reward=621.23, Steps=557, Epsilon=0.0500
+Episode 2414; Average Reward: 1147.18
+Mario won!
+Episode 2415: Reward=1535.77, Steps=1543, Epsilon=0.0500
+Episode 2415; Average Reward: 1140.71
+Mario won!
+Episode 2416: Reward=1550.15, Steps=635, Epsilon=0.0500
+Episode 2416; Average Reward: 1151.25
+Mario won!
+Episode 2417: Reward=1332.79, Steps=501, Epsilon=0.0500
+Episode 2417; Average Reward: 1151.10
+Mario died!
+Episode 2418: Reward=625.30, Steps=640, Epsilon=0.0500
+Episode 2418; Average Reward: 1144.02
+Mario won!
+Episode 2419: Reward=1638.07, Steps=1133, Epsilon=0.0500
+Episode 2419; Average Reward: 1147.06
+Mario won!
+Episode 2420: Reward=1765.69, Steps=911, Epsilon=0.0500
+Episode 2420; Average Reward: 1155.18
+Time out!
+Episode 2421: Reward=801.84, Steps=1686, Epsilon=0.0500
+Episode 2421; Average Reward: 1157.36
+Mario won!
+Episode 2422: Reward=1688.77, Steps=783, Epsilon=0.0500
+Episode 2422; Average Reward: 1172.93
+Mario won!
+Episode 2423: Reward=1534.10, Steps=1450, Epsilon=0.0500
+Episode 2423; Average Reward: 1180.30
+Time out!
+Episode 2424: Reward=740.72, Steps=1608, Epsilon=0.0500
+Episode 2424; Average Reward: 1183.95
+Mario won!
+Episode 2425: Reward=1333.53, Steps=417, Epsilon=0.0500
+Episode 2425; Average Reward: 1181.85
+Time out!
+Episode 2426: Reward=790.02, Steps=1948, Epsilon=0.0500
+Episode 2426; Average Reward: 1176.41
+Time out!
+Episode 2427: Reward=1047.40, Steps=1820, Epsilon=0.0500
+Episode 2427; Average Reward: 1179.21
+Mario won!
+Episode 2428: Reward=1333.56, Steps=424, Epsilon=0.0500
+Episode 2428; Average Reward: 1179.25
+Mario died!
+Episode 2429: Reward=431.28, Steps=512, Epsilon=0.0500
+Episode 2429; Average Reward: 1170.23
+Mario won!
+Episode 2430: Reward=1760.50, Steps=770, Epsilon=0.0500
+Episode 2430; Average Reward: 1171.73
+Mario died!
+Episode 2431: Reward=135.72, Steps=1568, Epsilon=0.0500
+Episode 2431; Average Reward: 1159.77
+Mario won!
+Episode 2432: Reward=1333.27, Steps=493, Epsilon=0.0500
+Episode 2432; Average Reward: 1159.76
+Mario died!
+Episode 2433: Reward=482.20, Steps=480, Epsilon=0.0500
+Episode 2433; Average Reward: 1150.62
+Mario died!
+Episode 2434: Reward=559.83, Steps=627, Epsilon=0.0500
+Episode 2434; Average Reward: 1140.79
+Mario won!
+Episode 2435: Reward=1332.74, Steps=526, Epsilon=0.0500
+Episode 2435; Average Reward: 1139.44
+Mario won!
+Episode 2436: Reward=1716.74, Steps=806, Epsilon=0.0500
+Episode 2436; Average Reward: 1137.74
+Mario died!
+Episode 2437: Reward=657.63, Steps=557, Epsilon=0.0500
+Episode 2437; Average Reward: 1128.72
+Mario won!
+Episode 2438: Reward=1325.57, Steps=1193, Epsilon=0.0500
+Episode 2438; Average Reward: 1127.97
+Mario won!
+Episode 2439: Reward=1832.74, Steps=816, Epsilon=0.0500
+Episode 2439; Average Reward: 1138.94
+Mario died!
+Episode 2440: Reward=344.34, Steps=426, Epsilon=0.0500
+Episode 2440; Average Reward: 1129.04
+Mario died!
+Episode 2441: Reward=743.64, Steps=606, Epsilon=0.0500
+Episode 2441; Average Reward: 1128.27
+Mario won!
+Episode 2442: Reward=1333.27, Steps=443, Epsilon=0.0500
+Episode 2442; Average Reward: 1128.26
+Mario won!
+Episode 2443: Reward=1548.61, Steps=639, Epsilon=0.0500
+Episode 2443; Average Reward: 1129.52
+Mario won!
+Episode 2444: Reward=1616.20, Steps=890, Epsilon=0.0500
+Episode 2444; Average Reward: 1135.76
+Mario won!
+Episode 2445: Reward=1333.23, Steps=447, Epsilon=0.0500
+Episode 2445; Average Reward: 1135.76
+Time out!
+Episode 2446: Reward=589.52, Steps=1608, Epsilon=0.0500
+Episode 2446; Average Reward: 1135.54
+Mario won!
+Episode 2447: Reward=1394.66, Steps=594, Epsilon=0.0500
+Episode 2447; Average Reward: 1136.15
+Mario won!
+Episode 2448: Reward=1333.00, Steps=470, Epsilon=0.0500
+Episode 2448; Average Reward: 1136.15
+Mario won!
+Episode 2449: Reward=1333.31, Steps=469, Epsilon=0.0500
+Episode 2449; Average Reward: 1134.28
+Mario died!
+Episode 2450: Reward=305.96, Steps=434, Epsilon=0.0500
+Episode 2450; Average Reward: 1127.37
+Mario won!
+Episode 2451: Reward=1460.94, Steps=906, Epsilon=0.0500
+Episode 2451; Average Reward: 1136.02
+Mario died!
+Episode 2452: Reward=587.10, Steps=550, Epsilon=0.0500
+Episode 2452; Average Reward: 1134.68
+Mario won!
+Episode 2453: Reward=1333.21, Steps=429, Epsilon=0.0500
+Episode 2453; Average Reward: 1133.05
+Mario won!
+Episode 2454: Reward=1707.70, Steps=1590, Epsilon=0.0500
+Episode 2454; Average Reward: 1140.13
+Mario died!
+Episode 2455: Reward=467.29, Steps=551, Epsilon=0.0500
+Episode 2455; Average Reward: 1131.53
+Mario won!
+Episode 2456: Reward=1672.78, Steps=1642, Epsilon=0.0500
+Episode 2456; Average Reward: 1144.47
+Mario won!
+Episode 2457: Reward=1333.30, Steps=480, Epsilon=0.0500
+Episode 2457; Average Reward: 1142.84
+Mario won!
+Episode 2458: Reward=1332.32, Steps=508, Epsilon=0.0500
+Episode 2458; Average Reward: 1141.54
+Mario won!
+Episode 2459: Reward=1333.98, Steps=422, Epsilon=0.0500
+Episode 2459; Average Reward: 1141.55
+Mario won!
+Episode 2460: Reward=1489.03, Steps=687, Epsilon=0.0500
+Episode 2460; Average Reward: 1154.85
+Mario won!
+Episode 2461: Reward=1333.33, Steps=457, Epsilon=0.0500
+Episode 2461; Average Reward: 1153.57
+Mario won!
+Episode 2462: Reward=1332.24, Steps=546, Epsilon=0.0500
+Episode 2462; Average Reward: 1153.66
+Mario won!
+Episode 2463: Reward=1332.61, Steps=519, Epsilon=0.0500
+Episode 2463; Average Reward: 1149.43
+Mario won!
+Episode 2464: Reward=1418.06, Steps=1304, Epsilon=0.0500
+Episode 2464; Average Reward: 1148.25
+Mario won!
+Episode 2465: Reward=1573.06, Steps=794, Epsilon=0.0500
+Episode 2465; Average Reward: 1145.01
+Mario won!
+Episode 2466: Reward=1640.98, Steps=712, Epsilon=0.0500
+Episode 2466; Average Reward: 1145.59
+Mario won!
+Episode 2467: Reward=1332.09, Steps=611, Epsilon=0.0500
+Episode 2467; Average Reward: 1152.77
+Mario died!
+Episode 2468: Reward=689.57, Steps=893, Epsilon=0.0500
+Episode 2468; Average Reward: 1152.85
+Mario died!
+Episode 2469: Reward=304.70, Steps=390, Epsilon=0.0500
+Episode 2469; Average Reward: 1142.66
+Mario won!
+Episode 2470: Reward=1619.25, Steps=675, Epsilon=0.0500
+Episode 2470; Average Reward: 1157.55
+Mario won!
+Episode 2471: Reward=1332.37, Steps=543, Epsilon=0.0500
+Episode 2471; Average Reward: 1157.54
+Mario won!
+Episode 2472: Reward=1507.31, Steps=589, Epsilon=0.0500
+Episode 2472; Average Reward: 1159.19
+Mario won!
+Episode 2473: Reward=1332.60, Steps=480, Epsilon=0.0500
+Episode 2473; Average Reward: 1167.26
+Mario died!
+Episode 2474: Reward=942.53, Steps=887, Epsilon=0.0500
+Episode 2474; Average Reward: 1171.02
+Mario won!
+Episode 2475: Reward=1399.12, Steps=808, Epsilon=0.0500
+Episode 2475; Average Reward: 1171.83
+Mario won!
+Episode 2476: Reward=1333.51, Steps=469, Epsilon=0.0500
+Episode 2476; Average Reward: 1171.82
+Mario won!
+Episode 2477: Reward=1333.81, Steps=409, Epsilon=0.0500
+Episode 2477; Average Reward: 1171.82
+Mario won!
+Episode 2478: Reward=1395.25, Steps=615, Epsilon=0.0500
+Episode 2478; Average Reward: 1171.88
+Mario won!
+Episode 2479: Reward=1709.60, Steps=1390, Epsilon=0.0500
+Episode 2479; Average Reward: 1174.42
+Mario died!
+Episode 2480: Reward=654.02, Steps=558, Epsilon=0.0500
+Episode 2480; Average Reward: 1177.63
+Mario won!
+Episode 2481: Reward=1333.27, Steps=443, Epsilon=0.0500
+Episode 2481; Average Reward: 1176.99
+Mario died!
+Episode 2482: Reward=449.98, Steps=1732, Epsilon=0.0500
+Episode 2482; Average Reward: 1168.16
+Mario won!
+Episode 2483: Reward=1329.45, Steps=915, Epsilon=0.0500
+Episode 2483; Average Reward: 1177.51
+Mario won!
+Episode 2484: Reward=1561.77, Steps=673, Epsilon=0.0500
+Episode 2484; Average Reward: 1179.80
+Mario won!
+Episode 2485: Reward=1349.65, Steps=945, Epsilon=0.0500
+Episode 2485; Average Reward: 1179.96
+Mario died!
+Episode 2486: Reward=767.37, Steps=1353, Epsilon=0.0500
+Episode 2486; Average Reward: 1173.69
+Mario died!
+Episode 2487: Reward=659.52, Steps=578, Epsilon=0.0500
+Episode 2487; Average Reward: 1163.40
+Mario won!
+Episode 2488: Reward=1898.02, Steps=818, Epsilon=0.0500
+Episode 2488; Average Reward: 1174.28
+Mario won!
+Episode 2489: Reward=1326.01, Steps=1149, Epsilon=0.0500
+Episode 2489; Average Reward: 1174.22
+Time out!
+Episode 2490: Reward=710.94, Steps=1876, Epsilon=0.0500
+Episode 2490; Average Reward: 1165.25
+Mario won!
+Episode 2491: Reward=1767.87, Steps=803, Epsilon=0.0500
+Episode 2491; Average Reward: 1178.72
+Mario won!
+Episode 2492: Reward=1508.47, Steps=663, Epsilon=0.0500
+Episode 2492; Average Reward: 1186.66
+Mario won!
+Episode 2493: Reward=1393.48, Steps=562, Epsilon=0.0500
+Episode 2493; Average Reward: 1193.52
+Mario won!
+Episode 2494: Reward=1681.61, Steps=859, Epsilon=0.0500
+Episode 2494; Average Reward: 1197.14
+Mario died!
+Episode 2495: Reward=466.20, Steps=510, Epsilon=0.0500
+Episode 2495; Average Reward: 1188.46
+Mario died!
+Episode 2496: Reward=488.68, Steps=602, Epsilon=0.0500
+Episode 2496; Average Reward: 1188.55
+Mario won!
+Episode 2497: Reward=1824.50, Steps=890, Epsilon=0.0500
+Episode 2497; Average Reward: 1199.52
+Mario won!
+Episode 2498: Reward=1540.20, Steps=710, Epsilon=0.0500
+Episode 2498; Average Reward: 1206.96
+Mario won!
+Episode 2499: Reward=1665.67, Steps=1633, Epsilon=0.0500
+Episode 2499; Average Reward: 1210.03
+Mario died!
+Episode 2500: Reward=806.14, Steps=636, Epsilon=0.0500
+Episode 2500; Average Reward: 1200.72
