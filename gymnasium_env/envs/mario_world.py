@@ -71,6 +71,9 @@ class MarioLevelEnv(gym.Env):
         if reward_cfg:
             self.rw.update(reward_cfg)
 
+            # self.milestone_interval = 250  # Pixels per progress milestone
+            # self.max_x_reached = 0  # Track maximum x position reached
+
         if self.render_mode != "human":
             os.environ.setdefault("SDL_VIDEODRIVER", "dummy")
 
@@ -175,10 +178,21 @@ class MarioLevelEnv(gym.Env):
                     terminated = True
                     # print("Level ended! (else)")
         x = self.level.mario.rect.x
+
+        # # Progress milestone reward
+        # milestone_reward = 0
+        # if x > self.max_x_reached:
+        #     old_milestone = self.max_x_reached // self.milestone_interval
+        #     new_milestone = x // self.milestone_interval
+        #     if new_milestone > old_milestone:
+        #         milestone_reward = self.rw["progress_milestone"]
+        #     self.max_x_reached = x
+
         dx = x - self.prev_x
         score = self.persist[c.SCORE]
         dscore = score - self.prev_score
         r += self.rw["dx_scale"] * dx
+        # r += milestone_reward
         r += self.rw["score_scale"] * dscore
         # if r > 5 or r < -5:
         #     r = 0

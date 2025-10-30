@@ -272,7 +272,8 @@ def train_ppo():
         "dx_scale": 0.1,        # Small movement reward (prevents reward hacking)
         "score_scale": 0.01,     # Reward actual game score
         "death_penalty": -150.0,   # Strong death penalty
-        "win_bonus": 500.0,       # Large win bonus
+        "win_bonus": 1000.0,       # Large win bonus
+        "progress_milestone": 10.0,  # Reward for reaching progress milestones
     }
     
     # Create environment with your custom settings
@@ -290,13 +291,13 @@ def train_ppo():
     
     agent = PPOAgent(
         action_size=action_size,
-        lr=3e-4,
+        lr=5e-5,
         gamma=0.99,
         eps_clip=0.1,    # Conservative clipping
         k_epochs=3,      # Moderate updates
         gae_lambda=0.95,
         vf_coef=0.5,
-        ent_coef=0.05,   # Starting entropy coefficient
+        ent_coef=0.1,   # Starting entropy coefficient
     )
     
     # Initialize tracking variables
@@ -341,8 +342,8 @@ def train_ppo():
 
     # Entropy decay schedule
     ent_coef_start = agent.ent_coef  # High initial exploration
-    ent_coef_end = 0.01         # Final exploration level
-    ent_coef_decay = 0.995      # Slow decay
+    ent_coef_end = 0.02         # Final exploration level
+    ent_coef_decay = 0.99995      # Slow decay
     current_ent_coef = ent_coef_start
 
     buffer = RolloutBuffer()
@@ -408,57 +409,55 @@ def train_ppo():
                 break
         
         # Episode summary
-        episode_rewards.append(episode_reward)
-        avg_reward_100 = np.mean(episode_rewards) if len(episode_rewards) > 0 else 0
+        # episode_rewards.append(episode_reward)
+        # avg_reward_100 = np.mean(episode_rewards) if len(episode_rewards) > 0 else 0
         actual_episode = episode + loaded_episode
         
         # Calculate moving average and trend
-        if len(episode_rewards) >= 20:
-            recent_20 = np.mean(list(episode_rewards)[-20:])
-            older_20 = np.mean(list(episode_rewards)[-40:-20]) if len(episode_rewards) >= 40 else recent_20
-            trend = "📈" if recent_20 > older_20 else "📉" if recent_20 < older_20 else "➡️"
-        else:
-            trend = "➡️"
+        # if len(episode_rewards) >= 20:
+        #     recent_20 = np.mean(list(episode_rewards)[-20:])
+        #     older_20 = np.mean(list(episode_rewards)[-40:-20]) if len(episode_rewards) >= 40 else recent_20
+        #     trend = "📈" if recent_20 > older_20 else "📉" if recent_20 < older_20 else "➡️"
+        # else:
+        #     trend = "➡️"
 
         print(f"Ep {actual_episode:4d} | Steps: {episode_steps:4d} | "
-              f"Reward: {episode_reward:7.2f} | Avg100: {avg_reward_100:7.2f} {trend} | "
-              f"Score: {info['score']:4d} | X: {info['x']:4d} | "
-              f"Ent: {agent.ent_coef:.4f}")
+              f"Reward: {episode_reward:7.2f} | Score: {info['score']:4d} | "
+              f"X: {info['x']:4d} | Ent: {agent.ent_coef:.4f}")
 
         # Detect if stuck (same low reward repeatedly)
-        if len(episode_rewards) >= 5:
-            recent_std = np.std(list(episode_rewards)[-5:])
-            recent_mean = np.mean(list(episode_rewards)[-5:])
+        # if len(episode_rewards) >= 5:
+        #     recent_std = np.std(list(episode_rewards)[-10:])
+        #     recent_mean = np.mean(list(episode_rewards)[-10:])
             
-            # Check for degenerate "run right and die" policy
-            if (recent_std == 0 or recent_std < 5.0) and recent_mean < 80 and episode_steps < 150:
-                print(f"  🚨 DETECTED DEGENERATE POLICY! (mean={recent_mean:.2f}, steps={episode_steps})")
-                print(f"     Agent learned to 'run right and die' - resetting!")
+        #     # Check for degenerate "run right and die" policy
+        #     if recent_std < 5.0 and recent_mean < 80 and episode_steps < 150:
+        #         print(f"  🚨 DETECTED DEGENERATE POLICY! (mean={recent_mean:.2f}, steps={episode_steps})")
                 
-                # Hard reset
-                agent.policy = ActorCritic(action_size).to(device)
-                agent.policy_old = ActorCritic(action_size).to(device)
-                agent.policy_old.load_state_dict(agent.policy.state_dict())
-                agent.optimizer = optim.Adam(agent.policy.parameters(), lr=3e-4)
-                current_ent_coef = ent_coef_start
-                episode_rewards.clear()
-                buffer.clear()
-                continue
+        #         # Hard reset
+        #         agent.policy = ActorCritic(action_size).to(device)
+        #         agent.policy_old = ActorCritic(action_size).to(device)
+        #         agent.policy_old.load_state_dict(agent.policy.state_dict())
+        #         agent.optimizer = optim.Adam(agent.policy.parameters(), lr=3e-4)
+        #         current_ent_coef = ent_coef_start
+        #         episode_rewards.clear()
+        #         buffer.clear()
+        #         continue
             
-            # Original stuck detection (low negative rewards)
-            if recent_std < 1.0 and recent_mean < -5.0:
-                # print(f"  ⚠️  WARNING: Agent might be stuck! (std={recent_std:.2f}, mean={recent_mean:.2f})")
+        #     # Original stuck detection (low negative rewards)
+        #     if recent_std < 1.0 and recent_mean < -5.0:
+        #         # print(f"  ⚠️  WARNING: Agent might be stuck! (std={recent_std:.2f}, mean={recent_mean:.2f})")
                 
-                # Auto-recovery: reinitialize policy if stuck for too long
-                if len(episode_rewards) >= 50 and np.mean(list(episode_rewards)[-50:]) < -5.0:
-                    print("  🔄 AUTO-RECOVERY: Reinitializing policy due to persistent poor performance")
-                    agent.policy = ActorCritic(action_size).to(device)
-                    agent.policy_old = ActorCritic(action_size).to(device)
-                    agent.policy_old.load_state_dict(agent.policy.state_dict())
-                    agent.optimizer = optim.Adam(agent.policy.parameters(), lr=3e-4)
-                    current_ent_coef = ent_coef_start
-                    episode_rewards.clear()
-                    buffer.clear()
+        #         # Auto-recovery: reinitialize policy if stuck for too long
+        #         if len(episode_rewards) >= 50 and np.mean(list(episode_rewards)[-50:]) < -5.0:
+        #             print("  🔄 AUTO-RECOVERY: Reinitializing policy due to persistent poor performance")
+        #             agent.policy = ActorCritic(action_size).to(device)
+        #             agent.policy_old = ActorCritic(action_size).to(device)
+        #             agent.policy_old.load_state_dict(agent.policy.state_dict())
+        #             agent.optimizer = optim.Adam(agent.policy.parameters(), lr=3e-4)
+        #             current_ent_coef = ent_coef_start
+        #             episode_rewards.clear()
+        #             buffer.clear()
         
         # Save best single episode
         if episode_reward > best_reward:
