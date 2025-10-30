@@ -2119,3 +2119,9 @@ Episode 2216; Average Reward: 1139.49
 Episode 2217; Average Reward: 1140.50
 Episode 2218; Average Reward: 1150.58
 Episode 2219; Average Reward: 1158.96
+Episode 2220; Average Reward: 1169.33
+Episode 2221; Average Reward: 1170.66
+Episode 2222; Average Reward: 1160.53
+Episode 2223; Average Reward: 1172.79
+Episode 2224; Average Reward: 1170.17
+Episode 2225; Average Reward: 1176.83
