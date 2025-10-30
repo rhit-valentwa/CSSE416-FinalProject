@@ -13,6 +13,7 @@ from mario_game.data import setup
 import torch
 import torch.nn.functional as F
 from collections import deque
+from typing import Optional
 
 # Key mappings
 JUMP_KEYS = (pg.K_a,)
@@ -46,7 +47,7 @@ class MarioLevelEnv(gym.Env):
         max_steps: int = 20000,
         frame_skip: int = 4,
         number_of_sequential_frames: int = 16,
-        reward_cfg: dict | None = None,
+        reward_cfg: Optional[dict] = None,
     ):
         """Initialize the MarioLevelEnv environment."""
         self.render_mode = render_mode
@@ -59,9 +60,9 @@ class MarioLevelEnv(gym.Env):
         self.observation_space = spaces.Box(low=0, high=255, shape=(self.number_of_sequential_frames, self.height, self.width), dtype=np.uint8)
 
         self.rw = {
-            "dx_scale": 0.1,
-            "score_scale": 0.001,
-            "death_penalty": -150,
+            "dx_scale": 0.01,
+            "score_scale": 0.01,
+            "death_penalty": -200,
             "win_bonus": 500.0,
             "jump_tap_cost": 0,
             "jump_hold_cost": 0,
@@ -82,8 +83,8 @@ class MarioLevelEnv(gym.Env):
         self.surface = self.display
         self.clock = pg.time.Clock()
 
-        self.level: Level1 | None = None
-        self.persist = None
+        self.level: Optional[Level1] = None
+        self.persist: Optional[dict] = None
         self.prev_x = 0
         self.prev_score = 0
         self.step_count = 0
@@ -91,7 +92,7 @@ class MarioLevelEnv(gym.Env):
         self.frame_buf = deque(maxlen=self.number_of_sequential_frames)
         self.held_action = None  # Action that's currently being held
 
-    def reset(self, seed: int | None = None, options: dict | None = None):
+    def reset(self, seed: Optional[int] = None, options: Optional[dict] = None):
         """Reset the environment to the initial state."""
         super().reset(seed=seed)
         self.step_count = 0
@@ -150,7 +151,7 @@ class MarioLevelEnv(gym.Env):
             # print("state:", st)
             if st == c.FLAGPOLE:
                     r += self.rw["win_bonus"]
-                    print("Mario won!")
+                    print("🏆 Mario won!")
                     terminated = True
                     break
             if level_done:
@@ -165,14 +166,14 @@ class MarioLevelEnv(gym.Env):
                     break
                 elif nxt == c.TIME_OUT:
                     terminated = True
-                    print("Time out!")
+                    # print("Time out!")
                 elif nxt == c.GAME_OVER:
                     r += self.rw["death_penalty"]
                     terminated = True
-                    print("Mario died!")
+                    # print("Mario died!")
                 else:
                     terminated = True
-                    print("Level ended! (else)")
+                    # print("Level ended! (else)")
         x = self.level.mario.rect.x
         dx = x - self.prev_x
         score = self.persist[c.SCORE]

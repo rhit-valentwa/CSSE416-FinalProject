@@ -3,16 +3,21 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.distributions import Categorical
 import numpy as np
+from collections import deque
+import os
 from gymnasium_env.envs.mario_world import MarioLevelEnv
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
+
+importing = False
 
 # Actor-Critic Network
 class ActorCritic(nn.Module):
     def __init__(self, action_size):
         super().__init__()
         
+        # Simplified network for (4, 60, 80) input
         # Input: (4, 60, 80)
         self.shared = nn.Sequential(
             nn.Conv2d(in_channels=4, out_channels=32, kernel_size=8, stride=4),  # -> (32, 14, 19)
@@ -109,8 +114,8 @@ class RolloutBuffer:
 
 # PPO Agent
 class PPOAgent:
-    def __init__(self, action_size, lr=3e-4, gamma=0.99, eps_clip=0.2, 
-                 k_epochs=4, gae_lambda=0.95, vf_coef=0.5, ent_coef=0.01):
+    def __init__(self, action_size, lr=3e-4, gamma=0.99, eps_clip=0.1, 
+                 k_epochs=3, gae_lambda=0.95, vf_coef=0.5, ent_coef=0.01):
         self.gamma = gamma
         self.eps_clip = eps_clip
         self.k_epochs = k_epochs
@@ -237,16 +242,48 @@ class PPOAgent:
         self.optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 
 
+def evaluate_model(agent, env, n_episodes=5):
+    """Evaluate agent and return rewards"""
+    rewards = []
+    for _ in range(n_episodes):
+        state, _ = env.reset()
+        state = torch.FloatTensor(state).to(device)
+        episode_reward = 0
+        
+        while True:
+            action_idx, _, _ = agent.select_action(state)
+            action = index_to_multibinary(action_idx)
+            next_state, reward, terminated, truncated, _ = env.step(action)
+            episode_reward += reward
+            state = torch.FloatTensor(next_state).to(device)
+            
+            if terminated or truncated:
+                break
+        
+        rewards.append(episode_reward)
+    
+    return rewards if n_episodes > 1 else rewards[0]
+
+
 # Training loop
 def train_ppo():
+    # Better reward shaping to prevent "run right and die" strategy
+    reward_config = {
+        "dx_scale": 0.1,        # Small movement reward (prevents reward hacking)
+        "score_scale": 0.01,     # Reward actual game score
+        "death_penalty": -150.0,   # Strong death penalty
+        "win_bonus": 500.0,       # Large win bonus
+    }
+    
     # Create environment with your custom settings
     env = MarioLevelEnv(
-        render_mode="human",  # Change to "rgb_array" for faster training
+        render_mode="human",  # Use "human" to watch, "rgb_array" for faster training
         width=800,
         height=600,
-        max_steps=20000,
+        max_steps=2000,           # Prevent infinite episodes
         frame_skip=4,
         number_of_sequential_frames=4,
+        reward_cfg=reward_config,
     )
     
     action_size = 8  # 2^3 combinations of [Right, Jump, Left]
@@ -255,39 +292,72 @@ def train_ppo():
         action_size=action_size,
         lr=3e-4,
         gamma=0.99,
-        eps_clip=0.2,
-        k_epochs=4,
+        eps_clip=0.1,    # Conservative clipping
+        k_epochs=3,      # Moderate updates
         gae_lambda=0.95,
         vf_coef=0.5,
-        ent_coef=0.05 # higher = more exploration
+        ent_coef=0.05,   # Starting entropy coefficient
     )
     
-    # Optional: Load checkpoint
-    # agent.load('ppo_checkpoint_episode_200.pth')
+    # Initialize tracking variables
+    loaded_episode = 0
+    best_reward = -float('inf')
+    best_avg_reward = -float('inf')
+    episode_rewards = deque(maxlen=100)
+    
+    if (importing):
+        # FIRST: Load the checkpoint you want to continue training from
+        checkpoint_file = 'ppo_checkpoint_episode_200.pth'
+        if os.path.exists(checkpoint_file):
+            agent.load(checkpoint_file)
+            loaded_episode = 200
+            print(f"✅ Loaded checkpoint from episode {loaded_episode}")
+        
+        # SECOND: Evaluate best models to get baseline scores (FAST evaluation)
+        if os.path.exists('ppo_best_episode.pth'):
+            print("📊 Evaluating best episode model...")
+            temp_agent = PPOAgent(action_size=action_size)
+            temp_agent.load('ppo_best_episode.pth')
+            eval_reward = evaluate_model(temp_agent, env, n_episodes=1)
+            best_reward = eval_reward
+            print(f"  Best episode reward: {best_reward:.2f}")
+            del temp_agent  # Free memory
+        
+        if os.path.exists('ppo_best_avg.pth'):
+            print("📊 Evaluating best avg model...")
+            temp_agent = PPOAgent(action_size=action_size)
+            temp_agent.load('ppo_best_avg.pth')
+            eval_rewards = evaluate_model(temp_agent, env, n_episodes=3)  # Reduced from 20 to 3
+            best_avg_reward = np.mean(eval_rewards)
+            print(f"  Best avg reward: {best_avg_reward:.2f}")
+            del temp_agent  # Free memory
+    
+    print("\n🚀 Starting training...\n")
     
     # Hyperparameters
-    update_timestep = 512  # Update policy every n timesteps
+    update_frequency = 512      # Update every 512 steps
     max_episodes = 10000
-    min_buffer_size = 128
+    min_buffer_size = 128       # Minimum buffer size for episode-end updates
 
-    # Entropy decay params
-    min_entropy = 0.01
-    entropy_decay = 0.995
+    # Entropy decay schedule
+    ent_coef_start = agent.ent_coef  # High initial exploration
+    ent_coef_end = 0.01         # Final exploration level
+    ent_coef_decay = 0.995      # Slow decay
+    current_ent_coef = ent_coef_start
 
     buffer = RolloutBuffer()
     timestep = 0
-    best_reward = -float('inf')
     
     for episode in range(max_episodes):
         state, _ = env.reset()
-        # State is already (4, 60, 80)
         state = torch.FloatTensor(state).to(device)
         
         episode_reward = 0
         episode_steps = 0
 
-        # Update entropy
-        agent.ent_coef = max(min_entropy, agent.ent_coef * entropy_decay)
+        # Update entropy coefficient for this episode
+        agent.ent_coef = max(ent_coef_end, current_ent_coef)
+        current_ent_coef *= ent_coef_decay
         
         while True:
             timestep += 1
@@ -315,42 +385,99 @@ def train_ppo():
             episode_reward += reward
             state = next_state
             
-            # Update policy when buffer is full
-            if len(buffer) >= update_timestep:
+            # Update policy regularly (like DQN does every step)
+            if len(buffer) >= update_frequency:
                 losses = agent.update(buffer, state)
                 buffer.clear()
                 
-                print(f"  [Update] Actor Loss: {losses['actor_loss']:.4f}, "
-                      f"Critic Loss: {losses['critic_loss']:.4f}, "
-                      f"Entropy: {losses['entropy']:.4f}")
+                print(f"  [Update@{timestep}] Actor: {losses['actor_loss']:.4f}, "
+                      f"Critic: {losses['critic_loss']:.4f}, "
+                      f"Entropy: {losses['entropy']:.4f} (coef: {agent.ent_coef:.4f})")
                 
-                # Clear cache
-                torch.cuda.empty_cache()
-                import gc
-                gc.collect()
+                # Warn if entropy is too low
+                if losses['entropy'] < 0.5:
+                    print(f"  ⚠️  Low entropy detected! Policy may be too deterministic.")
             
             if done:
+                # Always update at episode end if we have enough samples
                 if len(buffer) >= min_buffer_size:
+                    buffer_size = len(buffer)
                     losses = agent.update(buffer, state)
                     buffer.clear()
-                    print(f"  [EpisodeEnd] Buffer had {len(buffer)} samples, updated")
+                    # print(f"  [EpisodeEnd] Updated with {buffer_size} samples")
                 break
         
         # Episode summary
-        print(f"Episode {episode:4d} | Steps: {episode_steps:4d} | "
-              f"Reward: {episode_reward:7.2f} | Score: {info['score']:4d} | "
-              f"X: {info['x']:4d} | Timestep: {timestep}")
+        episode_rewards.append(episode_reward)
+        avg_reward_100 = np.mean(episode_rewards) if len(episode_rewards) > 0 else 0
+        actual_episode = episode + loaded_episode
         
-        # Save best model
+        # Calculate moving average and trend
+        if len(episode_rewards) >= 20:
+            recent_20 = np.mean(list(episode_rewards)[-20:])
+            older_20 = np.mean(list(episode_rewards)[-40:-20]) if len(episode_rewards) >= 40 else recent_20
+            trend = "📈" if recent_20 > older_20 else "📉" if recent_20 < older_20 else "➡️"
+        else:
+            trend = "➡️"
+
+        print(f"Ep {actual_episode:4d} | Steps: {episode_steps:4d} | "
+              f"Reward: {episode_reward:7.2f} | Avg100: {avg_reward_100:7.2f} {trend} | "
+              f"Score: {info['score']:4d} | X: {info['x']:4d} | "
+              f"Ent: {agent.ent_coef:.4f}")
+
+        # Detect if stuck (same low reward repeatedly)
+        if len(episode_rewards) >= 5:
+            recent_std = np.std(list(episode_rewards)[-5:])
+            recent_mean = np.mean(list(episode_rewards)[-5:])
+            
+            # Check for degenerate "run right and die" policy
+            if (recent_std == 0 or recent_std < 5.0) and recent_mean < 80 and episode_steps < 150:
+                print(f"  🚨 DETECTED DEGENERATE POLICY! (mean={recent_mean:.2f}, steps={episode_steps})")
+                print(f"     Agent learned to 'run right and die' - resetting!")
+                
+                # Hard reset
+                agent.policy = ActorCritic(action_size).to(device)
+                agent.policy_old = ActorCritic(action_size).to(device)
+                agent.policy_old.load_state_dict(agent.policy.state_dict())
+                agent.optimizer = optim.Adam(agent.policy.parameters(), lr=3e-4)
+                current_ent_coef = ent_coef_start
+                episode_rewards.clear()
+                buffer.clear()
+                continue
+            
+            # Original stuck detection (low negative rewards)
+            if recent_std < 1.0 and recent_mean < -5.0:
+                # print(f"  ⚠️  WARNING: Agent might be stuck! (std={recent_std:.2f}, mean={recent_mean:.2f})")
+                
+                # Auto-recovery: reinitialize policy if stuck for too long
+                if len(episode_rewards) >= 50 and np.mean(list(episode_rewards)[-50:]) < -5.0:
+                    print("  🔄 AUTO-RECOVERY: Reinitializing policy due to persistent poor performance")
+                    agent.policy = ActorCritic(action_size).to(device)
+                    agent.policy_old = ActorCritic(action_size).to(device)
+                    agent.policy_old.load_state_dict(agent.policy.state_dict())
+                    agent.optimizer = optim.Adam(agent.policy.parameters(), lr=3e-4)
+                    current_ent_coef = ent_coef_start
+                    episode_rewards.clear()
+                    buffer.clear()
+        
+        # Save best single episode
         if episode_reward > best_reward:
             best_reward = episode_reward
-            agent.save('ppo_best_model.pth')
-            print(f"  ✓ New best reward: {best_reward:.2f}")
+            agent.save('ppo_best_episode.pth')
+            print(f"  ✓ New best single episode: {best_reward:.2f}")
+        
+        # Save best average model (more reliable)
+        if len(episode_rewards) >= 20:
+            avg_20 = np.mean(list(episode_rewards)[-20:])
+            if avg_20 > best_avg_reward:
+                best_avg_reward = avg_20
+                agent.save('ppo_best_avg.pth')
+                print(f"  ✓✓ New best avg-20: {best_avg_reward:.2f}")
         
         # Save checkpoint periodically
         if episode % 200 == 0 and episode > 0:
-            agent.save(f'ppo_checkpoint_episode_{episode}.pth')
-            print(f"  💾 Checkpoint saved at episode {episode}")
+            agent.save(f'ppo_checkpoint_episode_{actual_episode}.pth')
+            print(f"  💾 Checkpoint saved at episode {actual_episode}")
     
     env.close()
     return agent
