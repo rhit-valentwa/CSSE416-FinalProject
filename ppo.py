@@ -269,13 +269,13 @@ def evaluate_model(agent, env, n_episodes=5):
 def get_target_entropy(episode):
     """Get target entropy based on training phase"""
     if episode < 500:
-        return 1.5  # High exploration
+        return 1.2  # High exploration
     elif episode < 1500:
-        return 1.2  # Moderate exploration
+        return 1.0  # Moderate exploration
     elif episode < 3000:
-        return 0.9  # Focus on good strategies
+        return 0.6  # Focus on good strategies
     else:
-        return 0.7  # Exploit best strategy
+        return 0.3  # Exploit best strategy
 
 
 # Training loop
