@@ -1,0 +1,14 @@
+
+📊 Episode 3200 Summary (Last 100 eps):
+   Avg Reward: 648.00
+   Avg X Progress: 1930
+   Max X Reached: 1930
+   Current Entropy Coef: 0.0857
+   Target Entropy: 0.70
+
+📊 Episode 3200 Summary (Last 100 eps):
+   Avg Reward: 444.30
+   Avg X Progress: 3707
+   Max X Reached: 3707
+   Current Entropy Coef: 0.0846
+   Target Entropy: 0.70

@@ -10,7 +10,8 @@ from gymnasium_env.envs.mario_world import MarioLevelEnv
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
-importing = False
+importing = True
+log_file_name = "ppo_training_log_summary.txt"
 
 # Actor-Critic Network
 class ActorCritic(nn.Module):
@@ -265,6 +266,18 @@ def evaluate_model(agent, env, n_episodes=5):
     return rewards if n_episodes > 1 else rewards[0]
 
 
+def get_target_entropy(episode):
+    """Get target entropy based on training phase"""
+    if episode < 500:
+        return 1.5  # High exploration
+    elif episode < 1500:
+        return 1.2  # Moderate exploration
+    elif episode < 3000:
+        return 0.9  # Focus on good strategies
+    else:
+        return 0.7  # Exploit best strategy
+
+
 # Training loop
 def train_ppo():
     # Better reward shaping to prevent "run right and die" strategy
@@ -306,32 +319,18 @@ def train_ppo():
     best_avg_reward = -float('inf')
     episode_rewards = deque(maxlen=100)
     
+    # NEW: dPerformance tracking for adaptive entropy
+    performance_window = deque(maxlen=50)
+    best_avg_50 = -float('inf')
+    x_positions = deque(maxlen=100)
+    
     if (importing):
         # FIRST: Load the checkpoint you want to continue training from
-        checkpoint_file = 'ppo_checkpoint_episode_200.pth'
+        checkpoint_file = 'ppo_checkpoint_episode_3000.pth'
         if os.path.exists(checkpoint_file):
             agent.load(checkpoint_file)
-            loaded_episode = 200
+            loaded_episode = 3001
             print(f"✅ Loaded checkpoint from episode {loaded_episode}")
-        
-        # SECOND: Evaluate best models to get baseline scores (FAST evaluation)
-        if os.path.exists('ppo_best_episode.pth'):
-            print("📊 Evaluating best episode model...")
-            temp_agent = PPOAgent(action_size=action_size)
-            temp_agent.load('ppo_best_episode.pth')
-            eval_reward = evaluate_model(temp_agent, env, n_episodes=1)
-            best_reward = eval_reward
-            print(f"  Best episode reward: {best_reward:.2f}")
-            del temp_agent  # Free memory
-        
-        if os.path.exists('ppo_best_avg.pth'):
-            print("📊 Evaluating best avg model...")
-            temp_agent = PPOAgent(action_size=action_size)
-            temp_agent.load('ppo_best_avg.pth')
-            eval_rewards = evaluate_model(temp_agent, env, n_episodes=3)  # Reduced from 20 to 3
-            best_avg_reward = np.mean(eval_rewards)
-            print(f"  Best avg reward: {best_avg_reward:.2f}")
-            del temp_agent  # Free memory
     
     print("\n🚀 Starting training...\n")
     
@@ -342,8 +341,6 @@ def train_ppo():
 
     # Entropy decay schedule
     ent_coef_start = agent.ent_coef  # High initial exploration
-    ent_coef_end = 0.02         # Final exploration level
-    ent_coef_decay = 0.99995      # Slow decay
     current_ent_coef = ent_coef_start
 
     buffer = RolloutBuffer()
@@ -356,9 +353,46 @@ def train_ppo():
         episode_reward = 0
         episode_steps = 0
 
-        # Update entropy coefficient for this episode
-        agent.ent_coef = max(ent_coef_end, current_ent_coef)
-        current_ent_coef *= ent_coef_decay
+        # ========== NEW: ADAPTIVE ENTROPY MANAGEMENT ==========
+        actual_episode = episode + loaded_episode
+        
+        # 1. Get target entropy for current training phase
+        target_entropy = get_target_entropy(actual_episode)
+        
+        # 2. Phase-based minimum entropy coefficient
+        if actual_episode < 2000:
+            min_ent_coef = 0.08  # Exploration phase
+            max_ent_coef = 0.15
+        else:
+            min_ent_coef = 0.04  # Exploitation phase
+            max_ent_coef = 0.10
+        
+        # 3. Performance-based adjustment (every 50 episodes)
+        if len(performance_window) >= 50:
+            avg_50 = np.mean(performance_window)
+            
+            # If improving, reduce exploration (exploit what works)
+            if avg_50 > best_avg_50 + 30:
+                best_avg_50 = avg_50
+                current_ent_coef *= 0.98  # Faster decay when improving
+                print(f"  📈 Performance improving! avg_50={avg_50:.1f}, reducing ent_coef to {current_ent_coef:.4f}")
+        
+        # 4. Check for stagnation (every 100 episodes)
+        if actual_episode % 100 == 0 and len(episode_rewards) >= 100:
+            recent_100 = np.mean(list(episode_rewards)[-100:])
+            older_100 = np.mean(list(episode_rewards)[-200:-100]) if len(episode_rewards) >= 200 else recent_100
+            
+            if abs(recent_100 - older_100) < 15:  # Stagnating
+                current_ent_coef = min(max_ent_coef, current_ent_coef * 1.15)
+                print(f"  📊 Stagnating! recent={recent_100:.1f} vs older={older_100:.1f}, boosting ent_coef to {current_ent_coef:.4f}")
+        
+        # 5. Apply entropy coefficient with bounds
+        current_ent_coef = max(min_ent_coef, min(max_ent_coef, current_ent_coef))
+        agent.ent_coef = current_ent_coef
+        
+        # 6. Slow natural decay
+        current_ent_coef *= 0.9995
+        # ========== END ADAPTIVE ENTROPY MANAGEMENT ==========
         
         while True:
             timestep += 1
@@ -391,13 +425,23 @@ def train_ppo():
                 losses = agent.update(buffer, state)
                 buffer.clear()
                 
+                # ========== NEW: ENTROPY-BASED ADJUSTMENTS ==========
+                current_entropy = losses['entropy']
+                
+                # Emergency entropy boost if too low
+                if current_entropy < 0.5:
+                    agent.ent_coef = min(max_ent_coef, agent.ent_coef * 1.2)
+                    # print(f"  🚨 CRITICAL: Entropy at {current_entropy:.4f}, boosting coef to {agent.ent_coef:.4f}")
+                
+                # Force reduction if entropy too high for late training
+                elif current_entropy > target_entropy + 0.5 and actual_episode > 2000:
+                    agent.ent_coef *= 0.92
+                    # print(f"  🔧 Entropy {current_entropy:.4f} too high for episode {actual_episode}, reducing to {agent.ent_coef:.4f}")
+                # ========== END ENTROPY ADJUSTMENTS ==========
+                
                 print(f"  [Update@{timestep}] Actor: {losses['actor_loss']:.4f}, "
                       f"Critic: {losses['critic_loss']:.4f}, "
-                      f"Entropy: {losses['entropy']:.4f} (coef: {agent.ent_coef:.4f})")
-                
-                # Warn if entropy is too low
-                if losses['entropy'] < 0.5:
-                    print(f"  ⚠️  Low entropy detected! Policy may be too deterministic.")
+                      f"Entropy: {current_entropy:.4f} (coef: {agent.ent_coef:.4f}, target: {target_entropy:.2f})")
             
             if done:
                 # Always update at episode end if we have enough samples
@@ -405,14 +449,14 @@ def train_ppo():
                     buffer_size = len(buffer)
                     losses = agent.update(buffer, state)
                     buffer.clear()
-                    # print(f"  [EpisodeEnd] Updated with {buffer_size} samples")
                 break
         
         # Episode summary
-        # episode_rewards.append(episode_reward)
-        # avg_reward_100 = np.mean(episode_rewards) if len(episode_rewards) > 0 else 0
-        actual_episode = episode + loaded_episode
-        
+        episode_rewards.append(episode_reward)
+        performance_window.append(episode_reward)
+        x_positions.append(info['x'])
+        avg_reward_100 = np.mean(episode_rewards) if len(episode_rewards) > 0 else 0
+
         # Calculate moving average and trend
         # if len(episode_rewards) >= 20:
         #     recent_20 = np.mean(list(episode_rewards)[-20:])
@@ -422,47 +466,26 @@ def train_ppo():
         #     trend = "➡️"
 
         print(f"Ep {actual_episode:4d} | Steps: {episode_steps:4d} | "
-              f"Reward: {episode_reward:7.2f} | Score: {info['score']:4d} | "
-              f"X: {info['x']:4d} | Ent: {agent.ent_coef:.4f}")
-
-        # Detect if stuck (same low reward repeatedly)
-        # if len(episode_rewards) >= 5:
-        #     recent_std = np.std(list(episode_rewards)[-10:])
-        #     recent_mean = np.mean(list(episode_rewards)[-10:])
-            
-        #     # Check for degenerate "run right and die" policy
-        #     if recent_std < 5.0 and recent_mean < 80 and episode_steps < 150:
-        #         print(f"  🚨 DETECTED DEGENERATE POLICY! (mean={recent_mean:.2f}, steps={episode_steps})")
-                
-        #         # Hard reset
-        #         agent.policy = ActorCritic(action_size).to(device)
-        #         agent.policy_old = ActorCritic(action_size).to(device)
-        #         agent.policy_old.load_state_dict(agent.policy.state_dict())
-        #         agent.optimizer = optim.Adam(agent.policy.parameters(), lr=3e-4)
-        #         current_ent_coef = ent_coef_start
-        #         episode_rewards.clear()
-        #         buffer.clear()
-        #         continue
-            
-        #     # Original stuck detection (low negative rewards)
-        #     if recent_std < 1.0 and recent_mean < -5.0:
-        #         # print(f"  ⚠️  WARNING: Agent might be stuck! (std={recent_std:.2f}, mean={recent_mean:.2f})")
-                
-        #         # Auto-recovery: reinitialize policy if stuck for too long
-        #         if len(episode_rewards) >= 50 and np.mean(list(episode_rewards)[-50:]) < -5.0:
-        #             print("  🔄 AUTO-RECOVERY: Reinitializing policy due to persistent poor performance")
-        #             agent.policy = ActorCritic(action_size).to(device)
-        #             agent.policy_old = ActorCritic(action_size).to(device)
-        #             agent.policy_old.load_state_dict(agent.policy.state_dict())
-        #             agent.optimizer = optim.Adam(agent.policy.parameters(), lr=3e-4)
-        #             current_ent_coef = ent_coef_start
-        #             episode_rewards.clear()
-        #             buffer.clear()
+              f"Reward: {episode_reward:7.2f} | Score: {info['score']:4d} | X: {info['x']:4d} | Ent: {agent.ent_coef:.4f}")
+        
+        # ========== NEW: PROGRESS SUMMARY EVERY 100 EPISODES ==========
+        
+        # write the stuff below to log file
+        if actual_episode % 100 == 0 and actual_episode > 0:
+            recent_100_x = list(x_positions)[-100:] if len(x_positions) >= 100 else list(x_positions)
+            with open(log_file_name, "a") as log_file:
+                log_file.write(f"\n📊 Episode {actual_episode} Summary (Last 100 eps):\n")
+                log_file.write(f"   Avg Reward: {avg_reward_100:.2f}\n")
+                log_file.write(f"   Avg X Progress: {np.mean(recent_100_x):.0f}\n")
+                log_file.write(f"   Max X Reached: {max(recent_100_x)}\n")
+                log_file.write(f"   Current Entropy Coef: {agent.ent_coef:.4f}\n")
+                log_file.write(f"   Target Entropy: {target_entropy:.2f}\n")
+                log_file.write(f"")
+        # ========== END PROGRESS SUMMARY ==========
         
         # Save best single episode
         if episode_reward > best_reward:
             best_reward = episode_reward
-            agent.save('ppo_best_episode.pth')
             print(f"  ✓ New best single episode: {best_reward:.2f}")
         
         # Save best average model (more reliable)
@@ -470,11 +493,10 @@ def train_ppo():
             avg_20 = np.mean(list(episode_rewards)[-20:])
             if avg_20 > best_avg_reward:
                 best_avg_reward = avg_20
-                agent.save('ppo_best_avg.pth')
                 print(f"  ✓✓ New best avg-20: {best_avg_reward:.2f}")
         
         # Save checkpoint periodically
-        if episode % 200 == 0 and episode > 0:
+        if actual_episode % 200 == 0 and actual_episode > 0:
             agent.save(f'ppo_checkpoint_episode_{actual_episode}.pth')
             print(f"  💾 Checkpoint saved at episode {actual_episode}")
     
