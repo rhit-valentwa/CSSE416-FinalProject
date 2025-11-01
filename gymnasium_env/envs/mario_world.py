@@ -60,13 +60,13 @@ class MarioLevelEnv(gym.Env):
         self.observation_space = spaces.Box(low=0, high=255, shape=(self.number_of_sequential_frames, self.height, self.width), dtype=np.uint8)
 
         self.rw = {
-            "dx_scale": 0.01,
-            "score_scale": 0.01,
-            "death_penalty": -200,
+            "dx_scale": 0.1,
+            "score_scale": 0.001,
+            "death_penalty": -150,
             "win_bonus": 500.0,
             "jump_tap_cost": 0,
             "jump_hold_cost": 0,
-            "time_penalty": -0.02,
+            "time_penalty": -0.05,
         }
         if reward_cfg:
             self.rw.update(reward_cfg)

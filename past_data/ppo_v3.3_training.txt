@@ -1,0 +1,1092 @@
+Using device: cuda
+✅ Loaded checkpoint from episode 4201
+
+🚀 Starting training...
+
+Ep 4201 | Steps:  189 | Reward:   41.61 | Score:  600 | X:  783 | Ent: 0.1000
+  ✓ New best single episode: 41.61
+  [Update@701] Actor: -0.0022, Critic: 54.2198, Entropy: 1.6494 (coef: 0.0920, target: 0.30)
+  [Update@1213] Actor: -0.0039, Critic: 97.4931, Entropy: 1.6120 (coef: 0.0846, target: 0.30)
+Ep 4202 | Steps: 1036 | Reward:  447.44 | Score: 2100 | X:  775 | Ent: 0.0846
+  ✓ New best single episode: 447.44
+  [Update@1725] Actor: -0.0010, Critic: 253.8506, Entropy: 1.5935 (coef: 0.0919, target: 0.30)
+Ep 4203 | Steps:  663 | Reward:  308.67 | Score:  700 | X: 3789 | Ent: 0.0919
+Ep 4204 | Steps:  453 | Reward:  261.47 | Score:  700 | X:  731 | Ent: 0.0999
+Ep 4205 | Steps:  265 | Reward:  138.85 | Score:    0 | X:  639 | Ent: 0.0998
+  [Update@3118] Actor: -0.0008, Critic: 171.8416, Entropy: 1.5824 (coef: 0.0918, target: 0.30)
+Ep 4206 | Steps:  715 | Reward:  378.65 | Score:  900 | X: 3018 | Ent: 0.0918
+  [Update@3833] Actor: 0.0337, Critic: 173.6920, Entropy: 1.6644 (coef: 0.0917, target: 0.30)
+Ep 4207 | Steps:  953 | Reward:  557.67 | Score: 1000 | X: 3714 | Ent: 0.0917
+  ✓ New best single episode: 557.67
+Ep 4208 | Steps:  430 | Reward:  181.60 | Score:  700 | X: 2164 | Ent: 0.0997
+  [Update@5216] Actor: -0.0008, Critic: 34.7529, Entropy: 1.7532 (coef: 0.0916, target: 0.30)
+  [Update@5728] Actor: 0.0019, Critic: 69.9674, Entropy: 1.7035 (coef: 0.0843, target: 0.30)
+Ep 4209 | Steps: 1155 | Reward:  295.45 | Score:  600 | X: 1930 | Ent: 0.0843
+  [Update@6371] Actor: -0.0023, Critic: 109.4796, Entropy: 1.7816 (coef: 0.0916, target: 0.30)
+Ep 4210 | Steps:  870 | Reward:  417.10 | Score: 1200 | X:  765 | Ent: 0.0916
+  [Update@7241] Actor: -0.0005, Critic: 40.3398, Entropy: 1.7058 (coef: 0.0915, target: 0.30)
+  [Update@7753] Actor: 0.0000, Critic: 28.6884, Entropy: 1.7646 (coef: 0.0842, target: 0.30)
+Ep 4211 | Steps: 1417 | Reward:  352.03 | Score: 1600 | X:  653 | Ent: 0.0842
+  [Update@8658] Actor: -0.0013, Critic: 78.4670, Entropy: 1.7380 (coef: 0.0915, target: 0.30)
+  [Update@9170] Actor: -0.0008, Critic: 16.9377, Entropy: 1.7401 (coef: 0.0842, target: 0.30)
+Ep 4212 | Steps: 1193 | Reward:  246.07 | Score:  600 | X:  660 | Ent: 0.0842
+Ep 4213 | Steps:  383 | Reward:  249.97 | Score:  400 | X:  661 | Ent: 0.0994
+  [Update@10234] Actor: -0.0008, Critic: 40.9423, Entropy: 1.7275 (coef: 0.0914, target: 0.30)
+  [Update@10746] Actor: -0.0018, Critic: 70.7271, Entropy: 1.7470 (coef: 0.0841, target: 0.30)
+Ep 4214 | Steps: 1517 | Reward:  510.33 | Score:  900 | X: 3707 | Ent: 0.0841
+  [Update@11751] Actor: -0.0017, Critic: 105.9344, Entropy: 1.6091 (coef: 0.0914, target: 0.30)
+Ep 4215 | Steps:  620 | Reward:  285.10 | Score:  400 | X: 2250 | Ent: 0.0914
+Ep 4216 | Steps:  381 | Reward:  183.09 | Score:  800 | X: 2232 | Ent: 0.0993
+  [Update@12752] Actor: -0.0001, Critic: 53.0117, Entropy: 1.6999 (coef: 0.0913, target: 0.30)
+  [Update@13264] Actor: -0.0003, Critic: 10.1601, Entropy: 1.6745 (coef: 0.0840, target: 0.30)
+  [Update@13776] Actor: 0.0265, Critic: 15.3073, Entropy: 1.6769 (coef: 0.0772, target: 0.30)
+Ep 4217 | Steps: 1561 | Reward:   67.89 | Score:  300 | X: 2415 | Ent: 0.0772
+  [Update@14288] Actor: 0.0551, Critic: 361.3910, Entropy: 1.4755 (coef: 0.0912, target: 0.30)
+  [Update@14800] Actor: 0.0106, Critic: 53.0119, Entropy: 1.1236 (coef: 0.0839, target: 0.30)
+  [Update@15312] Actor: 0.0001, Critic: 1.1863, Entropy: 1.3190 (coef: 0.0772, target: 0.30)
+Ep 4218 | Steps: 2000 | Reward:  475.20 | Score: 1600 | X: 1928 | Ent: 0.0772
+  [Update@16313] Actor: 0.0071, Critic: 48.8883, Entropy: 1.1991 (coef: 0.0912, target: 0.30)
+  [Update@16825] Actor: 0.0071, Critic: 1.4815, Entropy: 1.2284 (coef: 0.0839, target: 0.30)
+  [Update@17337] Actor: 0.0075, Critic: 2.3982, Entropy: 1.0548 (coef: 0.0772, target: 0.30)
+Ep 4219 | Steps: 1561 | Reward:   18.69 | Score:  100 | X: 1943 | Ent: 0.0772
+Ep 4220 | Steps:  115 | Reward:   46.05 | Score:  200 | X:  752 | Ent: 0.0991
+  ✓✓ New best avg-20: 273.15
+  [Update@17989] Actor: 0.0009, Critic: 42.9502, Entropy: 1.0053 (coef: 0.0911, target: 0.30)
+  [Update@18501] Actor: 0.0039, Critic: 7.3600, Entropy: 1.0665 (coef: 0.0838, target: 0.30)
+  [Update@19013] Actor: 0.0041, Critic: 8.0639, Entropy: 1.1721 (coef: 0.0771, target: 0.30)
+Ep 4221 | Steps: 1561 | Reward:   18.69 | Score:  100 | X: 1943 | Ent: 0.0771
+Ep 4222 | Steps:  102 | Reward:   50.68 | Score:  200 | X:  789 | Ent: 0.0990
+Ep 4223 | Steps:  105 | Reward:   54.05 | Score:  600 | X:  792 | Ent: 0.0989
+Ep 4224 | Steps:  115 | Reward:   44.15 | Score:  200 | X:  791 | Ent: 0.0989
+Ep 4225 | Steps:  127 | Reward:   36.73 | Score:    0 | X:  793 | Ent: 0.0988
+Ep 4226 | Steps:  115 | Reward:   47.95 | Score:    0 | X:  778 | Ent: 0.0988
+  [Update@19999] Actor: -0.0006, Critic: 312.8382, Entropy: 1.0630 (coef: 0.0908, target: 0.30)
+  [Update@20511] Actor: 0.0037, Critic: 0.6857, Entropy: 1.3757 (coef: 0.0835, target: 0.30)
+  [Update@21023] Actor: 0.0064, Critic: 1.3480, Entropy: 1.4875 (coef: 0.0769, target: 0.30)
+Ep 4227 | Steps: 1561 | Reward:   19.19 | Score:  200 | X: 1938 | Ent: 0.0769
+  [Update@21675] Actor: 0.0079, Critic: 55.5678, Entropy: 1.5612 (coef: 0.0908, target: 0.30)
+  [Update@22187] Actor: 0.0039, Critic: 19.5890, Entropy: 1.5324 (coef: 0.0835, target: 0.30)
+Ep 4228 | Steps: 1095 | Reward:  203.45 | Score:  800 | X:  783 | Ent: 0.0835
+Ep 4229 | Steps:  142 | Reward:   35.78 | Score:  400 | X:  712 | Ent: 0.0986
+  [Update@22912] Actor: -0.0013, Critic: 53.4473, Entropy: 1.4803 (coef: 0.0907, target: 0.30)
+  [Update@23424] Actor: -0.0014, Critic: 88.7199, Entropy: 1.4862 (coef: 0.0834, target: 0.30)
+  [Update@23936] Actor: -0.0004, Critic: 12.6592, Entropy: 1.4651 (coef: 0.0767, target: 0.30)
+Ep 4230 | Steps: 2000 | Reward:  447.00 | Score:  600 | X: 2415 | Ent: 0.0767
+Ep 4231 | Steps:  176 | Reward:   27.84 | Score:  200 | X:  706 | Ent: 0.0985
+  [Update@25088] Actor: 0.0050, Critic: 90.6796, Entropy: 1.5681 (coef: 0.0906, target: 0.30)
+  [Update@25600] Actor: 0.0000, Critic: 4.3850, Entropy: 1.6685 (coef: 0.0833, target: 0.30)
+  [Update@26112] Actor: -0.0012, Critic: 20.7567, Entropy: 1.6862 (coef: 0.0767, target: 0.30)
+Ep 4232 | Steps: 1606 | Reward:  268.84 | Score:  300 | X: 2357 | Ent: 0.0767
+  [Update@26624] Actor: -0.0003, Critic: 54.1404, Entropy: 1.6339 (coef: 0.0905, target: 0.30)
+  [Update@27136] Actor: -0.0001, Critic: 1.6732, Entropy: 1.6786 (coef: 0.0833, target: 0.30)
+  [Update@27648] Actor: 0.0031, Critic: 62.2342, Entropy: 1.5691 (coef: 0.0766, target: 0.30)
+Ep 4233 | Steps: 1565 | Reward:  290.55 | Score:  500 | X:  713 | Ent: 0.0766
+Ep 4234 | Steps:  315 | Reward:  156.45 | Score:  600 | X:  731 | Ent: 0.0984
+  [Update@28574] Actor: -0.0007, Critic: 88.6453, Entropy: 1.6606 (coef: 0.0904, target: 0.30)
+  [Update@29086] Actor: -0.0018, Critic: 1.5562, Entropy: 1.6679 (coef: 0.0832, target: 0.30)
+Ep 4235 | Steps: 1529 | Reward:  435.31 | Score: 1300 | X:  792 | Ent: 0.0832
+Ep 4236 | Steps:  460 | Reward:  322.10 | Score:  500 | X: 1864 | Ent: 0.0983
+  [Update@30563] Actor: -0.0003, Critic: 147.9291, Entropy: 1.6901 (coef: 0.0904, target: 0.30)
+  [Update@31075] Actor: -0.0003, Critic: 52.1625, Entropy: 1.7235 (coef: 0.0831, target: 0.30)
+Ep 4237 | Steps: 1345 | Reward:  626.35 | Score: 1100 | X: 3235 | Ent: 0.0831
+  ✓ New best single episode: 626.35
+Ep 4238 | Steps:  312 | Reward:  144.18 | Score:  500 | X:  705 | Ent: 0.0982
+Ep 4239 | Steps:  269 | Reward:  148.71 | Score:  700 | X: 1843 | Ent: 0.0981
+  [Update@32489] Actor: -0.0048, Critic: 122.0516, Entropy: 1.7293 (coef: 0.0902, target: 0.30)
+Ep 4240 | Steps:  539 | Reward:  261.41 | Score:  700 | X: 1901 | Ent: 0.0902
+Ep 4241 | Steps:  471 | Reward:  154.29 | Score:  700 | X:  719 | Ent: 0.0980
+  [Update@33499] Actor: -0.0015, Critic: 98.0728, Entropy: 1.7178 (coef: 0.0901, target: 0.30)
+Ep 4242 | Steps:  921 | Reward:  432.79 | Score: 1000 | X: 1875 | Ent: 0.0901
+  [Update@34420] Actor: -0.0026, Critic: 143.8780, Entropy: 1.8018 (coef: 0.0901, target: 0.30)
+  [Update@34932] Actor: -0.0008, Critic: 3.3193, Entropy: 1.8439 (coef: 0.0829, target: 0.30)
+Ep 4243 | Steps: 1484 | Reward:  360.16 | Score:  600 | X:  668 | Ent: 0.0829
+  [Update@35904] Actor: -0.0007, Critic: 83.9798, Entropy: 1.7914 (coef: 0.0900, target: 0.30)
+  [Update@36416] Actor: -0.0040, Critic: 57.6488, Entropy: 1.7959 (coef: 0.0828, target: 0.30)
+  [Update@36928] Actor: -0.0029, Critic: 14.4576, Entropy: 1.7812 (coef: 0.0762, target: 0.30)
+Ep 4244 | Steps: 1578 | Reward:  376.62 | Score:  700 | X: 3018 | Ent: 0.0762
+  [Update@37440] Actor: -0.0016, Critic: 325.8066, Entropy: 1.7082 (coef: 0.0900, target: 0.30)
+Ep 4245 | Steps:  485 | Reward:  256.35 | Score:  600 | X: 3723 | Ent: 0.0900
+Ep 4246 | Steps:  334 | Reward:  128.56 | Score:  200 | X:  686 | Ent: 0.0978
+  [Update@38301] Actor: -0.0015, Critic: 146.9599, Entropy: 1.6645 (coef: 0.0899, target: 0.30)
+Ep 4247 | Steps:  691 | Reward:  441.59 | Score:  900 | X: 1875 | Ent: 0.0899
+  ✓✓ New best avg-20: 275.92
+Ep 4248 | Steps:  299 | Reward:  151.31 | Score:  800 | X:  719 | Ent: 0.0977
+  [Update@39291] Actor: 0.0002, Critic: 184.0514, Entropy: 1.7014 (coef: 0.0898, target: 0.30)
+Ep 4249 | Steps:  983 | Reward:  488.77 | Score: 1000 | X: 3749 | Ent: 0.0898
+  ✓✓ New best avg-20: 295.96
+  [Update@40274] Actor: -0.0015, Critic: 180.8842, Entropy: 1.6626 (coef: 0.0898, target: 0.30)
+Ep 4250 | Steps:  846 | Reward:  469.04 | Score: 2800 | X: 3738 | Ent: 0.0898
+  ✓✓ New best avg-20: 297.06
+  📈 Performance improving! avg_50=247.2, reducing ent_coef to 0.0956
+  [Update@41120] Actor: 0.0007, Critic: 154.0777, Entropy: 1.6633 (coef: 0.0879, target: 0.30)
+  [Update@41632] Actor: 0.0017, Critic: 13.0252, Entropy: 1.7532 (coef: 0.0809, target: 0.30)
+Ep 4251 | Steps: 1520 | Reward:  466.40 | Score: 2100 | X: 3274 | Ent: 0.0809
+  ✓✓ New best avg-20: 318.99
+  [Update@42640] Actor: -0.0038, Critic: 179.6072, Entropy: 1.7718 (coef: 0.0879, target: 0.30)
+Ep 4252 | Steps:  783 | Reward:  311.47 | Score: 1100 | X: 2368 | Ent: 0.0879
+  ✓✓ New best avg-20: 321.12
+Ep 4253 | Steps:  388 | Reward:  143.12 | Score:  400 | X:  765 | Ent: 0.0955
+  [Update@43811] Actor: -0.0026, Critic: 60.7899, Entropy: 1.7457 (coef: 0.0878, target: 0.30)
+  [Update@44323] Actor: -0.0019, Critic: 0.9727, Entropy: 1.7391 (coef: 0.0808, target: 0.30)
+  [Update@44835] Actor: -0.0016, Critic: 1.4864, Entropy: 1.7595 (coef: 0.0743, target: 0.30)
+Ep 4254 | Steps: 1561 | Reward:   20.69 | Score:  300 | X: 1943 | Ent: 0.0743
+  [Update@45347] Actor: -0.0002, Critic: 344.2687, Entropy: 1.6906 (coef: 0.0878, target: 0.30)
+Ep 4255 | Steps:  711 | Reward:  268.69 | Score:  900 | X:  747 | Ent: 0.0878
+  [Update@46083] Actor: -0.0008, Critic: 47.5760, Entropy: 1.7130 (coef: 0.0877, target: 0.30)
+Ep 4256 | Steps:  701 | Reward:  163.69 | Score:  600 | X:  748 | Ent: 0.0877
+  [Update@46784] Actor: -0.0009, Critic: 96.5123, Entropy: 1.6881 (coef: 0.0877, target: 0.30)
+Ep 4257 | Steps:  756 | Reward:  267.64 | Score:  700 | X:  714 | Ent: 0.0877
+  [Update@47540] Actor: 0.0004, Critic: 75.0768, Entropy: 1.7061 (coef: 0.0876, target: 0.30)
+Ep 4258 | Steps:  599 | Reward:  207.31 | Score:  600 | X:  731 | Ent: 0.0876
+  [Update@48052] Actor: -0.0000, Critic: 340.2113, Entropy: 1.7078 (coef: 0.0876, target: 0.30)
+  [Update@48564] Actor: -0.0039, Critic: 1.1424, Entropy: 1.7870 (coef: 0.0806, target: 0.30)
+  [Update@49076] Actor: -0.0011, Critic: 74.1219, Entropy: 1.6844 (coef: 0.0741, target: 0.30)
+Ep 4259 | Steps: 1574 | Reward:  418.16 | Score:  700 | X: 1823 | Ent: 0.0741
+  [Update@49588] Actor: -0.0005, Critic: 370.1616, Entropy: 1.6155 (coef: 0.0875, target: 0.30)
+Ep 4260 | Steps:  625 | Reward:  473.65 | Score:  700 | X: 2415 | Ent: 0.0875
+  [Update@50338] Actor: 0.0010, Critic: 153.5439, Entropy: 1.5237 (coef: 0.0875, target: 0.30)
+Ep 4261 | Steps:  533 | Reward:  258.17 | Score:  200 | X: 1911 | Ent: 0.0875
+  [Update@50850] Actor: -0.0003, Critic: 273.4203, Entropy: 1.5913 (coef: 0.0875, target: 0.30)
+Ep 4262 | Steps:  895 | Reward:  168.05 | Score:  600 | X:  704 | Ent: 0.0875
+  [Update@51766] Actor: -0.0021, Critic: 128.2555, Entropy: 1.6653 (coef: 0.0874, target: 0.30)
+Ep 4263 | Steps:  947 | Reward:  316.43 | Score:  300 | X:  707 | Ent: 0.0874
+  [Update@52713] Actor: -0.0011, Critic: 52.5595, Entropy: 1.6992 (coef: 0.0874, target: 0.30)
+Ep 4264 | Steps:  967 | Reward:  315.33 | Score:  900 | X: 1795 | Ent: 0.0874
+  [Update@53680] Actor: -0.0011, Critic: 120.0715, Entropy: 1.6801 (coef: 0.0873, target: 0.30)
+Ep 4265 | Steps:  664 | Reward:  321.16 | Score: 1000 | X: 1819 | Ent: 0.0873
+Ep 4266 | Steps:  174 | Reward:   33.86 | Score:  400 | X:  709 | Ent: 0.0949
+  [Update@54518] Actor: -0.0010, Critic: 70.0499, Entropy: 1.7548 (coef: 0.0872, target: 0.30)
+  [Update@55030] Actor: 0.0003, Critic: 216.5898, Entropy: 1.7019 (coef: 0.0803, target: 0.30)
+Ep 4267 | Steps: 1398 | Reward:  610.52 | Score: 1300 | X: 2294 | Ent: 0.0803
+  [Update@55916] Actor: -0.0019, Critic: 138.2976, Entropy: 1.6980 (coef: 0.0872, target: 0.30)
+Ep 4268 | Steps:  521 | Reward:  282.79 | Score:  700 | X:  726 | Ent: 0.0872
+Ep 4269 | Steps:  264 | Reward:  147.36 | Score:  600 | X: 1810 | Ent: 0.0947
+  [Update@56701] Actor: -0.0010, Critic: 95.5839, Entropy: 1.7039 (coef: 0.0871, target: 0.30)
+Ep 4270 | Steps:  617 | Reward:  321.73 | Score:  400 | X:  787 | Ent: 0.0871
+Ep 4271 | Steps:  368 | Reward:  152.82 | Score:  700 | X: 1804 | Ent: 0.0946
+  [Update@57686] Actor: -0.0012, Critic: 69.6813, Entropy: 1.7684 (coef: 0.0870, target: 0.30)
+  [Update@58198] Actor: -0.0003, Critic: 2.0589, Entropy: 1.7227 (coef: 0.0801, target: 0.30)
+Ep 4272 | Steps: 1257 | Reward:  257.43 | Score: 1000 | X:  709 | Ent: 0.0801
+Ep 4273 | Steps:  295 | Reward:  159.55 | Score:  400 | X:  790 | Ent: 0.0945
+Ep 4274 | Steps:  465 | Reward:  126.25 | Score:  700 | X:  678 | Ent: 0.0945
+  [Update@59703] Actor: -0.0003, Critic: 38.2579, Entropy: 1.7424 (coef: 0.0869, target: 0.30)
+Ep 4275 | Steps:  814 | Reward:  263.86 | Score:  800 | X:  787 | Ent: 0.0869
+  [Update@60517] Actor: -0.0000, Critic: 37.0290, Entropy: 1.7521 (coef: 0.0868, target: 0.30)
+  [Update@61029] Actor: -0.0021, Critic: 4.4957, Entropy: 1.6960 (coef: 0.0799, target: 0.30)
+  [Update@61541] Actor: -0.0003, Critic: 55.7884, Entropy: 1.6885 (coef: 0.0735, target: 0.30)
+Ep 4276 | Steps: 1821 | Reward:  366.79 | Score: 1000 | X:  750 | Ent: 0.0735
+  [Update@62338] Actor: -0.0001, Critic: 150.8973, Entropy: 1.7277 (coef: 0.0868, target: 0.30)
+Ep 4277 | Steps:  990 | Reward:  463.00 | Score:  700 | X: 3776 | Ent: 0.0868
+  📈 Performance improving! avg_50=278.7, reducing ent_coef to 0.0924
+  [Update@63328] Actor: -0.0008, Critic: 134.9120, Entropy: 1.7342 (coef: 0.0850, target: 0.30)
+Ep 4278 | Steps:  924 | Reward:  409.66 | Score:  700 | X: 2389 | Ent: 0.0850
+  [Update@64252] Actor: -0.0007, Critic: 109.8458, Entropy: 1.7550 (coef: 0.0850, target: 0.30)
+  [Update@64764] Actor: -0.0000, Critic: 15.2886, Entropy: 1.7486 (coef: 0.0782, target: 0.30)
+  [Update@65276] Actor: 0.0000, Critic: 48.2807, Entropy: 1.6618 (coef: 0.0719, target: 0.30)
+Ep 4279 | Steps: 1538 | Reward:  264.32 | Score:  900 | X:  789 | Ent: 0.0719
+Ep 4280 | Steps:  313 | Reward:  185.77 | Score:  800 | X: 2163 | Ent: 0.0923
+  [Update@66103] Actor: -0.0001, Critic: 39.1487, Entropy: 1.7432 (coef: 0.0849, target: 0.30)
+  [Update@66615] Actor: -0.0013, Critic: 154.1971, Entropy: 1.7292 (coef: 0.0781, target: 0.30)
+  [Update@67127] Actor: -0.0013, Critic: 14.0642, Entropy: 1.7452 (coef: 0.0719, target: 0.30)
+Ep 4281 | Steps: 1744 | Reward:  547.16 | Score: 1000 | X: 3327 | Ent: 0.0719
+  [Update@67847] Actor: -0.0001, Critic: 49.0456, Entropy: 1.7333 (coef: 0.0848, target: 0.30)
+  [Update@68359] Actor: -0.0002, Critic: 87.1245, Entropy: 1.7020 (coef: 0.0781, target: 0.30)
+  [Update@68871] Actor: -0.0006, Critic: 23.4770, Entropy: 1.7915 (coef: 0.0718, target: 0.30)
+Ep 4282 | Steps: 2000 | Reward:  524.30 | Score: 2300 | X: 2415 | Ent: 0.0718
+Ep 4283 | Steps:  416 | Reward:  186.24 | Score:  300 | X:  651 | Ent: 0.0922
+  [Update@70263] Actor: -0.0019, Critic: 154.7861, Entropy: 1.7292 (coef: 0.0848, target: 0.30)
+Ep 4284 | Steps:  787 | Reward:  534.83 | Score: 1000 | X: 1912 | Ent: 0.0848
+Ep 4285 | Steps:  420 | Reward:  258.40 | Score:  700 | X:  795 | Ent: 0.0921
+  [Update@71470] Actor: -0.0021, Critic: 101.7034, Entropy: 1.7544 (coef: 0.0847, target: 0.30)
+Ep 4286 | Steps:  799 | Reward:  372.31 | Score: 1000 | X: 4431 | Ent: 0.0847
+  ✓✓ New best avg-20: 321.75
+  [Update@72269] Actor: -0.0023, Critic: 79.0585, Entropy: 1.7371 (coef: 0.0846, target: 0.30)
+  [Update@72781] Actor: -0.0007, Critic: 58.1393, Entropy: 1.7164 (coef: 0.0779, target: 0.30)
+Ep 4287 | Steps: 1165 | Reward:  394.35 | Score:  700 | X: 1794 | Ent: 0.0779
+  [Update@73434] Actor: -0.0005, Critic: 105.9467, Entropy: 1.6756 (coef: 0.0846, target: 0.30)
+Ep 4288 | Steps:  698 | Reward:  318.32 | Score:  700 | X:  771 | Ent: 0.0846
+Ep 4289 | Steps:  141 | Reward:   47.39 | Score:  400 | X:  790 | Ent: 0.0919
+  [Update@74273] Actor: -0.0003, Critic: 44.7872, Entropy: 1.7036 (coef: 0.0845, target: 0.30)
+Ep 4290 | Steps:  857 | Reward:  491.83 | Score:  500 | X: 1889 | Ent: 0.0845
+  [Update@75130] Actor: -0.0003, Critic: 71.5785, Entropy: 1.7393 (coef: 0.0845, target: 0.30)
+  [Update@75642] Actor: -0.0005, Critic: 9.3127, Entropy: 1.7119 (coef: 0.0777, target: 0.30)
+Ep 4291 | Steps: 1208 | Reward:  204.92 | Score:  900 | X:  757 | Ent: 0.0777
+  [Update@76338] Actor: -0.0007, Critic: 94.7760, Entropy: 1.7050 (coef: 0.0844, target: 0.30)
+  [Update@76850] Actor: -0.0007, Critic: 82.2767, Entropy: 1.7571 (coef: 0.0777, target: 0.30)
+  [Update@77362] Actor: -0.0024, Critic: 8.9972, Entropy: 1.7414 (coef: 0.0715, target: 0.30)
+Ep 4292 | Steps: 1865 | Reward:  616.35 | Score:  800 | X: 4353 | Ent: 0.0715
+  ✓✓ New best avg-20: 336.78
+  [Update@78203] Actor: -0.0003, Critic: 61.2961, Entropy: 1.7887 (coef: 0.0844, target: 0.30)
+  [Update@78715] Actor: -0.0009, Critic: 27.9987, Entropy: 1.7948 (coef: 0.0776, target: 0.30)
+  [Update@79227] Actor: -0.0018, Critic: 4.7264, Entropy: 1.7654 (coef: 0.0714, target: 0.30)
+Ep 4293 | Steps: 2000 | Reward:  400.20 | Score:  900 | X: 1943 | Ent: 0.0714
+  ✓✓ New best avg-20: 348.81
+Ep 4294 | Steps:  359 | Reward:  151.81 | Score:  500 | X:  669 | Ent: 0.0917
+  ✓✓ New best avg-20: 350.09
+Ep 4295 | Steps:  159 | Reward:   36.41 | Score:  200 | X:  792 | Ent: 0.0916
+Ep 4296 | Steps:  464 | Reward:  251.06 | Score:  300 | X: 1827 | Ent: 0.0916
+  [Update@81185] Actor: -0.0002, Critic: 130.9478, Entropy: 1.6214 (coef: 0.0842, target: 0.30)
+  [Update@81697] Actor: -0.0005, Critic: 7.3049, Entropy: 1.7228 (coef: 0.0775, target: 0.30)
+  [Update@82209] Actor: -0.0020, Critic: 14.5747, Entropy: 1.6693 (coef: 0.0713, target: 0.30)
+Ep 4297 | Steps: 1866 | Reward:  404.74 | Score:  700 | X: 3300 | Ent: 0.0713
+Ep 4298 | Steps:  151 | Reward:   34.89 | Score:  200 | X:  790 | Ent: 0.0915
+Ep 4299 | Steps:  141 | Reward:   42.89 | Score:  600 | X:  794 | Ent: 0.0914
+  [Update@83343] Actor: 0.0001, Critic: 99.4636, Entropy: 1.6839 (coef: 0.0841, target: 0.30)
+Ep 4300 | Steps:  943 | Reward:  540.97 | Score: 1200 | X: 1812 | Ent: 0.0841
+  [Update@84286] Actor: 0.0000, Critic: 121.9045, Entropy: 1.5983 (coef: 0.0840, target: 0.30)
+Ep 4301 | Steps:  637 | Reward:  376.83 | Score:  500 | X: 1884 | Ent: 0.0840
+  [Update@84798] Actor: -0.0018, Critic: 299.3074, Entropy: 1.7236 (coef: 0.0840, target: 0.30)
+Ep 4302 | Steps:  701 | Reward:  309.69 | Score:  500 | X: 1872 | Ent: 0.0840
+  [Update@85624] Actor: 0.0003, Critic: 84.1393, Entropy: 1.7356 (coef: 0.0840, target: 0.30)
+Ep 4303 | Steps:  639 | Reward:  314.91 | Score:  800 | X: 2415 | Ent: 0.0840
+  [Update@86136] Actor: -0.0010, Critic: 347.9196, Entropy: 1.7676 (coef: 0.0839, target: 0.30)
+  [Update@86648] Actor: 0.0003, Critic: 148.4465, Entropy: 1.7192 (coef: 0.0772, target: 0.30)
+Ep 4304 | Steps:  945 | Reward:  410.25 | Score:  800 | X: 1891 | Ent: 0.0772
+Ep 4305 | Steps:  230 | Reward:  159.30 | Score:  500 | X:  745 | Ent: 0.0912
+Ep 4306 | Steps:  296 | Reward:  141.54 | Score:  500 | X:  757 | Ent: 0.0911
+  [Update@87734] Actor: -0.0012, Critic: 40.3306, Entropy: 1.7700 (coef: 0.0838, target: 0.30)
+  [Update@88246] Actor: 0.0067, Critic: 7.1082, Entropy: 1.7182 (coef: 0.0771, target: 0.30)
+Ep 4307 | Steps: 1382 | Reward:  259.48 | Score: 1800 | X:  694 | Ent: 0.0771
+  [Update@89116] Actor: -0.0028, Critic: 200.3770, Entropy: 1.4053 (coef: 0.0838, target: 0.30)
+Ep 4308 | Steps:  521 | Reward:  395.19 | Score:  300 | X: 1801 | Ent: 0.0838
+  [Update@89628] Actor: 0.0025, Critic: 607.2169, Entropy: 1.4431 (coef: 0.0837, target: 0.30)
+Ep 4309 | Steps:  503 | Reward:  405.37 | Score:  600 | X: 3349 | Ent: 0.0837
+Ep 4310 | Steps:  134 | Reward:   45.46 | Score:  400 | X:  724 | Ent: 0.0909
+  [Update@90274] Actor: -0.0013, Critic: 137.4066, Entropy: 1.5331 (coef: 0.0836, target: 0.30)
+Ep 4311 | Steps:  516 | Reward:  313.74 | Score: 1600 | X: 3769 | Ent: 0.0836
+  [Update@90786] Actor: -0.0003, Critic: 206.1272, Entropy: 1.5573 (coef: 0.0836, target: 0.30)
+Ep 4312 | Steps:  547 | Reward:  315.73 | Score:  800 | X: 2415 | Ent: 0.0836
+Ep 4313 | Steps:  237 | Reward:  159.93 | Score:  300 | X: 1943 | Ent: 0.0908
+Ep 4314 | Steps:  340 | Reward:  153.90 | Score:  400 | X:  730 | Ent: 0.0908
+Ep 4315 | Steps:  406 | Reward:  264.54 | Score: 1000 | X:  694 | Ent: 0.0907
+  [Update@92320] Actor: -0.0005, Critic: 48.1966, Entropy: 1.6138 (coef: 0.0834, target: 0.30)
+Ep 4316 | Steps:  881 | Reward:  369.69 | Score:  300 | X: 1805 | Ent: 0.0834
+  [Update@93201] Actor: -0.0001, Critic: 190.0765, Entropy: 1.6170 (coef: 0.0834, target: 0.30)
+Ep 4317 | Steps:  526 | Reward:  304.94 | Score:  900 | X:  787 | Ent: 0.0834
+Ep 4318 | Steps:  337 | Reward:  164.93 | Score:  600 | X:  734 | Ent: 0.0906
+  [Update@94064] Actor: -0.0003, Critic: 98.6485, Entropy: 1.6133 (coef: 0.0833, target: 0.30)
+Ep 4319 | Steps:  593 | Reward:  372.17 | Score:  500 | X:  760 | Ent: 0.0833
+  [Update@94576] Actor: 0.0002, Critic: 301.2461, Entropy: 1.6296 (coef: 0.0833, target: 0.30)
+Ep 4320 | Steps:  859 | Reward:  394.71 | Score: 1800 | X: 1896 | Ent: 0.0833
+  [Update@95516] Actor: 0.0003, Critic: 156.1063, Entropy: 1.6558 (coef: 0.0832, target: 0.30)
+  [Update@96028] Actor: -0.0006, Critic: 72.3225, Entropy: 1.6542 (coef: 0.0766, target: 0.30)
+Ep 4321 | Steps: 1083 | Reward:  551.37 | Score:  900 | X: 1941 | Ent: 0.0766
+Ep 4322 | Steps:  375 | Reward:  151.35 | Score:  800 | X:  794 | Ent: 0.0904
+Ep 4323 | Steps:  166 | Reward:   38.94 | Score:  400 | X:  681 | Ent: 0.0904
+Ep 4324 | Steps:  497 | Reward:  258.83 | Score: 1400 | X: 3008 | Ent: 0.0903
+  [Update@97637] Actor: -0.0002, Critic: 96.3016, Entropy: 1.6871 (coef: 0.0830, target: 0.30)
+  [Update@98149] Actor: -0.0012, Critic: 28.5360, Entropy: 1.7024 (coef: 0.0764, target: 0.30)
+Ep 4325 | Steps: 1348 | Reward:  473.72 | Score:  800 | X:  691 | Ent: 0.0764
+Ep 4326 | Steps:  143 | Reward:   41.47 | Score:  600 | X:  756 | Ent: 0.0902
+Ep 4327 | Steps:  134 | Reward:   39.36 | Score:  600 | X:  758 | Ent: 0.0902
+  [Update@99262] Actor: -0.0029, Critic: 162.8178, Entropy: 1.6859 (coef: 0.0829, target: 0.30)
+  [Update@99774] Actor: -0.0020, Critic: 80.4249, Entropy: 1.6657 (coef: 0.0763, target: 0.30)
+Ep 4328 | Steps: 1130 | Reward:  653.10 | Score:  600 | X: 1853 | Ent: 0.0763
+  ✓ New best single episode: 653.10
+  [Update@100286] Actor: 0.0001, Critic: 273.6071, Entropy: 1.6549 (coef: 0.0829, target: 0.30)
+  [Update@100798] Actor: 0.0000, Critic: 25.5643, Entropy: 1.5609 (coef: 0.0762, target: 0.30)
+Ep 4329 | Steps:  981 | Reward:  274.89 | Score: 1700 | X:  783 | Ent: 0.0762
+  [Update@101310] Actor: -0.0007, Critic: 286.0903, Entropy: 1.6460 (coef: 0.0828, target: 0.30)
+Ep 4330 | Steps:  852 | Reward:  410.18 | Score: 2700 | X: 3736 | Ent: 0.0828
+  [Update@102225] Actor: -0.0007, Critic: 41.6369, Entropy: 1.6244 (coef: 0.0828, target: 0.30)
+  [Update@102737] Actor: -0.0008, Critic: 99.6030, Entropy: 1.6885 (coef: 0.0762, target: 0.30)
+Ep 4331 | Steps: 1360 | Reward:  639.90 | Score: 1500 | X: 1943 | Ent: 0.0762
+Ep 4332 | Steps:  432 | Reward:  268.58 | Score:  200 | X:  765 | Ent: 0.0899
+  [Update@104017] Actor: -0.0001, Critic: 44.8763, Entropy: 1.7277 (coef: 0.0827, target: 0.30)
+  [Update@104529] Actor: -0.0002, Critic: 171.8878, Entropy: 1.6766 (coef: 0.0761, target: 0.30)
+Ep 4333 | Steps: 1083 | Reward:  496.37 | Score: 1300 | X: 4049 | Ent: 0.0761
+  [Update@105041] Actor: -0.0001, Critic: 317.8156, Entropy: 1.7026 (coef: 0.0827, target: 0.30)
+Ep 4334 | Steps:  754 | Reward:  345.06 | Score: 1200 | X:  723 | Ent: 0.0827
+  [Update@105854] Actor: -0.0010, Critic: 136.1421, Entropy: 1.6905 (coef: 0.0826, target: 0.30)
+  [Update@106366] Actor: -0.0017, Critic: 27.3125, Entropy: 1.6550 (coef: 0.0760, target: 0.30)
+  [Update@106878] Actor: -0.0013, Critic: 90.4693, Entropy: 1.5839 (coef: 0.0699, target: 0.30)
+Ep 4335 | Steps: 2000 | Reward:  758.90 | Score: 1600 | X: 2388 | Ent: 0.0699
+  ✓ New best single episode: 758.90
+  ✓✓ New best avg-20: 350.42
+Ep 4336 | Steps:  487 | Reward:  319.43 | Score:  900 | X: 1882 | Ent: 0.0898
+  [Update@108341] Actor: -0.0008, Critic: 105.6433, Entropy: 1.6100 (coef: 0.0825, target: 0.30)
+Ep 4337 | Steps:  652 | Reward:  261.68 | Score:  800 | X: 3018 | Ent: 0.0825
+  [Update@108993] Actor: 0.0020, Critic: 49.9045, Entropy: 1.7615 (coef: 0.0825, target: 0.30)
+Ep 4338 | Steps:  923 | Reward:  389.87 | Score:  900 | X: 1943 | Ent: 0.0825
+  ✓✓ New best avg-20: 356.99
+  [Update@109916] Actor: -0.0032, Critic: 125.0926, Entropy: 1.8493 (coef: 0.0825, target: 0.30)
+Ep 4339 | Steps:  734 | Reward:  266.46 | Score: 1700 | X: 3755 | Ent: 0.0825
+  📈 Performance improving! avg_50=309.0, reducing ent_coef to 0.0878
+  [Update@110650] Actor: 0.0067, Critic: 45.9680, Entropy: 1.8558 (coef: 0.0808, target: 0.30)
+  [Update@111162] Actor: -0.0012, Critic: 6.5958, Entropy: 1.8461 (coef: 0.0743, target: 0.30)
+  [Update@111674] Actor: 0.0004, Critic: 56.8301, Entropy: 1.8196 (coef: 0.0684, target: 0.30)
+Ep 4340 | Steps: 1991 | Reward:  397.79 | Score: 1100 | X: 3018 | Ent: 0.0684
+  [Update@112641] Actor: -0.0012, Critic: 29.7092, Entropy: 1.8743 (coef: 0.0807, target: 0.30)
+  [Update@113153] Actor: 0.0001, Critic: 35.0631, Entropy: 1.8344 (coef: 0.0743, target: 0.30)
+  [Update@113665] Actor: 0.0038, Critic: 10.9319, Entropy: 1.9157 (coef: 0.0683, target: 0.30)
+Ep 4341 | Steps: 1696 | Reward:  430.34 | Score: 3500 | X: 4681 | Ent: 0.0683
+  [Update@114337] Actor: -0.0054, Critic: 145.0230, Entropy: 1.6258 (coef: 0.0807, target: 0.30)
+Ep 4342 | Steps:  519 | Reward:  322.61 | Score:  800 | X:  795 | Ent: 0.0807
+Ep 4343 | Steps:  410 | Reward:  250.00 | Score:  500 | X: 3734 | Ent: 0.0877
+  ✓✓ New best avg-20: 364.93
+Ep 4344 | Steps:  290 | Reward:  186.80 | Score:  600 | X:  731 | Ent: 0.0876
+Ep 4345 | Steps:  414 | Reward:  304.66 | Score:  700 | X:  791 | Ent: 0.0876
+Ep 4346 | Steps:  330 | Reward:  250.30 | Score:  700 | X: 3726 | Ent: 0.0875
+Ep 4347 | Steps:  174 | Reward:   34.56 | Score:  600 | X:  727 | Ent: 0.0875
+  [Update@116474] Actor: -0.0017, Critic: 136.5560, Entropy: 1.6853 (coef: 0.0805, target: 0.30)
+Ep 4348 | Steps:  855 | Reward:  394.95 | Score: 1600 | X:  788 | Ent: 0.0805
+  [Update@117329] Actor: -0.0025, Critic: 142.9134, Entropy: 1.6989 (coef: 0.0804, target: 0.30)
+Ep 4349 | Steps:  636 | Reward:  407.14 | Score: 1000 | X: 1806 | Ent: 0.0804
+  [Update@117841] Actor: 0.0035, Critic: 290.5567, Entropy: 1.6767 (coef: 0.0804, target: 0.30)
+  [Update@118353] Actor: 0.0054, Critic: 56.4896, Entropy: 1.6362 (coef: 0.0739, target: 0.30)
+  [Update@118865] Actor: -0.0003, Critic: 85.4659, Entropy: 1.5842 (coef: 0.0680, target: 0.30)
+Ep 4350 | Steps: 1505 | Reward:  590.75 | Score: 2200 | X: 3017 | Ent: 0.0680
+  ✓✓ New best avg-20: 365.81
+Ep 4351 | Steps:  155 | Reward:   50.85 | Score:  600 | X:  794 | Ent: 0.0873
+Ep 4352 | Steps:  347 | Reward:  302.73 | Score:  600 | X: 3735 | Ent: 0.0873
+Ep 4353 | Steps:  263 | Reward:  159.47 | Score:  600 | X:  737 | Ent: 0.0872
+Ep 4354 | Steps:  230 | Reward:  149.60 | Score:  700 | X:  733 | Ent: 0.0872
+Ep 4355 | Steps:  312 | Reward:  154.68 | Score:  400 | X:  727 | Ent: 0.0871
+Ep 4356 | Steps:  354 | Reward:  183.26 | Score:  700 | X: 2272 | Ent: 0.0871
+Ep 4357 | Steps:  386 | Reward:  267.84 | Score:  700 | X:  750 | Ent: 0.0871
+  [Update@121517] Actor: -0.0006, Critic: 118.1107, Entropy: 1.6324 (coef: 0.0801, target: 0.30)
+Ep 4358 | Steps:  667 | Reward:  261.63 | Score:  400 | X: 3018 | Ent: 0.0801
+  [Update@122184] Actor: 0.0265, Critic: 122.1604, Entropy: 1.7395 (coef: 0.0800, target: 0.30)
+  [Update@122696] Actor: 0.0003, Critic: 55.0676, Entropy: 1.7578 (coef: 0.0736, target: 0.30)
+Ep 4359 | Steps: 1064 | Reward:  471.66 | Score: 2300 | X:  542 | Ent: 0.0736
+  [Update@123208] Actor: -0.0011, Critic: 323.3254, Entropy: 1.7646 (coef: 0.0800, target: 0.30)
+  [Update@123720] Actor: -0.0029, Critic: 14.3681, Entropy: 1.6978 (coef: 0.0736, target: 0.30)
+Ep 4360 | Steps: 1132 | Reward:  278.28 | Score:  600 | X: 3277 | Ent: 0.0736
+  [Update@124380] Actor: 0.0001, Critic: 95.5497, Entropy: 1.7082 (coef: 0.0799, target: 0.30)
+Ep 4361 | Steps:  613 | Reward:  365.67 | Score:  800 | X:  664 | Ent: 0.0799
+Ep 4362 | Steps:  387 | Reward:  159.53 | Score:  500 | X:  789 | Ent: 0.0868
+Ep 4363 | Steps:  381 | Reward:   16.09 | Score:  400 | X:  744 | Ent: 0.0868
+  [Update@125761] Actor: 0.0029, Critic: 63.2696, Entropy: 1.7676 (coef: 0.0798, target: 0.30)
+Ep 4364 | Steps:  519 | Reward:  152.81 | Score:  900 | X:  686 | Ent: 0.0798
+  [Update@126273] Actor: -0.0037, Critic: 179.6096, Entropy: 1.7534 (coef: 0.0798, target: 0.30)
+Ep 4365 | Steps:  960 | Reward:  270.20 | Score: 1600 | X:  731 | Ent: 0.0798
+  [Update@127240] Actor: -0.0023, Critic: 70.7408, Entropy: 1.7142 (coef: 0.0797, target: 0.30)
+Ep 4366 | Steps:  556 | Reward:  210.44 | Score: 1100 | X:  739 | Ent: 0.0797
+  [Update@127752] Actor: -0.0004, Critic: 317.4578, Entropy: 1.6697 (coef: 0.0797, target: 0.30)
+Ep 4367 | Steps:  964 | Reward:  448.96 | Score:  900 | X: 2138 | Ent: 0.0797
+  [Update@128760] Actor: -0.0084, Critic: 36.6827, Entropy: 1.6348 (coef: 0.0797, target: 0.30)
+Ep 4368 | Steps:  789 | Reward:  264.41 | Score: 1600 | X: 3736 | Ent: 0.0797
+  [Update@129549] Actor: -0.0049, Critic: 67.9409, Entropy: 1.6739 (coef: 0.0796, target: 0.30)
+Ep 4369 | Steps:  569 | Reward:  202.21 | Score:  800 | X: 2415 | Ent: 0.0796
+  [Update@130061] Actor: -0.0007, Critic: 421.9558, Entropy: 1.5925 (coef: 0.0796, target: 0.30)
+Ep 4370 | Steps:  714 | Reward:  469.96 | Score: 1500 | X:  698 | Ent: 0.0796
+  [Update@130832] Actor: -0.0027, Critic: 73.3634, Entropy: 1.5925 (coef: 0.0795, target: 0.30)
+Ep 4371 | Steps:  534 | Reward:  185.36 | Score: 1000 | X:  699 | Ent: 0.0795
+Ep 4372 | Steps:  392 | Reward:  269.88 | Score:  700 | X: 3011 | Ent: 0.0864
+  [Update@131758] Actor: -0.0006, Critic: 147.0907, Entropy: 1.5255 (coef: 0.0795, target: 0.30)
+Ep 4373 | Steps:  640 | Reward:  413.20 | Score:  800 | X: 3319 | Ent: 0.0795
+  [Update@132398] Actor: -0.0023, Critic: 74.9743, Entropy: 1.5729 (coef: 0.0794, target: 0.30)
+Ep 4374 | Steps:  833 | Reward:  374.67 | Score:  700 | X: 1820 | Ent: 0.0794
+Ep 4375 | Steps:  460 | Reward:  191.20 | Score:  800 | X:  754 | Ent: 0.0863
+  [Update@133691] Actor: -0.0019, Critic: 77.3896, Entropy: 1.6123 (coef: 0.0793, target: 0.30)
+Ep 4376 | Steps:  565 | Reward:  280.85 | Score: 1700 | X:  756 | Ent: 0.0793
+  [Update@134203] Actor: 0.0029, Critic: 355.7341, Entropy: 1.6074 (coef: 0.0793, target: 0.30)
+Ep 4377 | Steps:  886 | Reward:  583.14 | Score:  800 | X: 2237 | Ent: 0.0793
+  [Update@135142] Actor: 0.0016, Critic: 94.3709, Entropy: 1.5634 (coef: 0.0793, target: 0.30)
+Ep 4378 | Steps:  710 | Reward:  357.70 | Score:  800 | X: 1728 | Ent: 0.0793
+  [Update@135852] Actor: -0.0027, Critic: 105.2484, Entropy: 1.6513 (coef: 0.0792, target: 0.30)
+Ep 4379 | Steps:  572 | Reward:  314.68 | Score:  500 | X: 1894 | Ent: 0.0792
+  [Update@136364] Actor: -0.0031, Critic: 375.5820, Entropy: 1.6339 (coef: 0.0792, target: 0.30)
+Ep 4380 | Steps:  611 | Reward:  310.89 | Score:  600 | X:  747 | Ent: 0.0792
+  [Update@137035] Actor: -0.0043, Critic: 132.8371, Entropy: 1.5849 (coef: 0.0791, target: 0.30)
+Ep 4381 | Steps:  571 | Reward:  380.69 | Score:  900 | X: 3008 | Ent: 0.0791
+Ep 4382 | Steps:  136 | Reward:   43.64 | Score:  600 | X:  711 | Ent: 0.0860
+Ep 4383 | Steps:  143 | Reward:   40.77 | Score:  400 | X:  727 | Ent: 0.0859
+  [Update@137885] Actor: 0.0010, Critic: 107.1796, Entropy: 1.4870 (coef: 0.0790, target: 0.30)
+Ep 4384 | Steps:  861 | Reward:  512.79 | Score:  900 | X:  651 | Ent: 0.0790
+  [Update@138746] Actor: -0.0073, Critic: 72.7513, Entropy: 1.5989 (coef: 0.0790, target: 0.30)
+Ep 4385 | Steps:  654 | Reward:  188.16 | Score:  500 | X: 2293 | Ent: 0.0790
+Ep 4386 | Steps:  296 | Reward:  187.14 | Score:  400 | X:  733 | Ent: 0.0858
+Ep 4387 | Steps:  315 | Reward:  275.65 | Score:  300 | X: 1943 | Ent: 0.0858
+Ep 4388 | Steps:  108 | Reward:   46.32 | Score:    0 | X:  788 | Ent: 0.0857
+Ep 4389 | Steps:  268 | Reward:  261.32 | Score:  100 | X:  797 | Ent: 0.0857
+Ep 4390 | Steps:  350 | Reward:  304.00 | Score:  600 | X:  773 | Ent: 0.0856
+Ep 4391 | Steps:  232 | Reward:  156.38 | Score:  300 | X:  795 | Ent: 0.0856
+  [Update@140969] Actor: 0.0026, Critic: 263.2294, Entropy: 0.5351 (coef: 0.0855, target: 0.30)
+Ep 4392 | Steps:  530 | Reward:  562.70 | Score:  700 | X: 2225 | Ent: 0.0855
+Ep 4393 | Steps:  433 | Reward:  373.67 | Score:  300 | X:  721 | Ent: 0.0855
+Ep 4394 | Steps:  363 | Reward:  293.57 | Score:  300 | X:  711 | Ent: 0.0855
+Ep 4395 | Steps:  112 | Reward:   42.28 | Score:    0 | X:  771 | Ent: 0.0854
+Ep 4396 | Steps:  358 | Reward:  426.72 | Score:  300 | X: 3018 | Ent: 0.0854
+Ep 4397 | Steps:  241 | Reward:  184.89 | Score:  500 | X:  773 | Ent: 0.0853
+Ep 4398 | Steps:  464 | Reward:  421.96 | Score:  600 | X: 2279 | Ent: 0.0853
+  [Update@143470] Actor: 0.0003, Critic: 142.3104, Entropy: 0.8705 (coef: 0.0784, target: 0.30)
+Ep 4399 | Steps:  938 | Reward:  554.92 | Score:  500 | X: 3789 | Ent: 0.0784
+  📊 Stagnating! recent=297.6 vs older=297.6, boosting ent_coef to 0.0980
+Ep 4400 | Steps:  157 | Reward:   26.33 | Score:  400 | X:  698 | Ent: 0.0980
+  💾 Checkpoint saved at episode 4400
+Ep 4401 | Steps:  169 | Reward:   18.81 | Score:    0 | X:  697 | Ent: 0.0979
+  [Update@144734] Actor: 0.0008, Critic: 58.1531, Entropy: 1.2220 (coef: 0.0901, target: 0.30)
+  [Update@145246] Actor: 0.0011, Critic: 62.8004, Entropy: 1.2749 (coef: 0.0829, target: 0.30)
+Ep 4402 | Steps: 1121 | Reward:  538.09 | Score:  900 | X: 1820 | Ent: 0.0829
+  [Update@145758] Actor: 0.0017, Critic: 309.0261, Entropy: 1.2954 (coef: 0.0900, target: 0.30)
+Ep 4403 | Steps:  625 | Reward:  304.45 | Score:  800 | X: 3767 | Ent: 0.0900
+Ep 4404 | Steps:  404 | Reward:  200.86 | Score:  600 | X:  692 | Ent: 0.0978
+Ep 4405 | Steps:  206 | Reward:  153.84 | Score:  900 | X: 1868 | Ent: 0.0977
+Ep 4406 | Steps:  294 | Reward:  142.46 | Score:  200 | X:  722 | Ent: 0.0977
+  [Update@147384] Actor: 0.0005, Critic: 83.0956, Entropy: 1.3392 (coef: 0.0898, target: 0.30)
+Ep 4407 | Steps:  620 | Reward:  288.00 | Score:  500 | X:  728 | Ent: 0.0898
+  [Update@147896] Actor: -0.0001, Critic: 339.5326, Entropy: 1.4141 (coef: 0.0898, target: 0.30)
+Ep 4408 | Steps:  798 | Reward:  326.02 | Score:  400 | X:  650 | Ent: 0.0898
+Ep 4409 | Steps:  393 | Reward:  148.07 | Score:  700 | X: 1936 | Ent: 0.0975
+  [Update@149195] Actor: 0.0013, Critic: 50.5299, Entropy: 1.5222 (coef: 0.0897, target: 0.30)
+Ep 4410 | Steps:  597 | Reward:  182.73 | Score:  600 | X:  605 | Ent: 0.0897
+  [Update@149707] Actor: 0.0145, Critic: 371.4425, Entropy: 1.5140 (coef: 0.0897, target: 0.30)
+  [Update@150219] Actor: -0.0058, Critic: 23.9428, Entropy: 1.4793 (coef: 0.0825, target: 0.30)
+  [Update@150731] Actor: -0.0029, Critic: 61.0824, Entropy: 1.4662 (coef: 0.0759, target: 0.30)
+Ep 4411 | Steps: 1641 | Reward:  600.79 | Score: 2200 | X: 2415 | Ent: 0.0759
+Ep 4412 | Steps:  242 | Reward:   21.88 | Score:  200 | X:  678 | Ent: 0.0974
+  [Update@151675] Actor: -0.0015, Critic: 27.6058, Entropy: 1.5062 (coef: 0.0896, target: 0.30)
+  [Update@152187] Actor: 0.0117, Critic: 58.6689, Entropy: 1.3504 (coef: 0.0824, target: 0.30)
+  [Update@152699] Actor: 0.0039, Critic: 34.6793, Entropy: 1.5140 (coef: 0.0758, target: 0.30)
+Ep 4413 | Steps: 1561 | Reward:  486.79 | Score: 2200 | X:  630 | Ent: 0.0758
+  [Update@153211] Actor: -0.0010, Critic: 328.2911, Entropy: 1.6430 (coef: 0.0895, target: 0.30)
+Ep 4414 | Steps:  958 | Reward:  330.22 | Score: 1000 | X:  697 | Ent: 0.0895
+  [Update@154194] Actor: -0.0050, Critic: 38.5197, Entropy: 1.7132 (coef: 0.0895, target: 0.30)
+  [Update@154706] Actor: -0.0079, Critic: 69.6253, Entropy: 1.7082 (coef: 0.0823, target: 0.30)
+Ep 4415 | Steps: 1165 | Reward:  356.75 | Score: 1200 | X: 1803 | Ent: 0.0823
+Ep 4416 | Steps:  428 | Reward:  137.52 | Score:  500 | X:  722 | Ent: 0.0972
+Ep 4417 | Steps:  254 | Reward:   31.36 | Score:  400 | X:  713 | Ent: 0.0972
+  [Update@156041] Actor: -0.0031, Critic: 19.7069, Entropy: 1.8183 (coef: 0.0893, target: 0.30)
+  [Update@156553] Actor: -0.0004, Critic: 33.7676, Entropy: 1.7941 (coef: 0.0822, target: 0.30)
+Ep 4418 | Steps: 1178 | Reward:  170.42 | Score: 1500 | X:  471 | Ent: 0.0822
+  [Update@157219] Actor: -0.0071, Critic: 32.9003, Entropy: 1.8163 (coef: 0.0893, target: 0.30)
+Ep 4419 | Steps:  725 | Reward:  149.75 | Score:  700 | X:  792 | Ent: 0.0893
+  [Update@157944] Actor: -0.0013, Critic: 30.3138, Entropy: 1.8648 (coef: 0.0892, target: 0.30)
+  [Update@158456] Actor: 0.0298, Critic: 27.3190, Entropy: 1.6280 (coef: 0.0821, target: 0.30)
+  [Update@158968] Actor: 0.0477, Critic: 56.5742, Entropy: 1.5890 (coef: 0.0755, target: 0.30)
+Ep 4420 | Steps: 1971 | Reward:  574.29 | Score: 3100 | X: 6617 | Ent: 0.0755
+Ep 4421 | Steps:  316 | Reward:  196.94 | Score:  800 | X:  738 | Ent: 0.0970
+Ep 4422 | Steps:  173 | Reward:   27.37 | Score:  200 | X:  719 | Ent: 0.0969
+  [Update@160404] Actor: -0.0000, Critic: 44.8590, Entropy: 1.4526 (coef: 0.0891, target: 0.30)
+  [Update@160916] Actor: 0.0015, Critic: 70.2049, Entropy: 1.5901 (coef: 0.0820, target: 0.30)
+Ep 4423 | Steps: 1149 | Reward:  432.41 | Score: 1100 | X: 1804 | Ent: 0.0820
+  [Update@161428] Actor: -0.0020, Critic: 320.1285, Entropy: 1.5580 (coef: 0.0891, target: 0.30)
+Ep 4424 | Steps:  469 | Reward:  265.21 | Score:  500 | X: 3017 | Ent: 0.0891
+  [Update@161940] Actor: -0.0001, Critic: 334.5050, Entropy: 1.4951 (coef: 0.0890, target: 0.30)
+  [Update@162452] Actor: -0.0014, Critic: 79.8904, Entropy: 1.5780 (coef: 0.0819, target: 0.30)
+Ep 4425 | Steps: 1242 | Reward:  750.18 | Score: 1100 | X: 3763 | Ent: 0.0819
+  [Update@163264] Actor: -0.0023, Critic: 86.6445, Entropy: 1.5320 (coef: 0.0890, target: 0.30)
+Ep 4426 | Steps:  698 | Reward:  369.02 | Score:  400 | X: 1789 | Ent: 0.0890
+  [Update@163962] Actor: -0.0037, Critic: 78.3702, Entropy: 1.6723 (coef: 0.0889, target: 0.30)
+  [Update@164474] Actor: -0.0007, Critic: 42.6516, Entropy: 1.6138 (coef: 0.0818, target: 0.30)
+Ep 4427 | Steps: 1456 | Reward:  404.24 | Score:  400 | X: 1883 | Ent: 0.0818
+  [Update@165418] Actor: 0.0590, Critic: 36.9797, Entropy: 1.4969 (coef: 0.0889, target: 0.30)
+  [Update@165930] Actor: 0.0041, Critic: 58.8632, Entropy: 1.3666 (coef: 0.0818, target: 0.30)
+Ep 4428 | Steps: 1074 | Reward:  277.66 | Score: 1700 | X:  761 | Ent: 0.0818
+  [Update@166442] Actor: 0.0014, Critic: 358.1271, Entropy: 1.3752 (coef: 0.0888, target: 0.30)
+Ep 4429 | Steps:  650 | Reward:  263.60 | Score:  700 | X: 3018 | Ent: 0.0888
+  [Update@167142] Actor: 0.0257, Critic: 51.7733, Entropy: 1.4829 (coef: 0.0888, target: 0.30)
+  [Update@167654] Actor: 0.0014, Critic: 66.0049, Entropy: 1.5286 (coef: 0.0817, target: 0.30)
+  [Update@168166] Actor: -0.0034, Critic: 38.6944, Entropy: 1.5197 (coef: 0.0752, target: 0.30)
+Ep 4430 | Steps: 1754 | Reward:  688.26 | Score: 1600 | X: 3018 | Ent: 0.0752
+Ep 4431 | Steps:  239 | Reward:  137.71 | Score:  500 | X:  683 | Ent: 0.0965
+Ep 4432 | Steps:  177 | Reward:   46.43 | Score:  600 | X:  741 | Ent: 0.0964
+  [Update@169312] Actor: -0.0003, Critic: 43.2978, Entropy: 1.5239 (coef: 0.0887, target: 0.30)
+Ep 4433 | Steps:  587 | Reward:  194.23 | Score: 1000 | X:  771 | Ent: 0.0887
+  [Update@169824] Actor: -0.0008, Critic: 373.1418, Entropy: 1.4697 (coef: 0.0886, target: 0.30)
+Ep 4434 | Steps:  534 | Reward:  375.26 | Score:  800 | X: 1834 | Ent: 0.0886
+  [Update@170336] Actor: -0.0003, Critic: 264.7279, Entropy: 1.5307 (coef: 0.0886, target: 0.30)
+  [Update@170848] Actor: -0.0004, Critic: 39.5189, Entropy: 1.5276 (coef: 0.0815, target: 0.30)
+Ep 4435 | Steps: 1413 | Reward:  444.17 | Score: 1300 | X: 3727 | Ent: 0.0815
+Ep 4436 | Steps:  304 | Reward:  144.86 | Score:  700 | X: 1816 | Ent: 0.0962
+  [Update@172150] Actor: -0.0011, Critic: 97.2477, Entropy: 1.5294 (coef: 0.0885, target: 0.30)
+Ep 4437 | Steps:  606 | Reward:  304.44 | Score:  900 | X: 2301 | Ent: 0.0885
+Ep 4438 | Steps:  162 | Reward:   41.98 | Score:  600 | X:  719 | Ent: 0.0961
+Ep 4439 | Steps:  341 | Reward:  137.29 | Score:  800 | X:  688 | Ent: 0.0961
+  [Update@173259] Actor: -0.0008, Critic: 66.6390, Entropy: 1.5354 (coef: 0.0884, target: 0.30)
+Ep 4440 | Steps:  914 | Reward:  291.66 | Score:  900 | X: 3306 | Ent: 0.0884
+  [Update@174173] Actor: 0.0010, Critic: 63.1601, Entropy: 1.5166 (coef: 0.0883, target: 0.30)
+Ep 4441 | Steps:  521 | Reward:  200.09 | Score:  600 | X:  735 | Ent: 0.0883
+Ep 4442 | Steps:  401 | Reward:  148.59 | Score:  700 | X:  711 | Ent: 0.0959
+Ep 4443 | Steps:  468 | Reward:  164.42 | Score:  400 | X:  650 | Ent: 0.0959
+  [Update@175563] Actor: -0.0020, Critic: 77.6842, Entropy: 1.5847 (coef: 0.0882, target: 0.30)
+Ep 4444 | Steps:  781 | Reward:  285.19 | Score:  900 | X: 3246 | Ent: 0.0882
+  [Update@176344] Actor: 0.0011, Critic: 59.0564, Entropy: 1.5824 (coef: 0.0881, target: 0.30)
+Ep 4445 | Steps:  758 | Reward:  243.32 | Score:  500 | X:  571 | Ent: 0.0881
+  [Update@177102] Actor: -0.0008, Critic: 99.8137, Entropy: 1.6040 (coef: 0.0881, target: 0.30)
+  [Update@177614] Actor: -0.0055, Critic: 59.6207, Entropy: 1.5053 (coef: 0.0810, target: 0.30)
+Ep 4446 | Steps: 1235 | Reward:  627.15 | Score: 2700 | X: 3733 | Ent: 0.0810
+  [Update@178337] Actor: -0.0022, Critic: 89.8056, Entropy: 1.5239 (coef: 0.0881, target: 0.30)
+Ep 4447 | Steps:  843 | Reward:  483.67 | Score: 1200 | X: 2415 | Ent: 0.0881
+  [Update@179180] Actor: -0.0001, Critic: 73.3985, Entropy: 1.5522 (coef: 0.0880, target: 0.30)
+Ep 4448 | Steps:  797 | Reward:  278.33 | Score:  500 | X:  687 | Ent: 0.0880
+  [Update@179977] Actor: -0.0023, Critic: 53.4589, Entropy: 1.5637 (coef: 0.0880, target: 0.30)
+Ep 4449 | Steps:  944 | Reward:  357.26 | Score: 1200 | X: 2412 | Ent: 0.0880
+Ep 4450 | Steps:  460 | Reward:  263.20 | Score:  100 | X:  757 | Ent: 0.0956
+  [Update@181381] Actor: -0.0019, Critic: 39.9973, Entropy: 1.5712 (coef: 0.0879, target: 0.30)
+Ep 4451 | Steps:  906 | Reward:  394.04 | Score:  800 | X: 1876 | Ent: 0.0879
+  [Update@182287] Actor: -0.0006, Critic: 52.8281, Entropy: 1.5984 (coef: 0.0878, target: 0.30)
+  [Update@182799] Actor: -0.0032, Critic: 63.4581, Entropy: 1.5730 (coef: 0.0808, target: 0.30)
+Ep 4452 | Steps: 1103 | Reward:  434.97 | Score:  900 | X: 2413 | Ent: 0.0808
+  [Update@183311] Actor: 0.0002, Critic: 401.6068, Entropy: 1.6795 (coef: 0.0878, target: 0.30)
+Ep 4453 | Steps:  678 | Reward:  415.52 | Score:  800 | X: 3732 | Ent: 0.0878
+  [Update@184068] Actor: -0.0017, Critic: 62.9863, Entropy: 1.6048 (coef: 0.0877, target: 0.30)
+  [Update@184580] Actor: -0.0023, Critic: 64.4762, Entropy: 1.7482 (coef: 0.0807, target: 0.30)
+Ep 4454 | Steps: 1045 | Reward:  255.35 | Score:  800 | X: 3762 | Ent: 0.0807
+Ep 4455 | Steps:  325 | Reward:  154.75 | Score:  700 | X:  736 | Ent: 0.0953
+  [Update@185438] Actor: -0.0006, Critic: 94.2480, Entropy: 1.6082 (coef: 0.0877, target: 0.30)
+Ep 4456 | Steps:  741 | Reward:  322.89 | Score:  700 | X: 2415 | Ent: 0.0877
+Ep 4457 | Steps:  183 | Reward:   20.07 | Score:  200 | X:  689 | Ent: 0.0952
+Ep 4458 | Steps:  166 | Reward:   40.24 | Score:  600 | X:  744 | Ent: 0.0952
+Ep 4459 | Steps:  474 | Reward:  270.16 | Score:  700 | X: 1870 | Ent: 0.0951
+  [Update@187002] Actor: 0.0001, Critic: 70.5661, Entropy: 1.6651 (coef: 0.0875, target: 0.30)
+Ep 4460 | Steps:  527 | Reward:  148.03 | Score:  800 | X:  723 | Ent: 0.0875
+  [Update@187514] Actor: -0.0002, Critic: 280.0636, Entropy: 1.6532 (coef: 0.0874, target: 0.30)
+  [Update@188026] Actor: -0.0011, Critic: 39.7424, Entropy: 1.6906 (coef: 0.0804, target: 0.30)
+Ep 4461 | Steps: 1099 | Reward:  439.21 | Score: 1300 | X: 1844 | Ent: 0.0804
+  [Update@188538] Actor: -0.0006, Critic: 300.0440, Entropy: 1.7082 (coef: 0.0874, target: 0.30)
+Ep 4462 | Steps:  823 | Reward:  260.17 | Score: 1800 | X: 2999 | Ent: 0.0874
+  [Update@189451] Actor: 0.0013, Critic: 46.1357, Entropy: 1.8402 (coef: 0.0873, target: 0.30)
+  [Update@189963] Actor: -0.0008, Critic: 15.5051, Entropy: 1.7707 (coef: 0.0804, target: 0.30)
+  [Update@190475] Actor: -0.0032, Critic: 45.4439, Entropy: 1.8170 (coef: 0.0739, target: 0.30)
+Ep 4463 | Steps: 1634 | Reward:  279.36 | Score: 1200 | X: 1860 | Ent: 0.0739
+  [Update@190987] Actor: -0.0005, Critic: 259.2886, Entropy: 1.8175 (coef: 0.0873, target: 0.30)
+  [Update@191499] Actor: -0.0048, Critic: 45.6885, Entropy: 1.7520 (coef: 0.0803, target: 0.30)
+  [Update@192011] Actor: -0.0035, Critic: 47.3986, Entropy: 1.6946 (coef: 0.0739, target: 0.30)
+Ep 4464 | Steps: 1591 | Reward:  428.79 | Score: 1500 | X:  747 | Ent: 0.0739
+  [Update@192676] Actor: -0.0014, Critic: 30.8903, Entropy: 1.7363 (coef: 0.0873, target: 0.30)
+  [Update@193188] Actor: -0.0031, Critic: 41.4387, Entropy: 1.7209 (coef: 0.0803, target: 0.30)
+Ep 4465 | Steps: 1044 | Reward:  368.26 | Score:  900 | X:  691 | Ent: 0.0803
+  [Update@193700] Actor: -0.0028, Critic: 304.3930, Entropy: 1.7366 (coef: 0.0872, target: 0.30)
+  [Update@194212] Actor: -0.0043, Critic: 23.8938, Entropy: 1.5494 (coef: 0.0802, target: 0.30)
+Ep 4466 | Steps: 1159 | Reward:  259.71 | Score: 1700 | X: 3018 | Ent: 0.0802
+  [Update@194879] Actor: -0.0022, Critic: 36.4854, Entropy: 1.8243 (coef: 0.0872, target: 0.30)
+  [Update@195391] Actor: 0.0005, Critic: 38.8496, Entropy: 1.7815 (coef: 0.0802, target: 0.30)
+Ep 4467 | Steps: 1158 | Reward:  379.22 | Score: 2300 | X: 3018 | Ent: 0.0802
+  [Update@196037] Actor: 0.0216, Critic: 46.2440, Entropy: 1.8668 (coef: 0.0871, target: 0.30)
+  [Update@196549] Actor: -0.0022, Critic: 49.3246, Entropy: 1.7635 (coef: 0.0802, target: 0.30)
+Ep 4468 | Steps: 1343 | Reward:  299.57 | Score:  700 | X: 1793 | Ent: 0.0802
+  [Update@197380] Actor: -0.0005, Critic: 66.9388, Entropy: 1.6649 (coef: 0.0871, target: 0.30)
+Ep 4469 | Steps:  564 | Reward:  271.96 | Score: 1200 | X:  708 | Ent: 0.0871
+  [Update@197892] Actor: -0.0004, Critic: 349.2577, Entropy: 1.7558 (coef: 0.0870, target: 0.30)
+Ep 4470 | Steps:  650 | Reward:  248.80 | Score:  700 | X: 1823 | Ent: 0.0870
+  [Update@198594] Actor: -0.0010, Critic: 34.2248, Entropy: 1.8343 (coef: 0.0870, target: 0.30)
+  [Update@199106] Actor: -0.0007, Critic: 35.1866, Entropy: 1.7872 (coef: 0.0800, target: 0.30)
+Ep 4471 | Steps: 1194 | Reward:  360.86 | Score: 1900 | X: 3015 | Ent: 0.0800
+  [Update@199788] Actor: -0.0020, Critic: 62.5827, Entropy: 1.8206 (coef: 0.0870, target: 0.30)
+  [Update@200300] Actor: -0.0053, Critic: 42.1890, Entropy: 1.8679 (coef: 0.0800, target: 0.30)
+Ep 4472 | Steps: 1226 | Reward:  346.44 | Score:  700 | X: 2216 | Ent: 0.0800
+  [Update@201014] Actor: -0.0029, Critic: 35.4686, Entropy: 1.7776 (coef: 0.0869, target: 0.30)
+  [Update@201526] Actor: -0.0006, Critic: 45.3291, Entropy: 1.6963 (coef: 0.0800, target: 0.30)
+Ep 4473 | Steps: 1443 | Reward:  498.87 | Score: 2000 | X:  732 | Ent: 0.0800
+Ep 4474 | Steps:  463 | Reward:  158.67 | Score:  900 | X: 1813 | Ent: 0.0944
+  [Update@202920] Actor: -0.0034, Critic: 85.5272, Entropy: 1.7596 (coef: 0.0868, target: 0.30)
+Ep 4475 | Steps: 1021 | Reward:  495.19 | Score: 1200 | X: 4024 | Ent: 0.0868
+Ep 4476 | Steps:  330 | Reward:  160.00 | Score:  500 | X:  796 | Ent: 0.0943
+  [Update@204271] Actor: -0.0053, Critic: 29.9136, Entropy: 1.7406 (coef: 0.0867, target: 0.30)
+  [Update@204783] Actor: -0.0018, Critic: 84.0273, Entropy: 1.6934 (coef: 0.0798, target: 0.30)
+Ep 4477 | Steps: 1161 | Reward:  433.89 | Score:  700 | X:  722 | Ent: 0.0798
+  [Update@205432] Actor: -0.0017, Critic: 145.5791, Entropy: 1.6272 (coef: 0.0867, target: 0.30)
+Ep 4478 | Steps:  977 | Reward:  554.23 | Score:  900 | X: 3332 | Ent: 0.0867
+  [Update@206409] Actor: -0.0022, Critic: 91.0087, Entropy: 1.6530 (coef: 0.0867, target: 0.30)
+Ep 4479 | Steps:  782 | Reward:  560.78 | Score: 2100 | X: 4687 | Ent: 0.0867
+Ep 4480 | Steps:  453 | Reward:  144.67 | Score:  700 | X:  658 | Ent: 0.0941
+Ep 4481 | Steps:  406 | Reward:  144.14 | Score:  400 | X:  717 | Ent: 0.0941
+  [Update@208050] Actor: -0.0024, Critic: 51.6026, Entropy: 1.7415 (coef: 0.0865, target: 0.30)
+Ep 4482 | Steps:  613 | Reward:  284.47 | Score:  700 | X: 1800 | Ent: 0.0865
+  [Update@208562] Actor: -0.0015, Critic: 322.0756, Entropy: 1.6606 (coef: 0.0865, target: 0.30)
+  [Update@209074] Actor: -0.0012, Critic: 68.7865, Entropy: 1.6876 (coef: 0.0796, target: 0.30)
+  [Update@209586] Actor: -0.0010, Critic: 32.0068, Entropy: 1.6820 (coef: 0.0732, target: 0.30)
+Ep 4483 | Steps: 1657 | Reward:  668.53 | Score: 2300 | X: 3018 | Ent: 0.0732
+  [Update@210320] Actor: 0.0001, Critic: 100.3990, Entropy: 1.6650 (coef: 0.0864, target: 0.30)
+Ep 4484 | Steps:  805 | Reward:  442.85 | Score: 1300 | X: 1939 | Ent: 0.0864
+Ep 4485 | Steps:  395 | Reward:  149.05 | Score:  600 | X: 1837 | Ent: 0.0939
+  [Update@211520] Actor: 0.0003, Critic: 82.7968, Entropy: 1.6898 (coef: 0.0863, target: 0.30)
+Ep 4486 | Steps:  637 | Reward:  358.93 | Score:  500 | X:  688 | Ent: 0.0863
+  [Update@212032] Actor: -0.0000, Critic: 401.2740, Entropy: 1.7414 (coef: 0.0863, target: 0.30)
+Ep 4487 | Steps:  389 | Reward:  181.81 | Score:  600 | X: 2231 | Ent: 0.0863
+  [Update@212544] Actor: 0.0001, Critic: 168.0801, Entropy: 1.7595 (coef: 0.0863, target: 0.30)
+Ep 4488 | Steps:  701 | Reward:  285.89 | Score: 2000 | X: 3018 | Ent: 0.0863
+  [Update@213247] Actor: 0.0230, Critic: 27.7066, Entropy: 1.7983 (coef: 0.0862, target: 0.30)
+  [Update@213759] Actor: -0.0026, Critic: 50.3881, Entropy: 1.5971 (coef: 0.0793, target: 0.30)
+  [Update@214271] Actor: -0.0104, Critic: 20.6447, Entropy: 1.7820 (coef: 0.0730, target: 0.30)
+Ep 4489 | Steps: 1590 | Reward:  319.80 | Score: 1000 | X: 1939 | Ent: 0.0730
+  [Update@214783] Actor: -0.0011, Critic: 333.6926, Entropy: 1.7604 (coef: 0.0862, target: 0.30)
+  [Update@215295] Actor: -0.0047, Critic: 21.3436, Entropy: 1.7714 (coef: 0.0793, target: 0.30)
+Ep 4490 | Steps: 1189 | Reward:  289.81 | Score:  700 | X:  717 | Ent: 0.0793
+  [Update@216026] Actor: -0.0004, Critic: 16.9941, Entropy: 1.7770 (coef: 0.0861, target: 0.30)
+Ep 4491 | Steps:  636 | Reward:  137.14 | Score:  500 | X:  708 | Ent: 0.0861
+  [Update@216538] Actor: 0.0023, Critic: 456.3834, Entropy: 1.7129 (coef: 0.0861, target: 0.30)
+Ep 4492 | Steps:  703 | Reward:  429.37 | Score: 1000 | X: 1933 | Ent: 0.0861
+Ep 4493 | Steps:  336 | Reward:  135.54 | Score:  600 | X: 1789 | Ent: 0.0935
+  [Update@217701] Actor: -0.0011, Critic: 61.2779, Entropy: 1.6776 (coef: 0.0860, target: 0.30)
+Ep 4494 | Steps:  618 | Reward:  319.22 | Score:  600 | X: 3747 | Ent: 0.0860
+Ep 4495 | Steps:  274 | Reward:  146.96 | Score:  400 | X:  769 | Ent: 0.0934
+Ep 4496 | Steps:  477 | Reward:  309.83 | Score:  900 | X:  773 | Ent: 0.0934
+  [Update@219070] Actor: -0.0016, Critic: 29.4503, Entropy: 1.6395 (coef: 0.0859, target: 0.30)
+  [Update@219582] Actor: -0.0013, Critic: 58.1157, Entropy: 1.6410 (coef: 0.0790, target: 0.30)
+Ep 4497 | Steps: 1442 | Reward:  488.38 | Score: 1200 | X: 3789 | Ent: 0.0790
+  [Update@220512] Actor: -0.0014, Critic: 33.5691, Entropy: 1.6469 (coef: 0.0858, target: 0.30)
+Ep 4498 | Steps:  765 | Reward:  176.75 | Score:  800 | X:  789 | Ent: 0.0858
+  [Update@221277] Actor: -0.0040, Critic: 36.7554, Entropy: 1.6804 (coef: 0.0858, target: 0.30)
+Ep 4499 | Steps:  713 | Reward:  294.67 | Score:  800 | X:  734 | Ent: 0.0858
+  📊 Stagnating! recent=290.0 vs older=290.0, boosting ent_coef to 0.1000
+  [Update@221990] Actor: -0.0041, Critic: 24.8556, Entropy: 1.7340 (coef: 0.0920, target: 0.30)
+  [Update@222502] Actor: -0.0015, Critic: 45.4202, Entropy: 1.6777 (coef: 0.0846, target: 0.30)
+Ep 4500 | Steps: 1192 | Reward:  258.88 | Score: 1900 | X: 3701 | Ent: 0.0846
+  [Update@223182] Actor: -0.0071, Critic: 50.0145, Entropy: 1.7261 (coef: 0.0920, target: 0.30)
+  [Update@223694] Actor: 0.0009, Critic: 23.4495, Entropy: 1.6207 (coef: 0.0846, target: 0.30)
+Ep 4501 | Steps: 1358 | Reward:  252.02 | Score: 1000 | X:  792 | Ent: 0.0846
+  [Update@224540] Actor: -0.0035, Critic: 27.4203, Entropy: 1.7279 (coef: 0.0919, target: 0.30)
+Ep 4502 | Steps:  886 | Reward:  263.54 | Score: 1200 | X:  743 | Ent: 0.0919
+  [Update@225426] Actor: -0.0017, Critic: 31.2514, Entropy: 1.6260 (coef: 0.0919, target: 0.30)
+  [Update@225938] Actor: -0.0004, Critic: 21.4065, Entropy: 1.7188 (coef: 0.0845, target: 0.30)
+  [Update@226450] Actor: 0.0229, Critic: 65.4124, Entropy: 1.5819 (coef: 0.0778, target: 0.30)
+Ep 4503 | Steps: 1759 | Reward:  198.31 | Score: 1600 | X: 2405 | Ent: 0.0778
+  [Update@227185] Actor: 0.0581, Critic: 16.1574, Entropy: 1.6807 (coef: 0.0918, target: 0.30)
+  [Update@227697] Actor: -0.0025, Critic: 11.6653, Entropy: 1.7384 (coef: 0.0845, target: 0.30)
+Ep 4504 | Steps: 1228 | Reward:  237.42 | Score:  600 | X: 2997 | Ent: 0.0845
+Ep 4505 | Steps:  382 | Reward:  136.98 | Score:  500 | X: 1824 | Ent: 0.0998
+  [Update@228795] Actor: -0.0018, Critic: 32.1552, Entropy: 1.7619 (coef: 0.0917, target: 0.30)
+  [Update@229307] Actor: -0.0032, Critic: 30.1055, Entropy: 1.7249 (coef: 0.0844, target: 0.30)
+Ep 4506 | Steps: 1387 | Reward:  429.23 | Score:  700 | X:  664 | Ent: 0.0844
+  [Update@230182] Actor: 0.0001, Critic: 73.9506, Entropy: 1.7040 (coef: 0.0917, target: 0.30)
+Ep 4507 | Steps:  935 | Reward:  343.45 | Score:  700 | X:  787 | Ent: 0.0917
+Ep 4508 | Steps:  404 | Reward:  170.26 | Score:  100 | X:  670 | Ent: 0.0996
+Ep 4509 | Steps:  296 | Reward:  144.64 | Score:  500 | X:  643 | Ent: 0.0996
+  [Update@231817] Actor: -0.0020, Critic: 41.6866, Entropy: 1.7074 (coef: 0.0915, target: 0.30)
+  [Update@232329] Actor: -0.0023, Critic: 43.0218, Entropy: 1.6656 (coef: 0.0842, target: 0.30)
+Ep 4510 | Steps: 1111 | Reward:  273.59 | Score:  600 | X: 3741 | Ent: 0.0842
+  [Update@232841] Actor: -0.0018, Critic: 299.9524, Entropy: 1.6941 (coef: 0.0915, target: 0.30)
+Ep 4511 | Steps:  852 | Reward:  311.88 | Score: 1800 | X: 3733 | Ent: 0.0915
+Ep 4512 | Steps:  201 | Reward:   23.49 | Score:  400 | X:  661 | Ent: 0.0994
+Ep 4513 | Steps:  452 | Reward:  205.88 | Score:  800 | X:  789 | Ent: 0.0994
+  [Update@234433] Actor: -0.0026, Critic: 44.8193, Entropy: 1.7617 (coef: 0.0914, target: 0.30)
+  [Update@234945] Actor: -0.0006, Critic: 48.1853, Entropy: 1.7573 (coef: 0.0840, target: 0.30)
+Ep 4514 | Steps: 1107 | Reward:  425.43 | Score: 1900 | X:  734 | Ent: 0.0840
+  [Update@235457] Actor: -0.0029, Critic: 346.2657, Entropy: 1.7481 (coef: 0.0913, target: 0.30)
+Ep 4515 | Steps:  639 | Reward:  159.31 | Score:  700 | X:  769 | Ent: 0.0913
+Ep 4516 | Steps:  203 | Reward:   30.07 | Score:  600 | X:  713 | Ent: 0.0992
+  [Update@236382] Actor: -0.0015, Critic: 32.8743, Entropy: 1.7906 (coef: 0.0912, target: 0.30)
+Ep 4517 | Steps:  579 | Reward:  143.91 | Score:  700 | X:  702 | Ent: 0.0912
+  [Update@236894] Actor: -0.0004, Critic: 319.9617, Entropy: 1.7546 (coef: 0.0912, target: 0.30)
+  [Update@237406] Actor: -0.0002, Critic: 69.0174, Entropy: 1.7546 (coef: 0.0839, target: 0.30)
+  [Update@237918] Actor: -0.0022, Critic: 42.9209, Entropy: 1.7728 (coef: 0.0772, target: 0.30)
+Ep 4518 | Steps: 1687 | Reward:  535.33 | Score: 2000 | X: 2325 | Ent: 0.0772
+  [Update@238648] Actor: -0.0010, Critic: 37.4182, Entropy: 1.8017 (coef: 0.0911, target: 0.30)
+Ep 4519 | Steps:  619 | Reward:  162.01 | Score:  200 | X: 2228 | Ent: 0.0911
+  [Update@239160] Actor: -0.0004, Critic: 355.9775, Entropy: 1.8006 (coef: 0.0911, target: 0.30)
+  [Update@239672] Actor: -0.0029, Critic: 26.5782, Entropy: 1.8075 (coef: 0.0838, target: 0.30)
+Ep 4520 | Steps: 1180 | Reward:  316.50 | Score:  700 | X: 2237 | Ent: 0.0838
+  [Update@240447] Actor: -0.0018, Critic: 60.8696, Entropy: 1.7447 (coef: 0.0910, target: 0.30)
+  [Update@240959] Actor: -0.0016, Critic: 40.8360, Entropy: 1.7045 (coef: 0.0838, target: 0.30)
+  [Update@241471] Actor: -0.0002, Critic: 23.3259, Entropy: 1.6785 (coef: 0.0771, target: 0.30)
+Ep 4521 | Steps: 1653 | Reward:  715.07 | Score: 1700 | X: 4400 | Ent: 0.0771
+Ep 4522 | Steps:  206 | Reward:   26.14 | Score:  200 | X:  772 | Ent: 0.0989
+  [Update@242306] Actor: -0.0042, Critic: 69.0992, Entropy: 1.6893 (coef: 0.0909, target: 0.30)
+Ep 4523 | Steps:  525 | Reward:  267.45 | Score:  800 | X:  775 | Ent: 0.0909
+  [Update@242818] Actor: -0.0024, Critic: 256.9645, Entropy: 1.6945 (coef: 0.0909, target: 0.30)
+Ep 4524 | Steps:  684 | Reward:  255.26 | Score:  800 | X:  666 | Ent: 0.0909
+  [Update@243515] Actor: -0.0024, Critic: 79.6573, Entropy: 1.6818 (coef: 0.0909, target: 0.30)
+Ep 4525 | Steps:  646 | Reward:  300.44 | Score:  500 | X: 2283 | Ent: 0.0909
+  [Update@244161] Actor: 0.0029, Critic: 52.2823, Entropy: 1.7631 (coef: 0.0908, target: 0.30)
+  [Update@244673] Actor: 0.0008, Critic: 70.6481, Entropy: 1.7272 (coef: 0.0835, target: 0.30)
+Ep 4526 | Steps: 1056 | Reward:  296.64 | Score:  900 | X: 3789 | Ent: 0.0835
+  [Update@245185] Actor: 0.0024, Critic: 356.0194, Entropy: 1.7286 (coef: 0.0908, target: 0.30)
+Ep 4527 | Steps:  801 | Reward:  211.99 | Score: 1100 | X: 2415 | Ent: 0.0908
+  [Update@246018] Actor: -0.0020, Critic: 28.3901, Entropy: 1.7731 (coef: 0.0907, target: 0.30)
+  [Update@246530] Actor: -0.0015, Critic: 40.3299, Entropy: 1.7593 (coef: 0.0835, target: 0.30)
+Ep 4528 | Steps: 1061 | Reward:  266.49 | Score: 1200 | X: 3006 | Ent: 0.0835
+  [Update@247042] Actor: -0.0042, Critic: 326.1110, Entropy: 1.7955 (coef: 0.0907, target: 0.30)
+  [Update@247554] Actor: -0.0026, Critic: 31.0854, Entropy: 1.7926 (coef: 0.0834, target: 0.30)
+Ep 4529 | Steps: 1240 | Reward:  285.90 | Score:  900 | X: 2188 | Ent: 0.0834
+Ep 4530 | Steps:  178 | Reward:   41.12 | Score:  600 | X:  734 | Ent: 0.0985
+  [Update@248497] Actor: -0.0022, Critic: 92.2156, Entropy: 1.5605 (coef: 0.0906, target: 0.30)
+Ep 4531 | Steps:  599 | Reward:  383.61 | Score:  400 | X: 1943 | Ent: 0.0906
+Ep 4532 | Steps:  245 | Reward:  157.85 | Score:  500 | X:  787 | Ent: 0.0984
+  [Update@249341] Actor: -0.0003, Critic: 48.6569, Entropy: 1.5440 (coef: 0.0905, target: 0.30)
+Ep 4533 | Steps:  904 | Reward:  282.26 | Score:  700 | X: 3780 | Ent: 0.0905
+  [Update@250245] Actor: -0.0001, Critic: 122.6506, Entropy: 1.5911 (coef: 0.0904, target: 0.30)
+Ep 4534 | Steps:  596 | Reward:  436.44 | Score:  700 | X: 3741 | Ent: 0.0904
+  [Update@250757] Actor: -0.0017, Critic: 300.1693, Entropy: 1.5814 (coef: 0.0904, target: 0.30)
+  [Update@251269] Actor: -0.0004, Critic: 128.2787, Entropy: 1.6069 (coef: 0.0832, target: 0.30)
+Ep 4535 | Steps: 1020 | Reward:  493.40 | Score: 1100 | X: 1935 | Ent: 0.0832
+  [Update@251781] Actor: -0.0002, Critic: 425.6129, Entropy: 1.6086 (coef: 0.0904, target: 0.30)
+Ep 4536 | Steps:  633 | Reward:  411.27 | Score:  500 | X:  735 | Ent: 0.0904
+  [Update@252494] Actor: -0.0000, Critic: 64.8540, Entropy: 1.6324 (coef: 0.0903, target: 0.30)
+  [Update@253006] Actor: -0.0038, Critic: 37.7373, Entropy: 1.6802 (coef: 0.0831, target: 0.30)
+Ep 4537 | Steps: 1332 | Reward:  405.98 | Score: 1400 | X: 2213 | Ent: 0.0831
+  [Update@253826] Actor: 0.0012, Critic: 34.0164, Entropy: 1.6614 (coef: 0.0903, target: 0.30)
+  [Update@254338] Actor: -0.0013, Critic: 27.9485, Entropy: 1.6472 (coef: 0.0830, target: 0.30)
+  [Update@254850] Actor: 0.0294, Critic: 44.0503, Entropy: 1.5886 (coef: 0.0764, target: 0.30)
+Ep 4538 | Steps: 1561 | Reward:   19.69 | Score:  300 | X: 1933 | Ent: 0.0764
+  [Update@255362] Actor: 0.0280, Critic: 454.8334, Entropy: 1.6342 (coef: 0.0902, target: 0.30)
+  [Update@255874] Actor: 0.0013, Critic: 44.5371, Entropy: 1.6767 (coef: 0.0830, target: 0.30)
+Ep 4539 | Steps: 1150 | Reward:  251.10 | Score:  500 | X:  694 | Ent: 0.0830
+Ep 4540 | Steps:  495 | Reward:  123.55 | Score:  600 | X: 1799 | Ent: 0.0980
+  [Update@257032] Actor: -0.0015, Critic: 23.6978, Entropy: 1.5644 (coef: 0.0901, target: 0.30)
+  [Update@257544] Actor: 0.0034, Critic: 36.5249, Entropy: 1.6232 (coef: 0.0829, target: 0.30)
+  [Update@258056] Actor: 0.0019, Critic: 46.3420, Entropy: 1.5206 (coef: 0.0763, target: 0.30)
+Ep 4541 | Steps: 2000 | Reward:  473.30 | Score: 2100 | X: 1925 | Ent: 0.0763
+Ep 4542 | Steps:  466 | Reward:  158.64 | Score:  600 | X:  701 | Ent: 0.0979
+Ep 4543 | Steps:  381 | Reward:  175.69 | Score: 1700 | X: 1939 | Ent: 0.0979
+  [Update@259879] Actor: -0.0003, Critic: 40.6802, Entropy: 1.4795 (coef: 0.0900, target: 0.30)
+  [Update@260391] Actor: -0.0005, Critic: 21.4646, Entropy: 1.5460 (coef: 0.0828, target: 0.30)
+  [Update@260903] Actor: -0.0009, Critic: 28.8035, Entropy: 1.5665 (coef: 0.0762, target: 0.30)
+Ep 4544 | Steps: 1644 | Reward:  290.66 | Score:  600 | X: 2533 | Ent: 0.0762
+Ep 4545 | Steps:  191 | Reward:   39.99 | Score:  600 | X:  784 | Ent: 0.0978
+  [Update@261714] Actor: -0.0001, Critic: 51.8074, Entropy: 1.4972 (coef: 0.0899, target: 0.30)
+Ep 4546 | Steps:  616 | Reward:  142.84 | Score:  500 | X: 1781 | Ent: 0.0899
+Ep 4547 | Steps:  265 | Reward:   20.85 | Score:  200 | X:  694 | Ent: 0.0977
+Ep 4548 | Steps:  262 | Reward:   28.98 | Score:  400 | X:  703 | Ent: 0.0976
+Ep 4549 | Steps:  253 | Reward:   19.97 | Score:  200 | X:  650 | Ent: 0.0976
+  [Update@263110] Actor: -0.0038, Critic: 23.3718, Entropy: 1.5923 (coef: 0.0897, target: 0.30)
+Ep 4550 | Steps:  954 | Reward:  247.76 | Score:  700 | X: 3740 | Ent: 0.0897
+Ep 4551 | Steps:  192 | Reward:   39.58 | Score:  400 | X:  761 | Ent: 0.0975
+  [Update@264256] Actor: -0.0011, Critic: 23.0090, Entropy: 1.6070 (coef: 0.0896, target: 0.30)
+Ep 4552 | Steps:  886 | Reward:  213.24 | Score: 1600 | X:  788 | Ent: 0.0896
+  [Update@265142] Actor: -0.0005, Critic: 42.1538, Entropy: 1.6145 (coef: 0.0896, target: 0.30)
+Ep 4553 | Steps:  741 | Reward:  169.99 | Score:  500 | X: 2117 | Ent: 0.0896
+  [Update@265883] Actor: 0.0317, Critic: 33.6135, Entropy: 1.6366 (coef: 0.0895, target: 0.30)
+Ep 4554 | Steps:  781 | Reward:  197.19 | Score:  700 | X: 2415 | Ent: 0.0895
+Ep 4555 | Steps:  281 | Reward:  151.79 | Score:  300 | X:  724 | Ent: 0.0973
+  [Update@266945] Actor: -0.0003, Critic: 153.8437, Entropy: 1.5980 (coef: 0.0895, target: 0.30)
+Ep 4556 | Steps:  897 | Reward:  560.73 | Score:  800 | X: 3329 | Ent: 0.0895
+  [Update@267842] Actor: 0.0003, Critic: 59.3011, Entropy: 1.6406 (coef: 0.0894, target: 0.30)
+Ep 4557 | Steps:  572 | Reward:  167.48 | Score:  100 | X: 2177 | Ent: 0.0894
+  [Update@268354] Actor: 0.0004, Critic: 366.4069, Entropy: 1.6183 (coef: 0.0894, target: 0.30)
+  [Update@268866] Actor: -0.0020, Critic: 23.7938, Entropy: 1.6458 (coef: 0.0822, target: 0.30)
+Ep 4558 | Steps: 1229 | Reward:  350.11 | Score:  900 | X: 2415 | Ent: 0.0822
+  [Update@269643] Actor: -0.0012, Critic: 94.3626, Entropy: 1.6429 (coef: 0.0893, target: 0.30)
+  [Update@270155] Actor: 0.0004, Critic: 26.6260, Entropy: 1.5941 (coef: 0.0822, target: 0.30)
+Ep 4559 | Steps: 1140 | Reward:  474.60 | Score: 1100 | X: 2302 | Ent: 0.0822
+  [Update@270667] Actor: -0.0018, Critic: 377.5319, Entropy: 1.6175 (coef: 0.0893, target: 0.30)
+Ep 4560 | Steps:  812 | Reward:  363.38 | Score: 2000 | X: 2210 | Ent: 0.0893
+  [Update@271595] Actor: -0.0015, Critic: 60.6690, Entropy: 1.6241 (coef: 0.0892, target: 0.30)
+Ep 4561 | Steps:  972 | Reward:  498.88 | Score: 1300 | X: 1826 | Ent: 0.0892
+  [Update@272567] Actor: -0.0001, Critic: 59.6671, Entropy: 1.6604 (coef: 0.0892, target: 0.30)
+Ep 4562 | Steps:  630 | Reward:  263.40 | Score: 1800 | X:  667 | Ent: 0.0892
+Ep 4563 | Steps:  304 | Reward:  162.76 | Score:  600 | X:  792 | Ent: 0.0969
+Ep 4564 | Steps:  365 | Reward:  165.35 | Score:  200 | X:  796 | Ent: 0.0968
+  [Update@273866] Actor: -0.0022, Critic: 25.6949, Entropy: 1.6992 (coef: 0.0891, target: 0.30)
+Ep 4565 | Steps: 1017 | Reward:  364.13 | Score:  800 | X: 2297 | Ent: 0.0891
+  [Update@274883] Actor: -0.0037, Critic: 55.7001, Entropy: 1.6507 (coef: 0.0890, target: 0.30)
+Ep 4566 | Steps:  807 | Reward:  498.93 | Score: 1000 | X: 1844 | Ent: 0.0890
+  [Update@275690] Actor: -0.0003, Critic: 28.9496, Entropy: 1.6594 (coef: 0.0890, target: 0.30)
+  [Update@276202] Actor: -0.0001, Critic: 72.0991, Entropy: 1.6265 (coef: 0.0819, target: 0.30)
+Ep 4567 | Steps: 1316 | Reward:  536.34 | Score: 2200 | X: 3788 | Ent: 0.0819
+  [Update@277006] Actor: -0.0007, Critic: 73.6593, Entropy: 1.6409 (coef: 0.0889, target: 0.30)
+Ep 4568 | Steps: 1008 | Reward:  630.12 | Score: 1700 | X: 1726 | Ent: 0.0889
+  [Update@278014] Actor: -0.0017, Critic: 39.4885, Entropy: 1.6420 (coef: 0.0889, target: 0.30)
+  [Update@278526] Actor: -0.0001, Critic: 69.5078, Entropy: 1.6415 (coef: 0.0818, target: 0.30)
+Ep 4569 | Steps: 1099 | Reward:  523.91 | Score:  900 | X: 3306 | Ent: 0.0818
+  [Update@279038] Actor: -0.0016, Critic: 482.1339, Entropy: 1.6342 (coef: 0.0888, target: 0.30)
+Ep 4570 | Steps:  472 | Reward:  306.38 | Score:  800 | X: 3359 | Ent: 0.0888
+  [Update@279550] Actor: -0.0000, Critic: 390.2763, Entropy: 1.6830 (coef: 0.0888, target: 0.30)
+Ep 4571 | Steps:  582 | Reward:  250.98 | Score:  900 | X: 3741 | Ent: 0.0888
+  [Update@280062] Actor: -0.0032, Critic: 309.9881, Entropy: 1.6632 (coef: 0.0887, target: 0.30)
+  [Update@280574] Actor: -0.0018, Critic: 52.7975, Entropy: 1.5877 (coef: 0.0816, target: 0.30)
+Ep 4572 | Steps:  936 | Reward:  387.24 | Score: 2200 | X: 3008 | Ent: 0.0816
+  [Update@281086] Actor: 0.0001, Critic: 399.3053, Entropy: 1.6820 (coef: 0.0887, target: 0.30)
+Ep 4573 | Steps:  665 | Reward:  368.15 | Score:  700 | X: 1942 | Ent: 0.0887
+  [Update@281768] Actor: 0.0011, Critic: 53.6207, Entropy: 1.6812 (coef: 0.0887, target: 0.30)
+Ep 4574 | Steps:  906 | Reward:  342.24 | Score: 1900 | X:  733 | Ent: 0.0887
+  ✓✓ New best avg-20: 368.35
+  [Update@282674] Actor: -0.0013, Critic: 88.7720, Entropy: 1.6732 (coef: 0.0886, target: 0.30)
+  [Update@283186] Actor: -0.0006, Critic: 26.9974, Entropy: 1.7014 (coef: 0.0815, target: 0.30)
+Ep 4575 | Steps: 1107 | Reward:  524.03 | Score: 1200 | X: 3358 | Ent: 0.0815
+  ✓✓ New best avg-20: 386.96
+  [Update@283698] Actor: -0.0000, Critic: 368.1258, Entropy: 1.6830 (coef: 0.0886, target: 0.30)
+  [Update@284210] Actor: -0.0007, Critic: 48.6695, Entropy: 1.6975 (coef: 0.0815, target: 0.30)
+Ep 4576 | Steps: 1124 | Reward:  498.26 | Score: 1500 | X:  790 | Ent: 0.0815
+  [Update@284905] Actor: -0.0021, Critic: 33.1776, Entropy: 1.6907 (coef: 0.0885, target: 0.30)
+Ep 4577 | Steps:  796 | Reward:  264.24 | Score: 1200 | X:  692 | Ent: 0.0885
+  ✓✓ New best avg-20: 388.67
+  [Update@285701] Actor: -0.0024, Critic: 80.5758, Entropy: 1.6537 (coef: 0.0885, target: 0.30)
+Ep 4578 | Steps:  605 | Reward:  275.35 | Score:  800 | X: 1942 | Ent: 0.0885
+Ep 4579 | Steps:  280 | Reward:  148.80 | Score:  400 | X:  766 | Ent: 0.0961
+Ep 4580 | Steps:  218 | Reward:  147.12 | Score:  700 | X:  731 | Ent: 0.0961
+  [Update@286804] Actor: -0.0002, Critic: 72.0735, Entropy: 1.6324 (coef: 0.0883, target: 0.30)
+Ep 4581 | Steps:  926 | Reward:  496.54 | Score:  900 | X: 3018 | Ent: 0.0883
+  [Update@287730] Actor: -0.0010, Critic: 46.9435, Entropy: 1.6933 (coef: 0.0883, target: 0.30)
+Ep 4582 | Steps:  703 | Reward:  265.27 | Score: 1100 | X: 3018 | Ent: 0.0883
+  [Update@288433] Actor: -0.0010, Critic: 34.9285, Entropy: 1.6706 (coef: 0.0883, target: 0.30)
+Ep 4583 | Steps:  768 | Reward:  338.32 | Score: 1100 | X: 3747 | Ent: 0.0883
+  [Update@289201] Actor: -0.0003, Critic: 82.3682, Entropy: 1.6487 (coef: 0.0882, target: 0.30)
+  [Update@289713] Actor: -0.0005, Critic: 35.4717, Entropy: 1.6620 (coef: 0.0812, target: 0.30)
+  [Update@290225] Actor: -0.0026, Critic: 67.0955, Entropy: 1.6424 (coef: 0.0747, target: 0.30)
+Ep 4584 | Steps: 1558 | Reward:  852.02 | Score: 1400 | X: 3722 | Ent: 0.0747
+  ✓ New best single episode: 852.02
+  ✓✓ New best avg-20: 400.92
+  [Update@290737] Actor: -0.0006, Critic: 278.8968, Entropy: 1.6813 (coef: 0.0882, target: 0.30)
+  [Update@291249] Actor: 0.0015, Critic: 46.5139, Entropy: 1.6359 (coef: 0.0811, target: 0.30)
+Ep 4585 | Steps: 1072 | Reward:  480.08 | Score:  300 | X: 1902 | Ent: 0.0811
+  ✓✓ New best avg-20: 406.72
+  [Update@291761] Actor: -0.0012, Critic: 391.8885, Entropy: 1.7333 (coef: 0.0881, target: 0.30)
+  [Update@292273] Actor: -0.0002, Critic: 63.1663, Entropy: 1.7087 (coef: 0.0811, target: 0.30)
+Ep 4586 | Steps: 1063 | Reward:  299.77 | Score: 1000 | X: 3742 | Ent: 0.0811
+  [Update@292785] Actor: -0.0009, Critic: 268.9281, Entropy: 1.7748 (coef: 0.0881, target: 0.30)
+  [Update@293297] Actor: -0.0049, Critic: 48.0441, Entropy: 1.6803 (coef: 0.0810, target: 0.30)
+  [Update@293809] Actor: -0.0011, Critic: 36.9178, Entropy: 1.6658 (coef: 0.0746, target: 0.30)
+  [Update@294321] Actor: -0.0019, Critic: 41.1753, Entropy: 1.6991 (coef: 0.0686, target: 0.30)
+Ep 4587 | Steps: 2000 | Reward:  878.60 | Score: 1800 | X: 3107 | Ent: 0.0686
+  ✓ New best single episode: 878.60
+  ✓✓ New best avg-20: 413.87
+  [Update@294833] Actor: -0.0021, Critic: 70.6373, Entropy: 1.7144 (coef: 0.0880, target: 0.30)
+Ep 4588 | Steps:  711 | Reward:  372.09 | Score: 1100 | X: 1803 | Ent: 0.0880
+  [Update@295605] Actor: -0.0022, Critic: 96.7808, Entropy: 1.6932 (coef: 0.0880, target: 0.30)
+Ep 4589 | Steps:  683 | Reward:  402.37 | Score:  900 | X: 1855 | Ent: 0.0880
+  [Update@296288] Actor: 0.0551, Critic: 66.2817, Entropy: 1.5321 (coef: 0.0880, target: 0.30)
+Ep 4590 | Steps:  588 | Reward:  378.82 | Score:  900 | X: 1821 | Ent: 0.0880
+  [Update@296800] Actor: 0.0012, Critic: 382.5833, Entropy: 1.4392 (coef: 0.0879, target: 0.30)
+Ep 4591 | Steps:  602 | Reward:  421.08 | Score:  300 | X: 3357 | Ent: 0.0879
+Ep 4592 | Steps:  246 | Reward:  154.64 | Score:  600 | X:  725 | Ent: 0.0955
+Ep 4593 | Steps:  492 | Reward:  326.68 | Score:  400 | X: 3789 | Ent: 0.0955
+  [Update@298216] Actor: -0.0006, Critic: 55.5015, Entropy: 1.4093 (coef: 0.0878, target: 0.30)
+Ep 4594 | Steps:  794 | Reward:  381.06 | Score: 2300 | X: 2415 | Ent: 0.0878
+Ep 4595 | Steps:  203 | Reward:   21.77 | Score:  400 | X:  695 | Ent: 0.0954
+  [Update@299213] Actor: -0.0002, Critic: 50.2587, Entropy: 1.4435 (coef: 0.0877, target: 0.30)
+Ep 4596 | Steps:  550 | Reward:  268.40 | Score:  900 | X:  698 | Ent: 0.0877
+  [Update@299725] Actor: 0.0003, Critic: 456.9810, Entropy: 1.5241 (coef: 0.0876, target: 0.30)
+Ep 4597 | Steps:  799 | Reward:  417.71 | Score:  600 | X: 3737 | Ent: 0.0876
+Ep 4598 | Steps:  161 | Reward:   46.29 | Score:  400 | X:  788 | Ent: 0.0952
+Ep 4599 | Steps:  297 | Reward:  185.63 | Score:  300 | X:  780 | Ent: 0.0952
+  📈 Performance improving! avg_50=341.6, reducing ent_coef to 0.0932
+  📊 Stagnating! recent=290.8 vs older=290.8, boosting ent_coef to 0.1000
+  [Update@301020] Actor: -0.0008, Critic: 54.3639, Entropy: 1.4902 (coef: 0.0920, target: 0.30)
+Ep 4600 | Steps:  546 | Reward:  318.04 | Score:  500 | X: 1943 | Ent: 0.0920
+  💾 Checkpoint saved at episode 4600
+  [Update@301532] Actor: -0.0003, Critic: 380.7331, Entropy: 1.5511 (coef: 0.0920, target: 0.30)
+Ep 4601 | Steps:  810 | Reward:  635.50 | Score:  500 | X: 2964 | Ent: 0.0920
+  [Update@302376] Actor: -0.0010, Critic: 41.2938, Entropy: 1.5409 (coef: 0.0919, target: 0.30)
+Ep 4602 | Steps:  639 | Reward:  311.71 | Score:  500 | X: 3737 | Ent: 0.0919
+Ep 4603 | Steps:  228 | Reward:  203.52 | Score:  500 | X:  785 | Ent: 0.0999
+Ep 4604 | Steps:  402 | Reward:  301.58 | Score:  500 | X: 3789 | Ent: 0.0998
+  [Update@303645] Actor: 0.0021, Critic: 66.7633, Entropy: 1.5987 (coef: 0.0918, target: 0.30)
+Ep 4605 | Steps:  722 | Reward:  384.68 | Score:  700 | X: 1943 | Ent: 0.0918
+Ep 4606 | Steps:  422 | Reward:  145.28 | Score:  600 | X:  675 | Ent: 0.0997
+  [Update@304789] Actor: -0.0022, Critic: 44.2002, Entropy: 1.6136 (coef: 0.0917, target: 0.30)
+Ep 4607 | Steps:  528 | Reward:  264.42 | Score:  900 | X:  770 | Ent: 0.0917
+Ep 4608 | Steps:  231 | Reward:   13.09 | Score:    0 | X:  743 | Ent: 0.0996
+  [Update@305548] Actor: -0.0029, Critic: 37.6032, Entropy: 1.6680 (coef: 0.0916, target: 0.30)
+  [Update@306060] Actor: -0.0008, Critic: 102.8865, Entropy: 1.6291 (coef: 0.0843, target: 0.30)
+Ep 4609 | Steps: 1198 | Reward:  677.02 | Score: 1700 | X: 3274 | Ent: 0.0843
+  [Update@306746] Actor: 0.0030, Critic: 51.6914, Entropy: 1.6473 (coef: 0.0915, target: 0.30)
+Ep 4610 | Steps:  876 | Reward:  365.34 | Score:  900 | X: 3762 | Ent: 0.0915
+Ep 4611 | Steps:  377 | Reward:  171.73 | Score:  300 | X: 2276 | Ent: 0.0995
+  [Update@307999] Actor: -0.0024, Critic: 68.0393, Entropy: 1.6777 (coef: 0.0914, target: 0.30)
+  [Update@308511] Actor: -0.0018, Critic: 60.8196, Entropy: 1.6812 (coef: 0.0841, target: 0.30)
+Ep 4612 | Steps: 1217 | Reward:  754.33 | Score: 1000 | X: 3359 | Ent: 0.0841
+Ep 4613 | Steps:  158 | Reward:   38.72 | Score:  600 | X:  744 | Ent: 0.0994
+  [Update@309374] Actor: 0.0001, Critic: 62.5484, Entropy: 1.6908 (coef: 0.0914, target: 0.30)
+Ep 4614 | Steps:  856 | Reward:  417.54 | Score: 1200 | X: 2299 | Ent: 0.0914
+Ep 4615 | Steps:  283 | Reward:  157.17 | Score:  700 | X:  727 | Ent: 0.0993
+  [Update@310513] Actor: -0.0013, Critic: 53.8698, Entropy: 1.7106 (coef: 0.0913, target: 0.30)
+Ep 4616 | Steps:  794 | Reward:  474.26 | Score: 1300 | X: 1870 | Ent: 0.0913
+  [Update@311307] Actor: -0.0003, Critic: 93.6037, Entropy: 1.6946 (coef: 0.0912, target: 0.30)
+Ep 4617 | Steps:  686 | Reward:  519.24 | Score: 2000 | X: 1943 | Ent: 0.0912
+Ep 4618 | Steps:  160 | Reward:   32.90 | Score:  600 | X:  725 | Ent: 0.0991
+Ep 4619 | Steps:  314 | Reward:  155.06 | Score:  400 | X: 1824 | Ent: 0.0991
+  [Update@312467] Actor: -0.0013, Critic: 20.9905, Entropy: 1.6748 (coef: 0.0911, target: 0.30)
+Ep 4620 | Steps:  867 | Reward:  284.73 | Score:  800 | X:  707 | Ent: 0.0911
+  [Update@313334] Actor: -0.0013, Critic: 92.7304, Entropy: 1.6288 (coef: 0.0910, target: 0.30)
+Ep 4621 | Steps:  531 | Reward:  334.19 | Score:  400 | X:  780 | Ent: 0.0910
+  [Update@313846] Actor: -0.0011, Critic: 347.6788, Entropy: 1.6317 (coef: 0.0910, target: 0.30)
+Ep 4622 | Steps:  836 | Reward:  411.34 | Score: 1200 | X: 2242 | Ent: 0.0910
+  [Update@314701] Actor: 0.0002, Critic: 74.6995, Entropy: 1.7315 (coef: 0.0909, target: 0.30)
+Ep 4623 | Steps:  607 | Reward:  374.93 | Score: 1100 | X: 1875 | Ent: 0.0909
+  [Update@315213] Actor: -0.0007, Critic: 318.7419, Entropy: 1.7144 (coef: 0.0909, target: 0.30)
+  [Update@315725] Actor: 0.0011, Critic: 117.2126, Entropy: 1.7196 (coef: 0.0836, target: 0.30)
+Ep 4624 | Steps: 1031 | Reward:  572.19 | Score: 1200 | X: 2385 | Ent: 0.0836
+  [Update@316237] Actor: -0.0004, Critic: 454.2764, Entropy: 1.7125 (coef: 0.0909, target: 0.30)
+  [Update@316749] Actor: 0.0004, Critic: 68.8125, Entropy: 1.6631 (coef: 0.0836, target: 0.30)
+Ep 4625 | Steps: 1292 | Reward:  510.78 | Score: 1000 | X: 3018 | Ent: 0.0836
+  [Update@317631] Actor: 0.0000, Critic: 71.3349, Entropy: 1.7273 (coef: 0.0908, target: 0.30)
+Ep 4626 | Steps:  525 | Reward:  259.75 | Score: 1000 | X:  721 | Ent: 0.0908
+  [Update@318143] Actor: -0.0016, Critic: 366.9979, Entropy: 1.7283 (coef: 0.0908, target: 0.30)
+  [Update@318655] Actor: -0.0003, Critic: 68.2610, Entropy: 1.6735 (coef: 0.0835, target: 0.30)
+Ep 4627 | Steps: 1160 | Reward:  532.20 | Score: 2300 | X: 3362 | Ent: 0.0835
+  [Update@319316] Actor: 0.0016, Critic: 77.4766, Entropy: 1.7235 (coef: 0.0907, target: 0.30)
+Ep 4628 | Steps:  879 | Reward:  441.51 | Score: 2500 | X: 2399 | Ent: 0.0907
+Ep 4629 | Steps:  362 | Reward:  129.88 | Score:  600 | X: 1748 | Ent: 0.0986
+  [Update@320557] Actor: -0.0012, Critic: 28.7219, Entropy: 1.7080 (coef: 0.0906, target: 0.30)
+Ep 4630 | Steps:  740 | Reward:  288.30 | Score:  700 | X:  692 | Ent: 0.0906
+  [Update@321297] Actor: -0.0021, Critic: 46.0574, Entropy: 1.7475 (coef: 0.0906, target: 0.30)
+  [Update@321809] Actor: -0.0015, Critic: 42.8232, Entropy: 1.7055 (coef: 0.0833, target: 0.30)
+Ep 4631 | Steps: 1074 | Reward:  494.36 | Score: 1100 | X: 1822 | Ent: 0.0833
+  [Update@322321] Actor: 0.0214, Critic: 339.5472, Entropy: 1.7318 (coef: 0.0905, target: 0.30)
+Ep 4632 | Steps:  561 | Reward:  264.19 | Score:  600 | X: 3007 | Ent: 0.0905
+  [Update@322833] Actor: 0.0111, Critic: 365.7076, Entropy: 1.7264 (coef: 0.0905, target: 0.30)
+Ep 4633 | Steps:  586 | Reward:  183.34 | Score: 1600 | X:  730 | Ent: 0.0905
+  [Update@323518] Actor: 0.0032, Critic: 41.9426, Entropy: 1.8074 (coef: 0.0904, target: 0.30)
+  [Update@324030] Actor: -0.0023, Critic: 62.1841, Entropy: 1.7856 (coef: 0.0832, target: 0.30)
+  [Update@324542] Actor: -0.0011, Critic: 29.0758, Entropy: 1.7552 (coef: 0.0766, target: 0.30)
+Ep 4634 | Steps: 1603 | Reward:  633.37 | Score: 2500 | X: 3018 | Ent: 0.0766
+  [Update@325054] Actor: 0.0002, Critic: 362.6259, Entropy: 1.8109 (coef: 0.0904, target: 0.30)
+  [Update@325566] Actor: -0.0013, Critic: 48.0394, Entropy: 1.8055 (coef: 0.0832, target: 0.30)
+Ep 4635 | Steps: 1065 | Reward:  371.45 | Score: 1600 | X: 3018 | Ent: 0.0832
+  [Update@326078] Actor: -0.0008, Critic: 375.4803, Entropy: 1.7708 (coef: 0.0904, target: 0.30)
+Ep 4636 | Steps:  462 | Reward:  151.18 | Score:  600 | X: 1863 | Ent: 0.0904
+  [Update@326590] Actor: 0.0002, Critic: 351.7839, Entropy: 1.8017 (coef: 0.0903, target: 0.30)
+Ep 4637 | Steps:  923 | Reward:  266.97 | Score: 1200 | X: 3001 | Ent: 0.0903
+  [Update@327571] Actor: -0.0048, Critic: 35.6161, Entropy: 1.7966 (coef: 0.0903, target: 0.30)
+Ep 4638 | Steps:  613 | Reward:  268.47 | Score:  600 | X:  737 | Ent: 0.0903
+  [Update@328083] Actor: -0.0005, Critic: 432.9870, Entropy: 1.7644 (coef: 0.0902, target: 0.30)
+  [Update@328595] Actor: -0.0024, Critic: 29.7724, Entropy: 1.6894 (coef: 0.0830, target: 0.30)
+Ep 4639 | Steps: 1222 | Reward:  448.78 | Score: 3100 | X:  711 | Ent: 0.0830
+  [Update@329406] Actor: -0.0024, Critic: 44.5053, Entropy: 1.7279 (coef: 0.0902, target: 0.30)
+Ep 4640 | Steps:  595 | Reward:  185.75 | Score:  600 | X:  733 | Ent: 0.0902
+  [Update@329918] Actor: -0.0011, Critic: 454.9806, Entropy: 1.7135 (coef: 0.0901, target: 0.30)
+Ep 4641 | Steps:  734 | Reward:  323.06 | Score:  800 | X: 1943 | Ent: 0.0901
+  [Update@330735] Actor: -0.0011, Critic: 48.2646, Entropy: 1.7518 (coef: 0.0901, target: 0.30)
+  [Update@331247] Actor: -0.0019, Critic: 60.5235, Entropy: 1.6569 (coef: 0.0829, target: 0.30)
+Ep 4642 | Steps: 1209 | Reward:  517.61 | Score: 1300 | X: 3273 | Ent: 0.0829
+  [Update@331944] Actor: -0.0016, Critic: 73.4518, Entropy: 1.7219 (coef: 0.0900, target: 0.30)
+Ep 4643 | Steps:  822 | Reward:  492.58 | Score: 2200 | X: 4022 | Ent: 0.0900
+  [Update@332766] Actor: -0.0026, Critic: 39.2633, Entropy: 1.6774 (coef: 0.0900, target: 0.30)
+  [Update@333278] Actor: -0.0007, Critic: 54.1466, Entropy: 1.6724 (coef: 0.0828, target: 0.30)
+Ep 4644 | Steps: 1279 | Reward:  677.61 | Score: 2900 | X: 3316 | Ent: 0.0828
+  [Update@334045] Actor: 0.0007, Critic: 52.6494, Entropy: 1.6949 (coef: 0.0900, target: 0.30)
+  [Update@334557] Actor: -0.0017, Critic: 40.9766, Entropy: 1.7059 (coef: 0.0828, target: 0.30)
+Ep 4645 | Steps: 1466 | Reward:  743.74 | Score: 1100 | X: 3307 | Ent: 0.0828
+  [Update@335511] Actor: -0.0014, Critic: 74.9774, Entropy: 1.6905 (coef: 0.0899, target: 0.30)
+Ep 4646 | Steps:  882 | Reward:  349.28 | Score:  600 | X: 2264 | Ent: 0.0899
+  [Update@336393] Actor: -0.0026, Critic: 57.8622, Entropy: 1.6768 (coef: 0.0899, target: 0.30)
+Ep 4647 | Steps:  588 | Reward:  255.12 | Score:  600 | X: 3789 | Ent: 0.0899
+  [Update@336905] Actor: 0.0003, Critic: 331.2527, Entropy: 1.7133 (coef: 0.0898, target: 0.30)
+Ep 4648 | Steps:  540 | Reward:  191.00 | Score:  300 | X:  628 | Ent: 0.0898
+Ep 4649 | Steps:  313 | Reward:  152.07 | Score:  200 | X:  763 | Ent: 0.0976
+  [Update@337834] Actor: -0.0037, Critic: 48.8329, Entropy: 1.7530 (coef: 0.0897, target: 0.30)
+Ep 4650 | Steps:  948 | Reward:  375.42 | Score:  800 | X:  732 | Ent: 0.0897
+  [Update@338782] Actor: -0.0004, Critic: 43.5244, Entropy: 1.7704 (coef: 0.0897, target: 0.30)
+Ep 4651 | Steps:  842 | Reward:  285.88 | Score:  800 | X:  668 | Ent: 0.0897
+Ep 4652 | Steps:  325 | Reward:  121.45 | Score:  200 | X:  615 | Ent: 0.0974
+  [Update@339949] Actor: -0.0029, Critic: 52.7977, Entropy: 1.7224 (coef: 0.0896, target: 0.30)
+Ep 4653 | Steps:  665 | Reward:  315.05 | Score:  500 | X:  710 | Ent: 0.0896
+Ep 4654 | Steps:  494 | Reward:  208.66 | Score:  700 | X:  787 | Ent: 0.0973
+  [Update@341108] Actor: -0.0046, Critic: 56.7284, Entropy: 1.6958 (coef: 0.0895, target: 0.30)
+Ep 4655 | Steps:  790 | Reward:  450.30 | Score:  500 | X: 1900 | Ent: 0.0895
+Ep 4656 | Steps:  175 | Reward:   30.55 | Score:  200 | X:  793 | Ent: 0.0972
+Ep 4657 | Steps:  362 | Reward:  159.98 | Score:  700 | X:  791 | Ent: 0.0972
+  [Update@342435] Actor: -0.0007, Critic: 64.7839, Entropy: 1.7249 (coef: 0.0894, target: 0.30)
+Ep 4658 | Steps:  525 | Reward:  264.55 | Score:  700 | X:  766 | Ent: 0.0894
+  [Update@342947] Actor: -0.0042, Critic: 317.5282, Entropy: 1.7313 (coef: 0.0893, target: 0.30)
+Ep 4659 | Steps:  789 | Reward:  273.71 | Score: 1700 | X: 3789 | Ent: 0.0893
+  [Update@343749] Actor: -0.0062, Critic: 40.1390, Entropy: 1.7609 (coef: 0.0893, target: 0.30)
+Ep 4660 | Steps:  616 | Reward:  204.54 | Score: 1600 | X: 2341 | Ent: 0.0893
+  [Update@344261] Actor: -0.0061, Critic: 488.4368, Entropy: 1.7396 (coef: 0.0892, target: 0.30)
+Ep 4661 | Steps:  788 | Reward:  301.92 | Score:  400 | X: 1801 | Ent: 0.0892
+Ep 4662 | Steps:  182 | Reward:   37.28 | Score:  200 | X:  796 | Ent: 0.0969
+  [Update@345335] Actor: -0.0017, Critic: 20.3620, Entropy: 1.7394 (coef: 0.0891, target: 0.30)
+  [Update@345847] Actor: -0.0055, Critic: 67.7798, Entropy: 1.7053 (coef: 0.0820, target: 0.30)
+Ep 4663 | Steps: 1059 | Reward:  375.11 | Score: 1900 | X:  676 | Ent: 0.0820
+Ep 4664 | Steps:  336 | Reward:  148.14 | Score:  500 | X:  770 | Ent: 0.0968
+  [Update@346730] Actor: 0.0033, Critic: 36.2462, Entropy: 1.5805 (coef: 0.0891, target: 0.30)
+Ep 4665 | Steps:  582 | Reward:  138.18 | Score:  200 | X: 1852 | Ent: 0.0891
+  [Update@347242] Actor: -0.0011, Critic: 355.3351, Entropy: 1.7644 (coef: 0.0890, target: 0.30)
+  [Update@347754] Actor: -0.0015, Critic: 64.4852, Entropy: 1.7693 (coef: 0.0819, target: 0.30)
+  [Update@348266] Actor: -0.0020, Critic: 28.0898, Entropy: 1.7351 (coef: 0.0753, target: 0.30)
+  [Update@348778] Actor: 0.0008, Critic: 55.4044, Entropy: 1.6642 (coef: 0.0693, target: 0.30)
+Ep 4666 | Steps: 2000 | Reward:  558.10 | Score:  500 | X: 1595 | Ent: 0.0693
+  [Update@349290] Actor: -0.0040, Critic: 42.8236, Entropy: 1.7168 (coef: 0.0890, target: 0.30)
+  [Update@349802] Actor: -0.0020, Critic: 46.7551, Entropy: 1.8420 (coef: 0.0819, target: 0.30)
+  [Update@350314] Actor: 0.0188, Critic: 81.3785, Entropy: 1.7807 (coef: 0.0753, target: 0.30)
+Ep 4667 | Steps: 1575 | Reward:   78.35 | Score: 1500 | X: 2401 | Ent: 0.0753
+  [Update@350826] Actor: 0.0283, Critic: 554.4934, Entropy: 1.3815 (coef: 0.0889, target: 0.30)
+  [Update@351338] Actor: 0.0025, Critic: 50.7141, Entropy: 1.6610 (coef: 0.0818, target: 0.30)
+  [Update@351850] Actor: 0.0120, Critic: 64.1864, Entropy: 1.6236 (coef: 0.0753, target: 0.30)
+Ep 4668 | Steps: 1561 | Reward:   18.49 | Score:  100 | X: 1941 | Ent: 0.0753
+Ep 4669 | Steps:  145 | Reward:   42.65 | Score:  200 | X:  791 | Ent: 0.0966
+Ep 4670 | Steps:  142 | Reward:   40.58 | Score:    0 | X:  770 | Ent: 0.0966
+Ep 4671 | Steps:  164 | Reward:   29.46 | Score:  400 | X:  676 | Ent: 0.0965
+Ep 4672 | Steps:  204 | Reward:   18.46 | Score:    0 | X:  714 | Ent: 0.0965
+Ep 4673 | Steps:  251 | Reward:    2.99 | Score:    0 | X:  666 | Ent: 0.0964
+Ep 4674 | Steps:  162 | Reward:   30.08 | Score:  200 | X:  755 | Ent: 0.0964
+  [Update@353516] Actor: -0.0025, Critic: 37.7576, Entropy: 0.7965 (coef: 0.0963, target: 0.30)
+  [Update@354028] Actor: 0.0004, Critic: 27.7417, Entropy: 1.0377 (coef: 0.0886, target: 0.30)
+  [Update@354540] Actor: 0.0066, Critic: 31.6407, Entropy: 1.0853 (coef: 0.0815, target: 0.30)
+Ep 4675 | Steps: 1611 | Reward:  194.49 | Score:  300 | X: 1546 | Ent: 0.0815
+  [Update@355052] Actor: 0.0033, Critic: 45.5403, Entropy: 0.8343 (coef: 0.0886, target: 0.30)
+  [Update@355564] Actor: 0.0218, Critic: 22.8025, Entropy: 1.0826 (coef: 0.0815, target: 0.30)
+Ep 4676 | Steps: 1303 | Reward:  144.47 | Score:  300 | X:  767 | Ent: 0.0815
+  [Update@356430] Actor: 0.0077, Critic: 80.2953, Entropy: 0.3707 (coef: 0.1000, target: 0.30)
+  [Update@356942] Actor: 0.0087, Critic: 12.5717, Entropy: 0.6040 (coef: 0.1000, target: 0.30)
+  [Update@357454] Actor: 0.1131, Critic: 15.8666, Entropy: 0.9187 (coef: 0.0920, target: 0.30)
+Ep 4677 | Steps: 1620 | Reward:  149.50 | Score:  100 | X: 1931 | Ent: 0.0920
+  [Update@357966] Actor: 0.0007, Critic: 488.2986, Entropy: 0.7779 (coef: 0.0962, target: 0.30)
+Ep 4678 | Steps:  785 | Reward:  -10.85 | Score:    0 | X:  560 | Ent: 0.0962
+  [Update@358835] Actor: 0.0025, Critic: 39.4432, Entropy: 0.7608 (coef: 0.0961, target: 0.30)
+  [Update@359347] Actor: -0.0102, Critic: 51.7532, Entropy: 0.7726 (coef: 0.0961, target: 0.30)
+  [Update@359859] Actor: -0.0124, Critic: 33.9161, Entropy: 0.7884 (coef: 0.0961, target: 0.30)
+Ep 4679 | Steps: 1599 | Reward:  -46.99 | Score:    0 | X:  466 | Ent: 0.0961
+  [Update@360371] Actor: 0.0177, Critic: 443.5284, Entropy: 0.7756 (coef: 0.0961, target: 0.30)
+  [Update@360883] Actor: 0.0569, Critic: 59.1531, Entropy: 0.8180 (coef: 0.0884, target: 0.30)
+  [Update@361395] Actor: 0.0155, Critic: 46.5974, Entropy: 0.7598 (coef: 0.0884, target: 0.30)
+Ep 4680 | Steps: 1963 | Reward:   16.37 | Score:    0 | X:   68 | Ent: 0.0884
+  [Update@362397] Actor: 0.0323, Critic: 52.5125, Entropy: 1.4491 (coef: 0.0883, target: 0.30)
+  [Update@362909] Actor: 0.0111, Critic: 37.5790, Entropy: 1.3478 (coef: 0.0813, target: 0.30)
+  [Update@363421] Actor: 0.0050, Critic: 32.2386, Entropy: 1.2849 (coef: 0.0748, target: 0.30)
+Ep 4681 | Steps: 1561 | Reward: -171.31 | Score:    0 | X:   53 | Ent: 0.0748
+  [Update@363933] Actor: 0.0003, Critic: 395.4239, Entropy: 1.5897 (coef: 0.0883, target: 0.30)
+  [Update@364445] Actor: 0.0076, Critic: 43.4927, Entropy: 1.6672 (coef: 0.0812, target: 0.30)
+  [Update@364957] Actor: 0.0023, Critic: 40.3725, Entropy: 1.6739 (coef: 0.0747, target: 0.30)
+Ep 4682 | Steps: 1561 | Reward: -175.41 | Score:    0 | X:   12 | Ent: 0.0747
+  [Update@365469] Actor: 0.0016, Critic: 447.5795, Entropy: 1.7408 (coef: 0.0883, target: 0.30)
+  [Update@365981] Actor: 0.0064, Critic: 42.3188, Entropy: 1.7981 (coef: 0.0812, target: 0.30)
+  [Update@366493] Actor: -0.0029, Critic: 42.7170, Entropy: 1.7995 (coef: 0.0747, target: 0.30)
+Ep 4683 | Steps: 1561 | Reward: -169.91 | Score:    0 | X:   67 | Ent: 0.0747
+  [Update@367005] Actor: -0.0007, Critic: 424.2221, Entropy: 1.7859 (coef: 0.0882, target: 0.30)
+  [Update@367517] Actor: 0.0044, Critic: 47.9952, Entropy: 1.8121 (coef: 0.0812, target: 0.30)
+  [Update@368029] Actor: 0.0004, Critic: 42.0203, Entropy: 1.7441 (coef: 0.0747, target: 0.30)
+  [Update@368541] Actor: 0.0016, Critic: 22.0857, Entropy: 1.7846 (coef: 0.0687, target: 0.30)
+Ep 4684 | Steps: 2000 | Reward:    6.30 | Score:  100 | X:  279 | Ent: 0.0687
+  [Update@369053] Actor: 0.0010, Critic: 44.5436, Entropy: 1.7866 (coef: 0.0882, target: 0.30)
+  [Update@369565] Actor: -0.0004, Critic: 50.1623, Entropy: 1.7749 (coef: 0.0811, target: 0.30)
+  [Update@370077] Actor: -0.0001, Critic: 47.1728, Entropy: 1.7566 (coef: 0.0746, target: 0.30)
+Ep 4685 | Steps: 1561 | Reward: -121.71 | Score:  300 | X:  519 | Ent: 0.0746
+  [Update@370589] Actor: -0.0004, Critic: 423.5525, Entropy: 1.7873 (coef: 0.0881, target: 0.30)
+  [Update@371101] Actor: 0.0003, Critic: 39.3582, Entropy: 1.8003 (coef: 0.0811, target: 0.30)
+  [Update@371613] Actor: -0.0008, Critic: 38.5180, Entropy: 1.8116 (coef: 0.0746, target: 0.30)
+Ep 4686 | Steps: 1561 | Reward: -170.11 | Score:    0 | X:   65 | Ent: 0.0746
+  [Update@372125] Actor: -0.0005, Critic: 396.3999, Entropy: 1.7990 (coef: 0.0881, target: 0.30)
+  [Update@372637] Actor: -0.0016, Critic: 38.5664, Entropy: 1.8275 (coef: 0.0810, target: 0.30)
+  [Update@373149] Actor: -0.0035, Critic: 32.4089, Entropy: 1.8507 (coef: 0.0746, target: 0.30)
+Ep 4687 | Steps: 1561 | Reward: -129.21 | Score:  100 | X:  464 | Ent: 0.0746
+  [Update@373661] Actor: -0.0020, Critic: 353.8146, Entropy: 1.8487 (coef: 0.0880, target: 0.30)
+  [Update@374173] Actor: -0.0011, Critic: 39.6241, Entropy: 1.8442 (coef: 0.0810, target: 0.30)
+  [Update@374685] Actor: -0.0029, Critic: 34.8771, Entropy: 1.8012 (coef: 0.0745, target: 0.30)
+Ep 4688 | Steps: 1561 | Reward:  -96.01 | Score:  200 | X:  786 | Ent: 0.0745
+  [Update@375197] Actor: -0.0004, Critic: 403.1282, Entropy: 1.8174 (coef: 0.0880, target: 0.30)
+  [Update@375709] Actor: -0.0033, Critic: 35.4224, Entropy: 1.8075 (coef: 0.0810, target: 0.30)
+  [Update@376221] Actor: -0.0023, Critic: 24.6417, Entropy: 1.8185 (coef: 0.0745, target: 0.30)
+Ep 4689 | Steps: 1569 | Reward:  154.21 | Score: 1500 | X: 1659 | Ent: 0.0745
+  [Update@376893] Actor: -0.0047, Critic: 47.2786, Entropy: 1.8070 (coef: 0.0880, target: 0.30)
+Ep 4690 | Steps:  561 | Reward:  -32.21 | Score:  200 | X:  459 | Ent: 0.0880
+  [Update@377405] Actor: -0.0022, Critic: 385.3497, Entropy: 1.7879 (coef: 0.0879, target: 0.30)
+  [Update@377917] Actor: -0.0016, Critic: 44.6000, Entropy: 1.7780 (coef: 0.0809, target: 0.30)
+Ep 4691 | Steps: 1090 | Reward:  214.30 | Score: 1600 | X:  650 | Ent: 0.0809
+  [Update@378429] Actor: -0.0012, Critic: 319.2737, Entropy: 1.7673 (coef: 0.0879, target: 0.30)
+  [Update@378941] Actor: -0.0040, Critic: 24.0766, Entropy: 1.7635 (coef: 0.0808, target: 0.30)
+Ep 4692 | Steps: 1281 | Reward:  160.99 | Score:  800 | X:  699 | Ent: 0.0808
+  [Update@379825] Actor: -0.0027, Critic: 41.2999, Entropy: 1.7505 (coef: 0.0878, target: 0.30)
+  [Update@380337] Actor: -0.0041, Critic: 29.2777, Entropy: 1.7266 (coef: 0.0808, target: 0.30)
+  [Update@380849] Actor: -0.0018, Critic: 21.5816, Entropy: 1.6829 (coef: 0.0743, target: 0.30)
+Ep 4693 | Steps: 2000 | Reward:  627.10 | Score: 1500 | X: 2415 | Ent: 0.0743
+  [Update@381825] Actor: -0.0027, Critic: 37.0930, Entropy: 1.6381 (coef: 0.0878, target: 0.30)
+Ep 4694 | Steps:  827 | Reward:  190.63 | Score:  700 | X:  714 | Ent: 0.0878
+  [Update@382652] Actor: -0.0020, Critic: 45.4471, Entropy: 1.5732 (coef: 0.0877, target: 0.30)
+Ep 4695 | Steps:  907 | Reward:  309.33 | Score: 2100 | X: 3776 | Ent: 0.0877
+  [Update@383559] Actor: -0.0017, Critic: 54.9559, Entropy: 1.5601 (coef: 0.0877, target: 0.30)
+Ep 4696 | Steps:  841 | Reward:  449.89 | Score: 2100 | X: 3018 | Ent: 0.0877
+  [Update@384400] Actor: -0.0010, Critic: 80.0467, Entropy: 1.5117 (coef: 0.0876, target: 0.30)
+Ep 4697 | Steps:  584 | Reward:  266.06 | Score: 1500 | X:  724 | Ent: 0.0876
+  [Update@384912] Actor: 0.0006, Critic: 348.5724, Entropy: 1.5073 (coef: 0.0876, target: 0.30)
+Ep 4698 | Steps:  474 | Reward:  272.06 | Score: 1700 | X: 3018 | Ent: 0.0876
+Ep 4699 | Steps:  306 | Reward:  159.34 | Score:  900 | X: 1943 | Ent: 0.0952
+  📊 Stagnating! recent=241.5 vs older=241.5, boosting ent_coef to 0.1000
+Ep 4700 | Steps:  153 | Reward:   32.47 | Score:  400 | X:  704 | Ent: 0.1000
+  [Update@385917] Actor: -0.0002, Critic: 77.9858, Entropy: 1.5618 (coef: 0.0920, target: 0.30)
+Ep 4701 | Steps:  584 | Reward:  208.06 | Score: 1000 | X:  695 | Ent: 0.0920
+Ep 4702 | Steps:  361 | Reward:  149.19 | Score:  600 | X: 1818 | Ent: 0.0999
+  [Update@386862] Actor: -0.0057, Critic: 136.5046, Entropy: 1.5846 (coef: 0.0919, target: 0.30)
+Ep 4703 | Steps:  873 | Reward:  546.57 | Score:  900 | X: 3310 | Ent: 0.0919
+  [Update@387735] Actor: -0.0028, Critic: 121.4948, Entropy: 1.5155 (coef: 0.0918, target: 0.30)
+Ep 4704 | Steps:  546 | Reward:  336.34 | Score: 1500 | X: 1938 | Ent: 0.0918
+Ep 4705 | Steps:  441 | Reward:  260.49 | Score:  200 | X: 1750 | Ent: 0.0998
+  [Update@388722] Actor: 0.0001, Critic: 52.3907, Entropy: 1.4598 (coef: 0.0917, target: 0.30)
+Ep 4706 | Steps:  721 | Reward:  264.69 | Score:  900 | X:  703 | Ent: 0.0917
+  [Update@389443] Actor: 0.0002, Critic: 64.7488, Entropy: 1.4604 (coef: 0.0917, target: 0.30)
+Ep 4707 | Steps:  651 | Reward:  245.49 | Score:  500 | X: 3741 | Ent: 0.0917
+Ep 4708 | Steps:  180 | Reward:   36.40 | Score:  600 | X:  759 | Ent: 0.0996
+  [Update@390274] Actor: 0.0011, Critic: 65.6001, Entropy: 1.5665 (coef: 0.0916, target: 0.30)

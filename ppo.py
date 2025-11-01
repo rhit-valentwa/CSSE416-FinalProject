@@ -7,11 +7,14 @@ from collections import deque
 import os
 from gymnasium_env.envs.mario_world import MarioLevelEnv
 
+torch.cuda.empty_cache()
+torch.cuda.reset_peak_memory_stats()
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
-importing = True
-log_file_name = "ppo_training_log_summary.txt"
+importing = False
+log_file_name = "ppo_v4_training_log_summary.txt"
 
 # Actor-Critic Network
 class ActorCritic(nn.Module):
@@ -307,8 +310,8 @@ def train_ppo():
         lr=5e-5,
         gamma=0.99,
         eps_clip=0.1,    # Conservative clipping
-        k_epochs=3,      # Moderate updates
-        gae_lambda=0.95,
+        k_epochs=10,      # Moderate updates
+        gae_lambda=0.96,
         vf_coef=0.5,
         ent_coef=0.1,   # Starting entropy coefficient
     )
@@ -326,16 +329,16 @@ def train_ppo():
     
     if (importing):
         # FIRST: Load the checkpoint you want to continue training from
-        checkpoint_file = 'ppo_checkpoint_episode_3000.pth'
+        checkpoint_file = 'ppo_checkpoint_episode_4200.pth'
         if os.path.exists(checkpoint_file):
             agent.load(checkpoint_file)
-            loaded_episode = 3001
+            loaded_episode = 4201
             print(f"✅ Loaded checkpoint from episode {loaded_episode}")
     
     print("\n🚀 Starting training...\n")
     
     # Hyperparameters
-    update_frequency = 512      # Update every 512 steps
+    update_frequency = 4096      # Update every 4096 steps
     max_episodes = 10000
     min_buffer_size = 128       # Minimum buffer size for episode-end updates
 
@@ -497,7 +500,7 @@ def train_ppo():
         
         # Save checkpoint periodically
         if actual_episode % 200 == 0 and actual_episode > 0:
-            agent.save(f'ppo_checkpoint_episode_{actual_episode}.pth')
+            agent.save(f'ppo_v4_checkpoint_episode_{actual_episode}.pth')
             print(f"  💾 Checkpoint saved at episode {actual_episode}")
     
     env.close()
