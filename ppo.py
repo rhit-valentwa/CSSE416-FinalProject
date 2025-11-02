@@ -118,8 +118,8 @@ class RolloutBuffer:
 
 # PPO Agent
 class PPOAgent:
-    def __init__(self, action_size, lr=3e-4, gamma=0.99, eps_clip=0.1, 
-                 k_epochs=3, gae_lambda=0.95, vf_coef=0.5, ent_coef=0.01):
+    def __init__(self, action_size, lr=3e-4, gamma=0.99, eps_clip=0.2, 
+                 k_epochs=4, gae_lambda=0.95, vf_coef=0.5, ent_coef=0.01):
         self.gamma = gamma
         self.eps_clip = eps_clip
         self.k_epochs = k_epochs
@@ -245,42 +245,6 @@ class PPOAgent:
         self.policy_old.load_state_dict(checkpoint['policy_state_dict'])
         self.optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 
-
-def evaluate_model(agent, env, n_episodes=5):
-    """Evaluate agent and return rewards"""
-    rewards = []
-    for _ in range(n_episodes):
-        state, _ = env.reset()
-        state = torch.FloatTensor(state).to(device)
-        episode_reward = 0
-        
-        while True:
-            action_idx, _, _ = agent.select_action(state)
-            action = index_to_multibinary(action_idx)
-            next_state, reward, terminated, truncated, _ = env.step(action)
-            episode_reward += reward
-            state = torch.FloatTensor(next_state).to(device)
-            
-            if terminated or truncated:
-                break
-        
-        rewards.append(episode_reward)
-    
-    return rewards if n_episodes > 1 else rewards[0]
-
-
-def get_target_entropy(episode):
-    """Get target entropy based on training phase"""
-    if episode < 500:
-        return 1.2  # High exploration
-    elif episode < 1500:
-        return 1.0  # Moderate exploration
-    elif episode < 3000:
-        return 0.6  # Focus on good strategies
-    else:
-        return 0.3  # Exploit best strategy
-
-
 # Training loop
 def train_ppo():
     # Better reward shaping to prevent "run right and die" strategy
@@ -288,8 +252,7 @@ def train_ppo():
         "dx_scale": 0.1,        # Small movement reward (prevents reward hacking)
         "score_scale": 0.01,     # Reward actual game score
         "death_penalty": -150.0,   # Strong death penalty
-        "win_bonus": 1000.0,       # Large win bonus
-        "progress_milestone": 10.0,  # Reward for reaching progress milestones
+        "win_bonus": 500.0,       # Large win bonus
     }
     
     # Create environment with your custom settings
@@ -297,7 +260,7 @@ def train_ppo():
         render_mode="human",  # Use "human" to watch, "rgb_array" for faster training
         width=800,
         height=600,
-        max_steps=2000,           # Prevent infinite episodes
+        max_steps=20000,           # Prevent infinite episodes
         frame_skip=4,
         number_of_sequential_frames=4,
         reward_cfg=reward_config,
@@ -307,7 +270,7 @@ def train_ppo():
     
     agent = PPOAgent(
         action_size=action_size,
-        lr=5e-5,
+        lr=1e-4,
         gamma=0.99,
         eps_clip=0.1,    # Conservative clipping
         k_epochs=10,      # Moderate updates

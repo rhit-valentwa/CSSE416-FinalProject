@@ -1,0 +1,2001 @@
+Using device: cuda
+  Update - Policy Loss: 0.0373, Value Loss: 122.6583, Entropy: -1.7275
+
+Episode 0: Reward=-176.11, Steps=1561
+  Update - Policy Loss: 0.0155, Value Loss: 125.3720, Entropy: -1.9040
+
+Episode 1: Reward=-176.11, Steps=1561
+  Update - Policy Loss: 0.0185, Value Loss: 119.4565, Entropy: -1.7666
+
+Episode 2: Reward=-166.31, Steps=1561
+  Update - Policy Loss: -0.0023, Value Loss: 21.1212, Entropy: -1.6486
+  Update - Policy Loss: -0.0280, Value Loss: 34.8401, Entropy: -1.6766
+
+Episode 3: Reward=170.04, Steps=2626
+  Update - Policy Loss: 0.0308, Value Loss: 19.1031, Entropy: -1.3965
+  Update - Policy Loss: 0.0167, Value Loss: 227.2209, Entropy: -1.2861
+
+Episode 4: Reward=254.30, Steps=2680
+  Update - Policy Loss: 0.0736, Value Loss: 186.5712, Entropy: -0.8030
+
+Episode 5: Reward=575.36, Steps=1284
+  Update - Policy Loss: 0.0360, Value Loss: 1740.4022, Entropy: -0.6517
+
+Episode 6: Reward=47.79, Steps=121
+  Update - Policy Loss: 0.0007, Value Loss: 428.2723, Entropy: -0.7035
+
+Episode 7: Reward=392.90, Steps=560
+  Update - Policy Loss: -0.0049, Value Loss: 645.7846, Entropy: -0.5746
+
+Episode 8: Reward=336.50, Steps=410
+  Update - Policy Loss: 0.0349, Value Loss: 2849.9587, Entropy: -0.4744
+
+Episode 9: Reward=45.73, Steps=107
+  Update - Policy Loss: 0.0093, Value Loss: 952.9745, Entropy: -0.3136
+
+Episode 10: Reward=357.71, Steps=299
+  Update - Policy Loss: 0.0003, Value Loss: 1067.7742, Entropy: -0.3884
+
+Episode 11: Reward=300.24, Steps=296
+  Update - Policy Loss: -0.0534, Value Loss: 1510.5794, Entropy: -0.4166
+
+Episode 12: Reward=157.85, Steps=195
+  Update - Policy Loss: -0.0116, Value Loss: 981.8233, Entropy: -0.4497
+
+Episode 13: Reward=476.84, Steps=406
+  Update - Policy Loss: -0.0007, Value Loss: 1369.2398, Entropy: -0.4963
+
+Episode 14: Reward=212.94, Steps=306
+  Update - Policy Loss: -0.0034, Value Loss: 3189.7798, Entropy: -0.3891
+
+Episode 15: Reward=46.53, Steps=107
+  Update - Policy Loss: 0.0069, Value Loss: 505.3535, Entropy: -0.2825
+
+Episode 16: Reward=430.19, Steps=391
+  Update - Policy Loss: 0.0055, Value Loss: 2274.8124, Entropy: -0.4111
+
+Episode 17: Reward=150.72, Steps=168
+  Update - Policy Loss: -0.0101, Value Loss: 1163.7890, Entropy: -0.3772
+
+Episode 18: Reward=263.79, Steps=261
+  Update - Policy Loss: 0.0069, Value Loss: 1207.5179, Entropy: -0.4617
+
+Episode 19: Reward=302.39, Steps=341
+  Update - Policy Loss: -0.0019, Value Loss: 1248.0494, Entropy: -0.5269
+
+Episode 20: Reward=211.29, Steps=291
+  Update - Policy Loss: 0.0208, Value Loss: 1245.5550, Entropy: -0.5415
+
+Episode 21: Reward=263.04, Steps=296
+  Update - Policy Loss: -0.0462, Value Loss: 1224.5757, Entropy: -0.5126
+
+Episode 22: Reward=256.82, Steps=258
+  Update - Policy Loss: -0.0009, Value Loss: 1448.1550, Entropy: -0.5117
+
+Episode 23: Reward=273.22, Steps=248
+  Update - Policy Loss: -0.0104, Value Loss: 1108.6419, Entropy: -0.5146
+
+Episode 24: Reward=338.76, Steps=334
+  Update - Policy Loss: -0.0016, Value Loss: 573.9114, Entropy: -0.5140
+
+Episode 25: Reward=305.29, Steps=281
+  Update - Policy Loss: 0.0145, Value Loss: 1482.1301, Entropy: -0.5587
+
+Episode 26: Reward=267.11, Steps=319
+  Update - Policy Loss: 0.0056, Value Loss: 607.2120, Entropy: -0.2370
+
+Episode 27: Reward=301.02, Steps=238
+  Update - Policy Loss: -0.0054, Value Loss: 4779.7448, Entropy: -0.1946
+
+Episode 28: Reward=46.57, Steps=103
+  Update - Policy Loss: 0.0001, Value Loss: 1270.3158, Entropy: -0.3943
+
+Episode 29: Reward=268.80, Steps=240
+  Update - Policy Loss: -0.0306, Value Loss: 794.8442, Entropy: -0.5613
+
+Episode 30: Reward=637.22, Steps=458
+  Update - Policy Loss: -0.0020, Value Loss: 1457.2006, Entropy: -0.4931
+
+Episode 31: Reward=265.03, Steps=247
+  Update - Policy Loss: 0.0343, Value Loss: 1324.8188, Entropy: -0.3712
+
+Episode 32: Reward=300.96, Steps=284
+  Update - Policy Loss: -0.0001, Value Loss: 1386.7460, Entropy: -0.3763
+
+Episode 33: Reward=304.08, Steps=312
+  Update - Policy Loss: -0.0068, Value Loss: 1880.3605, Entropy: -0.4054
+
+Episode 34: Reward=153.94, Steps=176
+  Update - Policy Loss: 0.0005, Value Loss: 1120.2334, Entropy: -0.4933
+
+Episode 35: Reward=303.13, Steps=297
+  Update - Policy Loss: 0.0023, Value Loss: 1484.3408, Entropy: -0.5053
+
+Episode 36: Reward=267.30, Steps=250
+  Update - Policy Loss: 0.0098, Value Loss: 1673.3168, Entropy: -0.3068
+
+Episode 37: Reward=253.71, Steps=239
+  Update - Policy Loss: 0.0105, Value Loss: 2808.0742, Entropy: -0.2444
+
+Episode 38: Reward=46.75, Steps=105
+  Update - Policy Loss: -0.0156, Value Loss: 995.8715, Entropy: -0.4309
+
+Episode 39: Reward=275.05, Steps=285
+  Update - Policy Loss: 0.0137, Value Loss: 1498.3467, Entropy: -0.5327
+
+Episode 40: Reward=143.29, Steps=201
+  Update - Policy Loss: -0.0155, Value Loss: 360.0628, Entropy: -0.3856
+
+Episode 41: Reward=256.72, Steps=268
+  Update - Policy Loss: 0.0097, Value Loss: 777.5235, Entropy: -0.2971
+
+Episode 42: Reward=686.56, Steps=554
+  Update - Policy Loss: 0.0345, Value Loss: 3256.4720, Entropy: -0.5609
+
+Episode 43: Reward=50.88, Steps=102
+  Update - Policy Loss: 0.0190, Value Loss: 328.6623, Entropy: -0.5112
+
+Episode 44: Reward=293.89, Steps=381
+  Update - Policy Loss: -0.0018, Value Loss: 1750.4529, Entropy: -0.3633
+
+Episode 45: Reward=190.73, Steps=247
+  Update - Policy Loss: 0.0747, Value Loss: 1963.1026, Entropy: -0.2639
+
+Episode 46: Reward=292.92, Steps=258
+  Update - Policy Loss: -0.0073, Value Loss: 3537.2146, Entropy: -0.0491
+
+Episode 47: Reward=50.01, Steps=99
+  Update - Policy Loss: -0.0147, Value Loss: 2469.0974, Entropy: -0.1327
+
+Episode 48: Reward=51.20, Steps=100
+  Update - Policy Loss: 0.0017, Value Loss: 2072.4666, Entropy: -0.3178
+
+Episode 49: Reward=47.74, Steps=106
+  Update - Policy Loss: -0.0022, Value Loss: 1608.9890, Entropy: -0.4628
+
+Episode 50: Reward=155.47, Steps=173
+  Update - Policy Loss: 0.0044, Value Loss: 1104.3810, Entropy: -0.4191
+
+Episode 51: Reward=193.98, Steps=252
+  Update - Policy Loss: 0.0144, Value Loss: 1627.7826, Entropy: -0.2304
+
+Episode 52: Reward=154.18, Steps=162
+  Update - Policy Loss: 0.0056, Value Loss: 2114.0139, Entropy: -0.1454
+
+Episode 53: Reward=49.61, Steps=99
+  Update - Policy Loss: 0.0093, Value Loss: 1967.1587, Entropy: -0.0581
+
+Episode 54: Reward=50.01, Steps=99
+  Update - Policy Loss: -0.0015, Value Loss: 1913.0574, Entropy: -0.0350
+
+Episode 55: Reward=50.01, Steps=99
+  Update - Policy Loss: 0.0101, Value Loss: 1992.6698, Entropy: -0.0180
+
+Episode 56: Reward=50.01, Steps=99
+  Update - Policy Loss: 0.0028, Value Loss: 146.5070, Entropy: -0.0326
+
+Episode 57: Reward=128.79, Steps=1621
+  Update - Policy Loss: -0.0090, Value Loss: 2450.0019, Entropy: -0.0838
+
+Episode 58: Reward=50.01, Steps=99
+  Update - Policy Loss: -0.0003, Value Loss: 1467.7915, Entropy: -0.1047
+
+Episode 59: Reward=157.27, Steps=173
+  Update - Policy Loss: -0.0011, Value Loss: 1485.3521, Entropy: -0.1814
+
+Episode 60: Reward=151.51, Steps=179
+  Update - Policy Loss: 0.0010, Value Loss: 590.3070, Entropy: -0.1628
+
+Episode 61: Reward=329.00, Steps=530
+  Update - Policy Loss: 0.0051, Value Loss: 1189.4950, Entropy: -0.3434
+
+Episode 62: Reward=272.70, Steps=290
+  Update - Policy Loss: -0.0194, Value Loss: 1521.7778, Entropy: -0.5740
+
+Episode 63: Reward=196.88, Steps=212
+  Update - Policy Loss: 0.0076, Value Loss: 1041.2562, Entropy: -0.5342
+
+Episode 64: Reward=526.69, Steps=411
+  Update - Policy Loss: 0.0047, Value Loss: 1374.2970, Entropy: -0.5484
+
+Episode 65: Reward=311.69, Steps=311
+  Update - Policy Loss: 0.0144, Value Loss: 973.0767, Entropy: -0.2791
+
+Episode 66: Reward=523.94, Steps=496
+  Update - Policy Loss: 0.0072, Value Loss: 3493.3978, Entropy: -0.4555
+
+Episode 67: Reward=53.19, Steps=101
+  Update - Policy Loss: -0.0156, Value Loss: 2369.3707, Entropy: -0.6136
+
+Episode 68: Reward=49.96, Steps=104
+  Update - Policy Loss: 0.0081, Value Loss: 1259.5339, Entropy: -0.4918
+
+Episode 69: Reward=152.10, Steps=190
+  Update - Policy Loss: 0.0067, Value Loss: 1123.9474, Entropy: -0.1842
+
+Episode 70: Reward=273.15, Steps=295
+  Update - Policy Loss: 0.0070, Value Loss: 1601.6148, Entropy: -0.3651
+
+Episode 71: Reward=151.31, Steps=189
+  Update - Policy Loss: 0.0260, Value Loss: 1269.3382, Entropy: -0.1413
+
+Episode 72: Reward=313.09, Steps=291
+  Update - Policy Loss: 0.0206, Value Loss: 2858.6788, Entropy: -0.1226
+
+Episode 73: Reward=50.01, Steps=99
+  Update - Policy Loss: 0.0173, Value Loss: 2266.3778, Entropy: -0.2940
+
+Episode 74: Reward=49.78, Steps=102
+  Update - Policy Loss: 0.0121, Value Loss: 2001.6300, Entropy: -0.4274
+
+Episode 75: Reward=47.64, Steps=106
+  Update - Policy Loss: 0.0152, Value Loss: 1292.2344, Entropy: -0.7101
+
+Episode 76: Reward=145.39, Steps=171
+  Update - Policy Loss: -0.0335, Value Loss: 786.9870, Entropy: -0.7716
+
+Episode 77: Reward=255.30, Steps=260
+  Update - Policy Loss: 0.0263, Value Loss: 330.0828, Entropy: -0.4526
+
+Episode 78: Reward=338.83, Steps=337
+  Update - Policy Loss: 0.0123, Value Loss: 1631.4424, Entropy: -0.2794
+
+Episode 79: Reward=320.30, Steps=270
+  Update - Policy Loss: 0.0036, Value Loss: 1051.6568, Entropy: -0.5262
+
+Episode 80: Reward=415.53, Steps=377
+  Update - Policy Loss: 0.0022, Value Loss: 624.2977, Entropy: -0.0922
+
+Episode 81: Reward=463.99, Steps=581
+  Update - Policy Loss: 0.0019, Value Loss: 1166.5846, Entropy: -0.1499
+
+Episode 82: Reward=304.76, Steps=304
+  Update - Policy Loss: -0.0011, Value Loss: 732.6174, Entropy: -0.2321
+
+Episode 83: Reward=312.84, Steps=456
+  Update - Policy Loss: 0.0008, Value Loss: 1108.6141, Entropy: -0.2790
+
+Episode 84: Reward=156.87, Steps=183
+  Update - Policy Loss: -0.0064, Value Loss: 3343.8552, Entropy: -0.2687
+
+Episode 85: Reward=48.85, Steps=105
+  Update - Policy Loss: 0.0155, Value Loss: 1359.6706, Entropy: -0.4358
+
+Episode 86: Reward=361.59, Steps=301
+  Update - Policy Loss: 0.0348, Value Loss: 1105.2440, Entropy: -0.2068
+
+Episode 87: Reward=420.85, Steps=345
+  Update - Policy Loss: 0.0068, Value Loss: 716.1744, Entropy: -0.1011
+
+Episode 88: Reward=299.09, Steps=431
+  Update - Policy Loss: 0.0122, Value Loss: 2888.5194, Entropy: -0.1273
+
+Episode 89: Reward=48.29, Steps=101
+  Update - Policy Loss: 0.0144, Value Loss: 2362.6172, Entropy: -0.0988
+
+Episode 90: Reward=50.80, Steps=100
+  Update - Policy Loss: -0.0056, Value Loss: 1067.4185, Entropy: -0.3167
+
+Episode 91: Reward=153.80, Steps=230
+  Update - Policy Loss: 0.0198, Value Loss: 944.2477, Entropy: -0.3576
+
+Episode 92: Reward=265.65, Steps=265
+  Update - Policy Loss: 0.0015, Value Loss: 2220.6122, Entropy: -0.2165
+
+Episode 93: Reward=43.42, Steps=108
+  Update - Policy Loss: 0.0128, Value Loss: 1967.0173, Entropy: -0.4972
+
+Episode 94: Reward=51.39, Steps=101
+  Update - Policy Loss: -0.0037, Value Loss: 1737.0471, Entropy: -0.6670
+
+Episode 95: Reward=51.02, Steps=118
+  Update - Policy Loss: 0.0405, Value Loss: 1002.0190, Entropy: -0.9456
+
+Episode 96: Reward=298.16, Steps=254
+  Update - Policy Loss: -0.0088, Value Loss: 205.1095, Entropy: -0.7349
+
+Episode 97: Reward=570.27, Steps=543
+  Update - Policy Loss: 0.0187, Value Loss: 2612.2614, Entropy: -0.2072
+
+Episode 98: Reward=51.06, Steps=104
+  Update - Policy Loss: -0.0091, Value Loss: 491.0630, Entropy: -0.2614
+
+Episode 99: Reward=209.33, Steps=517
+Average Reward (last 100): 215.36
+  Update - Policy Loss: 0.0297, Value Loss: 113.0901, Entropy: -0.7285
+
+Episode 100: Reward=141.09, Steps=1561
+Average Reward (last 100): 218.53
+  Update - Policy Loss: 0.0278, Value Loss: 3010.3778, Entropy: -0.6751
+
+Episode 101: Reward=51.84, Steps=106
+Average Reward (last 100): 220.81
+  Update - Policy Loss: 0.0069, Value Loss: 586.0681, Entropy: -0.8064
+
+Episode 102: Reward=488.36, Steps=484
+Average Reward (last 100): 227.35
+  Update - Policy Loss: -0.0016, Value Loss: 2814.6426, Entropy: -0.6436
+
+Episode 103: Reward=50.78, Steps=102
+Average Reward (last 100): 226.16
+  Update - Policy Loss: -0.0028, Value Loss: 796.0609, Entropy: -0.7184
+
+Episode 104: Reward=268.07, Steps=393
+Average Reward (last 100): 226.30
+  Update - Policy Loss: -0.0013, Value Loss: 429.8666, Entropy: -0.6318
+
+Episode 105: Reward=524.58, Steps=482
+Average Reward (last 100): 225.79
+  Update - Policy Loss: -0.0208, Value Loss: 1416.5383, Entropy: -0.1808
+
+Episode 106: Reward=212.24, Steps=276
+Average Reward (last 100): 227.44
+  Update - Policy Loss: 0.0055, Value Loss: 1406.1926, Entropy: -0.5434
+
+Episode 107: Reward=188.70, Steps=230
+Average Reward (last 100): 225.39
+  Update - Policy Loss: 0.0239, Value Loss: 1236.4411, Entropy: -0.1976
+
+Episode 108: Reward=377.07, Steps=333
+Average Reward (last 100): 225.80
+  Update - Policy Loss: 0.0021, Value Loss: 3456.3141, Entropy: -0.2094
+
+Episode 109: Reward=49.91, Steps=99
+Average Reward (last 100): 225.84
+  Update - Policy Loss: 0.0066, Value Loss: 509.3812, Entropy: -0.2063
+
+Episode 110: Reward=301.54, Steps=306
+Average Reward (last 100): 225.28
+  Update - Policy Loss: 0.0270, Value Loss: 4065.4124, Entropy: -0.0740
+
+Episode 111: Reward=50.30, Steps=100
+Average Reward (last 100): 222.78
+  Update - Policy Loss: -0.0017, Value Loss: 2334.0968, Entropy: -0.1388
+
+Episode 112: Reward=47.69, Steps=101
+Average Reward (last 100): 221.68
+  Update - Policy Loss: 0.0003, Value Loss: 738.9956, Entropy: -0.3113
+
+Episode 113: Reward=198.34, Steps=256
+Average Reward (last 100): 218.89
+  Update - Policy Loss: -0.0196, Value Loss: 472.9094, Entropy: -0.5368
+
+Episode 114: Reward=200.51, Steps=269
+Average Reward (last 100): 218.77
+  Update - Policy Loss: 0.0015, Value Loss: 2150.6801, Entropy: -0.6477
+
+Episode 115: Reward=159.19, Steps=181
+Average Reward (last 100): 219.90
+  Update - Policy Loss: 0.0183, Value Loss: 1595.8694, Entropy: -0.5843
+
+Episode 116: Reward=167.89, Steps=181
+Average Reward (last 100): 217.27
+  Update - Policy Loss: 0.0054, Value Loss: 1658.5786, Entropy: -0.1293
+
+Episode 117: Reward=158.92, Steps=178
+Average Reward (last 100): 217.36
+  Update - Policy Loss: -0.0087, Value Loss: 2636.6183, Entropy: -0.0276
+
+Episode 118: Reward=50.40, Steps=100
+Average Reward (last 100): 215.22
+  Update - Policy Loss: -0.0014, Value Loss: 2234.3370, Entropy: -0.0963
+
+Episode 119: Reward=50.90, Steps=100
+Average Reward (last 100): 212.71
+  Update - Policy Loss: 0.0081, Value Loss: 552.1374, Entropy: -0.1472
+
+Episode 120: Reward=268.95, Steps=455
+Average Reward (last 100): 213.28
+  Update - Policy Loss: -0.0014, Value Loss: 3035.9498, Entropy: -0.0186
+
+Episode 121: Reward=50.01, Steps=99
+Average Reward (last 100): 211.15
+  Update - Policy Loss: 0.0021, Value Loss: 2354.6436, Entropy: -0.0118
+
+Episode 122: Reward=50.01, Steps=99
+Average Reward (last 100): 209.09
+  Update - Policy Loss: 0.0103, Value Loss: 2048.3101, Entropy: -0.0027
+
+Episode 123: Reward=50.01, Steps=99
+Average Reward (last 100): 206.85
+  Update - Policy Loss: -0.0134, Value Loss: 1836.9063, Entropy: -0.0018
+
+Episode 124: Reward=50.01, Steps=99
+Average Reward (last 100): 203.97
+  Update - Policy Loss: 0.0090, Value Loss: 1773.9174, Entropy: -0.0015
+
+Episode 125: Reward=50.01, Steps=99
+Average Reward (last 100): 201.41
+  Update - Policy Loss: -0.0043, Value Loss: 1787.2210, Entropy: -0.0010
+
+Episode 126: Reward=50.01, Steps=99
+Average Reward (last 100): 199.24
+  Update - Policy Loss: -0.0041, Value Loss: 1755.8308, Entropy: -0.0012
+
+Episode 127: Reward=50.01, Steps=99
+Average Reward (last 100): 196.73
+  Update - Policy Loss: -0.0182, Value Loss: 1655.9510, Entropy: -0.0007
+
+Episode 128: Reward=50.01, Steps=99
+Average Reward (last 100): 196.77
+  Update - Policy Loss: 0.0100, Value Loss: 1612.5102, Entropy: -0.0006
+
+Episode 129: Reward=50.01, Steps=99
+Average Reward (last 100): 194.58
+  Update - Policy Loss: 0.0073, Value Loss: 1584.0630, Entropy: -0.0005
+
+Episode 130: Reward=50.01, Steps=99
+Average Reward (last 100): 188.71
+  Update - Policy Loss: -0.0044, Value Loss: 1642.3547, Entropy: -0.0004
+
+Episode 131: Reward=50.01, Steps=99
+Average Reward (last 100): 186.56
+  Update - Policy Loss: -0.0166, Value Loss: 1653.3511, Entropy: -0.0005
+
+Episode 132: Reward=50.01, Steps=99
+Average Reward (last 100): 184.05
+  Update - Policy Loss: -0.0021, Value Loss: 1593.9611, Entropy: -0.0007
+
+Episode 133: Reward=50.01, Steps=99
+Average Reward (last 100): 181.51
+  Update - Policy Loss: -0.0169, Value Loss: 1556.6597, Entropy: -0.0007
+
+Episode 134: Reward=50.01, Steps=99
+Average Reward (last 100): 180.47
+  Update - Policy Loss: 0.0017, Value Loss: 1559.7870, Entropy: -0.0008
+
+Episode 135: Reward=50.01, Steps=99
+Average Reward (last 100): 177.94
+  Update - Policy Loss: 0.0366, Value Loss: 1588.3653, Entropy: -0.0005
+
+Episode 136: Reward=50.01, Steps=99
+Average Reward (last 100): 175.76
+  Update - Policy Loss: -0.0154, Value Loss: 1471.3026, Entropy: -0.0003
+
+Episode 137: Reward=50.01, Steps=99
+Average Reward (last 100): 173.73
+  Update - Policy Loss: 0.0028, Value Loss: 1474.2539, Entropy: -0.0001
+
+Episode 138: Reward=50.01, Steps=99
+Average Reward (last 100): 173.76
+  Update - Policy Loss: -0.0238, Value Loss: 1445.1437, Entropy: -0.0002
+
+Episode 139: Reward=50.01, Steps=99
+Average Reward (last 100): 171.51
+  Update - Policy Loss: 0.0103, Value Loss: 1402.8337, Entropy: -0.0002
+
+Episode 140: Reward=50.01, Steps=99
+Average Reward (last 100): 170.57
+  Update - Policy Loss: -0.0037, Value Loss: 1403.2025, Entropy: -0.0002
+
+Episode 141: Reward=50.01, Steps=99
+Average Reward (last 100): 168.51
+  Update - Policy Loss: -0.0222, Value Loss: 1437.5403, Entropy: -0.0002
+
+Episode 142: Reward=50.01, Steps=99
+Average Reward (last 100): 162.14
+  Update - Policy Loss: -0.0363, Value Loss: 1378.8021, Entropy: -0.0002
+
+Episode 143: Reward=50.01, Steps=99
+Average Reward (last 100): 162.13
+  Update - Policy Loss: -0.0118, Value Loss: 1476.9421, Entropy: -0.0002
+
+Episode 144: Reward=50.01, Steps=99
+Average Reward (last 100): 159.69
+  Update - Policy Loss: -0.0021, Value Loss: 1443.0413, Entropy: -0.0002
+
+Episode 145: Reward=50.01, Steps=99
+Average Reward (last 100): 158.29
+  Update - Policy Loss: 0.0047, Value Loss: 1444.2410, Entropy: -0.0002
+
+Episode 146: Reward=50.01, Steps=99
+Average Reward (last 100): 155.86
+  Update - Policy Loss: 0.0142, Value Loss: 1469.1653, Entropy: -0.0003
+
+Episode 147: Reward=50.01, Steps=99
+Average Reward (last 100): 155.86
+  Update - Policy Loss: 0.0127, Value Loss: 1339.5782, Entropy: -0.0003
+
+Episode 148: Reward=50.01, Steps=99
+Average Reward (last 100): 155.85
+  Update - Policy Loss: -0.0001, Value Loss: 1316.8911, Entropy: -0.0004
+
+Episode 149: Reward=50.01, Steps=99
+Average Reward (last 100): 155.87
+  Update - Policy Loss: -0.0093, Value Loss: 1310.9640, Entropy: -0.0005
+
+Episode 150: Reward=50.01, Steps=99
+Average Reward (last 100): 154.81
+  Update - Policy Loss: -0.0015, Value Loss: 1380.8128, Entropy: -0.0007
+
+Episode 151: Reward=50.01, Steps=99
+Average Reward (last 100): 153.37
+  Update - Policy Loss: -0.0211, Value Loss: 1316.0076, Entropy: -0.0005
+
+Episode 152: Reward=50.01, Steps=99
+Average Reward (last 100): 152.33
+  Update - Policy Loss: 0.0012, Value Loss: 1314.1646, Entropy: -0.0003
+
+Episode 153: Reward=50.01, Steps=99
+Average Reward (last 100): 152.34
+  Update - Policy Loss: 0.0131, Value Loss: 1381.3906, Entropy: -0.0004
+
+Episode 154: Reward=50.01, Steps=99
+Average Reward (last 100): 152.34
+  Update - Policy Loss: 0.0284, Value Loss: 1360.2206, Entropy: -0.0007
+
+Episode 155: Reward=50.01, Steps=99
+Average Reward (last 100): 152.34
+  Update - Policy Loss: 0.0163, Value Loss: 1249.7237, Entropy: -0.0004
+
+Episode 156: Reward=50.01, Steps=99
+Average Reward (last 100): 152.34
+  Update - Policy Loss: 0.0302, Value Loss: 1334.1528, Entropy: -0.0004
+
+Episode 157: Reward=50.01, Steps=99
+Average Reward (last 100): 151.55
+  Update - Policy Loss: 0.0325, Value Loss: 1294.4061, Entropy: -0.0003
+
+Episode 158: Reward=50.01, Steps=99
+Average Reward (last 100): 151.55
+  Update - Policy Loss: -0.0060, Value Loss: 1272.8660, Entropy: -0.0004
+
+Episode 159: Reward=50.01, Steps=99
+Average Reward (last 100): 150.48
+  Update - Policy Loss: -0.0099, Value Loss: 1317.6595, Entropy: -0.0007
+
+Episode 160: Reward=50.01, Steps=99
+Average Reward (last 100): 149.46
+  Update - Policy Loss: -0.0132, Value Loss: 1286.7714, Entropy: -0.0005
+
+Episode 161: Reward=50.01, Steps=99
+Average Reward (last 100): 146.67
+  Update - Policy Loss: 0.0075, Value Loss: 1237.2921, Entropy: -0.0005
+
+Episode 162: Reward=50.01, Steps=99
+Average Reward (last 100): 144.44
+  Update - Policy Loss: -0.0019, Value Loss: 1234.1188, Entropy: -0.0007
+
+Episode 163: Reward=50.01, Steps=99
+Average Reward (last 100): 142.98
+  Update - Policy Loss: -0.0130, Value Loss: 1334.0536, Entropy: -0.0008
+
+Episode 164: Reward=50.01, Steps=99
+Average Reward (last 100): 138.21
+  Update - Policy Loss: -0.0243, Value Loss: 1219.9687, Entropy: -0.0009
+
+Episode 165: Reward=50.01, Steps=99
+Average Reward (last 100): 135.59
+  Update - Policy Loss: -0.0298, Value Loss: 1268.0745, Entropy: -0.0014
+
+Episode 166: Reward=50.01, Steps=99
+Average Reward (last 100): 130.85
+  Update - Policy Loss: -0.0170, Value Loss: 1262.1317, Entropy: -0.0015
+
+Episode 167: Reward=50.01, Steps=99
+Average Reward (last 100): 130.82
+  Update - Policy Loss: 0.0136, Value Loss: 1276.5625, Entropy: -0.0010
+
+Episode 168: Reward=50.01, Steps=99
+Average Reward (last 100): 130.82
+  Update - Policy Loss: -0.0305, Value Loss: 1273.2476, Entropy: -0.0013
+
+Episode 169: Reward=50.01, Steps=99
+Average Reward (last 100): 129.80
+  Update - Policy Loss: 0.0039, Value Loss: 1191.7406, Entropy: -0.0013
+
+Episode 170: Reward=50.01, Steps=99
+Average Reward (last 100): 127.57
+  Update - Policy Loss: -0.0173, Value Loss: 1166.6383, Entropy: -0.0016
+
+Episode 171: Reward=50.01, Steps=99
+Average Reward (last 100): 126.56
+  Update - Policy Loss: -0.0254, Value Loss: 1184.1451, Entropy: -0.0007
+
+Episode 172: Reward=50.01, Steps=99
+Average Reward (last 100): 123.93
+  Update - Policy Loss: 0.0112, Value Loss: 1271.6672, Entropy: -0.0004
+
+Episode 173: Reward=50.01, Steps=99
+Average Reward (last 100): 123.93
+  Update - Policy Loss: -0.0055, Value Loss: 1213.9182, Entropy: -0.0003
+
+Episode 174: Reward=50.01, Steps=99
+Average Reward (last 100): 123.93
+  Update - Policy Loss: -0.0129, Value Loss: 1238.1371, Entropy: -0.0005
+
+Episode 175: Reward=50.01, Steps=99
+Average Reward (last 100): 123.95
+  Update - Policy Loss: -0.0141, Value Loss: 1184.2269, Entropy: -0.0006
+
+Episode 176: Reward=50.01, Steps=99
+Average Reward (last 100): 123.00
+  Update - Policy Loss: -0.0048, Value Loss: 1189.2187, Entropy: -0.0007
+
+Episode 177: Reward=50.01, Steps=99
+Average Reward (last 100): 120.95
+  Update - Policy Loss: 0.0080, Value Loss: 1118.5423, Entropy: -0.0005
+
+Episode 178: Reward=50.01, Steps=99
+Average Reward (last 100): 118.06
+  Update - Policy Loss: -0.0026, Value Loss: 1159.9792, Entropy: -0.0006
+
+Episode 179: Reward=50.01, Steps=99
+Average Reward (last 100): 115.35
+  Update - Policy Loss: 0.0050, Value Loss: 1216.4317, Entropy: -0.0004
+
+Episode 180: Reward=50.01, Steps=99
+Average Reward (last 100): 111.70
+  Update - Policy Loss: -0.0192, Value Loss: 1180.5754, Entropy: -0.0005
+
+Episode 181: Reward=50.01, Steps=99
+Average Reward (last 100): 107.56
+  Update - Policy Loss: -0.0003, Value Loss: 141.2540, Entropy: -0.0419
+
+Episode 182: Reward=72.80, Steps=1620
+Average Reward (last 100): 105.24
+  Update - Policy Loss: 0.0048, Value Loss: 1936.3619, Entropy: -0.0001
+
+Episode 183: Reward=50.01, Steps=99
+Average Reward (last 100): 102.61
+  Update - Policy Loss: -0.0036, Value Loss: 1453.4364, Entropy: -0.0002
+
+Episode 184: Reward=50.01, Steps=99
+Average Reward (last 100): 101.54
+  Update - Policy Loss: 0.0112, Value Loss: 1380.8445, Entropy: -0.0001
+
+Episode 185: Reward=50.01, Steps=99
+Average Reward (last 100): 101.55
+  Update - Policy Loss: 0.0073, Value Loss: 1330.5553, Entropy: -0.0000
+
+Episode 186: Reward=50.01, Steps=99
+Average Reward (last 100): 98.44
+  Update - Policy Loss: -0.0235, Value Loss: 1373.6835, Entropy: -0.0000
+
+Episode 187: Reward=50.01, Steps=99
+Average Reward (last 100): 94.73
+  Update - Policy Loss: 0.0046, Value Loss: 1152.0350, Entropy: -0.0000
+
+Episode 188: Reward=50.01, Steps=99
+Average Reward (last 100): 92.24
+  Update - Policy Loss: 0.0254, Value Loss: 1164.0317, Entropy: -0.0000
+
+Episode 189: Reward=50.01, Steps=99
+Average Reward (last 100): 92.26
+  Update - Policy Loss: 0.0311, Value Loss: 1202.7369, Entropy: -0.0000
+
+Episode 190: Reward=50.01, Steps=99
+Average Reward (last 100): 92.25
+  Update - Policy Loss: -0.0161, Value Loss: 1225.5475, Entropy: -0.0000
+
+Episode 191: Reward=50.01, Steps=99
+Average Reward (last 100): 91.21
+  Update - Policy Loss: 0.0050, Value Loss: 1219.1945, Entropy: -0.0000
+
+Episode 192: Reward=50.01, Steps=99
+Average Reward (last 100): 89.05
+  Update - Policy Loss: -0.0149, Value Loss: 1207.3264, Entropy: -0.0000
+
+Episode 193: Reward=50.01, Steps=99
+Average Reward (last 100): 89.12
+  Update - Policy Loss: -0.0273, Value Loss: 1299.7632, Entropy: -0.0000
+
+Episode 194: Reward=50.01, Steps=99
+Average Reward (last 100): 89.11
+  Update - Policy Loss: 0.0001, Value Loss: 1239.3473, Entropy: -0.0000
+
+Episode 195: Reward=50.01, Steps=99
+Average Reward (last 100): 89.10
+  Update - Policy Loss: -0.0036, Value Loss: 1231.8869, Entropy: -0.0000
+
+Episode 196: Reward=50.01, Steps=99
+Average Reward (last 100): 86.61
+  Update - Policy Loss: 0.0205, Value Loss: 1125.3928, Entropy: -0.0000
+
+Episode 197: Reward=50.01, Steps=99
+Average Reward (last 100): 81.41
+  Update - Policy Loss: -0.0456, Value Loss: 1184.2284, Entropy: -0.0000
+
+Episode 198: Reward=50.01, Steps=99
+Average Reward (last 100): 81.40
+  Update - Policy Loss: 0.0116, Value Loss: 1153.5116, Entropy: -0.0000
+
+Episode 199: Reward=50.01, Steps=99
+Average Reward (last 100): 79.81
+  Update - Policy Loss: 0.0131, Value Loss: 1171.6532, Entropy: -0.0000
+
+Episode 200: Reward=50.01, Steps=99
+Average Reward (last 100): 78.90
+  Update - Policy Loss: 0.0129, Value Loss: 1078.1500, Entropy: -0.0000
+
+Episode 201: Reward=50.01, Steps=99
+Average Reward (last 100): 78.88
+  Update - Policy Loss: 0.0050, Value Loss: 1122.6744, Entropy: -0.0000
+
+Episode 202: Reward=50.01, Steps=99
+Average Reward (last 100): 74.50
+  Update - Policy Loss: 0.0361, Value Loss: 1111.7470, Entropy: -0.0000
+
+Episode 203: Reward=50.01, Steps=99
+Average Reward (last 100): 74.49
+  Update - Policy Loss: -0.0114, Value Loss: 1137.2302, Entropy: -0.0000
+
+Episode 204: Reward=50.01, Steps=99
+Average Reward (last 100): 72.31
+  Update - Policy Loss: -0.0218, Value Loss: 1199.8463, Entropy: -0.0000
+
+Episode 205: Reward=50.01, Steps=99
+Average Reward (last 100): 67.56
+  Update - Policy Loss: -0.0098, Value Loss: 1225.2203, Entropy: -0.0000
+
+Episode 206: Reward=50.01, Steps=99
+Average Reward (last 100): 65.94
+  Update - Policy Loss: 0.0011, Value Loss: 1245.9763, Entropy: -0.0000
+
+Episode 207: Reward=50.01, Steps=99
+Average Reward (last 100): 64.55
+  Update - Policy Loss: 0.0097, Value Loss: 1142.3810, Entropy: -0.0000
+
+Episode 208: Reward=50.01, Steps=99
+Average Reward (last 100): 61.28
+  Update - Policy Loss: 0.0056, Value Loss: 1069.7505, Entropy: -0.0000
+
+Episode 209: Reward=50.01, Steps=99
+Average Reward (last 100): 61.28
+  Update - Policy Loss: -0.0085, Value Loss: 1098.8172, Entropy: -0.0000
+
+Episode 210: Reward=50.01, Steps=99
+Average Reward (last 100): 58.77
+  Update - Policy Loss: -0.0296, Value Loss: 1189.6918, Entropy: -0.0000
+
+Episode 211: Reward=50.01, Steps=99
+Average Reward (last 100): 58.76
+  Update - Policy Loss: -0.0020, Value Loss: 1256.2142, Entropy: -0.0000
+
+Episode 212: Reward=50.01, Steps=99
+Average Reward (last 100): 58.79
+  Update - Policy Loss: 0.0338, Value Loss: 1173.0736, Entropy: -0.0000
+
+Episode 213: Reward=50.01, Steps=99
+Average Reward (last 100): 57.30
+  Update - Policy Loss: -0.0110, Value Loss: 1168.1966, Entropy: -0.0000
+
+Episode 214: Reward=50.01, Steps=99
+Average Reward (last 100): 55.80
+  Update - Policy Loss: 0.0246, Value Loss: 1163.8963, Entropy: -0.0000
+
+Episode 215: Reward=50.01, Steps=99
+Average Reward (last 100): 54.71
+  Update - Policy Loss: 0.0017, Value Loss: 1116.2916, Entropy: -0.0000
+
+Episode 216: Reward=50.01, Steps=99
+Average Reward (last 100): 53.53
+  Update - Policy Loss: -0.0037, Value Loss: 1123.8939, Entropy: -0.0000
+
+Episode 217: Reward=50.01, Steps=99
+Average Reward (last 100): 52.44
+  Update - Policy Loss: -0.0071, Value Loss: 1087.7150, Entropy: -0.0000
+
+Episode 218: Reward=50.01, Steps=99
+Average Reward (last 100): 52.44
+  Update - Policy Loss: -0.0121, Value Loss: 1135.1562, Entropy: -0.0000
+
+Episode 219: Reward=50.01, Steps=99
+Average Reward (last 100): 52.43
+  Update - Policy Loss: 0.0063, Value Loss: 1179.2782, Entropy: -0.0000
+
+Episode 220: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0018, Value Loss: 1161.0362, Entropy: -0.0000
+
+Episode 221: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0157, Value Loss: 1226.0402, Entropy: -0.0000
+
+Episode 222: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0102, Value Loss: 1191.4083, Entropy: -0.0000
+
+Episode 223: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0248, Value Loss: 1152.7346, Entropy: -0.0000
+
+Episode 224: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0258, Value Loss: 1186.5766, Entropy: -0.0000
+
+Episode 225: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0248, Value Loss: 1101.4974, Entropy: -0.0000
+
+Episode 226: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0074, Value Loss: 1157.7206, Entropy: -0.0000
+
+Episode 227: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0097, Value Loss: 1139.7618, Entropy: -0.0000
+
+Episode 228: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0142, Value Loss: 1133.3469, Entropy: -0.0000
+
+Episode 229: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0020, Value Loss: 1178.6457, Entropy: -0.0000
+
+Episode 230: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0219, Value Loss: 1116.5822, Entropy: -0.0000
+
+Episode 231: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0130, Value Loss: 1065.6754, Entropy: -0.0000
+
+Episode 232: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0024, Value Loss: 1119.4542, Entropy: -0.0000
+
+Episode 233: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0202, Value Loss: 1121.7003, Entropy: -0.0000
+
+Episode 234: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0152, Value Loss: 1173.2082, Entropy: -0.0000
+
+Episode 235: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0014, Value Loss: 1228.3814, Entropy: -0.0000
+
+Episode 236: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0277, Value Loss: 1103.9449, Entropy: -0.0000
+
+Episode 237: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0081, Value Loss: 1134.7818, Entropy: -0.0000
+
+Episode 238: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0062, Value Loss: 1044.0274, Entropy: -0.0000
+
+Episode 239: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0212, Value Loss: 1103.2440, Entropy: -0.0000
+
+Episode 240: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0116, Value Loss: 1225.8774, Entropy: -0.0000
+
+Episode 241: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0137, Value Loss: 1157.1393, Entropy: -0.0000
+
+Episode 242: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0005, Value Loss: 1128.2798, Entropy: -0.0000
+
+Episode 243: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0048, Value Loss: 1093.5968, Entropy: -0.0000
+
+Episode 244: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0294, Value Loss: 1131.4832, Entropy: -0.0000
+
+Episode 245: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0027, Value Loss: 1108.6261, Entropy: -0.0000
+
+Episode 246: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0170, Value Loss: 1084.2537, Entropy: -0.0000
+
+Episode 247: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0004, Value Loss: 1098.2024, Entropy: -0.0000
+
+Episode 248: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0323, Value Loss: 1155.2306, Entropy: -0.0000
+
+Episode 249: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0211, Value Loss: 1071.6933, Entropy: -0.0000
+
+Episode 250: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0060, Value Loss: 1113.9982, Entropy: -0.0000
+
+Episode 251: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0251, Value Loss: 1061.8158, Entropy: -0.0000
+
+Episode 252: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0118, Value Loss: 1027.8655, Entropy: -0.0000
+
+Episode 253: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0086, Value Loss: 1029.3769, Entropy: -0.0000
+
+Episode 254: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0004, Value Loss: 1064.7045, Entropy: -0.0000
+
+Episode 255: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0295, Value Loss: 1055.7951, Entropy: -0.0000
+
+Episode 256: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0048, Value Loss: 1030.7139, Entropy: -0.0000
+
+Episode 257: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0156, Value Loss: 1067.1724, Entropy: -0.0000
+
+Episode 258: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0055, Value Loss: 1089.5371, Entropy: -0.0000
+
+Episode 259: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0030, Value Loss: 1075.7814, Entropy: -0.0000
+
+Episode 260: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0134, Value Loss: 986.2594, Entropy: -0.0000
+
+Episode 261: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0081, Value Loss: 1128.5188, Entropy: -0.0000
+
+Episode 262: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0207, Value Loss: 1094.0052, Entropy: -0.0000
+
+Episode 263: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0059, Value Loss: 1029.5185, Entropy: -0.0000
+
+Episode 264: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0116, Value Loss: 1017.8712, Entropy: -0.0000
+
+Episode 265: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0053, Value Loss: 1042.6596, Entropy: -0.0000
+
+Episode 266: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0235, Value Loss: 1132.7946, Entropy: -0.0000
+
+Episode 267: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0120, Value Loss: 1132.8391, Entropy: -0.0000
+
+Episode 268: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0355, Value Loss: 1075.5431, Entropy: -0.0000
+
+Episode 269: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0060, Value Loss: 1092.8270, Entropy: -0.0000
+
+Episode 270: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0057, Value Loss: 1025.1383, Entropy: -0.0000
+
+Episode 271: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0281, Value Loss: 1033.6681, Entropy: -0.0000
+
+Episode 272: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0051, Value Loss: 1103.8659, Entropy: -0.0000
+
+Episode 273: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0174, Value Loss: 1018.7510, Entropy: -0.0000
+
+Episode 274: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0202, Value Loss: 1121.6994, Entropy: -0.0000
+
+Episode 275: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0175, Value Loss: 1104.8145, Entropy: -0.0000
+
+Episode 276: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0136, Value Loss: 1034.3986, Entropy: -0.0000
+
+Episode 277: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0003, Value Loss: 1077.4862, Entropy: -0.0000
+
+Episode 278: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0263, Value Loss: 1058.5371, Entropy: -0.0000
+
+Episode 279: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: 0.0287, Value Loss: 1039.2287, Entropy: -0.0000
+
+Episode 280: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0207, Value Loss: 987.2961, Entropy: -0.0000
+
+Episode 281: Reward=50.01, Steps=99
+Average Reward (last 100): 50.24
+  Update - Policy Loss: -0.0245, Value Loss: 1078.3108, Entropy: -0.0000
+
+Episode 282: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0163, Value Loss: 1034.2069, Entropy: -0.0000
+
+Episode 283: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0039, Value Loss: 979.9277, Entropy: -0.0000
+
+Episode 284: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0146, Value Loss: 1043.2630, Entropy: -0.0000
+
+Episode 285: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0101, Value Loss: 1023.0078, Entropy: -0.0000
+
+Episode 286: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0155, Value Loss: 1005.9353, Entropy: -0.0000
+
+Episode 287: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0200, Value Loss: 950.8876, Entropy: -0.0000
+
+Episode 288: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0036, Value Loss: 1042.4184, Entropy: -0.0000
+
+Episode 289: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0217, Value Loss: 933.4123, Entropy: -0.0000
+
+Episode 290: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0015, Value Loss: 975.8514, Entropy: -0.0000
+
+Episode 291: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0025, Value Loss: 1086.7074, Entropy: -0.0000
+
+Episode 292: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0006, Value Loss: 1000.3139, Entropy: -0.0000
+
+Episode 293: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0005, Value Loss: 1045.9702, Entropy: -0.0000
+
+Episode 294: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0068, Value Loss: 1061.4713, Entropy: -0.0000
+
+Episode 295: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0144, Value Loss: 998.8320, Entropy: -0.0000
+
+Episode 296: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0036, Value Loss: 970.3179, Entropy: -0.0000
+
+Episode 297: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0142, Value Loss: 1004.0097, Entropy: -0.0000
+
+Episode 298: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0020, Value Loss: 919.5540, Entropy: -0.0000
+
+Episode 299: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0082, Value Loss: 968.0467, Entropy: -0.0000
+
+Episode 300: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0078, Value Loss: 956.5426, Entropy: -0.0000
+
+Episode 301: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0215, Value Loss: 955.9997, Entropy: -0.0000
+
+Episode 302: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0305, Value Loss: 1004.6438, Entropy: -0.0000
+
+Episode 303: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0029, Value Loss: 956.0521, Entropy: -0.0000
+
+Episode 304: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0201, Value Loss: 936.9012, Entropy: -0.0000
+
+Episode 305: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0262, Value Loss: 969.8626, Entropy: -0.0000
+
+Episode 306: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0216, Value Loss: 922.7671, Entropy: -0.0000
+
+Episode 307: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0002, Value Loss: 924.4649, Entropy: -0.0000
+
+Episode 308: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0002, Value Loss: 942.9160, Entropy: -0.0000
+
+Episode 309: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0017, Value Loss: 924.0251, Entropy: -0.0000
+
+Episode 310: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0075, Value Loss: 974.6056, Entropy: -0.0000
+
+Episode 311: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0133, Value Loss: 929.6114, Entropy: -0.0000
+
+Episode 312: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0038, Value Loss: 1025.5349, Entropy: -0.0000
+
+Episode 313: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0306, Value Loss: 961.3717, Entropy: -0.0001
+
+Episode 314: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0208, Value Loss: 953.7468, Entropy: -0.0000
+
+Episode 315: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0257, Value Loss: 925.0765, Entropy: -0.0000
+
+Episode 316: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0347, Value Loss: 903.0468, Entropy: -0.0000
+
+Episode 317: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0174, Value Loss: 947.6944, Entropy: -0.0000
+
+Episode 318: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0021, Value Loss: 878.5417, Entropy: -0.0000
+
+Episode 319: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0120, Value Loss: 898.3592, Entropy: -0.0000
+
+Episode 320: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0435, Value Loss: 895.4193, Entropy: -0.0000
+
+Episode 321: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0232, Value Loss: 901.6458, Entropy: -0.0000
+
+Episode 322: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0100, Value Loss: 874.4205, Entropy: -0.0000
+
+Episode 323: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0118, Value Loss: 933.8342, Entropy: -0.0000
+
+Episode 324: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0245, Value Loss: 941.9190, Entropy: -0.0000
+
+Episode 325: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0034, Value Loss: 887.4830, Entropy: -0.0000
+
+Episode 326: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0137, Value Loss: 910.6120, Entropy: -0.0000
+
+Episode 327: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0073, Value Loss: 966.3300, Entropy: -0.0000
+
+Episode 328: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0021, Value Loss: 931.9814, Entropy: -0.0000
+
+Episode 329: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0179, Value Loss: 925.9099, Entropy: -0.0000
+
+Episode 330: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0040, Value Loss: 878.3605, Entropy: -0.0000
+
+Episode 331: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0089, Value Loss: 929.0288, Entropy: -0.0000
+
+Episode 332: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0346, Value Loss: 899.9249, Entropy: -0.0000
+
+Episode 333: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0018, Value Loss: 863.8937, Entropy: -0.0000
+
+Episode 334: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0028, Value Loss: 883.2204, Entropy: -0.0001
+
+Episode 335: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0129, Value Loss: 908.7449, Entropy: -0.0001
+
+Episode 336: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0064, Value Loss: 925.5468, Entropy: -0.0001
+
+Episode 337: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0025, Value Loss: 919.9429, Entropy: -0.0001
+
+Episode 338: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0138, Value Loss: 893.0908, Entropy: -0.0001
+
+Episode 339: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0059, Value Loss: 857.4153, Entropy: -0.0001
+
+Episode 340: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0202, Value Loss: 862.3571, Entropy: -0.0001
+
+Episode 341: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0041, Value Loss: 853.0861, Entropy: -0.0000
+
+Episode 342: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0083, Value Loss: 914.7467, Entropy: -0.0000
+
+Episode 343: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0376, Value Loss: 843.2619, Entropy: -0.0001
+
+Episode 344: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0193, Value Loss: 840.9470, Entropy: -0.0001
+
+Episode 345: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0311, Value Loss: 873.6811, Entropy: -0.0001
+
+Episode 346: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0067, Value Loss: 877.4832, Entropy: -0.0001
+
+Episode 347: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0037, Value Loss: 840.5671, Entropy: -0.0001
+
+Episode 348: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0048, Value Loss: 872.1051, Entropy: -0.0001
+
+Episode 349: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0393, Value Loss: 937.9903, Entropy: -0.0002
+
+Episode 350: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0276, Value Loss: 872.3964, Entropy: -0.0001
+
+Episode 351: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0232, Value Loss: 882.1484, Entropy: -0.0000
+
+Episode 352: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0160, Value Loss: 847.2148, Entropy: -0.0000
+
+Episode 353: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0201, Value Loss: 849.5746, Entropy: -0.0001
+
+Episode 354: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0065, Value Loss: 822.2344, Entropy: -0.0001
+
+Episode 355: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0148, Value Loss: 819.1102, Entropy: -0.0002
+
+Episode 356: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0067, Value Loss: 823.7654, Entropy: -0.0002
+
+Episode 357: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0143, Value Loss: 852.8693, Entropy: -0.0001
+
+Episode 358: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0182, Value Loss: 844.6658, Entropy: -0.0000
+
+Episode 359: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0221, Value Loss: 907.4832, Entropy: -0.0001
+
+Episode 360: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0144, Value Loss: 846.6843, Entropy: -0.0001
+
+Episode 361: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0111, Value Loss: 836.9250, Entropy: -0.0001
+
+Episode 362: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0077, Value Loss: 862.3901, Entropy: -0.0001
+
+Episode 363: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0252, Value Loss: 837.3888, Entropy: -0.0001
+
+Episode 364: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0272, Value Loss: 840.5240, Entropy: -0.0002
+
+Episode 365: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0126, Value Loss: 887.1996, Entropy: -0.0003
+
+Episode 366: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0092, Value Loss: 848.2315, Entropy: -0.0002
+
+Episode 367: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0004, Value Loss: 828.9712, Entropy: -0.0002
+
+Episode 368: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0082, Value Loss: 876.1498, Entropy: -0.0003
+
+Episode 369: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0150, Value Loss: 860.8628, Entropy: -0.0002
+
+Episode 370: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0086, Value Loss: 875.2285, Entropy: -0.0001
+
+Episode 371: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0012, Value Loss: 826.4031, Entropy: -0.0001
+
+Episode 372: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0001, Value Loss: 901.9155, Entropy: -0.0001
+
+Episode 373: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0146, Value Loss: 785.0045, Entropy: -0.0001
+
+Episode 374: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0102, Value Loss: 805.5334, Entropy: -0.0001
+
+Episode 375: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0222, Value Loss: 822.8184, Entropy: -0.0001
+
+Episode 376: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0122, Value Loss: 788.0710, Entropy: -0.0001
+
+Episode 377: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0130, Value Loss: 851.7653, Entropy: -0.0001
+
+Episode 378: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0080, Value Loss: 848.3188, Entropy: -0.0000
+
+Episode 379: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0193, Value Loss: 816.1158, Entropy: -0.0000
+
+Episode 380: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0013, Value Loss: 828.9788, Entropy: -0.0001
+
+Episode 381: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0000, Value Loss: 795.0195, Entropy: -0.0001
+
+Episode 382: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0183, Value Loss: 831.2878, Entropy: -0.0001
+
+Episode 383: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0146, Value Loss: 807.8554, Entropy: -0.0001
+
+Episode 384: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0025, Value Loss: 795.3332, Entropy: -0.0001
+
+Episode 385: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0039, Value Loss: 830.0723, Entropy: -0.0000
+
+Episode 386: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0000, Value Loss: 794.0570, Entropy: -0.0001
+
+Episode 387: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0085, Value Loss: 848.9659, Entropy: -0.0001
+
+Episode 388: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0237, Value Loss: 855.8759, Entropy: -0.0001
+
+Episode 389: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0077, Value Loss: 884.3506, Entropy: -0.0001
+
+Episode 390: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0197, Value Loss: 866.5410, Entropy: -0.0002
+
+Episode 391: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0465, Value Loss: 847.1743, Entropy: -0.0001
+
+Episode 392: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0142, Value Loss: 857.4222, Entropy: -0.0002
+
+Episode 393: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0138, Value Loss: 847.2295, Entropy: -0.0004
+
+Episode 394: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0088, Value Loss: 788.6526, Entropy: -0.0003
+
+Episode 395: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0024, Value Loss: 746.4603, Entropy: -0.0003
+
+Episode 396: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0236, Value Loss: 776.5399, Entropy: -0.0007
+
+Episode 397: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0097, Value Loss: 840.3666, Entropy: -0.0010
+
+Episode 398: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0053, Value Loss: 826.0797, Entropy: -0.0009
+
+Episode 399: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0029, Value Loss: 814.1863, Entropy: -0.0006
+
+Episode 400: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0006, Value Loss: 804.2716, Entropy: -0.0004
+
+Episode 401: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0025, Value Loss: 738.6361, Entropy: -0.0004
+
+Episode 402: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0103, Value Loss: 816.1990, Entropy: -0.0004
+
+Episode 403: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0041, Value Loss: 807.3904, Entropy: -0.0005
+
+Episode 404: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0072, Value Loss: 794.1040, Entropy: -0.0005
+
+Episode 405: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0032, Value Loss: 788.2309, Entropy: -0.0003
+
+Episode 406: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0202, Value Loss: 825.1548, Entropy: -0.0004
+
+Episode 407: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0033, Value Loss: 790.1094, Entropy: -0.0004
+
+Episode 408: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0060, Value Loss: 806.2198, Entropy: -0.0003
+
+Episode 409: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0085, Value Loss: 816.5828, Entropy: -0.0002
+
+Episode 410: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0256, Value Loss: 798.9099, Entropy: -0.0003
+
+Episode 411: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0116, Value Loss: 796.3838, Entropy: -0.0005
+
+Episode 412: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0064, Value Loss: 806.6561, Entropy: -0.0005
+
+Episode 413: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0168, Value Loss: 819.4085, Entropy: -0.0005
+
+Episode 414: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0183, Value Loss: 793.7966, Entropy: -0.0008
+
+Episode 415: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0092, Value Loss: 763.2026, Entropy: -0.0006
+
+Episode 416: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0068, Value Loss: 779.2304, Entropy: -0.0006
+
+Episode 417: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0257, Value Loss: 796.6110, Entropy: -0.0006
+
+Episode 418: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0109, Value Loss: 782.8392, Entropy: -0.0006
+
+Episode 419: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0022, Value Loss: 760.3670, Entropy: -0.0006
+
+Episode 420: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0063, Value Loss: 771.7513, Entropy: -0.0007
+
+Episode 421: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0108, Value Loss: 776.6622, Entropy: -0.0005
+
+Episode 422: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0124, Value Loss: 831.8183, Entropy: -0.0005
+
+Episode 423: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0042, Value Loss: 766.3605, Entropy: -0.0005
+
+Episode 424: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0030, Value Loss: 754.3646, Entropy: -0.0004
+
+Episode 425: Reward=50.21, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0066, Value Loss: 812.7689, Entropy: -0.0005
+
+Episode 426: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0005, Value Loss: 791.4117, Entropy: -0.0013
+
+Episode 427: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0094, Value Loss: 760.0084, Entropy: -0.0008
+
+Episode 428: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0126, Value Loss: 808.5359, Entropy: -0.0004
+
+Episode 429: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0065, Value Loss: 859.3340, Entropy: -0.0010
+
+Episode 430: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0014, Value Loss: 773.3684, Entropy: -0.0016
+
+Episode 431: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0013, Value Loss: 802.3300, Entropy: -0.0018
+
+Episode 432: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0104, Value Loss: 759.5213, Entropy: -0.0024
+
+Episode 433: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0148, Value Loss: 835.2438, Entropy: -0.0032
+
+Episode 434: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0067, Value Loss: 813.7605, Entropy: -0.0016
+
+Episode 435: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0123, Value Loss: 785.9980, Entropy: -0.0015
+
+Episode 436: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0002, Value Loss: 844.6049, Entropy: -0.0008
+
+Episode 437: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0159, Value Loss: 830.2697, Entropy: -0.0007
+
+Episode 438: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0071, Value Loss: 839.7272, Entropy: -0.0006
+
+Episode 439: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0536, Value Loss: 826.3980, Entropy: -0.0004
+
+Episode 440: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0171, Value Loss: 830.9703, Entropy: -0.0005
+
+Episode 441: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0054, Value Loss: 795.9021, Entropy: -0.0007
+
+Episode 442: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0176, Value Loss: 823.4991, Entropy: -0.0005
+
+Episode 443: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0040, Value Loss: 826.8994, Entropy: -0.0004
+
+Episode 444: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0042, Value Loss: 751.9598, Entropy: -0.0004
+
+Episode 445: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0199, Value Loss: 760.6070, Entropy: -0.0005
+
+Episode 446: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0140, Value Loss: 784.8803, Entropy: -0.0005
+
+Episode 447: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0178, Value Loss: 801.2859, Entropy: -0.0003
+
+Episode 448: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0002, Value Loss: 787.2294, Entropy: -0.0003
+
+Episode 449: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0015, Value Loss: 740.2177, Entropy: -0.0004
+
+Episode 450: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0090, Value Loss: 786.7679, Entropy: -0.0008
+
+Episode 451: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0022, Value Loss: 791.7219, Entropy: -0.0011
+
+Episode 452: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0057, Value Loss: 725.8287, Entropy: -0.0014
+
+Episode 453: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0033, Value Loss: 769.1156, Entropy: -0.0012
+
+Episode 454: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0111, Value Loss: 782.9103, Entropy: -0.0010
+
+Episode 455: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0067, Value Loss: 736.9747, Entropy: -0.0009
+
+Episode 456: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0114, Value Loss: 761.6142, Entropy: -0.0024
+
+Episode 457: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0026, Value Loss: 787.5565, Entropy: -0.0034
+
+Episode 458: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0297, Value Loss: 807.1191, Entropy: -0.0028
+
+Episode 459: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0073, Value Loss: 661.5876, Entropy: -0.0027
+
+Episode 460: Reward=50.21, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0044, Value Loss: 792.6391, Entropy: -0.0038
+
+Episode 461: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0096, Value Loss: 774.7752, Entropy: -0.0061
+
+Episode 462: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0062, Value Loss: 788.8246, Entropy: -0.0074
+
+Episode 463: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0085, Value Loss: 775.9750, Entropy: -0.0077
+
+Episode 464: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0137, Value Loss: 746.8941, Entropy: -0.0123
+
+Episode 465: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0108, Value Loss: 718.8727, Entropy: -0.0161
+
+Episode 466: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0095, Value Loss: 584.3616, Entropy: -0.0099
+
+Episode 467: Reward=49.91, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0050, Value Loss: 843.3035, Entropy: -0.0053
+
+Episode 468: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0022, Value Loss: 760.5328, Entropy: -0.0065
+
+Episode 469: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0069, Value Loss: 805.7621, Entropy: -0.0155
+
+Episode 470: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0043, Value Loss: 828.6460, Entropy: -0.0264
+
+Episode 471: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0089, Value Loss: 787.8877, Entropy: -0.0275
+
+Episode 472: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0112, Value Loss: 756.3447, Entropy: -0.0187
+
+Episode 473: Reward=49.61, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: -0.0143, Value Loss: 756.8259, Entropy: -0.0118
+
+Episode 474: Reward=50.01, Steps=99
+Average Reward (last 100): 50.01
+  Update - Policy Loss: 0.0234, Value Loss: 915.2999, Entropy: -0.0119
+
+Episode 475: Reward=51.20, Steps=100
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0040, Value Loss: 834.4941, Entropy: -0.0167
+
+Episode 476: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0175, Value Loss: 762.4306, Entropy: -0.0104
+
+Episode 477: Reward=50.31, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0203, Value Loss: 800.8434, Entropy: -0.0045
+
+Episode 478: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0079, Value Loss: 779.5727, Entropy: -0.0037
+
+Episode 479: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0054, Value Loss: 820.9026, Entropy: -0.0028
+
+Episode 480: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0192, Value Loss: 827.6985, Entropy: -0.0026
+
+Episode 481: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0122, Value Loss: 750.8943, Entropy: -0.0027
+
+Episode 482: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0111, Value Loss: 760.3357, Entropy: -0.0031
+
+Episode 483: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0174, Value Loss: 789.3399, Entropy: -0.0042
+
+Episode 484: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0056, Value Loss: 750.5970, Entropy: -0.0045
+
+Episode 485: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0161, Value Loss: 759.3480, Entropy: -0.0068
+
+Episode 486: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0046, Value Loss: 783.8835, Entropy: -0.0088
+
+Episode 487: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0323, Value Loss: 787.0843, Entropy: -0.0071
+
+Episode 488: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0083, Value Loss: 759.0563, Entropy: -0.0075
+
+Episode 489: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0186, Value Loss: 769.2013, Entropy: -0.0069
+
+Episode 490: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0087, Value Loss: 781.9751, Entropy: -0.0060
+
+Episode 491: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0032, Value Loss: 768.0662, Entropy: -0.0034
+
+Episode 492: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0142, Value Loss: 749.3498, Entropy: -0.0025
+
+Episode 493: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0067, Value Loss: 797.2821, Entropy: -0.0024
+
+Episode 494: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0053, Value Loss: 774.0891, Entropy: -0.0027
+
+Episode 495: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0221, Value Loss: 768.7554, Entropy: -0.0030
+
+Episode 496: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0161, Value Loss: 821.8099, Entropy: -0.0037
+
+Episode 497: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0024, Value Loss: 808.4460, Entropy: -0.0037
+
+Episode 498: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0008, Value Loss: 739.0529, Entropy: -0.0037
+
+Episode 499: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0025, Value Loss: 786.3166, Entropy: -0.0046
+
+Episode 500: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+Saved checkpoint: checkpoints/ppo/ppo_episode_500.pth
+  Update - Policy Loss: -0.0102, Value Loss: 788.9378, Entropy: -0.0060
+
+Episode 501: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0079, Value Loss: 805.2784, Entropy: -0.0065
+
+Episode 502: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0012, Value Loss: 744.5429, Entropy: -0.0064
+
+Episode 503: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0019, Value Loss: 765.3964, Entropy: -0.0064
+
+Episode 504: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0099, Value Loss: 773.1477, Entropy: -0.0068
+
+Episode 505: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: -0.0138, Value Loss: 735.2953, Entropy: -0.0081
+
+Episode 506: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0121, Value Loss: 731.3993, Entropy: -0.0099
+
+Episode 507: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0007, Value Loss: 776.7846, Entropy: -0.0126
+
+Episode 508: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0112, Value Loss: 792.4156, Entropy: -0.0143
+
+Episode 509: Reward=50.01, Steps=99
+Average Reward (last 100): 50.02
+  Update - Policy Loss: 0.0054, Value Loss: 680.8105, Entropy: -0.0170
+
+Episode 510: Reward=50.21, Steps=99
+Average Reward (last 100): 50.03
+  Update - Policy Loss: 0.0109, Value Loss: 867.1969, Entropy: -0.0170
+
+Episode 511: Reward=50.01, Steps=99
+Average Reward (last 100): 50.03
+  Update - Policy Loss: -0.0215, Value Loss: 912.5798, Entropy: -0.0069
+
+Episode 512: Reward=50.51, Steps=99
+Average Reward (last 100): 50.03
+  Update - Policy Loss: 0.0054, Value Loss: 847.5829, Entropy: -0.0028
+
+Episode 513: Reward=50.01, Steps=99
+Average Reward (last 100): 50.03
+  Update - Policy Loss: -0.0123, Value Loss: 788.4211, Entropy: -0.0030
+
+Episode 514: Reward=50.01, Steps=99
+Average Reward (last 100): 50.03
+  Update - Policy Loss: 0.0121, Value Loss: 799.3064, Entropy: -0.0041
+
+Episode 515: Reward=50.01, Steps=99
+Average Reward (last 100): 50.03
+  Update - Policy Loss: -0.0005, Value Loss: 782.9788, Entropy: -0.0020
+
+Episode 516: Reward=50.01, Steps=99
+Average Reward (last 100): 50.03
+  Update - Policy Loss: 0.0078, Value Loss: 483.7037, Entropy: -0.0011
+
+Episode 517: Reward=49.91, Steps=99
+Average Reward (last 100): 50.03
+  Update - Policy Loss: -0.0102, Value Loss: 832.1839, Entropy: -0.0084
+
+Episode 518: Reward=50.01, Steps=99
+Average Reward (last 100): 50.03
+  Update - Policy Loss: -0.0071, Value Loss: 966.8364, Entropy: -0.0249
+
+Episode 519: Reward=50.51, Steps=99
+Average Reward (last 100): 50.03
+  Update - Policy Loss: 0.0149, Value Loss: 892.3826, Entropy: -0.0102
+
+Episode 520: Reward=50.01, Steps=99
+Average Reward (last 100): 50.03
+  Update - Policy Loss: -0.0228, Value Loss: 779.0283, Entropy: -0.0068
+
+Episode 521: Reward=50.01, Steps=99
+Average Reward (last 100): 50.03
+  Update - Policy Loss: -0.0179, Value Loss: 802.1625, Entropy: -0.0073
+
+Episode 522: Reward=50.01, Steps=99
+Average Reward (last 100): 50.03
+  Update - Policy Loss: 0.0121, Value Loss: 878.3332, Entropy: -0.0069
+
+Episode 523: Reward=50.51, Steps=99
+Average Reward (last 100): 50.04
