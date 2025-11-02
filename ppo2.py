@@ -23,15 +23,19 @@ LEARNING_RATE = 1e-4
 GAMMA = 0.99
 GAE_LAMBDA = 0.95
 CLIP_EPSILON = 0.2
-ENTROPY_COEF = 0.01
+# ENTROPY_COEF = 0.01
+ENTROPY_COEF_START = 0.01  # Much higher starting entropy
+ENTROPY_COEF_END = 0.01
+ENTROPY_DECAY = 0.9995  # Gradual decay
 VALUE_COEF = 0.5
 MAX_GRAD_NORM = 0.5
 N_EPISODES = 10000
-N_STEPS = 2048  # Steps per policy update
+N_STEPS = 512  # Steps per policy update
 N_EPOCHS = 4  # Epochs per update
 BATCH_SIZE = 64
+MAX_EPISODE_STEPS = 2500
 REWARD_HISTORY_SIZE = 100
-CHECKPOINT_FREQ = 500
+CHECKPOINT_FREQ = 200
 LOG_REWARD_DIR = "logs/ppo_rew"
 CHECKPOINT_DIR = "checkpoints/ppo"
 
@@ -177,6 +181,8 @@ class PPOAgent:
         self.optimizer = optim.Adam(self.policy.parameters(), lr=LEARNING_RATE, eps=1e-5)
         
         self.buffer = RolloutBuffer()
+        self.entropy_coef = ENTROPY_COEF_START
+        self.update_count = 0
         
     def select_action(self, state):
         """Select action using current policy."""
@@ -232,6 +238,7 @@ class PPOAgent:
         policy_losses = []
         value_losses = []
         entropy_losses = []
+        approx_kls = []
         
         for epoch in range(N_EPOCHS):
             np.random.shuffle(indices)
@@ -261,13 +268,21 @@ class PPOAgent:
                 policy_loss = -torch.min(surr1, surr2).mean()
                 
                 # Value loss
-                value_loss = F.mse_loss(curr_values, batch_returns)
+                # value_loss = F.mse_loss(curr_values, batch_returns)
+
+                # Value loss with clipping
+                value_pred_clipped = values[batch_indices] + torch.clamp(
+                    curr_values - values[batch_indices], -CLIP_EPSILON, CLIP_EPSILON
+                )
+                value_losses_unclipped = (curr_values - batch_returns) ** 2
+                value_losses_clipped = (value_pred_clipped - batch_returns) ** 2
+                value_loss = 0.5 * torch.max(value_losses_unclipped, value_losses_clipped).mean()
                 
                 # Entropy bonus
                 entropy_loss = -entropy.mean()
                 
                 # Total loss
-                loss = policy_loss + VALUE_COEF * value_loss + ENTROPY_COEF * entropy_loss
+                loss = policy_loss + VALUE_COEF * value_loss + self.entropy_coef * entropy_loss
                 
                 # Optimize
                 self.optimizer.zero_grad()
@@ -278,14 +293,30 @@ class PPOAgent:
                 policy_losses.append(policy_loss.item())
                 value_losses.append(value_loss.item())
                 entropy_losses.append(entropy_loss.item())
-        
+
+                # Approximate KL for early stopping
+                with torch.no_grad():
+                    approx_kl = ((ratio - 1) - torch.log(ratio)).mean()
+                    approx_kls.append(approx_kl.item())
+            
+            # Early stopping if KL divergence is too high
+            if np.mean(approx_kls) > 0.02:
+                print(f"  Early stopping at epoch {epoch} due to high KL: {np.mean(approx_kls):.4f}")
+                break
+
+        # Decay entropy coefficient
+        self.entropy_coef = max(ENTROPY_COEF_END, self.entropy_coef * ENTROPY_DECAY)
+        self.update_count += 1
+
         # Clear buffer
         self.buffer.clear()
         
         return {
             'policy_loss': np.mean(policy_losses),
             'value_loss': np.mean(value_losses),
-            'entropy_loss': np.mean(entropy_losses)
+            'entropy_loss': np.mean(entropy_losses),
+            'approx_kl': np.mean(approx_kls),
+            'entropy_coef': self.entropy_coef
         }
     
     def save(self, episode):
@@ -295,6 +326,8 @@ class PPOAgent:
             'episode': episode,
             'policy_state_dict': self.policy.state_dict(),
             'optimizer_state_dict': self.optimizer.state_dict(),
+            'entropy_coef': self.entropy_coef,
+            'update_count': self.update_count,
         }, checkpoint_path)
         print(f"Saved checkpoint: {checkpoint_path}")
     
@@ -302,6 +335,8 @@ class PPOAgent:
         checkpoint = torch.load(checkpoint_path, map_location=self.device)
         self.policy.load_state_dict(checkpoint['policy_state_dict'])
         self.optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+        self.entropy_coef = checkpoint.get('entropy_coef', self.entropy_coef)
+        self.update_count = checkpoint.get('update_count', 0)
         print(f"Loaded checkpoint: {checkpoint_path}")
 
 
@@ -322,8 +357,9 @@ def index_to_multibinary(index):
 # =============================
 def train():
     env = MarioLevelEnv(
-        render_mode="human",
-        number_of_sequential_frames=NUMBER_OF_SEQUENTIAL_FRAMES
+        render_mode="rgb_array",
+        number_of_sequential_frames=NUMBER_OF_SEQUENTIAL_FRAMES,
+        max_steps=MAX_EPISODE_STEPS,
     )
     agent = PPOAgent(ACTION_SIZE, DEVICE)
     
@@ -339,8 +375,60 @@ def train():
         
         episode_reward = 0
         episode_steps = 0
+
+        for episode in range(N_EPISODES):
+            state, _ = env.reset()
+            state = torch.FloatTensor(state).to(DEVICE)
+
+            episode_reward = 0
+            episode_steps = 0
+            steps_since_update = 0
+
+            while episode_steps < MAX_EPISODE_STEPS:
+                action_idx, log_prob, value = agent.select_action(state)
+            action = index_to_multibinary(action_idx)
+            
+            next_state, reward, terminated, truncated, info = env.step(action)
+            done = terminated or truncated
+            
+            next_state = torch.FloatTensor(next_state).to(DEVICE)
+            
+            agent.buffer.add(
+                state,
+                torch.tensor(action_idx),
+                torch.tensor(log_prob),
+                reward,
+                torch.tensor(value),
+                done
+            )
+            
+            episode_reward += reward
+            episode_steps += 1
+            global_step += 1
+            steps_since_update += 1
+            
+            state = next_state
+            
+            # Update every N_STEPS or at episode end
+            if steps_since_update >= N_STEPS or done:
+                if len(agent.buffer.states) > 0:
+                    losses = agent.update(state)
+                    print(f"  Update - Policy: {losses['policy_loss']:.4f}, "
+                          f"Value: {losses['value_loss']:.4f}, "
+                          f"Entropy: {losses['entropy_loss']:.4f}, "
+                          f"KL: {losses['approx_kl']:.4f}, "
+                          f"Ent_Coef: {losses['entropy_coef']:.4f}")
+                    
+                    # Clear CUDA cache after each update
+                    if torch.cuda.is_available():
+                        torch.cuda.empty_cache()
+                        
+                steps_since_update = 0
+            
+            if done:
+                break
         
-        while True:
+        # while True:
             # Collect N_STEPS of experience
             for _ in range(N_STEPS):
                 action_idx, log_prob, value = agent.select_action(state)
@@ -379,7 +467,11 @@ def train():
             if done:
                 break
         
-        reward_history.append(episode_reward)
+        reward_history.append(episode_reward)# Memory cleanup after every episode
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        import gc
+        gc.collect()
         
         print(f"\nEpisode {episode}: Reward={episode_reward:.2f}, Steps={episode_steps}")
         
