@@ -24,7 +24,7 @@ GAMMA = 0.99
 GAE_LAMBDA = 0.95
 CLIP_EPSILON = 0.2
 # ENTROPY_COEF = 0.01
-ENTROPY_COEF_START = 0.01  # Much higher starting entropy
+ENTROPY_COEF_START = 0.1  # Much higher starting entropy
 ENTROPY_COEF_END = 0.01
 ENTROPY_DECAY = 0.9995  # Gradual decay
 VALUE_COEF = 0.5
@@ -164,7 +164,7 @@ class RolloutBuffer:
             torch.stack(self.actions),
             torch.stack(self.log_probs),
             torch.FloatTensor(self.rewards),
-            torch.stack(self.values).squeeze(),
+            torch.stack(self.values).squeeze(-1),
             torch.FloatTensor(self.dones)
         )
 
@@ -375,24 +375,20 @@ def train():
         
         episode_reward = 0
         episode_steps = 0
-
-        for episode in range(N_EPISODES):
-            state, _ = env.reset()
-            state = torch.FloatTensor(state).to(DEVICE)
-
-            episode_reward = 0
-            episode_steps = 0
-            steps_since_update = 0
-
-            while episode_steps < MAX_EPISODE_STEPS:
-                action_idx, log_prob, value = agent.select_action(state)
+        steps_since_update = 0
+        
+        done = False
+        while not done:
+            # Select action
+            action_idx, log_prob, value = agent.select_action(state)
             action = index_to_multibinary(action_idx)
             
+            # Step environment
             next_state, reward, terminated, truncated, info = env.step(action)
             done = terminated or truncated
-            
             next_state = torch.FloatTensor(next_state).to(DEVICE)
             
+            # Store transition
             agent.buffer.add(
                 state,
                 torch.tensor(action_idx),
@@ -406,68 +402,27 @@ def train():
             episode_steps += 1
             global_step += 1
             steps_since_update += 1
-            
             state = next_state
             
             # Update every N_STEPS or at episode end
-            if steps_since_update >= N_STEPS or done:
-                if len(agent.buffer.states) > 0:
-                    losses = agent.update(state)
-                    print(f"  Update - Policy: {losses['policy_loss']:.4f}, "
-                          f"Value: {losses['value_loss']:.4f}, "
-                          f"Entropy: {losses['entropy_loss']:.4f}, "
-                          f"KL: {losses['approx_kl']:.4f}, "
-                          f"Ent_Coef: {losses['entropy_coef']:.4f}")
-                    
-                    # Clear CUDA cache after each update
-                    if torch.cuda.is_available():
-                        torch.cuda.empty_cache()
-                        
-                steps_since_update = 0
-            
-            if done:
-                break
-        
-        # while True:
-            # Collect N_STEPS of experience
-            for _ in range(N_STEPS):
-                action_idx, log_prob, value = agent.select_action(state)
-                action = index_to_multibinary(action_idx)
-                
-                next_state, reward, terminated, truncated, info = env.step(action)
-                done = terminated or truncated
-                
-                next_state = torch.FloatTensor(next_state).to(DEVICE)
-                
-                agent.buffer.add(
-                    state,
-                    torch.tensor(action_idx),
-                    torch.tensor(log_prob),
-                    reward,
-                    torch.tensor(value),
-                    done
-                )
-                
-                episode_reward += reward
-                episode_steps += 1
-                global_step += 1
-                
-                state = next_state
-                
-                if done:
-                    break
-            
-            # Update policy
-            if len(agent.buffer.states) > 0:
+            should_update = (steps_since_update >= N_STEPS) or done
+            if should_update and len(agent.buffer.states) > 0:
                 losses = agent.update(state)
-                print(f"  Update - Policy Loss: {losses['policy_loss']:.4f}, "
-                      f"Value Loss: {losses['value_loss']:.4f}, "
-                      f"Entropy: {losses['entropy_loss']:.4f}")
-            
-            if done:
-                break
+                print(f"  Update - Policy: {losses['policy_loss']:.4f}, "
+                      f"Value: {losses['value_loss']:.4f}, "
+                      f"Entropy: {losses['entropy_loss']:.4f}, "
+                      f"KL: {losses['approx_kl']:.4f}, "
+                      f"Ent_Coef: {losses['entropy_coef']:.4f}")
+                
+                # Clear CUDA cache after each update
+                if torch.cuda.is_available():
+                    torch.cuda.empty_cache()
+                    
+                steps_since_update = 0
         
-        reward_history.append(episode_reward)# Memory cleanup after every episode
+        reward_history.append(episode_reward)
+        
+        # Memory cleanup after every episode
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
         import gc
@@ -484,15 +439,12 @@ def train():
             with open(log_path, "a") as f:
                 f.write(f"Episode {episode}; Average Reward: {avg_reward:.2f}\n")
         
-        # Periodic cleanup
-        if episode % 10 == 0:
-            torch.cuda.empty_cache()
-            import gc
-            gc.collect()
-        
         # Save checkpoint
         if episode % CHECKPOINT_FREQ == 0 and episode > 0:
             agent.save(episode)
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+            gc.collect()
     
     env.close()
 
