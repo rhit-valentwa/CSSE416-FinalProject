@@ -347,11 +347,13 @@ class Level1(tools._State):
         # check12 = checkpoint.Checkpoint(8775, '12')
         # check13 = checkpoint.Checkpoint(2740, 'secret_mushroom', 360, 40, 12)
 
+        respawn_mid = checkpoint.Checkpoint(3000, 'respawn_mid', 10, 260)
+
         self.check_point_group = pg.sprite.Group(check1, check2, check3,
                                                  check4, check5, check6,
                                                  check7, check8, check9,
                                                  check10, check11, check12,
-                                                 check13)
+                                                 check13, respawn_mid)
 
 
     def setup_spritegroups(self):
