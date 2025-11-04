@@ -365,7 +365,8 @@ def train():
     agent = PPOAgent(ACTION_SIZE, DEVICE)
     
     # Optional: Load checkpoint
-    # agent.load('checkpoints/ppo/ppo_episode_500.pth')
+    agent.load('checkpoints/ppo/ppo_episode_200.pth')
+    loaded_episode = 200
     
     reward_history = deque(maxlen=REWARD_HISTORY_SIZE)
     global_step = 0
@@ -429,7 +430,7 @@ def train():
         import gc
         gc.collect()
         
-        print(f"Episode {episode}: Reward={episode_reward:.2f}, Steps={episode_steps}, Max X={info['x']}\n")
+        print(f"Episode {episode + loaded_episode}: Reward={episode_reward:.2f}, Steps={episode_steps}, Max X={info['x']}\n")
         
         if len(reward_history) == REWARD_HISTORY_SIZE:
             avg_reward = sum(reward_history) / REWARD_HISTORY_SIZE
@@ -438,11 +439,11 @@ def train():
             os.makedirs(LOG_REWARD_DIR, exist_ok=True)
             log_path = os.path.join(LOG_REWARD_DIR, "avg_reward.txt")
             with open(log_path, "a") as f:
-                f.write(f"Episode {episode}; Average Reward: {avg_reward:.2f}\n")
+                f.write(f"Episode {episode + loaded_episode}; Average Reward: {avg_reward:.2f}\n")
         
         # Save checkpoint
         if episode % CHECKPOINT_FREQ == 0 and episode > 0:
-            agent.save(episode)
+            agent.save(episode + loaded_episode)
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
             gc.collect()
