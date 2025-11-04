@@ -164,7 +164,7 @@ class RolloutBuffer:
             torch.stack(self.actions),
             torch.stack(self.log_probs),
             torch.FloatTensor(self.rewards),
-            torch.stack(self.values).squeeze(-1),
+            torch.stack(self.values).view(-1),
             torch.FloatTensor(self.dones)
         )
 
@@ -192,9 +192,6 @@ class PPOAgent:
     
     def compute_gae(self, rewards, values, dones, next_value):
         """Compute Generalized Advantage Estimation."""
-        if values.dim() == 0:
-            values = values.unsqueeze(0)
-
         advantages = torch.zeros_like(rewards)
         last_gae = 0
         
@@ -232,7 +229,8 @@ class PPOAgent:
         advantages, returns = self.compute_gae(rewards, values, dones, next_value)
         
         # Normalize advantages
-        advantages = (advantages - advantages.mean()) / (advantages.std() + 1e-8)
+        if advantages.numel() > 1:
+            advantages = (advantages - advantages.mean()) / (advantages.std() + 1e-8)
         
         # PPO update for multiple epochs
         dataset_size = len(states)
@@ -409,7 +407,7 @@ def train():
             
             # Update every N_STEPS or at episode end
             should_update = (steps_since_update >= N_STEPS) or done
-            if should_update and len(agent.buffer.states) > 0:
+            if should_update and len(agent.buffer.states) >= BATCH_SIZE:
                 losses = agent.update(state)
                 print(f"  Update - Policy: {losses['policy_loss']:.4f}, "
                       f"Value: {losses['value_loss']:.4f}, "
