@@ -192,6 +192,9 @@ class PPOAgent:
     
     def compute_gae(self, rewards, values, dones, next_value):
         """Compute Generalized Advantage Estimation."""
+        if values.dim() == 0:
+            values = values.unsqueeze(0)
+
         advantages = torch.zeros_like(rewards)
         last_gae = 0
         
@@ -428,7 +431,7 @@ def train():
         import gc
         gc.collect()
         
-        print(f"\nEpisode {episode}: Reward={episode_reward:.2f}, Steps={episode_steps}, Max X={info['x']}")
+        print(f"Episode {episode}: Reward={episode_reward:.2f}, Steps={episode_steps}, Max X={info['x']}\n")
         
         if len(reward_history) == REWARD_HISTORY_SIZE:
             avg_reward = sum(reward_history) / REWARD_HISTORY_SIZE
