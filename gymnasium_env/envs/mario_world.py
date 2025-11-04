@@ -67,6 +67,7 @@ class MarioLevelEnv(gym.Env):
             "jump_tap_cost": 0,
             "jump_hold_cost": 0,
             "time_penalty": -0.05,
+            "checkpoint_bonus": 100.0,
         }
         if reward_cfg:
             self.rw.update(reward_cfg)
@@ -94,6 +95,7 @@ class MarioLevelEnv(gym.Env):
         self.ticks_ms = 0
         self.frame_buf = deque(maxlen=self.number_of_sequential_frames)
         self.held_action = None  # Action that's currently being held
+        self.checkpoint_reached = False
 
     def reset(self, seed: Optional[int] = None, options: Optional[dict] = None):
         """Reset the environment to the initial state."""
@@ -101,6 +103,7 @@ class MarioLevelEnv(gym.Env):
         self.step_count = 0
         self.ticks_ms = 0
         self.held_action = None
+        self.checkpoint_reached = False
 
         self.persist = {
             c.SCORE: 0,
@@ -137,26 +140,26 @@ class MarioLevelEnv(gym.Env):
         terminated = False
         action_tuple = tuple(action)
         self.held_action = action_tuple
-        if self.held_action is None:
-            self.held_action = action_tuple
+
         pressed = set()
         for i, v in enumerate(self.held_action):
             if v:
                 pressed.update(COMBO_ACTIONS[i])
+        
         self.step_count += 1
-        r = -0.01
+
         for i in range(self.frame_skip):
             self.ticks_ms += int(1000 / self.metadata["render_fps"])
             self.level.update(self.surface, _KeysProxy(pressed), self.ticks_ms)
             mario_dead = self.persist.get(c.MARIO_DEAD, False) or getattr(self.level.mario, "dead", False)
             level_done = bool(getattr(self.level, "done", False))
             st = getattr(self.level.mario, "state", None)
-            # print("state:", st)
+
             if st == c.FLAGPOLE:
-                    r += self.rw["win_bonus"]
-                    print("🏆 Mario won!")
-                    terminated = True
-                    break
+                total_reward += self.rw["win_bonus"]
+                print("🏆 Mario won!")
+                terminated = True
+                break
             if level_done:
                 nxt = getattr(self.level, "next", None)
                 if nxt == c.LOAD_SCREEN and self.persist.get(c.LIVES, 0) > 0:
@@ -171,41 +174,36 @@ class MarioLevelEnv(gym.Env):
                     terminated = True
                     # print("Time out!")
                 elif nxt == c.GAME_OVER:
-                    r += self.rw["death_penalty"]
+                    total_reward += self.rw["death_penalty"]
                     terminated = True
                     # print("Mario died!")
                 else:
                     terminated = True
                     # print("Level ended! (else)")
+        
         x = self.level.mario.rect.x
-
-        # # Progress milestone reward
-        # milestone_reward = 0
-        # if x > self.max_x_reached:
-        #     old_milestone = self.max_x_reached // self.milestone_interval
-        #     new_milestone = x // self.milestone_interval
-        #     if new_milestone > old_milestone:
-        #         milestone_reward = self.rw["progress_milestone"]
-        #     self.max_x_reached = x
-
         dx = x - self.prev_x
         score = self.persist[c.SCORE]
         dscore = score - self.prev_score
-        r += self.rw["dx_scale"] * dx
-        # r += milestone_reward
-        r += self.rw["score_scale"] * dscore
-        # if r > 5 or r < -5:
-        #     r = 0
-        total_reward += r
+
+        if not self.checkpoint_reached and x >= c.CHECKPOINT_X:
+            total_reward += self.rw["checkpoint_bonus"]
+            self.checkpoint_reached = True
+
+        total_reward += self.rw["dx_scale"] * dx
+        total_reward += self.rw["score_scale"] * dscore
+
         self.prev_x = x
         self.prev_score = score
         truncated = self.step_count >= self.max_steps
+
         info = self._info(terminated, truncated)
         self.frame_buf.append(self._frame())
         if self.render_mode == "human":
             self.render()
         obs = self._get_stacked_frames()
-        return obs, float(r), terminated, truncated, info
+
+        return obs, float(total_reward), terminated, truncated, info
     
 
     def _get_stacked_frames(self):

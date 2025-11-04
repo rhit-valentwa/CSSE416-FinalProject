@@ -24,6 +24,10 @@ class Control(object):
         self.show_fps = False
         self.current_time = 0.0
         self.keys = pg.key.get_pressed()
+        # flag used to inject RL key presses from external code (e.g. controller)
+        # initialize here to avoid AttributeError in event_loop when not used
+        self.RL_key_press = False
+        self.pressed_key = None
         self.state_dict = {}
         self.state_name = None
         self.state = None

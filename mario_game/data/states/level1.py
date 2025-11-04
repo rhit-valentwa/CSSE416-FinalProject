@@ -347,13 +347,11 @@ class Level1(tools._State):
         # check12 = checkpoint.Checkpoint(8775, '12')
         # check13 = checkpoint.Checkpoint(2740, 'secret_mushroom', 360, 40, 12)
 
-        respawn_mid = checkpoint.Checkpoint(3000, 'respawn_mid', 10, 260)
-
         self.check_point_group = pg.sprite.Group(check1, check2, check3,
                                                  check4, check5, check6,
                                                  check7, check8, check9,
                                                  check10, check11, check12,
-                                                 check13, respawn_mid)
+                                                 check13)
 
 
     def setup_spritegroups(self):
@@ -1366,9 +1364,10 @@ class Level1(tools._State):
         elif self.overhead_info_display.time == 0:
             self.next = c.TIME_OUT
         else:
-            if self.mario.rect.x > 3670 \
+            # checkpoint
+            if self.mario.rect.x > c.CHECKPOINT_X \
                     and self.game_info[c.CAMERA_START_X] == 0:
-                self.game_info[c.CAMERA_START_X] = 3440
+                self.game_info[c.CAMERA_START_X] = c.CHECKPOINT_X
             self.next = c.LOAD_SCREEN
 
 

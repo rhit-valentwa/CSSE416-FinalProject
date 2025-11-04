@@ -428,7 +428,7 @@ def train():
         import gc
         gc.collect()
         
-        print(f"\nEpisode {episode}: Reward={episode_reward:.2f}, Steps={episode_steps}")
+        print(f"\nEpisode {episode}: Reward={episode_reward:.2f}, Steps={episode_steps}, Max X={info['x']}")
         
         if len(reward_history) == REWARD_HISTORY_SIZE:
             avg_reward = sum(reward_history) / REWARD_HISTORY_SIZE

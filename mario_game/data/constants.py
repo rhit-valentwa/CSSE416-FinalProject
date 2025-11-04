@@ -170,7 +170,8 @@ TIME_WARNING = 'time warning'
 SPED_UP_NORMAL = 'sped up normal'
 MARIO_INVINCIBLE = 'mario invincible'
 
-
+# CHECKPOINT
+CHECKPOINT_X = 3440
 
 
 
