@@ -272,12 +272,13 @@ class PPOAgent:
                 # value_loss = F.mse_loss(curr_values, batch_returns)
 
                 # Value loss with clipping
-                value_pred_clipped = values[batch_indices] + torch.clamp(
-                    curr_values - values[batch_indices], -CLIP_EPSILON, CLIP_EPSILON
-                )
-                value_losses_unclipped = (curr_values - batch_returns) ** 2
-                value_losses_clipped = (value_pred_clipped - batch_returns) ** 2
-                value_loss = 0.5 * torch.max(value_losses_unclipped, value_losses_clipped).mean()
+                # value_pred_clipped = values[batch_indices] + torch.clamp(
+                #     curr_values - values[batch_indices], -CLIP_EPSILON, CLIP_EPSILON
+                # )
+                # value_losses_unclipped = (curr_values - batch_returns) ** 2
+                # value_losses_clipped = (value_pred_clipped - batch_returns) ** 2
+                # value_loss = 0.5 * torch.max(value_losses_unclipped, value_losses_clipped).mean()
+                value_loss = F.mse_loss(curr_values, batch_returns)
                 
                 # Entropy bonus
                 entropy_loss = -entropy.mean()
