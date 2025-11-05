@@ -132,6 +132,7 @@ class MarioLevelEnv(gym.Env):
         total_reward = self.rw["time_penalty"]
         terminated = False
         action_tuple = tuple(action)
+        death_by = "none"
         self.held_action = action_tuple
         if self.held_action is None:
             self.held_action = action_tuple
@@ -152,6 +153,7 @@ class MarioLevelEnv(gym.Env):
                     r += self.rw["win_bonus"]
                     print("Mario won!")
                     terminated = True
+                    death_by = "win"
                     break
             if level_done:
                 nxt = getattr(self.level, "next", None)
@@ -166,11 +168,13 @@ class MarioLevelEnv(gym.Env):
                 elif nxt == c.TIME_OUT:
                     terminated = True
                     print("Time out!")
+                    death_by = "time_out"
                     break
                 elif nxt == c.GAME_OVER:
                     r += self.rw["death_penalty"]
                     terminated = True
                     print("Mario died!")
+                    death_by = "game_over"
                     break
                 else:
                     terminated = True
@@ -188,7 +192,7 @@ class MarioLevelEnv(gym.Env):
         self.prev_x = x
         self.prev_score = score
         truncated = self.step_count >= self.max_steps
-        info = self._info(terminated, truncated)
+        info = self._info(terminated, truncated, death_by)
         self.frame_buf.append(self._frame())
         if self.render_mode == "human":
             self.render()
@@ -252,7 +256,7 @@ class MarioLevelEnv(gym.Env):
         return gray.squeeze(0).squeeze(0).cpu().numpy()
 
 
-    def _info(self, terminated: bool, truncated: bool) -> dict:
+    def _info(self, terminated: bool, truncated: bool, death_by: str) -> dict:
         """Return info dictionary for the current state."""
         return {
             "score": int(self.persist.get(c.SCORE, 0)),
@@ -261,6 +265,7 @@ class MarioLevelEnv(gym.Env):
             "y": int(self.level.mario.rect.y) if self.level else 0,
             "terminated": terminated,
             "truncated": truncated,
+            "death_by": death_by
         }
 
 

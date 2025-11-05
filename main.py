@@ -220,13 +220,15 @@ for episode in range(N_EPISODES):
     
     # Print every episode for debugging
     print(f"Episode {episode}: Reward={total_reward:.2f}, Steps={steps_in_episode}, Epsilon={agent.epsilon:.4f}")
-    
+    import os
+    os.makedirs(LOG_REWARD_DIR, exist_ok=True)
+    log_path_2 = os.path.join(LOG_REWARD_DIR, "episodic_info.txt")
+    with open(log_path_2, "a") as f:
+        f.write(f"Episode {episode}; Steps: {steps_in_episode}; Ended: {info['death_by']}\n")
+
     if len(reward_history) == REWARD_HISTORY_SIZE:
         avg_reward = sum(reward_history)/REWARD_HISTORY_SIZE
         print(f"Episode {episode}; Average Reward: {avg_reward:.2f}")
-        
-        import os
-        os.makedirs(LOG_REWARD_DIR, exist_ok=True)
         log_path = os.path.join(LOG_REWARD_DIR, "avg_reward.txt")
         with open(log_path, "a") as f:
             f.write(f"Episode {episode}; Average Reward: {avg_reward:.2f}\n")
