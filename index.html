@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Super RL Bros</title>
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <style>
+    :root { --bg:#0f1220; --ink:#e8ecf1; --muted:#9aa7b1; --accent:#7dd3fc; }
+    .viewer-wrap { display:grid; grid-template-rows:auto auto 1fr; gap:8px; background:#0b0e1d; border:1px solid #222844; border-radius:14px; padding:8px; }
+    .viewer-top { display:flex; gap:8px; align-items:center }
+    .pill { font-size:12px; color:#0b0e1d; background: var(--accent); padding: 2px 8px; border-radius:9999px; font-weight:700 }
+    .stat{ font-size:12px; color: var(--muted) }
+    .viewer-canvas { position:relative; min-height:420px }
+    #viewport { display:block; width:100%; height:100%; image-rendering: pixelated; }
+    #slider{ width:100% }
+    .hud { position:absolute; right:10px; top:10px; width:280px; background: rgba(9,12,28,.85); border:1px solid #223; border-radius:12px; padding:10px; backdrop-filter: blur(6px); }
+    .hud h3{ margin:0 0 6px 0; font-size:13px; color:#b9c6d2 }
+    .bar { height:14px; background:#0e1328; border:1px solid #253056; border-radius:8px; overflow:hidden }
+    .bar > div { height:100%; background: linear-gradient(90deg, #60a5fa, #7dd3fc); width:0% }
+    .barrow{ display:grid; grid-template-columns: 1fr 40px; align-items:center; gap:8px; margin:6px 0 }
+    .controls .row{ display:flex; gap:10px; align-items:center; }
+    .controls .row > *{ flex:1 }
+    .controls .divider{ height:1px; background:#1e2238; margin:12px 0 }
+    .controls .toggle{ display:flex; gap:8px; align-items:center; font-size:12px; color:#b9c6d2 }
+    .controls input[type="number"], .controls select { width:100%; box-sizing:border-box }
+    .btn{ background:#131839; color: var(--ink); border:1px solid #2b3566; border-radius: 12px; padding:8px 10px; cursor:pointer; font-weight:600 }
+    .btn.primary{ background: linear-gradient(180deg,#19204d,#12173a); border-color:#2d3a7a; }
+    .controls-table { margin-top:12px }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Super RL Bros</h1>
+    <nav class="top-nav">
+      <a href="#home">Home</a>
+      <a href="#play">Play</a>
+      <a href="#model">How it works</a>
+      <a href="#citations">Citations</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="panel">
+      <h2>Home</h2>
+
+      <p>We sought out to create a reinforced neural network to play through the original NES Mario, level 1-1. Our dataset was dynamically generated frames from a Python implementation of the original NES Mario as inputs.</p>
+
+      <p>The amount of frames our model got to train off of depended on the round. A single playthrough of the level played will take at least 29.33 seconds, as this was the world record through 1-1 achieved on 10/23/2025. Rounding up for simpler calculations, 30 seconds * 60 frames per second = 1,800 frame inputs for our dataset for that single attempt to beat the level. We feed in four frames at a time to give the model the ability to learn velocity, so the number of features is 4 channels (4 grayscale images) * 60 rows * 80 columns = 19,200.  Through reinforcement learning our model seeks to find a policy that maximizes the reward function by repeatedly playing. The model is rewarded based on different criteria depending on how Mario performs in the level.</p>
+
+      <p>The problem of beating Mario boils down to a classification problem based on the current game state, using the game's rendered display to determine the next action for Mario (jump, left, or right). More exactly, multiclassification (multi-binary) as our action space allows the model to move horizontally and jump simultaneously (by the RL agent predicting up, right/left as classes at the same time).</p>
+    </section>
+
+    <section id="play" class="panel">
+      <h2>Mario Time</h2>
+
+      <div class="play-area" style="display:grid; grid-template-columns: 1fr 300px; gap:16px; align-items:start">
+        <!-- Viewer replaces the old #mycanvas -->
+        <div class="viewer-wrap">
+          <div class="viewer-top">
+            <span class="pill" id="framePill">Frame –</span>
+            <span class="stat" id="meta"></span>
+          </div>
+
+          <input id="slider" type="range" min="0" max="0" value="0" />
+
+          <div class="viewer-canvas" style="color:white;">
+            <canvas id="viewport" width="960" height="540"></canvas>
+            <div id="hud" class="hud" style="display:none">
+              <h3>Action probabilities</h3>
+              <div id="bars"></div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="controls">
+          <table class="controls-table">
+            <thead>
+              <tr><th colspan="2">Controls</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Move Left</td><td>&larr;</td></tr>
+              <tr><td>Move Right</td><td>&rarr;</td></tr>
+              <tr><td>Play/Pause</td><td>Space</td></tr>
+            </tbody>
+          </table>
+
+          <div class="divider"></div>
+
+          <div>
+            <label>Episode</label>
+            <select id="episodeSelect">
+              <option value="0">Episode 1</option>
+              <option value="1">Episode 2</option>
+              <option value="2">Episode 3</option>
+            </select>
+          </div>
+
+          <div class="row" style="margin-top:8px">
+            <div>
+              <label>FPS</label>
+              <input id="fps" type="number" value="12" min="1" max="60" step="1" />
+            </div>
+            <div>
+              <label>Zoom (%)</label>
+              <input id="zoom" type="number" value="100" min="25" max="200" step="5" />
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <label class="toggle"><input id="showProbs" type="checkbox" checked/> <span>Show action probabilities HUD</span></label>
+
+          <div class="divider"></div>
+          <div class="row">
+            <button id="playBtn" class="btn primary">Play</button>
+            <button id="pauseBtn" class="btn">Pause</button>
+            <button id="resetBtn" class="btn">Reset</button>
+          </div>
+
+          <div class="stat" id="stats" style="margin-top:8px">Loading…</div>
+
+          <p style="margin-top:12px; color:var(--muted); font-size:12px">
+            Auto-loads <code>/captures/replay_ep00004.json</code>, <code>_05.json</code>, <code>_06.json</code>.
+          </p>
+          <p style="color:var(--muted); font-size:12px">
+            Note: going downward into a pipe is disabled (out of model scope).
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="model" class="panel">
+      <h2>How the model works</h2>
+      <p><b>TLDR:</b></p>
+      <ul>
+        <li>Inputs: multiple grayscale frames (frame stacking), downscale planned for speed.</li>
+        <li>Algorithms: DDQN baseline & PPO experimentation.</li>
+        <li>Rewards: movement-based (dx), coins/enemies, win/lose, time penalty; examples in docs.</li>
+      </ul>
+
+      <p>TLDR aside, lets get into some of the details!</p>
+      <p>Maybe break into more sections, model, training DDQN vs PPO, other ideas.</p>
+    </section>
+
+    <section id="citations" class="panel">
+      <h2>Citations</h2>
+      <ul>
+        <li>F. Mourato, M. Santos, F. Birra, "Automatic level generation for platform videogames using genetic algorithms," in Proceedings of the 8th International Conference on Advances in Computer Entertainment Technology, 2011.</li>
+        <li>Mnih, V., et al. "Playing atari with deep reinforcement learning," in arXiv preprint arXiv:1312.5602, 2013</li>
+        <li>A. Seth, A. Nikou, M. Daoutis. "A scalable species-based genetic algorithm for reinforcement learning problems," in The Knowledge Engineering Review, vol. 37, pp. e9, 2022.</li>
+        <li>M. Guzdial, B. Li, M. Riedl, "Game engine learning from video," in Proceedings of the 26th International Joint Conference on Artificial Intelligence, 2017, pp. 3707–3713.</li>
+        <li>Towers, M., et al. "Gymnasium: A standard interface for reinforcement learning environments," in arXiv preprint arXiv:2407.17032, 2024.</li>
+        <li>Setiaji, B., et al, "Implementation of Reinforcement Learning in 2D Based Games Using Open AI Gym," in 2022 International Conference on Informatics, Multimedia, Cyber and Information System (ICIMCIS), 2022, pp. 293-297.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Alex Schieltz, William Valentine, Tristan Cohen-Rider, Pei-Jen Chen | Rose-Hulman Institute of Technology</small>
+  </footer>
+
+  <!-- Action Probabilities Viewer (integrated) -->
+  <script>
+  const $ = (sel) => document.querySelector(sel);
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+
+  const state = {
+    current: 0,
+    playing: false,
+    raf: null,
+    episodes: [],
+    currentEpisode: 0
+  };
+
+  // Auto-load on page load
+  window.addEventListener('load', autoLoad);
+
+  async function autoLoad() {
+    const params = new URLSearchParams(location.search);
+    const file1 = params.get('file1') || '/captures/replay_ep00006.json';
+
+    const files = [file1];
+    let loadedCount = 0;
+
+    state.episodes.length = 0;
+    for (let i = 0; i < files.length; i++) {
+      try {
+        const res = await fetch(files[i]);
+        if (!res.ok) throw new Error('fetch failed');
+        const data = await res.json();
+        const frames = await loadReplayData(data);
+        state.episodes.push({ name: data.run || `Episode ${i+1}`, frames });
+        loadedCount++;
+      } catch (err) {
+        console.warn('Failed to load', files[i], err);
+        state.episodes.push({ name: `Episode ${i+1} (not found)`, frames: [] });
+      }
+    }
+
+    if (loadedCount > 0) {
+      state.currentEpisode = 0;
+      updateEpisodeSelector();
+      updateSlider();
+      render();
+      $('#stats').textContent = `Loaded ${loadedCount} of 3 episodes`;
+    } else {
+      $('#stats').textContent = 'No data found. Add ?file1=replay1.json&file2=...';
+    }
+  }
+
+  async function loadReplayData(data) {
+    const frames = [];
+    for (const r of (data.frames || [])) {
+      const img = await loadImage(r.frame_path);
+      frames.push({
+        img,
+        w: img.naturalWidth || 1,
+        h: img.naturalHeight || 1,
+        name: r.frame_path?.split('/').pop() || 'frame',
+        worldX: Number.isFinite(r.x) ? r.x : 0,
+        probs: r.probs || null
+      });
+    }
+    return frames;
+  }
+
+  function loadImage(path) {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.decoding = 'async';
+      img.crossOrigin = 'anonymous';
+      img.onload = () => resolve(img);
+      img.onerror = () => {
+        const c = document.createElement('canvas'); c.width=c.height=1;
+        const blank = new Image(); blank.src = c.toDataURL(); resolve(blank);
+      };
+      if (path) img.src = path;
+      else { const c = document.createElement('canvas'); c.width=c.height=1; img.src = c.toDataURL(); }
+    });
+  }
+
+  // --- Controls wiring
+  $('#resetBtn').addEventListener('click', () => { state.current = 0; $('#slider').value = 0; render(); });
+  $('#playBtn').addEventListener('click', () => { state.playing = true; loop(); });
+  $('#pauseBtn').addEventListener('click', () => { state.playing = false; cancelAnimationFrame(state.raf); });
+
+  $('#episodeSelect').addEventListener('change', (e) => {
+    state.currentEpisode = Number(e.target.value);
+    state.current = 0;
+    updateSlider();
+    render();
+  });
+
+  $('#slider').addEventListener('input', e => { state.current = Number(e.target.value); render(); });
+  $('#zoom').addEventListener('input', render);
+  $('#showProbs').addEventListener('change', render);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') step(1);
+    if (e.key === 'ArrowLeft') step(-1);
+    if (e.code === 'Space') {
+      e.preventDefault();
+      state.playing = !state.playing;
+      if (state.playing) loop(); else cancelAnimationFrame(state.raf);
+    }
+  });
+
+  function updateEpisodeSelector() {
+    const sel = $('#episodeSelect');
+    if (!sel) return;
+    sel.innerHTML = '';
+    state.episodes.forEach((ep, i) => {
+      const opt = document.createElement('option');
+      opt.value = i; opt.textContent = ep.name;
+      sel.appendChild(opt);
+    });
+  }
+
+  function updateSlider() {
+    const ep = state.episodes[state.currentEpisode];
+    if (!ep) return;
+    $('#slider').max = Math.max(0, ep.frames.length - 1);
+    $('#slider').value = 0;
+    state.current = 0;
+  }
+
+  function getCurrentFrames() {
+    const ep = state.episodes[state.currentEpisode];
+    return ep ? ep.frames : [];
+  }
+
+  function loop(){
+    cancelAnimationFrame(state.raf);
+    if(!state.playing) return;
+    const fps = clamp(Number($('#fps')?.value) || 12, 1, 60);
+    const delay = 1000/fps;
+    let last = performance.now();
+    const tick = (now) => {
+      if(now - last >= delay){ last = now; step(1); }
+      state.raf = requestAnimationFrame(tick);
+    };
+    state.raf = requestAnimationFrame(tick);
+  }
+
+  function step(d){
+    const frames = getCurrentFrames();
+    const n = frames.length;
+    if(!n) return;
+    state.current = clamp(state.current + d, 0, n - 1);
+    $('#slider').value = String(state.current);
+    render();
+  }
+
+  function render(){
+    const vp = $('#viewport');
+    const dpr = devicePixelRatio || 1;
+    const cssW = vp.clientWidth, cssH = vp.clientHeight;
+    const zoom = clamp((Number($('#zoom')?.value) || 100) / 100, 0.25, 2);
+    vp.width = Math.round(cssW * dpr);
+    vp.height = Math.round(cssH * dpr);
+    const ctx = vp.getContext('2d');
+    ctx.imageSmoothingEnabled = false;
+    ctx.clearRect(0, 0, vp.width, vp.height);
+
+    const frames = getCurrentFrames();
+    if(!frames.length) return;
+    const f = frames[state.current]; if(!f) return;
+
+    // Draw frame
+    const scale = Math.min(vp.width / (f.w * zoom), vp.height / (f.h * zoom));
+    const drawW = Math.round(f.w * scale * zoom);
+    const drawH = Math.round(f.h * scale * zoom);
+    const dx = Math.floor((vp.width - drawW) / 2);
+    const dy = Math.floor((vp.height - drawH) / 2);
+    ctx.drawImage(f.img, 0, 0, f.w, f.h, dx, dy, drawW, drawH);
+
+    // HUD
+    const hud = $('#hud');
+    const showProbs = $('#showProbs')?.checked;
+    const probs = f.probs || null;
+    if (showProbs && probs){ hud.style.display = 'block'; renderBars(probs); }
+    else { hud.style.display = 'none'; }
+
+    const ep = state.episodes[state.currentEpisode];
+    $('#framePill').textContent = `Frame ${state.current + 1} / ${frames.length}`;
+    $('#meta').textContent = `${ep?.name || 'Episode'} — ${f.name} — x≈${Math.round(f.worldX)}`;
+  }
+
+  function renderBars(probs){
+    const bars = $('#bars');
+    bars.innerHTML = '';
+    const entries = Object.entries(probs).sort((a, b) => b[1] - a[1]);
+    entries.forEach(([k, v]) => {
+      const row = document.createElement('div'); row.className = 'barrow';
+      const name = document.createElement('div'); name.textContent = k;
+      const pct = document.createElement('div'); pct.textContent = Math.round(v * 100) + '%'; pct.style.textAlign = 'right';
+      const bar = document.createElement('div'); bar.className = 'bar';
+      const fill = document.createElement('div'); fill.style.width = Math.max(0, Math.min(100, v * 100)) + '%';
+      bar.appendChild(fill);
+      const left = document.createElement('div'); left.appendChild(name); left.appendChild(bar);
+      row.appendChild(left); row.appendChild(pct);
+      bars.appendChild(row);
+    });
+  }
+  </script>
+</body>
+</html>
