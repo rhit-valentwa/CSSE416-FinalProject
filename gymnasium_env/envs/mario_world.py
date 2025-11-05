@@ -112,7 +112,7 @@ class MarioLevelEnv(gym.Env):
         self.prev_score = self.persist[c.SCORE]
         for _ in range(self.number_of_sequential_frames):
             self.frame_buf.append(self._frame())
-        info = self._info(False, False)
+        info = self._info(False, False, "none")
         if self.render_mode == "human":
             self.render()
         obs = self._get_stacked_frames()
