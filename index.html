@@ -235,7 +235,7 @@
         const c = document.createElement('canvas'); c.width=c.height=1;
         const blank = new Image(); blank.src = c.toDataURL(); resolve(blank);
       };
-      if (path) img.src = 'https://rhit-valentwa.github.io/CSSE416-FinalProject/captures/' + path;
+      if (path) img.src = 'https://rhit-valentwa.github.io/CSSE416-FinalProject/' + path;
       else { const c = document.createElement('canvas'); c.width=c.height=1; img.src = c.toDataURL(); }
     });
   }
