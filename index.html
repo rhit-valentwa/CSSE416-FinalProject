@@ -178,7 +178,7 @@
 
   async function autoLoad() {
     const params = new URLSearchParams(location.search);
-    const file1 = params.get('file1') || 'https://rhit-valentwa.github.io/CSSE416-FinalProject/captures/replay_ep00006.json';
+    const file1 = params.get('file1') || 'https://mario.rocks/CSSE416-FinalProject/captures/replay_ep00006.json';
 
     const files = [file1];
     let loadedCount = 0;
@@ -235,7 +235,7 @@
         const c = document.createElement('canvas'); c.width=c.height=1;
         const blank = new Image(); blank.src = c.toDataURL(); resolve(blank);
       };
-      if (path) img.src = 'https://rhit-valentwa.github.io/CSSE416-FinalProject/' + path;
+      if (path) img.src = 'https://mario.rocks/CSSE416-FinalProject/' + path;
       else { const c = document.createElement('canvas'); c.width=c.height=1; img.src = c.toDataURL(); }
     });
   }
