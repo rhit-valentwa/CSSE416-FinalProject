@@ -201,7 +201,7 @@ class MarioLevelEnv(gym.Env):
     
 
     def _get_stacked_frames(self):
-        """Return the N most recent consecutive frames."""
+        """Return the N most recent consecutive frames stacked along the channel dimension."""
         num_frames = self.number_of_sequential_frames
         buf = list(self.frame_buf)
         
@@ -212,7 +212,9 @@ class MarioLevelEnv(gym.Env):
             # Pad with oldest frame if not enough frames yet
             frames = [buf[0]] * (num_frames - len(buf)) + buf
         
-        return np.stack(frames, axis=0)
+        # Each frame is (3, H, W), concatenate along channel dimension
+        # Result will be (num_frames * 3, H, W)
+        return np.concatenate(frames, axis=0)
 
 
     def render(self):
@@ -246,9 +248,18 @@ class MarioLevelEnv(gym.Env):
         rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
         t = torch.from_numpy(rgb).to(torch.float32).div_(255.0).permute(2, 0, 1).unsqueeze(0)
         t_small = F.interpolate(t, size=(60, 80), mode='bilinear', align_corners=False)
-        w = GRAY_WEIGHTS.to(t_small.device)
-        gray = (t_small * w).sum(dim=1, keepdim=True)
-        return gray.squeeze(0).squeeze(0).cpu().numpy()
+        # self.buffer_downscaled.append(t_small.squeeze(0).permute(1, 2, 0).cpu().numpy().copy())  # Store downscaled (H, W, C)
+
+        # # Step 4: Convert to grayscale
+        # w = GRAY_WEIGHTS.to(t_small.device)
+        # gray = (t_small * w).sum(dim=1, keepdim=True)
+        # self.buffer_grayscale.append(gray.squeeze(0).squeeze(0).cpu().numpy().copy())  # Store grayscale (H, W)
+
+        # # Return final result (unchanged behavior)
+        # return gray.squeeze(0).squeeze(0).cpu().numpy()
+
+        # Return final result as color (C, H, W) format
+        return t_small.squeeze(0).cpu().numpy()
 
 
     def _info(self, terminated: bool, truncated: bool, death_by: str) -> dict:
