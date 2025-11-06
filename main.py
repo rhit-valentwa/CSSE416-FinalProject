@@ -19,14 +19,14 @@ CLIP_EPSILON = 0.2
 VALUE_COEF = 0.5
 ENTROPY_COEF = 0.01  # Consider increasing to 0.02 for more exploration
 MAX_GRAD_NORM = 0.5
-N_EPISODES = 10000
+N_EPISODES = 20000
 REWARD_HISTORY_SIZE = 100
 CHECKPOINT_FREQ = 500
 LOG_REWARD_DIR = "logs/rew"
 CHECKPOINT_DIR = "checkpoints"
 ACTION_SIZE = 8
 UPDATE_EPOCHS = 4
-ROLLOUT_LENGTH = 32768
+ROLLOUT_LENGTH = 4096  # Total steps to collect before each update
 MINIBATCH_SIZE = 256  # For minibatch updates
 
 if PRINT_DEVICE:
@@ -291,12 +291,12 @@ import os
 os.makedirs(LOG_REWARD_DIR, exist_ok=True)
 log_path_2 = os.path.join(LOG_REWARD_DIR, "episodic_info.txt")
 log_path_3 = os.path.join(LOG_REWARD_DIR, "policy_info.txt")
-agent.load('checkpoints/ppo_episode_1000.pth')  # Uncomment to load checkpoint
+agent.load('checkpoints/ppo_episode_6000.pth')  # Uncomment to load checkpoint
 
 reward_history = deque(maxlen=REWARD_HISTORY_SIZE)
 global_step = 0
 
-for episode in range(1001, N_EPISODES):
+for episode in range(6001, N_EPISODES):
     state, _ = env.reset()
     state = torch.FloatTensor(state).to(DEVICE)
     episode_reward = 0
@@ -348,7 +348,7 @@ for episode in range(1001, N_EPISODES):
           f"Global Steps={global_step}")
     
     with open(log_path_2, "a") as f:
-        f.write(f"Episode {episode}; Steps: {episode_steps}; Ended: {info['death_by']}\n")
+        f.write(f"Episode {episode}; Reward: {episode_reward}; Steps: {episode_steps}; Ended: {info['death_by']}\n")
 
     if len(reward_history) == REWARD_HISTORY_SIZE:
         avg_reward = sum(reward_history)/REWARD_HISTORY_SIZE
