@@ -174,7 +174,7 @@ class MarioLevelEnv(gym.Env):
                     r += self.rw["death_penalty"]
                     terminated = True
                     print("Mario died!")
-                    death_by = "game_over"
+                    death_by = "dead"
                     break
                 else:
                     terminated = True
