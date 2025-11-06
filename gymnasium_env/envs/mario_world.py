@@ -89,6 +89,10 @@ class MarioLevelEnv(gym.Env):
         self.step_count = 0
         self.ticks_ms = 0
         self.frame_buf = deque(maxlen=self.number_of_sequential_frames)
+        self.buffer_original = deque(maxlen=self.number_of_sequential_frames)
+        self.buffer_normalized = deque(maxlen=self.number_of_sequential_frames)
+        self.buffer_downscaled = deque(maxlen=self.number_of_sequential_frames)
+        self.buffer_grayscale = deque(maxlen=self.number_of_sequential_frames)
         self.held_action = None  # Action that's currently being held
 
     def reset(self, seed: int | None = None, options: dict | None = None):
@@ -197,22 +201,17 @@ class MarioLevelEnv(gym.Env):
     
 
     def _get_stacked_frames(self):
-        """Return a stack of frames: 4 most recent, rest randomly sampled from last 64 frames."""
+        """Return the N most recent consecutive frames."""
         num_frames = self.number_of_sequential_frames
         buf = list(self.frame_buf)
-        n_buf = len(buf)
-        # Always take the 4 most recent frames
-        most_recent = buf[-4:] if n_buf >= 4 else buf[:]
-        # For the rest, sample randomly from the last 64 (excluding the most recent 4)
-        sample_pool = buf[max(0, n_buf-64):max(0, n_buf-4)] if n_buf > 4 else []
-        n_sample = max(0, num_frames - len(most_recent))
-        if sample_pool and n_sample > 0:
-            idxs = np.random.choice(len(sample_pool), size=n_sample, replace=True)
-            sampled = [sample_pool[i] for i in idxs]
+        
+        # Just take the last N frames
+        if len(buf) >= num_frames:
+            frames = buf[-num_frames:]
         else:
-            # If not enough, repeat the oldest available
-            sampled = [buf[0]] * n_sample if buf else []
-        frames = most_recent + sampled
+            # Pad with oldest frame if not enough frames yet
+            frames = [buf[0]] * (num_frames - len(buf)) + buf
+        
         return np.stack(frames, axis=0)
 
 
@@ -243,12 +242,33 @@ class MarioLevelEnv(gym.Env):
 
 
     def _frame(self) -> np.ndarray:
+        # """Process the current frame and return a normalized grayscale image."""
+        # rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
+        # t = torch.from_numpy(rgb).to(torch.float32).div_(255.0).permute(2, 0, 1).unsqueeze(0)
+        # t_small = F.interpolate(t, size=(60, 80), mode='bilinear', align_corners=False)
+        # w = GRAY_WEIGHTS.to(t_small.device)
+        # gray = (t_small * w).sum(dim=1, keepdim=True)
+        # return gray.squeeze(0).squeeze(0).cpu().numpy()
         """Process the current frame and return a normalized grayscale image."""
+        
+        # Step 1: Extract RGB from Pygame surface
         rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
+        self.buffer_original.append(rgb.copy())  # Store original RGB frame
+        
+        # Step 2: Normalize to [0, 1]
         t = torch.from_numpy(rgb).to(torch.float32).div_(255.0).permute(2, 0, 1).unsqueeze(0)
+        self.buffer_normalized.append(t.squeeze(0).permute(1, 2, 0).cpu().numpy().copy())  # Store normalized (H, W, C)
+
+        # Step 3: Downsample to 60x80
         t_small = F.interpolate(t, size=(60, 80), mode='bilinear', align_corners=False)
+        self.buffer_downscaled.append(t_small.squeeze(0).permute(1, 2, 0).cpu().numpy().copy())  # Store downscaled (H, W, C)
+
+        # Step 4: Convert to grayscale
         w = GRAY_WEIGHTS.to(t_small.device)
         gray = (t_small * w).sum(dim=1, keepdim=True)
+        self.buffer_grayscale.append(gray.squeeze(0).squeeze(0).cpu().numpy().copy())  # Store grayscale (H, W)
+
+        # Return final result (unchanged behavior)
         return gray.squeeze(0).squeeze(0).cpu().numpy()
 
 
