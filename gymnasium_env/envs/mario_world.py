@@ -201,22 +201,17 @@ class MarioLevelEnv(gym.Env):
     
 
     def _get_stacked_frames(self):
-        """Return a stack of frames: 4 most recent, rest randomly sampled from last 64 frames."""
+        """Return the N most recent consecutive frames."""
         num_frames = self.number_of_sequential_frames
         buf = list(self.frame_buf)
-        n_buf = len(buf)
-        # Always take the 4 most recent frames
-        most_recent = buf[-4:] if n_buf >= 4 else buf[:]
-        # For the rest, sample randomly from the last 64 (excluding the most recent 4)
-        sample_pool = buf[max(0, n_buf-64):max(0, n_buf-4)] if n_buf > 4 else []
-        n_sample = max(0, num_frames - len(most_recent))
-        if sample_pool and n_sample > 0:
-            idxs = np.random.choice(len(sample_pool), size=n_sample, replace=True)
-            sampled = [sample_pool[i] for i in idxs]
+        
+        # Just take the last N frames
+        if len(buf) >= num_frames:
+            frames = buf[-num_frames:]
         else:
-            # If not enough, repeat the oldest available
-            sampled = [buf[0]] * n_sample if buf else []
-        frames = most_recent + sampled
+            # Pad with oldest frame if not enough frames yet
+            frames = [buf[0]] * (num_frames - len(buf)) + buf
+        
         return np.stack(frames, axis=0)
 
 
