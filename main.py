@@ -6,11 +6,21 @@ import numpy as np
 from gymnasium_env.envs.mario_world import MarioLevelEnv
 
 # =============================
+# LOGGING CONFIGURATION
+# =============================
+ENABLE_CONSOLE_LOGGING = True      # Print to console
+ENABLE_FILE_LOGGING = False         # Write to log files
+LOG_DEVICE_INFO = True             # Print device on startup
+LOG_EPISODE_SUMMARY = True         # Log episode summaries
+LOG_UPDATE_METRICS = True          # Log training update metrics
+LOG_AVERAGE_REWARD = True          # Log rolling average reward
+SAVE_CHECKPOINTS = True            # Save model checkpoints
+
+# =============================
 # CONSTANTS & HYPERPARAMETERS
 # =============================
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-PRINT_DEVICE = True
-NUMBER_OF_SEQUENTIAL_FRAMES = 6
+NUMBER_OF_SEQUENTIAL_FRAMES = 4
 BATCH_SIZE = 256  # Increased for more stable updates
 LEARNING_RATE = 2.5e-4  # Standard PPO learning rate
 GAMMA = 0.99
@@ -25,12 +35,28 @@ CHECKPOINT_FREQ = 500
 LOG_REWARD_DIR = "logs/rew"
 CHECKPOINT_DIR = "checkpoints"
 ACTION_SIZE = 8
-UPDATE_EPOCHS = 4
-ROLLOUT_LENGTH = 32768
+UPDATE_EPOCHS = 16
+ROLLOUT_LENGTH = 4096
 MINIBATCH_SIZE = 256  # For minibatch updates
 
-if PRINT_DEVICE:
+if LOG_DEVICE_INFO:
     print(f"Using device: {DEVICE}")
+
+# =============================
+# LOGGING UTILITIES
+# =============================
+def log_console(message, force=False):
+    """Print to console if logging is enabled"""
+    if ENABLE_CONSOLE_LOGGING or force:
+        print(message)
+
+def log_file(filepath, message):
+    """Write to file if logging is enabled"""
+    if ENABLE_FILE_LOGGING:
+        import os
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        with open(filepath, "a") as f:
+            f.write(message + "\n")
 
 # Actor-Critic Network
 class ActorCritic(nn.Module):
@@ -38,7 +64,7 @@ class ActorCritic(nn.Module):
         super().__init__()
         # Shared convolutional layers
         self.conv = nn.Sequential(
-            nn.Conv2d(NUMBER_OF_SEQUENTIAL_FRAMES, 32, kernel_size=8, stride=4),
+            nn.Conv2d(NUMBER_OF_SEQUENTIAL_FRAMES*3, 32, kernel_size=8, stride=4),
             nn.ReLU(),
             nn.Conv2d(32, 64, kernel_size=4, stride=2),
             nn.ReLU(),
@@ -47,7 +73,7 @@ class ActorCritic(nn.Module):
         )
         
         # Calculate flattened size
-        conv_out_size = self._get_conv_out((NUMBER_OF_SEQUENTIAL_FRAMES, 60, 80))
+        conv_out_size = self._get_conv_out((NUMBER_OF_SEQUENTIAL_FRAMES*3, 60, 80))
         
         # Actor head (policy)
         self.actor = nn.Sequential(
@@ -265,6 +291,8 @@ class PPOAgent:
         )
 
     def save(self, episode):
+        if not SAVE_CHECKPOINTS:
+            return
         import os
         os.makedirs(CHECKPOINT_DIR, exist_ok=True)
         checkpoint_path = os.path.join(CHECKPOINT_DIR, f'ppo_episode_{episode}.pth')
@@ -284,14 +312,15 @@ class PPOAgent:
 # Training Loop
 # =============================
 env = MarioLevelEnv(render_mode="human", number_of_sequential_frames=NUMBER_OF_SEQUENTIAL_FRAMES)
-state_shape = (NUMBER_OF_SEQUENTIAL_FRAMES, 60, 80)
+state_shape = (NUMBER_OF_SEQUENTIAL_FRAMES*3, 60, 80)
 agent = PPOAgent(ACTION_SIZE, DEVICE, state_shape)
 
 import os
-os.makedirs(LOG_REWARD_DIR, exist_ok=True)
-log_path_2 = os.path.join(LOG_REWARD_DIR, "episodic_info.txt")
-log_path_3 = os.path.join(LOG_REWARD_DIR, "policy_info.txt")
-agent.load('checkpoints/ppo_episode_1000.pth')  # Uncomment to load checkpoint
+log_path_episodic = os.path.join(LOG_REWARD_DIR, "episodic_info.txt")
+log_path_policy = os.path.join(LOG_REWARD_DIR, "policy_info.txt")
+log_path_avg_reward = os.path.join(LOG_REWARD_DIR, "avg_reward.txt")
+
+# agent.load('checkpoints/ppo_episode_1000.pth')  # Uncomment to load checkpoint
 
 reward_history = deque(maxlen=REWARD_HISTORY_SIZE)
 global_step = 0
@@ -335,33 +364,38 @@ for episode in range(1001, N_EPISODES):
             # Train on collected data
             policy_loss, value_loss, entropy, clipfrac = agent.train_step()
             global_step = 0
-            print(f"  Update - Policy Loss: {policy_loss:.4f}, Value Loss: {value_loss:.4f}, "
-                  f"Entropy: {entropy:.4f}, ClipFrac: {clipfrac:.3f}")
-            with open(log_path_3, "a") as f:
-                f.write(f"Update - Policy Loss: {policy_loss:.4f}, Value Loss: {value_loss:.4f}, Entropy: {entropy:.4f}, ClipFrac: {clipfrac:.3f}\n")
+            
+            if LOG_UPDATE_METRICS:
+                msg = (f"  Update - Policy Loss: {policy_loss:.4f}, Value Loss: {value_loss:.4f}, "
+                       f"Entropy: {entropy:.4f}, ClipFrac: {clipfrac:.3f}")
+                log_console(msg)
+                log_file(log_path_policy, msg)
             
             # Continue episode with fresh buffer (don't break!)
     
     reward_history.append(episode_reward)
-    # Print episode info
-    print(f"\nEpisode {episode}: Reward={episode_reward:.2f}, Steps={episode_steps}, "
-          f"Global Steps={global_step}")
     
-    with open(log_path_2, "a") as f:
-        f.write(f"Episode {episode}; Steps: {episode_steps}; Ended: {info['death_by']}\n")
-
-    if len(reward_history) == REWARD_HISTORY_SIZE:
+    # Log episode summary
+    if LOG_EPISODE_SUMMARY:
+        msg = (f"\nEpisode {episode}: Reward={episode_reward:.2f}, Steps={episode_steps}, "
+               f"Global Steps={global_step}")
+        log_console(msg)
+        log_file(log_path_episodic, f"Episode {episode}; Steps: {episode_steps}; Ended: {info['death_by']}")
+    
+    # Log rolling average reward
+    if LOG_AVERAGE_REWARD and len(reward_history) == REWARD_HISTORY_SIZE:
         avg_reward = sum(reward_history)/REWARD_HISTORY_SIZE
-        print(f"Episode {episode}; Average Reward: {avg_reward:.2f}")
-        log_path = os.path.join(LOG_REWARD_DIR, "avg_reward.txt")
-        with open(log_path, "a") as f:
-            f.write(f"Episode {episode}; Average Reward: {avg_reward:.2f}\n")
+        msg = f"Episode {episode}; Average Reward: {avg_reward:.2f}"
+        log_console(msg)
+        log_file(log_path_avg_reward, msg)
     
+    # Periodic cleanup
     if episode % 10 == 0:
         torch.cuda.empty_cache()
         import gc
         gc.collect()
     
+    # Save checkpoint
     if episode % CHECKPOINT_FREQ == 0 and episode > 0:
         agent.save(episode)
 
