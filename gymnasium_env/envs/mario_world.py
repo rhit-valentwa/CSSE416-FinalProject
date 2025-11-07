@@ -226,7 +226,7 @@ class MarioLevelEnv(gym.Env):
         return np.concatenate(frames, axis=0)
 
 
-    def render(self):
+    def render(self):   
         """Render the environment."""
         if self.render_mode == "human":
             for event in pg.event.get():

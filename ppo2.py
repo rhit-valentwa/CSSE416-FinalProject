@@ -118,7 +118,7 @@ class ActorCritic(nn.Module):
         log_prob = dist.log_prob(action)
         entropy = dist.entropy()
         
-        return action, log_prob, entropy, value
+        return action, log_prob, entropy, value.squeeze(-1)
     
     def evaluate_actions(self, x, actions):
         logits, values = self.forward(x)
@@ -127,8 +127,8 @@ class ActorCritic(nn.Module):
         
         log_probs = dist.log_prob(actions)
         entropy = dist.entropy()
-        
-        return log_probs, entropy, values
+
+        return log_probs, entropy, values.squeeze(-1)
 
 
 # =============================
@@ -166,7 +166,7 @@ class RolloutBuffer:
             torch.stack(self.actions),
             torch.stack(self.log_probs),
             torch.FloatTensor(self.rewards),
-            torch.stack(self.values).view(-1),
+            torch.stack(self.values),
             torch.FloatTensor(self.dones)
         )
 
@@ -190,24 +190,40 @@ class PPOAgent:
         """Select action using current policy."""
         with torch.no_grad():
             action, log_prob, entropy, value = self.policy.get_action(state.unsqueeze(0))
-        return action.item(), log_prob.item(), value.item()
+        return action.item(), log_prob, value
     
     def compute_gae(self, rewards, values, dones, next_value):
         """Compute Generalized Advantage Estimation."""
-        advantages = torch.zeros_like(rewards)
+        # Convert to numpy for safe indexing
+        rewards_np = rewards.cpu().numpy()
+        values_np = values.cpu().numpy()
+        dones_np = dones.cpu().numpy()
+        
+        # Ensure next_value is a scalar
+        if torch.is_tensor(next_value):
+            next_value_np = next_value.item()
+        else:
+            next_value_np = next_value
+        
+        advantages = np.zeros_like(rewards_np)
+        returns = np.zeros_like(rewards_np)
         last_gae = 0
         
-        for t in reversed(range(len(rewards))):
-            if t == len(rewards) - 1:
-                next_val = next_value
+        for t in reversed(range(len(rewards_np))):
+            if t == len(rewards_np) - 1:
+                next_val = next_value_np
             else:
-                next_val = values[t + 1]
+                next_val = values_np[t + 1]
             
-            delta = rewards[t] + GAMMA * next_val * (1 - dones[t]) - values[t]
-            last_gae = delta + GAMMA * GAE_LAMBDA * (1 - dones[t]) * last_gae
+            delta = rewards_np[t] + GAMMA * next_val * (1 - dones_np[t]) - values_np[t]
+            last_gae = delta + GAMMA * GAE_LAMBDA * (1 - dones_np[t]) * last_gae
             advantages[t] = last_gae
         
-        returns = advantages + values
+        returns = advantages + values_np
+
+        advantages = torch.FloatTensor(advantages).to(self.device)
+        returns = torch.FloatTensor(returns).to(self.device)
+
         return advantages, returns
     
     def update(self, next_state):
@@ -225,7 +241,7 @@ class PPOAgent:
         # Compute next value for GAE
         with torch.no_grad():
             _, next_value = self.policy(next_state.unsqueeze(0))
-            next_value = next_value.squeeze()
+            next_value = next_value.squeeze().item()
         
         # Compute advantages and returns
         advantages, returns = self.compute_gae(rewards, values, dones, next_value)
@@ -396,10 +412,10 @@ def train():
             # Store transition
             agent.buffer.add(
                 state,
-                torch.tensor(action_idx),
-                torch.tensor(log_prob),
+                torch.tensor(action_idx, dtype=torch.long),
+                log_prob,
                 reward,
-                torch.tensor(value),
+                value,
                 done
             )
             
@@ -443,7 +459,7 @@ def train():
             os.makedirs(LOG_REWARD_DIR, exist_ok=True)
             log_path = os.path.join(LOG_REWARD_DIR, "avg_reward.txt")
             with open(log_path, "a") as f:
-                f.write(f"Episode {episode+loaded_episode-49} to {episode + loaded_episode}; Average Reward: {avg_reward:.2f}\n")
+                f.write(f"Episode {episode+loaded_episode-99} to {episode + loaded_episode}; Average Reward: {avg_reward:.2f}\n")
             reward_history.clear()
         
         # Save checkpoint
