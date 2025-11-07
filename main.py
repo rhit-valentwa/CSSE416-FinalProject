@@ -9,7 +9,7 @@ from gymnasium_env.envs.mario_world import MarioLevelEnv
 # LOGGING CONFIGURATION
 # =============================
 ENABLE_CONSOLE_LOGGING = True      # Print to console
-ENABLE_FILE_LOGGING = False         # Write to log files
+ENABLE_FILE_LOGGING = True         # Write to log files
 LOG_DEVICE_INFO = True             # Print device on startup
 LOG_EPISODE_SUMMARY = True         # Log episode summaries
 LOG_UPDATE_METRICS = True          # Log training update metrics
@@ -21,8 +21,7 @@ SAVE_CHECKPOINTS = True            # Save model checkpoints
 # =============================
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 NUMBER_OF_SEQUENTIAL_FRAMES = 4
-BATCH_SIZE = 256  # Increased for more stable updates
-LEARNING_RATE = 2.5e-4  # Standard PPO learning rate
+LEARNING_RATE = 1e-4  # Standard PPO learning rate
 GAMMA = 0.99
 GAE_LAMBDA = 0.95
 CLIP_EPSILON = 0.2
@@ -36,7 +35,8 @@ LOG_REWARD_DIR = "logs/rew"
 CHECKPOINT_DIR = "checkpoints"
 ACTION_SIZE = 8
 UPDATE_EPOCHS = 16
-ROLLOUT_LENGTH = 4096
+ROLLOUT_LENGTH = 8192
+START_EPISODE = 1000
 MINIBATCH_SIZE = 256  # For minibatch updates
 
 if LOG_DEVICE_INFO:
@@ -320,12 +320,12 @@ log_path_episodic = os.path.join(LOG_REWARD_DIR, "episodic_info.txt")
 log_path_policy = os.path.join(LOG_REWARD_DIR, "policy_info.txt")
 log_path_avg_reward = os.path.join(LOG_REWARD_DIR, "avg_reward.txt")
 
-# agent.load('checkpoints/ppo_episode_1000.pth')  # Uncomment to load checkpoint
+agent.load(f'checkpoints/ppo_episode_{START_EPISODE}.pth')  # Uncomment to load checkpoint
 
 reward_history = deque(maxlen=REWARD_HISTORY_SIZE)
 global_step = 0
 
-for episode in range(6001, N_EPISODES):
+for episode in range(START_EPISODE+1, N_EPISODES):
     state, _ = env.reset()
     state = torch.FloatTensor(state).to(DEVICE)
     episode_reward = 0
@@ -349,17 +349,17 @@ for episode in range(6001, N_EPISODES):
         global_step += 1
         state = next_state
         
-        # When episode ends, compute advantages for this trajectory
-        if done:
-            agent.rollout_buffer.finish_path(last_value=0)
-            break
-        
-        # If buffer is full, train and continue episode
+        # If buffer is full, train immediately
         if agent.rollout_buffer.is_full():
-            # Bootstrap with current state's value
-            with torch.no_grad():
-                _, _, _, last_value = agent.network.get_action_and_value(next_state.unsqueeze(0))
-            agent.rollout_buffer.finish_path(last_value=last_value.item())
+            # Bootstrap with current state's value (or 0 if terminal)
+            if done:
+                last_value = 0
+            else:
+                with torch.no_grad():
+                    _, _, _, last_value = agent.network.get_action_and_value(next_state.unsqueeze(0))
+                    last_value = last_value.item()
+            
+            agent.rollout_buffer.finish_path(last_value=last_value)
             
             # Train on collected data
             policy_loss, value_loss, entropy, clipfrac = agent.train_step()
@@ -370,8 +370,11 @@ for episode in range(6001, N_EPISODES):
                        f"Entropy: {entropy:.4f}, ClipFrac: {clipfrac:.3f}")
                 log_console(msg)
                 log_file(log_path_policy, msg)
-            
-            # Continue episode with fresh buffer (don't break!)
+        
+        # When episode ends, finish the current trajectory and break
+        if done:
+            agent.rollout_buffer.finish_path(last_value=0)
+            break
     
     reward_history.append(episode_reward)
     

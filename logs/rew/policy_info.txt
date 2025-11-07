@@ -1,388 +1,489 @@
-Update - Policy Loss: -0.0176, Value Loss: 7.2243, Entropy: 2.0647, ClipFrac: 0.253
-Update - Policy Loss: -0.0228, Value Loss: 18.6112, Entropy: 2.0185, ClipFrac: 0.310
-Update - Policy Loss: -0.0170, Value Loss: 55.3193, Entropy: 1.9504, ClipFrac: 0.293
-Update - Policy Loss: -0.0127, Value Loss: 73.5422, Entropy: 1.8876, ClipFrac: 0.271
-Update - Policy Loss: -0.0005, Value Loss: 110.6598, Entropy: 1.7504, ClipFrac: 0.194
-Update - Policy Loss: -0.0005, Value Loss: 228.7093, Entropy: 1.7066, ClipFrac: 0.071
-Update - Policy Loss: -0.0015, Value Loss: 345.7356, Entropy: 1.6663, ClipFrac: 0.059
-Update - Policy Loss: -0.0015, Value Loss: 392.1207, Entropy: 1.6440, ClipFrac: 0.060
-Update - Policy Loss: -0.0008, Value Loss: 449.5865, Entropy: 1.5850, ClipFrac: 0.066
-Update - Policy Loss: -0.0010, Value Loss: 560.5096, Entropy: 1.5747, ClipFrac: 0.057
-Update - Policy Loss: 0.0004, Value Loss: 526.1928, Entropy: 1.5976, ClipFrac: 0.088
-Update - Policy Loss: 0.0000, Value Loss: 605.3599, Entropy: 1.5144, ClipFrac: 0.046
-Update - Policy Loss: -0.0003, Value Loss: 723.8127, Entropy: 1.3945, ClipFrac: 0.047
-Update - Policy Loss: -0.0016, Value Loss: 707.7826, Entropy: 1.3152, ClipFrac: 0.085
-Update - Policy Loss: 0.0008, Value Loss: 864.4513, Entropy: 1.1825, ClipFrac: 0.062
-Update - Policy Loss: -0.0010, Value Loss: 768.2841, Entropy: 1.2049, ClipFrac: 0.047
-Update - Policy Loss: 0.0003, Value Loss: 781.7929, Entropy: 1.2330, ClipFrac: 0.045
-Update - Policy Loss: 0.0001, Value Loss: 806.0684, Entropy: 1.1920, ClipFrac: 0.049
-Update - Policy Loss: 0.0000, Value Loss: 780.6549, Entropy: 1.2174, ClipFrac: 0.047
-Update - Policy Loss: 0.0008, Value Loss: 931.4072, Entropy: 1.0459, ClipFrac: 0.040
-Update - Policy Loss: 0.0001, Value Loss: 863.5508, Entropy: 1.1455, ClipFrac: 0.027
-Update - Policy Loss: 0.0002, Value Loss: 908.7628, Entropy: 1.1471, ClipFrac: 0.030
-Update - Policy Loss: -0.0000, Value Loss: 857.2641, Entropy: 1.1333, ClipFrac: 0.047
-Update - Policy Loss: 0.0010, Value Loss: 911.1301, Entropy: 0.9695, ClipFrac: 0.040
-Update - Policy Loss: 0.0001, Value Loss: 851.3861, Entropy: 0.9938, ClipFrac: 0.039
-Update - Policy Loss: -0.0002, Value Loss: 915.5027, Entropy: 1.0335, ClipFrac: 0.045
-Update - Policy Loss: 0.0004, Value Loss: 908.1071, Entropy: 1.0428, ClipFrac: 0.032
-Update - Policy Loss: 0.0004, Value Loss: 880.0127, Entropy: 0.9176, ClipFrac: 0.033
-Update - Policy Loss: 0.0001, Value Loss: 961.5713, Entropy: 0.8823, ClipFrac: 0.038
-Update - Policy Loss: -0.0001, Value Loss: 960.0255, Entropy: 0.8998, ClipFrac: 0.042
-Update - Policy Loss: 0.0005, Value Loss: 859.2942, Entropy: 0.9635, ClipFrac: 0.049
-Update - Policy Loss: 0.0002, Value Loss: 1035.6015, Entropy: 0.8301, ClipFrac: 0.043
-Update - Policy Loss: 0.0008, Value Loss: 821.3172, Entropy: 0.8758, ClipFrac: 0.041
-Update - Policy Loss: -0.0002, Value Loss: 841.6979, Entropy: 0.9941, ClipFrac: 0.031
-Update - Policy Loss: -0.0004, Value Loss: 870.9245, Entropy: 1.0448, ClipFrac: 0.036
-Update - Policy Loss: -0.0012, Value Loss: 817.7728, Entropy: 1.0461, ClipFrac: 0.035
-Update - Policy Loss: -0.0003, Value Loss: 864.3828, Entropy: 1.0031, ClipFrac: 0.029
-Update - Policy Loss: 0.0005, Value Loss: 980.2514, Entropy: 0.9305, ClipFrac: 0.033
-Update - Policy Loss: 0.0003, Value Loss: 969.6750, Entropy: 0.9850, ClipFrac: 0.036
-Update - Policy Loss: -0.0006, Value Loss: 910.1955, Entropy: 0.9347, ClipFrac: 0.030
-Update - Policy Loss: -0.0002, Value Loss: 838.9239, Entropy: 0.9743, ClipFrac: 0.032
-----
-Update - Policy Loss: -0.0005, Value Loss: 895.2296, Entropy: 0.8905, ClipFrac: 0.067
-Update - Policy Loss: 0.0014, Value Loss: 735.4567, Entropy: 0.7812, ClipFrac: 0.053
-Update - Policy Loss: -0.0017, Value Loss: 878.3153, Entropy: 0.8272, ClipFrac: 0.060
-Update - Policy Loss: 0.0005, Value Loss: 714.6613, Entropy: 0.8222, ClipFrac: 0.048
-Update - Policy Loss: -0.0006, Value Loss: 1236.5879, Entropy: 0.8333, ClipFrac: 0.004
-Update - Policy Loss: 0.0021, Value Loss: 1247.6072, Entropy: 0.7979, ClipFrac: 0.050
-Update - Policy Loss: 0.0003, Value Loss: 1242.8233, Entropy: 0.6790, ClipFrac: 0.040
-Update - Policy Loss: -0.0022, Value Loss: 891.5525, Entropy: 0.7065, ClipFrac: 0.018
-Update - Policy Loss: -0.0017, Value Loss: 971.7336, Entropy: 0.7145, ClipFrac: 0.054
-Update - Policy Loss: -0.0004, Value Loss: 763.6383, Entropy: 0.7978, ClipFrac: 0.046
-Update - Policy Loss: 0.0007, Value Loss: 750.7305, Entropy: 0.7701, ClipFrac: 0.035
-Update - Policy Loss: -0.0009, Value Loss: 502.9662, Entropy: 0.7862, ClipFrac: 0.034
-Update - Policy Loss: -0.0017, Value Loss: 665.1265, Entropy: 0.7493, ClipFrac: 0.046
-Update - Policy Loss: -0.0011, Value Loss: 967.7678, Entropy: 0.7457, ClipFrac: 0.017
-Update - Policy Loss: -0.0003, Value Loss: 870.2308, Entropy: 0.6503, ClipFrac: 0.043
-Update - Policy Loss: 0.0006, Value Loss: 805.8599, Entropy: 0.7119, ClipFrac: 0.037
-Update - Policy Loss: -0.0013, Value Loss: 903.9505, Entropy: 0.7625, ClipFrac: 0.056
-Update - Policy Loss: 0.0008, Value Loss: 961.6752, Entropy: 0.7963, ClipFrac: 0.020
-Update - Policy Loss: -0.0004, Value Loss: 645.1428, Entropy: 0.9792, ClipFrac: 0.088
-Update - Policy Loss: -0.0001, Value Loss: 793.3034, Entropy: 0.9325, ClipFrac: 0.024
-Update - Policy Loss: -0.0045, Value Loss: 670.9177, Entropy: 0.9960, ClipFrac: 0.065
-Update - Policy Loss: -0.0006, Value Loss: 609.3194, Entropy: 1.0351, ClipFrac: 0.037
-Update - Policy Loss: -0.0006, Value Loss: 954.1170, Entropy: 1.0888, ClipFrac: 0.039
-Update - Policy Loss: -0.0026, Value Loss: 995.4227, Entropy: 0.9699, ClipFrac: 0.075
-Update - Policy Loss: -0.0008, Value Loss: 501.0730, Entropy: 1.0425, ClipFrac: 0.032
-Update - Policy Loss: -0.0006, Value Loss: 691.0645, Entropy: 1.1671, ClipFrac: 0.028
-Update - Policy Loss: -0.0018, Value Loss: 605.7167, Entropy: 1.1633, ClipFrac: 0.045
-Update - Policy Loss: -0.0006, Value Loss: 946.3831, Entropy: 0.8779, ClipFrac: 0.072
-Update - Policy Loss: -0.0015, Value Loss: 670.2793, Entropy: 0.9056, ClipFrac: 0.044
-Update - Policy Loss: 0.0001, Value Loss: 907.4469, Entropy: 0.9854, ClipFrac: 0.023
-Update - Policy Loss: -0.0014, Value Loss: 508.4482, Entropy: 0.9834, ClipFrac: 0.039
-Update - Policy Loss: 0.0005, Value Loss: 654.3485, Entropy: 1.0040, ClipFrac: 0.068
-Update - Policy Loss: -0.0006, Value Loss: 732.7603, Entropy: 0.8443, ClipFrac: 0.041
-Update - Policy Loss: -0.0000, Value Loss: 842.0966, Entropy: 0.7912, ClipFrac: 0.044
-Update - Policy Loss: 0.0001, Value Loss: 677.8883, Entropy: 0.9792, ClipFrac: 0.031
-Update - Policy Loss: 0.0005, Value Loss: 1009.1299, Entropy: 0.9119, ClipFrac: 0.084
-Update - Policy Loss: -0.0009, Value Loss: 767.5258, Entropy: 0.9861, ClipFrac: 0.048
-Update - Policy Loss: -0.0006, Value Loss: 511.3514, Entropy: 1.1099, ClipFrac: 0.032
-Update - Policy Loss: 0.0001, Value Loss: 777.0233, Entropy: 0.8932, ClipFrac: 0.047
-Update - Policy Loss: -0.0017, Value Loss: 886.9467, Entropy: 0.9423, ClipFrac: 0.087
-Update - Policy Loss: 0.0004, Value Loss: 769.9081, Entropy: 0.9086, ClipFrac: 0.040
-Update - Policy Loss: 0.0009, Value Loss: 1131.9809, Entropy: 0.7208, ClipFrac: 0.049
-Update - Policy Loss: -0.0008, Value Loss: 1016.7931, Entropy: 0.6192, ClipFrac: 0.040
-Update - Policy Loss: -0.0000, Value Loss: 779.1445, Entropy: 0.9084, ClipFrac: 0.031
-Update - Policy Loss: -0.0027, Value Loss: 867.0654, Entropy: 0.8007, ClipFrac: 0.067
-Update - Policy Loss: -0.0026, Value Loss: 998.9649, Entropy: 0.8910, ClipFrac: 0.080
-Update - Policy Loss: -0.0009, Value Loss: 755.3750, Entropy: 1.0352, ClipFrac: 0.035
-Update - Policy Loss: 0.0001, Value Loss: 678.7602, Entropy: 1.0514, ClipFrac: 0.044
-Update - Policy Loss: -0.0016, Value Loss: 604.1280, Entropy: 1.0880, ClipFrac: 0.008
-Update - Policy Loss: -0.0003, Value Loss: 713.3083, Entropy: 1.0303, ClipFrac: 0.015
-Update - Policy Loss: -0.0001, Value Loss: 665.5312, Entropy: 1.0400, ClipFrac: 0.041
-Update - Policy Loss: -0.0005, Value Loss: 678.4454, Entropy: 1.0484, ClipFrac: 0.037
-Update - Policy Loss: -0.0010, Value Loss: 575.4160, Entropy: 1.0326, ClipFrac: 0.018
-Update - Policy Loss: -0.0002, Value Loss: 656.4098, Entropy: 0.8923, ClipFrac: 0.046
-Update - Policy Loss: -0.0001, Value Loss: 931.6734, Entropy: 0.9275, ClipFrac: 0.044
-Update - Policy Loss: -0.0007, Value Loss: 1266.3056, Entropy: 0.8580, ClipFrac: 0.027
-Update - Policy Loss: 0.0006, Value Loss: 669.2395, Entropy: 0.8957, ClipFrac: 0.059
-Update - Policy Loss: -0.0032, Value Loss: 1080.0835, Entropy: 0.8639, ClipFrac: 0.013
-Update - Policy Loss: -0.0014, Value Loss: 760.7894, Entropy: 1.0099, ClipFrac: 0.064
-Update - Policy Loss: -0.0006, Value Loss: 720.8221, Entropy: 0.9940, ClipFrac: 0.019
-Update - Policy Loss: 0.0002, Value Loss: 804.1511, Entropy: 1.0182, ClipFrac: 0.043
-Update - Policy Loss: 0.0004, Value Loss: 685.6602, Entropy: 1.0220, ClipFrac: 0.028
-Update - Policy Loss: -0.0004, Value Loss: 795.7962, Entropy: 0.8591, ClipFrac: 0.038
-Update - Policy Loss: -0.0006, Value Loss: 707.7698, Entropy: 0.9342, ClipFrac: 0.038
-Update - Policy Loss: -0.0023, Value Loss: 646.0644, Entropy: 1.0433, ClipFrac: 0.068
-Update - Policy Loss: -0.0019, Value Loss: 685.9420, Entropy: 0.9386, ClipFrac: 0.038
-Update - Policy Loss: -0.0005, Value Loss: 621.6895, Entropy: 0.9320, ClipFrac: 0.036
-Update - Policy Loss: -0.0020, Value Loss: 765.0415, Entropy: 0.8885, ClipFrac: 0.031
-Update - Policy Loss: -0.0010, Value Loss: 587.8162, Entropy: 0.9664, ClipFrac: 0.043
-Update - Policy Loss: -0.0004, Value Loss: 557.9439, Entropy: 1.0847, ClipFrac: 0.027
-Update - Policy Loss: -0.0030, Value Loss: 633.2304, Entropy: 0.9305, ClipFrac: 0.062
-Update - Policy Loss: -0.0013, Value Loss: 747.3001, Entropy: 0.9353, ClipFrac: 0.013
-Update - Policy Loss: -0.0006, Value Loss: 713.2600, Entropy: 0.9075, ClipFrac: 0.052
-Update - Policy Loss: 0.0009, Value Loss: 760.7304, Entropy: 1.0014, ClipFrac: 0.053
-Update - Policy Loss: -0.0011, Value Loss: 754.7798, Entropy: 0.9890, ClipFrac: 0.028
-Update - Policy Loss: -0.0030, Value Loss: 494.5741, Entropy: 1.0135, ClipFrac: 0.080
-Update - Policy Loss: -0.0007, Value Loss: 1198.7783, Entropy: 0.9007, ClipFrac: 0.017
-Update - Policy Loss: -0.0002, Value Loss: 997.0725, Entropy: 0.8841, ClipFrac: 0.019
-Update - Policy Loss: -0.0014, Value Loss: 624.7387, Entropy: 0.9549, ClipFrac: 0.042
-Update - Policy Loss: -0.0026, Value Loss: 640.2989, Entropy: 0.8233, ClipFrac: 0.054
-Update - Policy Loss: -0.0031, Value Loss: 602.1526, Entropy: 0.9121, ClipFrac: 0.055
-Update - Policy Loss: -0.0002, Value Loss: 910.8623, Entropy: 0.9238, ClipFrac: 0.027
-Update - Policy Loss: -0.0003, Value Loss: 950.6846, Entropy: 0.8520, ClipFrac: 0.055
-Update - Policy Loss: 0.0001, Value Loss: 610.1409, Entropy: 0.8302, ClipFrac: 0.060
-Update - Policy Loss: 0.0002, Value Loss: 914.4769, Entropy: 0.7932, ClipFrac: 0.092
-Update - Policy Loss: -0.0008, Value Loss: 580.4802, Entropy: 0.7712, ClipFrac: 0.067
-Update - Policy Loss: -0.0012, Value Loss: 739.1753, Entropy: 0.7433, ClipFrac: 0.019
-Update - Policy Loss: -0.0007, Value Loss: 477.0801, Entropy: 0.8163, ClipFrac: 0.034
-Update - Policy Loss: 0.0005, Value Loss: 851.2617, Entropy: 0.7283, ClipFrac: 0.039
-Update - Policy Loss: -0.0017, Value Loss: 969.7410, Entropy: 0.6923, ClipFrac: 0.055
-Update - Policy Loss: -0.0005, Value Loss: 920.8219, Entropy: 0.7792, ClipFrac: 0.039
-Update - Policy Loss: -0.0003, Value Loss: 789.3805, Entropy: 0.7632, ClipFrac: 0.032
-Update - Policy Loss: -0.0011, Value Loss: 734.2370, Entropy: 0.8625, ClipFrac: 0.040
-Update - Policy Loss: -0.0010, Value Loss: 986.2027, Entropy: 0.8859, ClipFrac: 0.039
-Update - Policy Loss: -0.0007, Value Loss: 926.0038, Entropy: 0.8026, ClipFrac: 0.022
-Update - Policy Loss: -0.0010, Value Loss: 774.3954, Entropy: 0.8371, ClipFrac: 0.013
-Update - Policy Loss: -0.0009, Value Loss: 638.6209, Entropy: 0.8061, ClipFrac: 0.043
-Update - Policy Loss: -0.0004, Value Loss: 624.5444, Entropy: 0.8326, ClipFrac: 0.048
-Update - Policy Loss: 0.0007, Value Loss: 998.2392, Entropy: 0.7787, ClipFrac: 0.043
-Update - Policy Loss: -0.0008, Value Loss: 836.3593, Entropy: 0.9358, ClipFrac: 0.048
-Update - Policy Loss: -0.0009, Value Loss: 772.5716, Entropy: 0.9287, ClipFrac: 0.025
-Update - Policy Loss: -0.0015, Value Loss: 559.8932, Entropy: 0.9226, ClipFrac: 0.026
-Update - Policy Loss: 0.0010, Value Loss: 731.3377, Entropy: 0.9537, ClipFrac: 0.018
-Update - Policy Loss: -0.0008, Value Loss: 664.5242, Entropy: 0.9664, ClipFrac: 0.007
-Update - Policy Loss: 0.0006, Value Loss: 666.2667, Entropy: 0.9870, ClipFrac: 0.043
-Update - Policy Loss: -0.0001, Value Loss: 572.5965, Entropy: 0.9675, ClipFrac: 0.051
-Update - Policy Loss: 0.0001, Value Loss: 802.9644, Entropy: 1.1394, ClipFrac: 0.037
-Update - Policy Loss: 0.0034, Value Loss: 506.5971, Entropy: 1.2284, ClipFrac: 0.093
-Update - Policy Loss: -0.0023, Value Loss: 821.0872, Entropy: 1.2056, ClipFrac: 0.029
-Update - Policy Loss: -0.0008, Value Loss: 631.9153, Entropy: 1.2489, ClipFrac: 0.059
-Update - Policy Loss: -0.0008, Value Loss: 728.3040, Entropy: 1.1187, ClipFrac: 0.041
-Update - Policy Loss: -0.0006, Value Loss: 728.2794, Entropy: 1.1274, ClipFrac: 0.040
-Update - Policy Loss: -0.0009, Value Loss: 562.5215, Entropy: 1.1441, ClipFrac: 0.048
-Update - Policy Loss: -0.0015, Value Loss: 858.5460, Entropy: 1.1076, ClipFrac: 0.060
-Update - Policy Loss: -0.0024, Value Loss: 767.1090, Entropy: 1.0324, ClipFrac: 0.051
-Update - Policy Loss: -0.0013, Value Loss: 860.4847, Entropy: 0.9728, ClipFrac: 0.026
-Update - Policy Loss: 0.0003, Value Loss: 885.0513, Entropy: 0.9168, ClipFrac: 0.046
-Update - Policy Loss: -0.0007, Value Loss: 1010.6384, Entropy: 0.7840, ClipFrac: 0.029
-Update - Policy Loss: -0.0014, Value Loss: 740.2211, Entropy: 1.0316, ClipFrac: 0.054
-Update - Policy Loss: -0.0018, Value Loss: 963.0352, Entropy: 0.9181, ClipFrac: 0.037
-Update - Policy Loss: -0.0013, Value Loss: 721.9068, Entropy: 1.0180, ClipFrac: 0.056
-Update - Policy Loss: -0.0009, Value Loss: 1216.0347, Entropy: 0.9754, ClipFrac: 0.035
-Update - Policy Loss: 0.0012, Value Loss: 698.8486, Entropy: 1.2439, ClipFrac: 0.043
-Update - Policy Loss: -0.0009, Value Loss: 741.0752, Entropy: 1.0437, ClipFrac: 0.058
-Update - Policy Loss: -0.0002, Value Loss: 975.8873, Entropy: 0.9125, ClipFrac: 0.085
-Update - Policy Loss: -0.0022, Value Loss: 552.2316, Entropy: 1.0832, ClipFrac: 0.047
-Update - Policy Loss: -0.0018, Value Loss: 575.4815, Entropy: 1.0256, ClipFrac: 0.044
-Update - Policy Loss: -0.0002, Value Loss: 571.1413, Entropy: 0.9662, ClipFrac: 0.044
-Update - Policy Loss: 0.0002, Value Loss: 688.6720, Entropy: 0.9859, ClipFrac: 0.019
-Update - Policy Loss: -0.0018, Value Loss: 804.0605, Entropy: 0.9987, ClipFrac: 0.041
-Update - Policy Loss: 0.0012, Value Loss: 664.1351, Entropy: 1.1842, ClipFrac: 0.043
-Update - Policy Loss: -0.0018, Value Loss: 536.0154, Entropy: 1.1100, ClipFrac: 0.034
-Update - Policy Loss: -0.0015, Value Loss: 660.0355, Entropy: 0.8940, ClipFrac: 0.071
-Update - Policy Loss: -0.0006, Value Loss: 636.8825, Entropy: 0.9669, ClipFrac: 0.032
-Update - Policy Loss: -0.0043, Value Loss: 489.6222, Entropy: 1.0876, ClipFrac: 0.041
-Update - Policy Loss: -0.0029, Value Loss: 615.7759, Entropy: 0.9784, ClipFrac: 0.055
-Update - Policy Loss: -0.0046, Value Loss: 841.7806, Entropy: 0.8421, ClipFrac: 0.083
-Update - Policy Loss: -0.0003, Value Loss: 753.9411, Entropy: 0.9713, ClipFrac: 0.045
-Update - Policy Loss: 0.0007, Value Loss: 1218.5628, Entropy: 0.8433, ClipFrac: 0.023
-Update - Policy Loss: -0.0001, Value Loss: 1026.2026, Entropy: 0.8373, ClipFrac: 0.056
-Update - Policy Loss: -0.0012, Value Loss: 662.3377, Entropy: 0.8438, ClipFrac: 0.042
-Update - Policy Loss: 0.0005, Value Loss: 757.4682, Entropy: 0.9160, ClipFrac: 0.040
-Update - Policy Loss: -0.0028, Value Loss: 454.3631, Entropy: 1.0222, ClipFrac: 0.035
-Update - Policy Loss: -0.0004, Value Loss: 829.1962, Entropy: 0.9807, ClipFrac: 0.034
-Update - Policy Loss: 0.0006, Value Loss: 900.4568, Entropy: 0.9537, ClipFrac: 0.057
-Update - Policy Loss: -0.0020, Value Loss: 562.3799, Entropy: 0.9809, ClipFrac: 0.042
-Update - Policy Loss: -0.0007, Value Loss: 867.7709, Entropy: 1.1167, ClipFrac: 0.036
-Update - Policy Loss: -0.0022, Value Loss: 511.6863, Entropy: 1.1110, ClipFrac: 0.023
-Update - Policy Loss: -0.0035, Value Loss: 571.0109, Entropy: 0.9878, ClipFrac: 0.057
-Update - Policy Loss: -0.0033, Value Loss: 537.4187, Entropy: 1.0676, ClipFrac: 0.086
-Update - Policy Loss: -0.0029, Value Loss: 721.7342, Entropy: 0.9337, ClipFrac: 0.061
-Update - Policy Loss: -0.0031, Value Loss: 743.4355, Entropy: 1.0612, ClipFrac: 0.092
-Update - Policy Loss: -0.0009, Value Loss: 717.6388, Entropy: 0.9461, ClipFrac: 0.029
-Update - Policy Loss: -0.0025, Value Loss: 829.9501, Entropy: 1.0024, ClipFrac: 0.065
-Update - Policy Loss: -0.0001, Value Loss: 539.1163, Entropy: 0.9969, ClipFrac: 0.009
-Update - Policy Loss: -0.0018, Value Loss: 565.5064, Entropy: 1.0138, ClipFrac: 0.030
-Update - Policy Loss: 0.0000, Value Loss: 607.5334, Entropy: 1.0160, ClipFrac: 0.017
-Update - Policy Loss: -0.0003, Value Loss: 912.5016, Entropy: 0.8345, ClipFrac: 0.023
-Update - Policy Loss: -0.0011, Value Loss: 923.7970, Entropy: 0.8773, ClipFrac: 0.064
-Update - Policy Loss: -0.0004, Value Loss: 717.1572, Entropy: 0.8096, ClipFrac: 0.028
-Update - Policy Loss: -0.0019, Value Loss: 824.1097, Entropy: 0.8100, ClipFrac: 0.071
-Update - Policy Loss: -0.0011, Value Loss: 911.6181, Entropy: 0.7712, ClipFrac: 0.034
-Update - Policy Loss: 0.0004, Value Loss: 817.6548, Entropy: 0.8063, ClipFrac: 0.046
-Update - Policy Loss: -0.0008, Value Loss: 776.8743, Entropy: 0.7678, ClipFrac: 0.027
-Update - Policy Loss: -0.0014, Value Loss: 723.2087, Entropy: 0.8858, ClipFrac: 0.067
-Update - Policy Loss: -0.0003, Value Loss: 895.8515, Entropy: 0.7499, ClipFrac: 0.047
-Update - Policy Loss: 0.0008, Value Loss: 813.6735, Entropy: 0.7233, ClipFrac: 0.034
-Update - Policy Loss: -0.0008, Value Loss: 1175.9586, Entropy: 0.6479, ClipFrac: 0.042
-Update - Policy Loss: -0.0023, Value Loss: 734.9695, Entropy: 0.8113, ClipFrac: 0.045
-Update - Policy Loss: -0.0030, Value Loss: 661.2745, Entropy: 0.8473, ClipFrac: 0.040
-Update - Policy Loss: -0.0019, Value Loss: 699.5184, Entropy: 0.9620, ClipFrac: 0.083
-Update - Policy Loss: -0.0019, Value Loss: 913.9333, Entropy: 0.8608, ClipFrac: 0.074
-Update - Policy Loss: -0.0008, Value Loss: 500.1406, Entropy: 0.9868, ClipFrac: 0.055
-Update - Policy Loss: -0.0038, Value Loss: 677.3314, Entropy: 0.9428, ClipFrac: 0.029
-Update - Policy Loss: -0.0015, Value Loss: 741.5037, Entropy: 0.8614, ClipFrac: 0.021
-Update - Policy Loss: 0.0005, Value Loss: 877.5852, Entropy: 0.8103, ClipFrac: 0.041
-Update - Policy Loss: -0.0016, Value Loss: 902.8108, Entropy: 0.8618, ClipFrac: 0.070
-Update - Policy Loss: -0.0012, Value Loss: 827.4758, Entropy: 0.7646, ClipFrac: 0.042
-Update - Policy Loss: -0.0031, Value Loss: 542.7863, Entropy: 0.7648, ClipFrac: 0.075
-Update - Policy Loss: 0.0003, Value Loss: 452.8052, Entropy: 0.8781, ClipFrac: 0.036
-Update - Policy Loss: -0.0012, Value Loss: 747.3330, Entropy: 0.7968, ClipFrac: 0.041
-Update - Policy Loss: -0.0010, Value Loss: 647.3853, Entropy: 0.8821, ClipFrac: 0.052
-Update - Policy Loss: -0.0014, Value Loss: 506.6896, Entropy: 0.8487, ClipFrac: 0.035
-Update - Policy Loss: -0.0016, Value Loss: 940.1952, Entropy: 0.8643, ClipFrac: 0.057
-Update - Policy Loss: -0.0018, Value Loss: 522.3358, Entropy: 0.9822, ClipFrac: 0.073
-Update - Policy Loss: -0.0027, Value Loss: 655.2540, Entropy: 0.9390, ClipFrac: 0.061
-Update - Policy Loss: -0.0020, Value Loss: 1043.6568, Entropy: 0.8927, ClipFrac: 0.057
-Update - Policy Loss: -0.0024, Value Loss: 538.6656, Entropy: 0.9380, ClipFrac: 0.043
-Update - Policy Loss: -0.0027, Value Loss: 600.2436, Entropy: 0.9794, ClipFrac: 0.040
-Update - Policy Loss: -0.0039, Value Loss: 391.1514, Entropy: 0.8747, ClipFrac: 0.064
-Update - Policy Loss: -0.0008, Value Loss: 809.7839, Entropy: 0.7590, ClipFrac: 0.038
-Update - Policy Loss: 0.0023, Value Loss: 910.3178, Entropy: 0.8371, ClipFrac: 0.090
-Update - Policy Loss: -0.0018, Value Loss: 642.8998, Entropy: 0.7956, ClipFrac: 0.032
-Update - Policy Loss: -0.0007, Value Loss: 911.8121, Entropy: 0.8043, ClipFrac: 0.040
-Update - Policy Loss: -0.0004, Value Loss: 882.2622, Entropy: 0.8540, ClipFrac: 0.037
-Update - Policy Loss: -0.0025, Value Loss: 846.3437, Entropy: 0.7750, ClipFrac: 0.086
-Update - Policy Loss: 0.0005, Value Loss: 829.1055, Entropy: 0.7911, ClipFrac: 0.063
-Update - Policy Loss: -0.0046, Value Loss: 531.9726, Entropy: 0.7889, ClipFrac: 0.085
-Update - Policy Loss: -0.0006, Value Loss: 622.2561, Entropy: 0.7771, ClipFrac: 0.042
-Update - Policy Loss: -0.0015, Value Loss: 841.9015, Entropy: 0.7337, ClipFrac: 0.046
-Update - Policy Loss: -0.0031, Value Loss: 495.8835, Entropy: 0.8451, ClipFrac: 0.029
-Update - Policy Loss: -0.0004, Value Loss: 581.3188, Entropy: 0.7735, ClipFrac: 0.054
-Update - Policy Loss: 0.0013, Value Loss: 539.6014, Entropy: 0.8906, ClipFrac: 0.045
-Update - Policy Loss: -0.0019, Value Loss: 725.2243, Entropy: 0.7420, ClipFrac: 0.072
-Update - Policy Loss: -0.0014, Value Loss: 742.3847, Entropy: 0.7865, ClipFrac: 0.071
-Update - Policy Loss: 0.0005, Value Loss: 721.4559, Entropy: 0.6948, ClipFrac: 0.027
-Update - Policy Loss: -0.0014, Value Loss: 614.3126, Entropy: 0.6925, ClipFrac: 0.042
-Update - Policy Loss: -0.0008, Value Loss: 1069.3313, Entropy: 0.7354, ClipFrac: 0.065
-Update - Policy Loss: -0.0007, Value Loss: 669.3810, Entropy: 0.7431, ClipFrac: 0.009
-Update - Policy Loss: -0.0011, Value Loss: 963.9683, Entropy: 0.7260, ClipFrac: 0.045
-Update - Policy Loss: -0.0042, Value Loss: 515.1458, Entropy: 0.7562, ClipFrac: 0.067
-Update - Policy Loss: -0.0026, Value Loss: 664.7767, Entropy: 0.8295, ClipFrac: 0.056
-Update - Policy Loss: -0.0010, Value Loss: 909.2575, Entropy: 0.7446, ClipFrac: 0.043
-Update - Policy Loss: 0.0008, Value Loss: 858.4999, Entropy: 0.7979, ClipFrac: 0.056
-Update - Policy Loss: -0.0013, Value Loss: 972.4746, Entropy: 0.6978, ClipFrac: 0.059
-Update - Policy Loss: -0.0007, Value Loss: 810.7409, Entropy: 0.9547, ClipFrac: 0.089
-Update - Policy Loss: -0.0009, Value Loss: 578.1348, Entropy: 0.8463, ClipFrac: 0.036
-Update - Policy Loss: -0.0008, Value Loss: 602.8180, Entropy: 0.8920, ClipFrac: 0.057
-Update - Policy Loss: -0.0029, Value Loss: 808.8078, Entropy: 0.8434, ClipFrac: 0.033
-Update - Policy Loss: 0.0011, Value Loss: 748.1366, Entropy: 0.7707, ClipFrac: 0.052
-Update - Policy Loss: -0.0005, Value Loss: 985.0908, Entropy: 0.7269, ClipFrac: 0.051
-Update - Policy Loss: -0.0009, Value Loss: 694.0395, Entropy: 0.7601, ClipFrac: 0.042
-Update - Policy Loss: -0.0016, Value Loss: 585.1325, Entropy: 0.8585, ClipFrac: 0.054
-Update - Policy Loss: -0.0027, Value Loss: 761.8461, Entropy: 0.7639, ClipFrac: 0.061
-Update - Policy Loss: -0.0031, Value Loss: 451.1568, Entropy: 0.8259, ClipFrac: 0.053
-Update - Policy Loss: 0.0002, Value Loss: 1305.8142, Entropy: 0.7243, ClipFrac: 0.041
-Update - Policy Loss: 0.0001, Value Loss: 881.8483, Entropy: 0.7078, ClipFrac: 0.041
-Update - Policy Loss: -0.0038, Value Loss: 735.0575, Entropy: 0.6525, ClipFrac: 0.054
-Update - Policy Loss: -0.0014, Value Loss: 1240.1881, Entropy: 0.5990, ClipFrac: 0.074
-Update - Policy Loss: -0.0011, Value Loss: 809.0514, Entropy: 0.6799, ClipFrac: 0.051
-Update - Policy Loss: -0.0022, Value Loss: 559.5987, Entropy: 0.6613, ClipFrac: 0.046
-Update - Policy Loss: -0.0009, Value Loss: 673.9523, Entropy: 0.6659, ClipFrac: 0.040
-Update - Policy Loss: -0.0001, Value Loss: 1279.1992, Entropy: 0.5620, ClipFrac: 0.037
-Update - Policy Loss: -0.0004, Value Loss: 921.7606, Entropy: 0.6055, ClipFrac: 0.030
-Update - Policy Loss: -0.0016, Value Loss: 557.9493, Entropy: 0.6784, ClipFrac: 0.053
-Update - Policy Loss: -0.0018, Value Loss: 796.3238, Entropy: 0.6386, ClipFrac: 0.042
-Update - Policy Loss: -0.0035, Value Loss: 784.4243, Entropy: 0.6214, ClipFrac: 0.029
-Update - Policy Loss: -0.0009, Value Loss: 1118.1342, Entropy: 0.6223, ClipFrac: 0.036
-Update - Policy Loss: -0.0009, Value Loss: 675.9687, Entropy: 0.7833, ClipFrac: 0.015
-Update - Policy Loss: -0.0013, Value Loss: 908.2699, Entropy: 0.7819, ClipFrac: 0.033
-Update - Policy Loss: -0.0016, Value Loss: 646.1468, Entropy: 0.8408, ClipFrac: 0.035
-Update - Policy Loss: -0.0006, Value Loss: 590.6569, Entropy: 0.8457, ClipFrac: 0.031
-Update - Policy Loss: -0.0034, Value Loss: 458.9757, Entropy: 0.7976, ClipFrac: 0.067
-Update - Policy Loss: -0.0007, Value Loss: 736.5398, Entropy: 0.7076, ClipFrac: 0.043
-Update - Policy Loss: -0.0011, Value Loss: 585.3530, Entropy: 0.6861, ClipFrac: 0.044
-Update - Policy Loss: -0.0022, Value Loss: 1217.1563, Entropy: 0.7553, ClipFrac: 0.071
-Update - Policy Loss: -0.0036, Value Loss: 658.8443, Entropy: 0.6972, ClipFrac: 0.056
-Update - Policy Loss: -0.0013, Value Loss: 726.4229, Entropy: 0.7127, ClipFrac: 0.054
-Update - Policy Loss: -0.0016, Value Loss: 688.8384, Entropy: 0.7925, ClipFrac: 0.027
-Update - Policy Loss: -0.0003, Value Loss: 756.9151, Entropy: 0.7766, ClipFrac: 0.021
-Update - Policy Loss: 0.0003, Value Loss: 915.8578, Entropy: 0.8363, ClipFrac: 0.014
-Update - Policy Loss: -0.0008, Value Loss: 721.7626, Entropy: 0.8056, ClipFrac: 0.050
-Update - Policy Loss: -0.0009, Value Loss: 981.7802, Entropy: 0.8464, ClipFrac: 0.075
-Update - Policy Loss: -0.0008, Value Loss: 780.7314, Entropy: 0.8680, ClipFrac: 0.015
-Update - Policy Loss: -0.0000, Value Loss: 618.0956, Entropy: 0.8201, ClipFrac: 0.053
-Update - Policy Loss: -0.0011, Value Loss: 950.7240, Entropy: 0.7261, ClipFrac: 0.037
-Update - Policy Loss: -0.0021, Value Loss: 530.8129, Entropy: 0.8371, ClipFrac: 0.029
-Update - Policy Loss: -0.0009, Value Loss: 838.8822, Entropy: 0.8135, ClipFrac: 0.052
-Update - Policy Loss: -0.0010, Value Loss: 601.2749, Entropy: 0.8480, ClipFrac: 0.037
-Update - Policy Loss: -0.0017, Value Loss: 616.4322, Entropy: 0.7534, ClipFrac: 0.036
-Update - Policy Loss: -0.0005, Value Loss: 690.4533, Entropy: 0.7586, ClipFrac: 0.034
-Update - Policy Loss: -0.0006, Value Loss: 431.1212, Entropy: 0.7291, ClipFrac: 0.060
-Update - Policy Loss: -0.0001, Value Loss: 556.0611, Entropy: 0.8660, ClipFrac: 0.039
-Update - Policy Loss: -0.0014, Value Loss: 469.9901, Entropy: 0.8577, ClipFrac: 0.031
-Update - Policy Loss: -0.0003, Value Loss: 620.7267, Entropy: 0.8921, ClipFrac: 0.066
-Update - Policy Loss: -0.0007, Value Loss: 499.5006, Entropy: 0.8756, ClipFrac: 0.029
-Update - Policy Loss: -0.0013, Value Loss: 868.1769, Entropy: 0.7984, ClipFrac: 0.010
-Update - Policy Loss: -0.0010, Value Loss: 820.5637, Entropy: 0.8379, ClipFrac: 0.027
-Update - Policy Loss: 0.0021, Value Loss: 805.8377, Entropy: 0.8626, ClipFrac: 0.059
-Update - Policy Loss: -0.0016, Value Loss: 581.8644, Entropy: 0.8954, ClipFrac: 0.033
-Update - Policy Loss: -0.0048, Value Loss: 616.8366, Entropy: 0.8630, ClipFrac: 0.077
-Update - Policy Loss: -0.0040, Value Loss: 650.9874, Entropy: 0.8834, ClipFrac: 0.052
-Update - Policy Loss: -0.0024, Value Loss: 625.1249, Entropy: 0.9102, ClipFrac: 0.039
-Update - Policy Loss: -0.0028, Value Loss: 562.1584, Entropy: 0.8897, ClipFrac: 0.025
-Update - Policy Loss: -0.0028, Value Loss: 699.0973, Entropy: 0.8131, ClipFrac: 0.071
-Update - Policy Loss: -0.0006, Value Loss: 497.4303, Entropy: 0.8249, ClipFrac: 0.021
-Update - Policy Loss: -0.0003, Value Loss: 877.9121, Entropy: 0.6635, ClipFrac: 0.050
-Update - Policy Loss: -0.0023, Value Loss: 476.4502, Entropy: 0.7187, ClipFrac: 0.025
-Update - Policy Loss: -0.0012, Value Loss: 910.3861, Entropy: 0.7602, ClipFrac: 0.042
-Update - Policy Loss: -0.0007, Value Loss: 535.9417, Entropy: 0.9307, ClipFrac: 0.055
-Update - Policy Loss: -0.0007, Value Loss: 650.0027, Entropy: 0.9652, ClipFrac: 0.017
-Update - Policy Loss: -0.0002, Value Loss: 732.4691, Entropy: 0.9641, ClipFrac: 0.054
-Update - Policy Loss: 0.0006, Value Loss: 579.6286, Entropy: 1.0676, ClipFrac: 0.035
-Update - Policy Loss: -0.0027, Value Loss: 499.9335, Entropy: 1.0080, ClipFrac: 0.053
-Update - Policy Loss: -0.0032, Value Loss: 485.2165, Entropy: 1.1428, ClipFrac: 0.042
-Update - Policy Loss: -0.0011, Value Loss: 611.7249, Entropy: 1.0768, ClipFrac: 0.031
-Update - Policy Loss: -0.0025, Value Loss: 631.1774, Entropy: 1.0936, ClipFrac: 0.022
-Update - Policy Loss: -0.0006, Value Loss: 835.3064, Entropy: 1.0594, ClipFrac: 0.079
-Update - Policy Loss: -0.0029, Value Loss: 664.4938, Entropy: 1.0970, ClipFrac: 0.082
-Update - Policy Loss: -0.0030, Value Loss: 835.9420, Entropy: 1.0081, ClipFrac: 0.048
-Update - Policy Loss: -0.0011, Value Loss: 799.2799, Entropy: 1.0258, ClipFrac: 0.058
-Update - Policy Loss: -0.0022, Value Loss: 859.6661, Entropy: 1.0467, ClipFrac: 0.074
-Update - Policy Loss: -0.0006, Value Loss: 694.3722, Entropy: 1.0492, ClipFrac: 0.084
-Update - Policy Loss: -0.0008, Value Loss: 600.3141, Entropy: 1.1492, ClipFrac: 0.068
-Update - Policy Loss: -0.0017, Value Loss: 524.4737, Entropy: 1.2358, ClipFrac: 0.037
-Update - Policy Loss: -0.0031, Value Loss: 562.9709, Entropy: 1.2694, ClipFrac: 0.049
-Update - Policy Loss: -0.0025, Value Loss: 838.0630, Entropy: 1.2507, ClipFrac: 0.070
-Update - Policy Loss: -0.0030, Value Loss: 460.0894, Entropy: 1.3252, ClipFrac: 0.083
-Update - Policy Loss: 0.0002, Value Loss: 687.7717, Entropy: 1.2344, ClipFrac: 0.029
-Update - Policy Loss: -0.0025, Value Loss: 784.0212, Entropy: 1.1701, ClipFrac: 0.055
-Update - Policy Loss: -0.0017, Value Loss: 674.2175, Entropy: 1.2188, ClipFrac: 0.017
-Update - Policy Loss: -0.0022, Value Loss: 610.4262, Entropy: 1.1775, ClipFrac: 0.064
-Update - Policy Loss: -0.0030, Value Loss: 590.0953, Entropy: 1.1445, ClipFrac: 0.061
-Update - Policy Loss: -0.0010, Value Loss: 614.4068, Entropy: 1.1548, ClipFrac: 0.054
-Update - Policy Loss: -0.0025, Value Loss: 733.3666, Entropy: 1.1835, ClipFrac: 0.097
-Update - Policy Loss: -0.0022, Value Loss: 891.7559, Entropy: 1.1423, ClipFrac: 0.047
-Update - Policy Loss: -0.0018, Value Loss: 688.5025, Entropy: 1.1580, ClipFrac: 0.061
-Update - Policy Loss: -0.0029, Value Loss: 407.3020, Entropy: 1.0846, ClipFrac: 0.084
-Update - Policy Loss: -0.0015, Value Loss: 667.1538, Entropy: 1.1007, ClipFrac: 0.040
-Update - Policy Loss: -0.0017, Value Loss: 608.6064, Entropy: 1.0993, ClipFrac: 0.055
-Update - Policy Loss: -0.0011, Value Loss: 591.8811, Entropy: 1.1059, ClipFrac: 0.030
-Update - Policy Loss: -0.0010, Value Loss: 880.9898, Entropy: 1.0685, ClipFrac: 0.040
-Update - Policy Loss: 0.0001, Value Loss: 688.6292, Entropy: 1.1215, ClipFrac: 0.061
-Update - Policy Loss: -0.0021, Value Loss: 697.1417, Entropy: 1.1040, ClipFrac: 0.067
-Update - Policy Loss: -0.0020, Value Loss: 801.8049, Entropy: 1.1032, ClipFrac: 0.081
-Update - Policy Loss: -0.0023, Value Loss: 497.1798, Entropy: 1.1106, ClipFrac: 0.036
-Update - Policy Loss: -0.0011, Value Loss: 854.6368, Entropy: 1.0737, ClipFrac: 0.064
-Update - Policy Loss: 0.0002, Value Loss: 513.5730, Entropy: 0.9867, ClipFrac: 0.076
-Update - Policy Loss: 0.0005, Value Loss: 624.4770, Entropy: 1.1172, ClipFrac: 0.059
-Update - Policy Loss: -0.0012, Value Loss: 811.9613, Entropy: 1.1131, ClipFrac: 0.111
-Update - Policy Loss: 0.0002, Value Loss: 611.1232, Entropy: 1.0810, ClipFrac: 0.064
-Update - Policy Loss: 0.0012, Value Loss: 621.5188, Entropy: 1.1693, ClipFrac: 0.056
-Update - Policy Loss: -0.0003, Value Loss: 656.6279, Entropy: 1.1821, ClipFrac: 0.042
-Update - Policy Loss: -0.0023, Value Loss: 599.4776, Entropy: 1.1347, ClipFrac: 0.054
-Update - Policy Loss: -0.0007, Value Loss: 674.2900, Entropy: 1.0696, ClipFrac: 0.043
-Update - Policy Loss: 0.0004, Value Loss: 654.1437, Entropy: 0.9898, ClipFrac: 0.043
-Update - Policy Loss: -0.0003, Value Loss: 597.8406, Entropy: 0.9576, ClipFrac: 0.090
-Update - Policy Loss: -0.0001, Value Loss: 628.5411, Entropy: 0.8661, ClipFrac: 0.065
-Update - Policy Loss: 0.0002, Value Loss: 663.7365, Entropy: 0.9291, ClipFrac: 0.066
-Update - Policy Loss: -0.0023, Value Loss: 652.5559, Entropy: 0.9031, ClipFrac: 0.053
-Update - Policy Loss: -0.0016, Value Loss: 947.5607, Entropy: 0.9707, ClipFrac: 0.060
-Update - Policy Loss: -0.0005, Value Loss: 585.0811, Entropy: 0.9429, ClipFrac: 0.051
-Update - Policy Loss: -0.0005, Value Loss: 1131.4332, Entropy: 1.0149, ClipFrac: 0.074
-Update - Policy Loss: -0.0024, Value Loss: 701.3143, Entropy: 1.0489, ClipFrac: 0.102
-Update - Policy Loss: -0.0007, Value Loss: 562.0763, Entropy: 1.0892, ClipFrac: 0.039
-Update - Policy Loss: -0.0018, Value Loss: 471.3254, Entropy: 1.1009, ClipFrac: 0.066
-Update - Policy Loss: -0.0014, Value Loss: 692.7756, Entropy: 1.0399, ClipFrac: 0.048
-Update - Policy Loss: -0.0020, Value Loss: 703.6223, Entropy: 1.0434, ClipFrac: 0.070
-Update - Policy Loss: -0.0027, Value Loss: 774.8463, Entropy: 1.0391, ClipFrac: 0.023
-Update - Policy Loss: -0.0034, Value Loss: 701.0874, Entropy: 1.1083, ClipFrac: 0.072
-Update - Policy Loss: -0.0010, Value Loss: 859.9608, Entropy: 1.0151, ClipFrac: 0.053
-Update - Policy Loss: 0.0006, Value Loss: 829.5437, Entropy: 1.0753, ClipFrac: 0.067
-Update - Policy Loss: 0.0002, Value Loss: 712.3005, Entropy: 1.1220, ClipFrac: 0.055
-Update - Policy Loss: -0.0003, Value Loss: 844.8198, Entropy: 1.0440, ClipFrac: 0.041
-Update - Policy Loss: -0.0012, Value Loss: 507.7335, Entropy: 1.0493, ClipFrac: 0.049
-Update - Policy Loss: -0.0031, Value Loss: 722.6004, Entropy: 1.0561, ClipFrac: 0.045
+  Update - Policy Loss: -0.0158, Value Loss: 6.8625, Entropy: 2.0659, ClipFrac: 0.248
+  Update - Policy Loss: -0.0132, Value Loss: 48.0486, Entropy: 2.0271, ClipFrac: 0.325
+  Update - Policy Loss: -0.0066, Value Loss: 52.8646, Entropy: 1.9866, ClipFrac: 0.338
+  Update - Policy Loss: -0.0275, Value Loss: 22.1759, Entropy: 1.9344, ClipFrac: 0.341
+  Update - Policy Loss: -0.0133, Value Loss: 84.4412, Entropy: 1.8966, ClipFrac: 0.257
+  Update - Policy Loss: -0.0129, Value Loss: 180.9858, Entropy: 1.8200, ClipFrac: 0.271
+  Update - Policy Loss: -0.0101, Value Loss: 116.7111, Entropy: 1.7878, ClipFrac: 0.226
+  Update - Policy Loss: -0.0095, Value Loss: 174.6382, Entropy: 1.7497, ClipFrac: 0.192
+  Update - Policy Loss: -0.0087, Value Loss: 356.2453, Entropy: 1.7324, ClipFrac: 0.160
+  Update - Policy Loss: -0.0087, Value Loss: 318.1083, Entropy: 1.6867, ClipFrac: 0.147
+  Update - Policy Loss: -0.0073, Value Loss: 90.5701, Entropy: 1.7243, ClipFrac: 0.194
+  Update - Policy Loss: -0.0060, Value Loss: 570.3262, Entropy: 1.6585, ClipFrac: 0.146
+  Update - Policy Loss: -0.0062, Value Loss: 504.3499, Entropy: 1.6338, ClipFrac: 0.137
+  Update - Policy Loss: -0.0062, Value Loss: 396.7284, Entropy: 1.5903, ClipFrac: 0.181
+  Update - Policy Loss: -0.0095, Value Loss: 480.3349, Entropy: 1.6460, ClipFrac: 0.169
+  Update - Policy Loss: -0.0066, Value Loss: 302.7547, Entropy: 1.6164, ClipFrac: 0.152
+  Update - Policy Loss: -0.0056, Value Loss: 144.8212, Entropy: 1.5868, ClipFrac: 0.199
+  Update - Policy Loss: -0.0113, Value Loss: 370.0845, Entropy: 1.5567, ClipFrac: 0.199
+  Update - Policy Loss: -0.0075, Value Loss: 391.4951, Entropy: 1.5652, ClipFrac: 0.132
+  Update - Policy Loss: -0.0108, Value Loss: 273.5147, Entropy: 1.5756, ClipFrac: 0.150
+  Update - Policy Loss: -0.0071, Value Loss: 454.6688, Entropy: 1.6551, ClipFrac: 0.154
+  Update - Policy Loss: -0.0020, Value Loss: 83.7932, Entropy: 1.6395, ClipFrac: 0.216
+  Update - Policy Loss: -0.0084, Value Loss: 388.7882, Entropy: 1.6686, ClipFrac: 0.140
+  Update - Policy Loss: -0.0036, Value Loss: 48.0162, Entropy: 1.6441, ClipFrac: 0.138
+  Update - Policy Loss: -0.0090, Value Loss: 442.7027, Entropy: 1.5940, ClipFrac: 0.167
+  Update - Policy Loss: -0.0100, Value Loss: 304.1680, Entropy: 1.5506, ClipFrac: 0.147
+  Update - Policy Loss: -0.0065, Value Loss: 79.1607, Entropy: 1.4609, ClipFrac: 0.126
+  Update - Policy Loss: -0.0096, Value Loss: 375.3881, Entropy: 1.4914, ClipFrac: 0.180
+  Update - Policy Loss: -0.0092, Value Loss: 350.8382, Entropy: 1.6086, ClipFrac: 0.119
+  Update - Policy Loss: -0.0062, Value Loss: 576.4249, Entropy: 1.4953, ClipFrac: 0.098
+  Update - Policy Loss: -0.0118, Value Loss: 206.9224, Entropy: 1.4881, ClipFrac: 0.173
+  Update - Policy Loss: -0.0098, Value Loss: 392.5069, Entropy: 1.4244, ClipFrac: 0.167
+  Update - Policy Loss: -0.0096, Value Loss: 703.2110, Entropy: 1.4037, ClipFrac: 0.139
+  Update - Policy Loss: -0.0073, Value Loss: 705.3225, Entropy: 1.2914, ClipFrac: 0.113
+  Update - Policy Loss: -0.0085, Value Loss: 174.1921, Entropy: 1.4725, ClipFrac: 0.161
+  Update - Policy Loss: -0.0079, Value Loss: 200.0836, Entropy: 1.5649, ClipFrac: 0.199
+  Update - Policy Loss: -0.0081, Value Loss: 137.9125, Entropy: 1.4965, ClipFrac: 0.142
+  Update - Policy Loss: -0.0093, Value Loss: 155.2688, Entropy: 1.4260, ClipFrac: 0.145
+  Update - Policy Loss: -0.0082, Value Loss: 129.0082, Entropy: 1.4078, ClipFrac: 0.119
+  Update - Policy Loss: -0.0079, Value Loss: 356.7701, Entropy: 1.3335, ClipFrac: 0.120
+  Update - Policy Loss: -0.0111, Value Loss: 695.8581, Entropy: 1.2503, ClipFrac: 0.141
+  Update - Policy Loss: -0.0108, Value Loss: 908.8020, Entropy: 1.1748, ClipFrac: 0.100
+  Update - Policy Loss: -0.0080, Value Loss: 975.0288, Entropy: 1.1122, ClipFrac: 0.070
+  Update - Policy Loss: -0.0106, Value Loss: 651.8616, Entropy: 1.2644, ClipFrac: 0.121
+  Update - Policy Loss: -0.0080, Value Loss: 691.9968, Entropy: 1.1621, ClipFrac: 0.075
+  Update - Policy Loss: -0.0099, Value Loss: 318.0129, Entropy: 1.4405, ClipFrac: 0.159
+  Update - Policy Loss: -0.0097, Value Loss: 587.4269, Entropy: 1.3379, ClipFrac: 0.142
+  Update - Policy Loss: -0.0151, Value Loss: 377.0181, Entropy: 1.2917, ClipFrac: 0.131
+  Update - Policy Loss: -0.0105, Value Loss: 398.0740, Entropy: 1.3095, ClipFrac: 0.110
+  Update - Policy Loss: -0.0083, Value Loss: 725.2984, Entropy: 1.2845, ClipFrac: 0.124
+  Update - Policy Loss: -0.0112, Value Loss: 551.9754, Entropy: 1.2805, ClipFrac: 0.119
+  Update - Policy Loss: -0.0112, Value Loss: 370.6715, Entropy: 1.4950, ClipFrac: 0.150
+  Update - Policy Loss: -0.0121, Value Loss: 316.2386, Entropy: 1.4247, ClipFrac: 0.139
+  Update - Policy Loss: -0.0108, Value Loss: 297.2670, Entropy: 1.4504, ClipFrac: 0.118
+  Update - Policy Loss: -0.0106, Value Loss: 207.4443, Entropy: 1.5863, ClipFrac: 0.117
+  Update - Policy Loss: -0.0137, Value Loss: 125.8074, Entropy: 1.5912, ClipFrac: 0.186
+  Update - Policy Loss: -0.0080, Value Loss: 228.1091, Entropy: 1.5438, ClipFrac: 0.092
+  Update - Policy Loss: -0.0135, Value Loss: 298.6498, Entropy: 1.4887, ClipFrac: 0.126
+  Update - Policy Loss: -0.0129, Value Loss: 330.6727, Entropy: 1.4089, ClipFrac: 0.194
+  Update - Policy Loss: -0.0110, Value Loss: 379.7051, Entropy: 1.5009, ClipFrac: 0.127
+  Update - Policy Loss: -0.0175, Value Loss: 70.3775, Entropy: 1.5704, ClipFrac: 0.160
+  Update - Policy Loss: -0.0169, Value Loss: 292.4216, Entropy: 1.3988, ClipFrac: 0.158
+  Update - Policy Loss: -0.0122, Value Loss: 268.6087, Entropy: 1.4011, ClipFrac: 0.171
+  Update - Policy Loss: -0.0141, Value Loss: 305.8625, Entropy: 1.4043, ClipFrac: 0.119
+  Update - Policy Loss: -0.0158, Value Loss: 390.1080, Entropy: 1.3904, ClipFrac: 0.163
+  Update - Policy Loss: -0.0144, Value Loss: 494.7177, Entropy: 1.2552, ClipFrac: 0.143
+  Update - Policy Loss: -0.0151, Value Loss: 106.7128, Entropy: 1.5752, ClipFrac: 0.178
+  Update - Policy Loss: -0.0233, Value Loss: 75.9382, Entropy: 1.5843, ClipFrac: 0.289
+  Update - Policy Loss: -0.0125, Value Loss: 326.0303, Entropy: 1.5806, ClipFrac: 0.173
+  Update - Policy Loss: -0.0141, Value Loss: 346.3444, Entropy: 1.6728, ClipFrac: 0.207
+  Update - Policy Loss: -0.0145, Value Loss: 264.0723, Entropy: 1.6618, ClipFrac: 0.222
+  Update - Policy Loss: -0.0198, Value Loss: 203.6233, Entropy: 1.4788, ClipFrac: 0.230
+  Update - Policy Loss: -0.0162, Value Loss: 286.8761, Entropy: 1.4733, ClipFrac: 0.138
+  Update - Policy Loss: -0.0151, Value Loss: 196.2373, Entropy: 1.6150, ClipFrac: 0.203
+  Update - Policy Loss: -0.0171, Value Loss: 38.3496, Entropy: 1.7545, ClipFrac: 0.282
+  Update - Policy Loss: -0.0191, Value Loss: 39.4557, Entropy: 1.6773, ClipFrac: 0.206
+  Update - Policy Loss: -0.0180, Value Loss: 67.4556, Entropy: 1.7156, ClipFrac: 0.261
+  Update - Policy Loss: -0.0154, Value Loss: 65.0567, Entropy: 1.7499, ClipFrac: 0.214
+  Update - Policy Loss: -0.0173, Value Loss: 139.6664, Entropy: 1.7026, ClipFrac: 0.241
+  Update - Policy Loss: -0.0127, Value Loss: 226.9114, Entropy: 1.6632, ClipFrac: 0.204
+  Update - Policy Loss: -0.0175, Value Loss: 188.6653, Entropy: 1.5565, ClipFrac: 0.205
+  Update - Policy Loss: -0.0160, Value Loss: 148.2963, Entropy: 1.6989, ClipFrac: 0.211
+  Update - Policy Loss: -0.0191, Value Loss: 80.3324, Entropy: 1.7549, ClipFrac: 0.208
+  Update - Policy Loss: -0.0193, Value Loss: 245.3885, Entropy: 1.5765, ClipFrac: 0.210
+  Update - Policy Loss: -0.0178, Value Loss: 87.4237, Entropy: 1.7014, ClipFrac: 0.233
+  Update - Policy Loss: -0.0159, Value Loss: 62.3986, Entropy: 1.5874, ClipFrac: 0.284
+  Update - Policy Loss: -0.0165, Value Loss: 101.2200, Entropy: 1.6199, ClipFrac: 0.174
+  Update - Policy Loss: -0.0137, Value Loss: 37.2043, Entropy: 1.6909, ClipFrac: 0.269
+  Update - Policy Loss: -0.0193, Value Loss: 71.4540, Entropy: 1.7908, ClipFrac: 0.256
+  Update - Policy Loss: -0.0209, Value Loss: 45.8870, Entropy: 1.6925, ClipFrac: 0.271
+  Update - Policy Loss: -0.0163, Value Loss: 87.5683, Entropy: 1.7745, ClipFrac: 0.264
+  Update - Policy Loss: -0.0163, Value Loss: 277.3358, Entropy: 1.6613, ClipFrac: 0.202
+  Update - Policy Loss: -0.0162, Value Loss: 214.6694, Entropy: 1.4373, ClipFrac: 0.157
+  Update - Policy Loss: -0.0172, Value Loss: 163.6894, Entropy: 1.7064, ClipFrac: 0.180
+  Update - Policy Loss: -0.0150, Value Loss: 54.7773, Entropy: 1.5340, ClipFrac: 0.204
+  Update - Policy Loss: -0.0210, Value Loss: 91.6215, Entropy: 1.7070, ClipFrac: 0.174
+  Update - Policy Loss: -0.0175, Value Loss: 78.2689, Entropy: 1.3556, ClipFrac: 0.142
+  Update - Policy Loss: -0.0184, Value Loss: 36.3815, Entropy: 1.7512, ClipFrac: 0.263
+  Update - Policy Loss: -0.0252, Value Loss: 30.8573, Entropy: 1.6646, ClipFrac: 0.218
+  Update - Policy Loss: -0.0180, Value Loss: 116.3579, Entropy: 1.5717, ClipFrac: 0.202
+  Update - Policy Loss: -0.0281, Value Loss: 93.0313, Entropy: 1.5654, ClipFrac: 0.251
+  Update - Policy Loss: -0.0098, Value Loss: 62.6347, Entropy: 1.5151, ClipFrac: 0.217
+  Update - Policy Loss: -0.0175, Value Loss: 24.4887, Entropy: 1.5430, ClipFrac: 0.209
+  Update - Policy Loss: -0.0175, Value Loss: 147.9011, Entropy: 1.4874, ClipFrac: 0.229
+  Update - Policy Loss: -0.0133, Value Loss: 161.2866, Entropy: 1.6638, ClipFrac: 0.234
+  Update - Policy Loss: -0.0148, Value Loss: 366.4405, Entropy: 1.3490, ClipFrac: 0.195
+  Update - Policy Loss: -0.0149, Value Loss: 508.5006, Entropy: 1.2580, ClipFrac: 0.162
+  Update - Policy Loss: -0.0152, Value Loss: 240.9364, Entropy: 1.3595, ClipFrac: 0.176
+  Update - Policy Loss: -0.0169, Value Loss: 79.1212, Entropy: 1.5868, ClipFrac: 0.185
+  Update - Policy Loss: -0.0185, Value Loss: 155.0861, Entropy: 1.5403, ClipFrac: 0.172
+  Update - Policy Loss: -0.0126, Value Loss: 284.9605, Entropy: 1.4822, ClipFrac: 0.128
+  Update - Policy Loss: -0.0159, Value Loss: 180.7447, Entropy: 1.5489, ClipFrac: 0.168
+  Update - Policy Loss: -0.0195, Value Loss: 290.5634, Entropy: 1.3844, ClipFrac: 0.209
+  Update - Policy Loss: -0.0170, Value Loss: 68.6714, Entropy: 1.6590, ClipFrac: 0.215
+  Update - Policy Loss: -0.0184, Value Loss: 64.4818, Entropy: 1.6533, ClipFrac: 0.247
+  Update - Policy Loss: -0.0194, Value Loss: 96.4127, Entropy: 1.7204, ClipFrac: 0.215
+  Update - Policy Loss: -0.0167, Value Loss: 163.9501, Entropy: 1.6537, ClipFrac: 0.166
+  Update - Policy Loss: -0.0190, Value Loss: 66.3381, Entropy: 1.7131, ClipFrac: 0.219
+  Update - Policy Loss: -0.0190, Value Loss: 65.0274, Entropy: 1.6418, ClipFrac: 0.218
+  Update - Policy Loss: -0.0149, Value Loss: 78.0753, Entropy: 1.7254, ClipFrac: 0.283
+  Update - Policy Loss: -0.0239, Value Loss: 134.5848, Entropy: 1.6469, ClipFrac: 0.215
+  Update - Policy Loss: -0.0195, Value Loss: 115.7342, Entropy: 1.6001, ClipFrac: 0.214
+  Update - Policy Loss: -0.0175, Value Loss: 86.6323, Entropy: 1.6949, ClipFrac: 0.231
+  Update - Policy Loss: -0.0166, Value Loss: 90.1448, Entropy: 1.5546, ClipFrac: 0.215
+  Update - Policy Loss: -0.0206, Value Loss: 96.5241, Entropy: 1.5795, ClipFrac: 0.207
+  Update - Policy Loss: -0.0184, Value Loss: 198.1400, Entropy: 1.6097, ClipFrac: 0.152
+  Update - Policy Loss: -0.0205, Value Loss: 92.6788, Entropy: 1.6659, ClipFrac: 0.263
+  Update - Policy Loss: -0.0175, Value Loss: 381.8716, Entropy: 1.5856, ClipFrac: 0.194
+  Update - Policy Loss: -0.0157, Value Loss: 127.3277, Entropy: 1.6620, ClipFrac: 0.228
+  Update - Policy Loss: -0.0172, Value Loss: 178.9949, Entropy: 1.5866, ClipFrac: 0.218
+  Update - Policy Loss: -0.0157, Value Loss: 101.0201, Entropy: 1.4996, ClipFrac: 0.310
+  Update - Policy Loss: -0.0155, Value Loss: 170.7630, Entropy: 1.6287, ClipFrac: 0.272
+  Update - Policy Loss: -0.0174, Value Loss: 208.6032, Entropy: 1.6197, ClipFrac: 0.196
+  Update - Policy Loss: -0.0207, Value Loss: 116.3074, Entropy: 1.6429, ClipFrac: 0.192
+  Update - Policy Loss: -0.0166, Value Loss: 82.4172, Entropy: 1.7290, ClipFrac: 0.230
+  Update - Policy Loss: -0.0095, Value Loss: 196.6145, Entropy: 1.6472, ClipFrac: 0.212
+  Update - Policy Loss: -0.0171, Value Loss: 119.4176, Entropy: 1.8085, ClipFrac: 0.237
+  Update - Policy Loss: -0.0211, Value Loss: 88.3958, Entropy: 1.8153, ClipFrac: 0.225
+  Update - Policy Loss: -0.0237, Value Loss: 241.7759, Entropy: 1.5280, ClipFrac: 0.261
+  Update - Policy Loss: -0.0185, Value Loss: 245.1697, Entropy: 1.6179, ClipFrac: 0.223
+  Update - Policy Loss: -0.0215, Value Loss: 106.8769, Entropy: 1.5954, ClipFrac: 0.239
+  Update - Policy Loss: -0.0161, Value Loss: 50.2464, Entropy: 1.6650, ClipFrac: 0.278
+  Update - Policy Loss: -0.0149, Value Loss: 381.2969, Entropy: 1.5712, ClipFrac: 0.256
+  Update - Policy Loss: -0.0154, Value Loss: 220.1213, Entropy: 1.5158, ClipFrac: 0.177
+  Update - Policy Loss: -0.0225, Value Loss: 56.5232, Entropy: 1.6536, ClipFrac: 0.303
+  Update - Policy Loss: -0.0138, Value Loss: 70.8203, Entropy: 1.6126, ClipFrac: 0.282
+  Update - Policy Loss: -0.0172, Value Loss: 153.6039, Entropy: 1.5412, ClipFrac: 0.255
+  Update - Policy Loss: -0.0220, Value Loss: 288.1714, Entropy: 1.4923, ClipFrac: 0.195
+  Update - Policy Loss: -0.0137, Value Loss: 214.2348, Entropy: 1.6715, ClipFrac: 0.212
+  Update - Policy Loss: -0.0195, Value Loss: 181.0666, Entropy: 1.5557, ClipFrac: 0.215
+  Update - Policy Loss: -0.0266, Value Loss: 133.3964, Entropy: 1.5014, ClipFrac: 0.246
+  Update - Policy Loss: -0.0148, Value Loss: 192.5837, Entropy: 1.6426, ClipFrac: 0.229
+  Update - Policy Loss: -0.0153, Value Loss: 194.5204, Entropy: 1.6287, ClipFrac: 0.230
+  Update - Policy Loss: -0.0172, Value Loss: 123.3102, Entropy: 1.7021, ClipFrac: 0.284
+  Update - Policy Loss: -0.0175, Value Loss: 116.8558, Entropy: 1.6243, ClipFrac: 0.226
+  Update - Policy Loss: -0.0163, Value Loss: 126.2669, Entropy: 1.6194, ClipFrac: 0.277
+  Update - Policy Loss: -0.0242, Value Loss: 180.0300, Entropy: 1.4849, ClipFrac: 0.279
+  Update - Policy Loss: -0.0207, Value Loss: 117.7285, Entropy: 1.5834, ClipFrac: 0.227
+  Update - Policy Loss: -0.0186, Value Loss: 26.4956, Entropy: 1.6735, ClipFrac: 0.246
+  Update - Policy Loss: -0.0237, Value Loss: 34.2593, Entropy: 1.7120, ClipFrac: 0.269
+  Update - Policy Loss: -0.0177, Value Loss: 231.5374, Entropy: 1.5967, ClipFrac: 0.295
+  Update - Policy Loss: -0.0138, Value Loss: 31.1530, Entropy: 1.6755, ClipFrac: 0.210
+  Update - Policy Loss: -0.0229, Value Loss: 103.3058, Entropy: 1.6060, ClipFrac: 0.241
+  Update - Policy Loss: -0.0171, Value Loss: 112.8490, Entropy: 1.5966, ClipFrac: 0.303
+  Update - Policy Loss: -0.0243, Value Loss: 80.8367, Entropy: 1.6457, ClipFrac: 0.281
+  Update - Policy Loss: -0.0184, Value Loss: 177.1677, Entropy: 1.5934, ClipFrac: 0.241
+  Update - Policy Loss: -0.0158, Value Loss: 286.1656, Entropy: 1.5274, ClipFrac: 0.208
+  Update - Policy Loss: -0.0250, Value Loss: 72.3049, Entropy: 1.6114, ClipFrac: 0.229
+  Update - Policy Loss: -0.0236, Value Loss: 94.2403, Entropy: 1.5141, ClipFrac: 0.213
+  Update - Policy Loss: -0.0207, Value Loss: 88.9598, Entropy: 1.6274, ClipFrac: 0.226
+  Update - Policy Loss: -0.0231, Value Loss: 180.5471, Entropy: 1.5620, ClipFrac: 0.203
+  Update - Policy Loss: -0.0143, Value Loss: 106.3643, Entropy: 1.6442, ClipFrac: 0.206
+  Update - Policy Loss: -0.0235, Value Loss: 107.8347, Entropy: 1.6481, ClipFrac: 0.285
+  Update - Policy Loss: -0.0222, Value Loss: 102.0739, Entropy: 1.6040, ClipFrac: 0.227
+  Update - Policy Loss: -0.0256, Value Loss: 69.4355, Entropy: 1.5342, ClipFrac: 0.271
+  Update - Policy Loss: -0.0187, Value Loss: 137.5114, Entropy: 1.6078, ClipFrac: 0.239
+  Update - Policy Loss: -0.0149, Value Loss: 114.9766, Entropy: 1.5942, ClipFrac: 0.219
+  Update - Policy Loss: -0.0200, Value Loss: 89.0899, Entropy: 1.5390, ClipFrac: 0.249
+  Update - Policy Loss: -0.0209, Value Loss: 205.9163, Entropy: 1.4501, ClipFrac: 0.192
+  Update - Policy Loss: -0.0222, Value Loss: 96.6984, Entropy: 1.4826, ClipFrac: 0.263
+  Update - Policy Loss: -0.0239, Value Loss: 149.1565, Entropy: 1.5594, ClipFrac: 0.229
+  Update - Policy Loss: -0.0201, Value Loss: 193.7372, Entropy: 1.5098, ClipFrac: 0.202
+  Update - Policy Loss: -0.0244, Value Loss: 51.4166, Entropy: 1.5902, ClipFrac: 0.245
+  Update - Policy Loss: -0.0269, Value Loss: 111.5571, Entropy: 1.4734, ClipFrac: 0.237
+  Update - Policy Loss: -0.0292, Value Loss: 268.8423, Entropy: 1.3781, ClipFrac: 0.245
+  Update - Policy Loss: -0.0192, Value Loss: 361.4999, Entropy: 1.2755, ClipFrac: 0.219
+  Update - Policy Loss: -0.0169, Value Loss: 327.6495, Entropy: 1.3327, ClipFrac: 0.181
+  Update - Policy Loss: -0.0224, Value Loss: 207.5601, Entropy: 1.2506, ClipFrac: 0.190
+  Update - Policy Loss: -0.0179, Value Loss: 121.9892, Entropy: 1.4315, ClipFrac: 0.280
+  Update - Policy Loss: -0.0162, Value Loss: 181.1749, Entropy: 1.3084, ClipFrac: 0.222
+  Update - Policy Loss: -0.0252, Value Loss: 117.4225, Entropy: 1.3868, ClipFrac: 0.257
+  Update - Policy Loss: -0.0268, Value Loss: 99.9571, Entropy: 1.3664, ClipFrac: 0.325
+  Update - Policy Loss: -0.0247, Value Loss: 78.4325, Entropy: 1.4043, ClipFrac: 0.317
+  Update - Policy Loss: -0.0274, Value Loss: 248.6048, Entropy: 1.3996, ClipFrac: 0.320
+  Update - Policy Loss: -0.0300, Value Loss: 255.4061, Entropy: 1.3761, ClipFrac: 0.250
+  Update - Policy Loss: -0.0212, Value Loss: 375.4114, Entropy: 1.3933, ClipFrac: 0.254
+  Update - Policy Loss: -0.0207, Value Loss: 191.5591, Entropy: 1.3709, ClipFrac: 0.222
+  Update - Policy Loss: -0.0185, Value Loss: 219.4344, Entropy: 1.3794, ClipFrac: 0.240
+  Update - Policy Loss: -0.0157, Value Loss: 215.2913, Entropy: 1.3776, ClipFrac: 0.284
+  Update - Policy Loss: -0.0051, Value Loss: 255.4955, Entropy: 1.5012, ClipFrac: 0.208
+  Update - Policy Loss: -0.0205, Value Loss: 220.6695, Entropy: 1.3625, ClipFrac: 0.251
+  Update - Policy Loss: -0.0191, Value Loss: 300.6491, Entropy: 1.3576, ClipFrac: 0.246
+  Update - Policy Loss: -0.0214, Value Loss: 361.2278, Entropy: 1.2942, ClipFrac: 0.251
+  Update - Policy Loss: -0.0205, Value Loss: 267.3311, Entropy: 1.4209, ClipFrac: 0.253
+  Update - Policy Loss: -0.0194, Value Loss: 142.5137, Entropy: 1.3748, ClipFrac: 0.246
+  Update - Policy Loss: -0.0231, Value Loss: 249.1831, Entropy: 1.3373, ClipFrac: 0.259
+  Update - Policy Loss: -0.0006, Value Loss: 384.5868, Entropy: 1.5813, ClipFrac: 0.221
+  Update - Policy Loss: -0.0179, Value Loss: 77.4367, Entropy: 1.3864, ClipFrac: 0.274
+  Update - Policy Loss: -0.0206, Value Loss: 75.9456, Entropy: 1.5440, ClipFrac: 0.298
+  Update - Policy Loss: -0.0181, Value Loss: 111.5552, Entropy: 1.5784, ClipFrac: 0.280
+  Update - Policy Loss: -0.0241, Value Loss: 118.6051, Entropy: 1.4917, ClipFrac: 0.283
+  Update - Policy Loss: -0.0176, Value Loss: 91.2017, Entropy: 1.4600, ClipFrac: 0.240
+  Update - Policy Loss: -0.0205, Value Loss: 88.0186, Entropy: 1.4698, ClipFrac: 0.284
+  Update - Policy Loss: -0.0269, Value Loss: 169.6506, Entropy: 1.5053, ClipFrac: 0.296
+  Update - Policy Loss: -0.0182, Value Loss: 52.7645, Entropy: 1.6046, ClipFrac: 0.315
+  Update - Policy Loss: -0.0205, Value Loss: 120.8020, Entropy: 1.5076, ClipFrac: 0.237
+  Update - Policy Loss: -0.0207, Value Loss: 131.6554, Entropy: 1.3574, ClipFrac: 0.230
+  Update - Policy Loss: -0.0235, Value Loss: 93.3347, Entropy: 1.4353, ClipFrac: 0.269
+  Update - Policy Loss: -0.0231, Value Loss: 54.7100, Entropy: 1.6394, ClipFrac: 0.273
+  Update - Policy Loss: -0.0164, Value Loss: 155.7486, Entropy: 1.5204, ClipFrac: 0.225
+  Update - Policy Loss: -0.0215, Value Loss: 84.8527, Entropy: 1.6185, ClipFrac: 0.272
+  Update - Policy Loss: -0.0161, Value Loss: 53.6753, Entropy: 1.7429, ClipFrac: 0.307
+  Update - Policy Loss: -0.0140, Value Loss: 73.6694, Entropy: 1.7027, ClipFrac: 0.268
+  Update - Policy Loss: -0.0222, Value Loss: 62.7141, Entropy: 1.6732, ClipFrac: 0.246
+  Update - Policy Loss: -0.0133, Value Loss: 62.7620, Entropy: 1.5239, ClipFrac: 0.215
+  Update - Policy Loss: -0.0190, Value Loss: 52.4339, Entropy: 1.6362, ClipFrac: 0.248
+  Update - Policy Loss: -0.0149, Value Loss: 41.1779, Entropy: 1.6396, ClipFrac: 0.250
+  Update - Policy Loss: -0.0177, Value Loss: 57.0656, Entropy: 1.5961, ClipFrac: 0.260
+  Update - Policy Loss: -0.0130, Value Loss: 108.5561, Entropy: 1.5669, ClipFrac: 0.229
+  Update - Policy Loss: -0.0159, Value Loss: 47.4335, Entropy: 1.5014, ClipFrac: 0.268
+  Update - Policy Loss: -0.0231, Value Loss: 116.8584, Entropy: 1.5438, ClipFrac: 0.226
+  Update - Policy Loss: -0.0151, Value Loss: 49.0945, Entropy: 1.3284, ClipFrac: 0.234
+  Update - Policy Loss: -0.0151, Value Loss: 58.9591, Entropy: 1.5045, ClipFrac: 0.189
+  Update - Policy Loss: -0.0170, Value Loss: 282.4164, Entropy: 1.4198, ClipFrac: 0.221
+  Update - Policy Loss: -0.0238, Value Loss: 81.8028, Entropy: 1.5474, ClipFrac: 0.267
+  Update - Policy Loss: -0.0185, Value Loss: 294.7196, Entropy: 1.2696, ClipFrac: 0.251
+  Update - Policy Loss: -0.0179, Value Loss: 150.6917, Entropy: 1.3726, ClipFrac: 0.233
+  Update - Policy Loss: -0.0173, Value Loss: 189.7138, Entropy: 1.4132, ClipFrac: 0.218
+  Update - Policy Loss: -0.0180, Value Loss: 204.1514, Entropy: 1.3211, ClipFrac: 0.257
+  Update - Policy Loss: -0.0166, Value Loss: 347.5459, Entropy: 1.1616, ClipFrac: 0.225
+  Update - Policy Loss: -0.0191, Value Loss: 200.7964, Entropy: 1.3172, ClipFrac: 0.192
+  Update - Policy Loss: -0.0191, Value Loss: 206.6233, Entropy: 1.4064, ClipFrac: 0.255
+  Update - Policy Loss: -0.0182, Value Loss: 91.6879, Entropy: 1.4668, ClipFrac: 0.256
+  Update - Policy Loss: -0.0223, Value Loss: 131.3224, Entropy: 1.3470, ClipFrac: 0.310
+  Update - Policy Loss: -0.0192, Value Loss: 133.1770, Entropy: 1.0973, ClipFrac: 0.212
+  Update - Policy Loss: -0.0163, Value Loss: 152.6236, Entropy: 1.3561, ClipFrac: 0.259
+  Update - Policy Loss: -0.0189, Value Loss: 276.0374, Entropy: 1.2601, ClipFrac: 0.234
+  Update - Policy Loss: -0.0192, Value Loss: 296.5299, Entropy: 1.2376, ClipFrac: 0.237
+  Update - Policy Loss: -0.0227, Value Loss: 155.2989, Entropy: 1.4154, ClipFrac: 0.283
+  Update - Policy Loss: -0.0209, Value Loss: 227.5501, Entropy: 1.3688, ClipFrac: 0.267
+  Update - Policy Loss: -0.0169, Value Loss: 223.1564, Entropy: 1.4199, ClipFrac: 0.222
+  Update - Policy Loss: -0.0241, Value Loss: 200.7712, Entropy: 1.3774, ClipFrac: 0.273
+  Update - Policy Loss: -0.0160, Value Loss: 108.5526, Entropy: 1.4770, ClipFrac: 0.236
+  Update - Policy Loss: -0.0174, Value Loss: 145.5036, Entropy: 1.4800, ClipFrac: 0.280
+  Update - Policy Loss: -0.0220, Value Loss: 120.5590, Entropy: 1.4824, ClipFrac: 0.290
+  Update - Policy Loss: -0.0183, Value Loss: 151.4558, Entropy: 1.5373, ClipFrac: 0.270
+  Update - Policy Loss: -0.0197, Value Loss: 89.8179, Entropy: 1.5311, ClipFrac: 0.322
+  Update - Policy Loss: -0.0254, Value Loss: 122.5806, Entropy: 1.4917, ClipFrac: 0.252
+  Update - Policy Loss: -0.0218, Value Loss: 67.5053, Entropy: 1.5397, ClipFrac: 0.244
+  Update - Policy Loss: -0.0230, Value Loss: 161.5282, Entropy: 1.4459, ClipFrac: 0.261
+  Update - Policy Loss: -0.0204, Value Loss: 131.0924, Entropy: 1.3676, ClipFrac: 0.247
+  Update - Policy Loss: -0.0209, Value Loss: 324.6568, Entropy: 1.1981, ClipFrac: 0.245
+  Update - Policy Loss: -0.0245, Value Loss: 183.6601, Entropy: 1.3612, ClipFrac: 0.264
+  Update - Policy Loss: -0.0194, Value Loss: 113.9417, Entropy: 1.4149, ClipFrac: 0.243
+  Update - Policy Loss: -0.0288, Value Loss: 74.9324, Entropy: 1.4068, ClipFrac: 0.244
+  Update - Policy Loss: -0.0234, Value Loss: 216.4942, Entropy: 1.2532, ClipFrac: 0.231
+  Update - Policy Loss: -0.0256, Value Loss: 195.1882, Entropy: 1.1652, ClipFrac: 0.273
+  Update - Policy Loss: -0.0199, Value Loss: 185.2921, Entropy: 1.3657, ClipFrac: 0.239
+  Update - Policy Loss: -0.0218, Value Loss: 120.7612, Entropy: 1.4574, ClipFrac: 0.238
+  Update - Policy Loss: -0.0221, Value Loss: 78.3670, Entropy: 1.5486, ClipFrac: 0.266
+  Update - Policy Loss: -0.0259, Value Loss: 231.1951, Entropy: 1.3042, ClipFrac: 0.272
+  Update - Policy Loss: -0.0254, Value Loss: 234.9376, Entropy: 1.2335, ClipFrac: 0.201
+  Update - Policy Loss: -0.0241, Value Loss: 174.7399, Entropy: 1.3915, ClipFrac: 0.251
+  Update - Policy Loss: -0.0229, Value Loss: 92.8539, Entropy: 1.4979, ClipFrac: 0.286
+  Update - Policy Loss: -0.0219, Value Loss: 207.2560, Entropy: 1.3942, ClipFrac: 0.251
+  Update - Policy Loss: -0.0158, Value Loss: 502.3261, Entropy: 1.1653, ClipFrac: 0.219
+  Update - Policy Loss: -0.0214, Value Loss: 183.7531, Entropy: 1.4455, ClipFrac: 0.251
+  Update - Policy Loss: -0.0226, Value Loss: 170.6200, Entropy: 1.3791, ClipFrac: 0.262
+  Update - Policy Loss: -0.0228, Value Loss: 271.6146, Entropy: 1.2202, ClipFrac: 0.264
+  Update - Policy Loss: -0.0156, Value Loss: 303.1543, Entropy: 1.2272, ClipFrac: 0.186
+  Update - Policy Loss: -0.0183, Value Loss: 127.4364, Entropy: 1.3409, ClipFrac: 0.226
+  Update - Policy Loss: -0.0221, Value Loss: 251.0611, Entropy: 1.2958, ClipFrac: 0.270
+  Update - Policy Loss: -0.0187, Value Loss: 74.7354, Entropy: 1.5128, ClipFrac: 0.294
+  Update - Policy Loss: -0.0169, Value Loss: 177.3302, Entropy: 1.4046, ClipFrac: 0.270
+  Update - Policy Loss: -0.0208, Value Loss: 150.3563, Entropy: 1.4016, ClipFrac: 0.274
+  Update - Policy Loss: -0.0152, Value Loss: 103.0839, Entropy: 1.4749, ClipFrac: 0.260
+  Update - Policy Loss: -0.0223, Value Loss: 132.8953, Entropy: 1.4033, ClipFrac: 0.271
+  Update - Policy Loss: -0.0197, Value Loss: 153.2544, Entropy: 1.4475, ClipFrac: 0.259
+  Update - Policy Loss: -0.0198, Value Loss: 261.5892, Entropy: 1.1798, ClipFrac: 0.254
+  Update - Policy Loss: -0.0262, Value Loss: 93.8945, Entropy: 1.4401, ClipFrac: 0.294
+  Update - Policy Loss: -0.0187, Value Loss: 72.8411, Entropy: 1.4203, ClipFrac: 0.291
+  Update - Policy Loss: -0.0212, Value Loss: 146.4806, Entropy: 1.3792, ClipFrac: 0.258
+  Update - Policy Loss: -0.0266, Value Loss: 89.2750, Entropy: 1.4478, ClipFrac: 0.280
+  Update - Policy Loss: -0.0200, Value Loss: 77.4898, Entropy: 1.4366, ClipFrac: 0.297
+  Update - Policy Loss: -0.0278, Value Loss: 63.0314, Entropy: 1.3760, ClipFrac: 0.321
+  Update - Policy Loss: -0.0196, Value Loss: 44.0277, Entropy: 1.5878, ClipFrac: 0.296
+  Update - Policy Loss: -0.0309, Value Loss: 67.2245, Entropy: 1.5376, ClipFrac: 0.318
+  Update - Policy Loss: -0.0252, Value Loss: 112.7677, Entropy: 1.5265, ClipFrac: 0.287
+  Update - Policy Loss: -0.0287, Value Loss: 145.8790, Entropy: 1.3837, ClipFrac: 0.269
+  Update - Policy Loss: -0.0226, Value Loss: 139.5646, Entropy: 1.5292, ClipFrac: 0.259
+  Update - Policy Loss: -0.0240, Value Loss: 270.9129, Entropy: 1.2455, ClipFrac: 0.285
+  Update - Policy Loss: -0.0246, Value Loss: 195.9385, Entropy: 1.2673, ClipFrac: 0.288
+  Update - Policy Loss: -0.0278, Value Loss: 125.8751, Entropy: 1.3820, ClipFrac: 0.308
+  Update - Policy Loss: -0.0237, Value Loss: 325.4487, Entropy: 1.1594, ClipFrac: 0.336
+  Update - Policy Loss: -0.0316, Value Loss: 197.5331, Entropy: 1.1967, ClipFrac: 0.345
+  Update - Policy Loss: -0.0325, Value Loss: 135.2377, Entropy: 1.3090, ClipFrac: 0.344
+  Update - Policy Loss: 0.0330, Value Loss: 458.6632, Entropy: 1.0793, ClipFrac: 0.261
+  Update - Policy Loss: -0.0336, Value Loss: 125.8215, Entropy: 1.2646, ClipFrac: 0.294
+  Update - Policy Loss: -0.0302, Value Loss: 115.7007, Entropy: 1.4188, ClipFrac: 0.328
+  Update - Policy Loss: -0.0196, Value Loss: 160.8467, Entropy: 1.3585, ClipFrac: 0.247
+  Update - Policy Loss: -0.0360, Value Loss: 399.5798, Entropy: 0.9759, ClipFrac: 0.323
+  Update - Policy Loss: -0.0328, Value Loss: 336.2593, Entropy: 1.1355, ClipFrac: 0.305
+  Update - Policy Loss: -0.0315, Value Loss: 128.0699, Entropy: 1.2078, ClipFrac: 0.295
+  Update - Policy Loss: -0.0281, Value Loss: 250.3681, Entropy: 1.1366, ClipFrac: 0.306
+  Update - Policy Loss: -0.0272, Value Loss: 188.9013, Entropy: 1.1607, ClipFrac: 0.296
+  Update - Policy Loss: -0.0257, Value Loss: 183.9834, Entropy: 1.1483, ClipFrac: 0.315
+  Update - Policy Loss: -0.0239, Value Loss: 113.8815, Entropy: 0.9909, ClipFrac: 0.266
+  Update - Policy Loss: -0.0191, Value Loss: 111.8099, Entropy: 1.0484, ClipFrac: 0.254
+  Update - Policy Loss: -0.0193, Value Loss: 88.6723, Entropy: 1.3898, ClipFrac: 0.289
+  Update - Policy Loss: -0.0217, Value Loss: 194.9188, Entropy: 1.0161, ClipFrac: 0.207
+  Update - Policy Loss: -0.0264, Value Loss: 139.1760, Entropy: 1.2884, ClipFrac: 0.308
+  Update - Policy Loss: -0.0258, Value Loss: 143.0899, Entropy: 1.2523, ClipFrac: 0.264
+  Update - Policy Loss: -0.0282, Value Loss: 162.6532, Entropy: 1.3348, ClipFrac: 0.283
+  Update - Policy Loss: -0.0305, Value Loss: 89.5768, Entropy: 1.3921, ClipFrac: 0.287
+  Update - Policy Loss: -0.0211, Value Loss: 45.0108, Entropy: 1.5295, ClipFrac: 0.343
+  Update - Policy Loss: -0.0217, Value Loss: 67.7035, Entropy: 1.3413, ClipFrac: 0.305
+  Update - Policy Loss: -0.0208, Value Loss: 72.4151, Entropy: 1.3827, ClipFrac: 0.329
+  Update - Policy Loss: -0.0246, Value Loss: 35.6850, Entropy: 1.5255, ClipFrac: 0.293
+  Update - Policy Loss: -0.0258, Value Loss: 34.2420, Entropy: 1.2557, ClipFrac: 0.285
+  Update - Policy Loss: -0.0223, Value Loss: 33.7164, Entropy: 1.5045, ClipFrac: 0.303
+  Update - Policy Loss: -0.0162, Value Loss: 55.7843, Entropy: 1.5074, ClipFrac: 0.248
+  Update - Policy Loss: -0.0219, Value Loss: 98.1165, Entropy: 1.4475, ClipFrac: 0.248
+  Update - Policy Loss: -0.0218, Value Loss: 71.5641, Entropy: 1.4705, ClipFrac: 0.264
+  Update - Policy Loss: -0.0263, Value Loss: 106.9537, Entropy: 1.4132, ClipFrac: 0.297
+  Update - Policy Loss: -0.0281, Value Loss: 35.6315, Entropy: 1.5499, ClipFrac: 0.269
+  Update - Policy Loss: -0.0269, Value Loss: 99.0266, Entropy: 1.3337, ClipFrac: 0.282
+  Update - Policy Loss: -0.0254, Value Loss: 71.8307, Entropy: 1.5326, ClipFrac: 0.284
+  Update - Policy Loss: -0.0312, Value Loss: 121.1917, Entropy: 1.2872, ClipFrac: 0.308
+  Update - Policy Loss: -0.0258, Value Loss: 155.9019, Entropy: 1.2816, ClipFrac: 0.327
+  Update - Policy Loss: -0.0275, Value Loss: 166.4539, Entropy: 1.2180, ClipFrac: 0.275
+  Update - Policy Loss: -0.0274, Value Loss: 155.8367, Entropy: 1.2113, ClipFrac: 0.312
+  Update - Policy Loss: -0.0243, Value Loss: 106.7686, Entropy: 1.3544, ClipFrac: 0.299
+  Update - Policy Loss: -0.0218, Value Loss: 132.5060, Entropy: 1.2766, ClipFrac: 0.278
+  Update - Policy Loss: -0.0190, Value Loss: 28.3622, Entropy: 1.3899, ClipFrac: 0.322
+  Update - Policy Loss: -0.0294, Value Loss: 28.9795, Entropy: 1.4263, ClipFrac: 0.325
+  Update - Policy Loss: -0.0268, Value Loss: 29.2965, Entropy: 1.6249, ClipFrac: 0.342
+  Update - Policy Loss: -0.0205, Value Loss: 23.6603, Entropy: 1.6252, ClipFrac: 0.273
+  Update - Policy Loss: -0.0155, Value Loss: 15.5986, Entropy: 1.7609, ClipFrac: 0.282
+  Update - Policy Loss: -0.0274, Value Loss: 40.9398, Entropy: 1.5202, ClipFrac: 0.289
+  Update - Policy Loss: -0.0232, Value Loss: 34.9710, Entropy: 1.6193, ClipFrac: 0.252
+  Update - Policy Loss: -0.0265, Value Loss: 49.7327, Entropy: 1.5244, ClipFrac: 0.246
+  Update - Policy Loss: -0.0236, Value Loss: 102.1420, Entropy: 1.4331, ClipFrac: 0.251
+  Update - Policy Loss: -0.0294, Value Loss: 41.5376, Entropy: 1.5633, ClipFrac: 0.257
+  Update - Policy Loss: -0.0291, Value Loss: 38.9629, Entropy: 1.4288, ClipFrac: 0.259
+  Update - Policy Loss: -0.0228, Value Loss: 60.7387, Entropy: 1.3936, ClipFrac: 0.289
+  Update - Policy Loss: -0.0298, Value Loss: 104.3727, Entropy: 1.3826, ClipFrac: 0.292
+  Update - Policy Loss: -0.0264, Value Loss: 44.7780, Entropy: 1.4649, ClipFrac: 0.288
+  Update - Policy Loss: -0.0253, Value Loss: 43.3944, Entropy: 1.5232, ClipFrac: 0.297
+  Update - Policy Loss: -0.0275, Value Loss: 33.6102, Entropy: 1.4465, ClipFrac: 0.254
+  Update - Policy Loss: -0.0259, Value Loss: 40.9559, Entropy: 1.4814, ClipFrac: 0.248
+  Update - Policy Loss: -0.0256, Value Loss: 53.3678, Entropy: 1.3967, ClipFrac: 0.268
+  Update - Policy Loss: -0.0291, Value Loss: 54.1343, Entropy: 1.3796, ClipFrac: 0.265
+  Update - Policy Loss: -0.0312, Value Loss: 60.5845, Entropy: 1.3809, ClipFrac: 0.279
+  Update - Policy Loss: -0.0272, Value Loss: 110.9470, Entropy: 1.3256, ClipFrac: 0.236
+  Update - Policy Loss: -0.0311, Value Loss: 82.3390, Entropy: 1.2470, ClipFrac: 0.266
+  Update - Policy Loss: -0.0262, Value Loss: 95.3350, Entropy: 1.3380, ClipFrac: 0.301
+  Update - Policy Loss: -0.0208, Value Loss: 109.6264, Entropy: 1.5299, ClipFrac: 0.285
+  Update - Policy Loss: -0.0226, Value Loss: 78.4654, Entropy: 1.4712, ClipFrac: 0.321
+  Update - Policy Loss: -0.0259, Value Loss: 23.7062, Entropy: 1.4959, ClipFrac: 0.325
+  Update - Policy Loss: -0.0258, Value Loss: 31.3650, Entropy: 1.5421, ClipFrac: 0.296
+  Update - Policy Loss: -0.0257, Value Loss: 124.4383, Entropy: 1.3760, ClipFrac: 0.356
+  Update - Policy Loss: -0.0188, Value Loss: 20.6799, Entropy: 1.4170, ClipFrac: 0.327
+  Update - Policy Loss: -0.0310, Value Loss: 73.9088, Entropy: 1.4068, ClipFrac: 0.345
+  Update - Policy Loss: -0.0203, Value Loss: 127.5281, Entropy: 1.4884, ClipFrac: 0.233
+  Update - Policy Loss: -0.0150, Value Loss: 131.3822, Entropy: 1.5456, ClipFrac: 0.257
+  Update - Policy Loss: -0.0161, Value Loss: 153.3104, Entropy: 1.3820, ClipFrac: 0.252
+  Update - Policy Loss: -0.0239, Value Loss: 46.7981, Entropy: 1.5940, ClipFrac: 0.372
+  Update - Policy Loss: -0.0239, Value Loss: 17.6844, Entropy: 1.5791, ClipFrac: 0.355
+  Update - Policy Loss: -0.0148, Value Loss: 77.7873, Entropy: 1.6165, ClipFrac: 0.276
+  Update - Policy Loss: -0.0204, Value Loss: 10.8790, Entropy: 1.6515, ClipFrac: 0.351
+  Update - Policy Loss: -0.0232, Value Loss: 82.7546, Entropy: 1.5193, ClipFrac: 0.311
+  Update - Policy Loss: -0.0229, Value Loss: 31.4301, Entropy: 1.6611, ClipFrac: 0.331
+  Update - Policy Loss: -0.0237, Value Loss: 29.0071, Entropy: 1.6000, ClipFrac: 0.292
+  Update - Policy Loss: -0.0225, Value Loss: 42.5713, Entropy: 1.6503, ClipFrac: 0.271
+  Update - Policy Loss: -0.0218, Value Loss: 72.3833, Entropy: 1.6298, ClipFrac: 0.321
+  Update - Policy Loss: -0.0305, Value Loss: 60.1321, Entropy: 1.5558, ClipFrac: 0.318
+  Update - Policy Loss: -0.0264, Value Loss: 123.6938, Entropy: 1.5298, ClipFrac: 0.310
+  Update - Policy Loss: -0.0231, Value Loss: 40.0953, Entropy: 1.5982, ClipFrac: 0.332
+  Update - Policy Loss: -0.0297, Value Loss: 35.8079, Entropy: 1.6024, ClipFrac: 0.317
+  Update - Policy Loss: -0.0204, Value Loss: 88.7949, Entropy: 1.6363, ClipFrac: 0.273
+  Update - Policy Loss: -0.0265, Value Loss: 53.5908, Entropy: 1.5526, ClipFrac: 0.319
+  Update - Policy Loss: -0.0233, Value Loss: 42.0863, Entropy: 1.5073, ClipFrac: 0.272
+  Update - Policy Loss: -0.0241, Value Loss: 44.8033, Entropy: 1.6643, ClipFrac: 0.308
+  Update - Policy Loss: 0.0206, Value Loss: 51.5144, Entropy: 1.4059, ClipFrac: 0.288
+  Update - Policy Loss: -0.0284, Value Loss: 32.4577, Entropy: 1.6642, ClipFrac: 0.362
+  Update - Policy Loss: -0.0223, Value Loss: 32.6679, Entropy: 1.5479, ClipFrac: 0.368
+  Update - Policy Loss: -0.0112, Value Loss: 8.9353, Entropy: 1.6246, ClipFrac: 0.328
+  Update - Policy Loss: -0.0251, Value Loss: 26.5126, Entropy: 1.6321, ClipFrac: 0.364
+  Update - Policy Loss: -0.0263, Value Loss: 78.1684, Entropy: 1.2494, ClipFrac: 0.286
+  Update - Policy Loss: -0.0284, Value Loss: 60.3409, Entropy: 1.2775, ClipFrac: 0.311
+  Update - Policy Loss: -0.0216, Value Loss: 242.2665, Entropy: 1.1961, ClipFrac: 0.335
+  Update - Policy Loss: -0.0256, Value Loss: 104.0595, Entropy: 1.2577, ClipFrac: 0.315
+  Update - Policy Loss: -0.0295, Value Loss: 123.0405, Entropy: 1.2045, ClipFrac: 0.341
+  Update - Policy Loss: -0.0268, Value Loss: 107.6129, Entropy: 1.2947, ClipFrac: 0.324
+  Update - Policy Loss: -0.0306, Value Loss: 160.6051, Entropy: 1.3131, ClipFrac: 0.318
+  Update - Policy Loss: -0.0278, Value Loss: 140.1569, Entropy: 1.1124, ClipFrac: 0.360
+  Update - Policy Loss: -0.0237, Value Loss: 166.1947, Entropy: 1.2067, ClipFrac: 0.306
+  Update - Policy Loss: -0.0269, Value Loss: 140.2747, Entropy: 1.1920, ClipFrac: 0.295
+  Update - Policy Loss: -0.0273, Value Loss: 192.0822, Entropy: 1.0551, ClipFrac: 0.268
+  Update - Policy Loss: -0.0336, Value Loss: 222.7477, Entropy: 0.9819, ClipFrac: 0.298
+  Update - Policy Loss: -0.0350, Value Loss: 120.2418, Entropy: 1.1719, ClipFrac: 0.309
+  Update - Policy Loss: -0.0323, Value Loss: 142.0285, Entropy: 1.1174, ClipFrac: 0.329
+  Update - Policy Loss: -0.0254, Value Loss: 143.0925, Entropy: 1.1440, ClipFrac: 0.282
+  Update - Policy Loss: -0.0324, Value Loss: 181.6392, Entropy: 1.1740, ClipFrac: 0.343
+  Update - Policy Loss: -0.0282, Value Loss: 110.1505, Entropy: 1.3175, ClipFrac: 0.289
+  Update - Policy Loss: -0.0290, Value Loss: 65.1274, Entropy: 1.2065, ClipFrac: 0.356
+  Update - Policy Loss: -0.0275, Value Loss: 52.6173, Entropy: 1.4214, ClipFrac: 0.306
+  Update - Policy Loss: -0.0291, Value Loss: 76.1695, Entropy: 1.3167, ClipFrac: 0.309
+  Update - Policy Loss: -0.0256, Value Loss: 48.7099, Entropy: 1.4534, ClipFrac: 0.242
+  Update - Policy Loss: -0.0257, Value Loss: 76.5314, Entropy: 1.3273, ClipFrac: 0.238
+  Update - Policy Loss: -0.0257, Value Loss: 37.1850, Entropy: 1.4775, ClipFrac: 0.305
+  Update - Policy Loss: -0.0246, Value Loss: 34.6618, Entropy: 1.4201, ClipFrac: 0.346
+  Update - Policy Loss: -0.0290, Value Loss: 29.5744, Entropy: 1.4386, ClipFrac: 0.317
+  Update - Policy Loss: -0.0260, Value Loss: 50.2122, Entropy: 1.4287, ClipFrac: 0.310
+  Update - Policy Loss: -0.0230, Value Loss: 33.2864, Entropy: 1.4021, ClipFrac: 0.271
+  Update - Policy Loss: -0.0313, Value Loss: 79.0788, Entropy: 1.3069, ClipFrac: 0.301
+  Update - Policy Loss: -0.0323, Value Loss: 19.5909, Entropy: 1.5811, ClipFrac: 0.297
+  Update - Policy Loss: -0.0326, Value Loss: 46.8766, Entropy: 1.2338, ClipFrac: 0.305
+  Update - Policy Loss: -0.0290, Value Loss: 94.6592, Entropy: 1.3724, ClipFrac: 0.306
+  Update - Policy Loss: -0.0372, Value Loss: 33.5753, Entropy: 1.1925, ClipFrac: 0.250
+  Update - Policy Loss: -0.0389, Value Loss: 37.0199, Entropy: 1.4468, ClipFrac: 0.322
+  Update - Policy Loss: -0.0361, Value Loss: 34.2063, Entropy: 1.4604, ClipFrac: 0.285
+  Update - Policy Loss: -0.0394, Value Loss: 58.7025, Entropy: 1.4588, ClipFrac: 0.360
+  Update - Policy Loss: -0.0381, Value Loss: 38.0589, Entropy: 1.2907, ClipFrac: 0.355
+  Update - Policy Loss: -0.0356, Value Loss: 20.8345, Entropy: 1.3312, ClipFrac: 0.399
+  Update - Policy Loss: -0.0419, Value Loss: 38.6346, Entropy: 1.3163, ClipFrac: 0.397
+  Update - Policy Loss: -0.0305, Value Loss: 51.6787, Entropy: 1.4222, ClipFrac: 0.384
+  Update - Policy Loss: -0.0316, Value Loss: 21.5980, Entropy: 1.6020, ClipFrac: 0.383
+  Update - Policy Loss: -0.0331, Value Loss: 37.1519, Entropy: 1.3989, ClipFrac: 0.337
+  Update - Policy Loss: -0.0285, Value Loss: 32.7394, Entropy: 1.4273, ClipFrac: 0.304
+  Update - Policy Loss: -0.0248, Value Loss: 32.3200, Entropy: 1.4206, ClipFrac: 0.406
+  Update - Policy Loss: -0.0266, Value Loss: 21.8590, Entropy: 1.4274, ClipFrac: 0.358
+  Update - Policy Loss: -0.0306, Value Loss: 22.0482, Entropy: 1.2661, ClipFrac: 0.332
+  Update - Policy Loss: -0.0346, Value Loss: 21.4036, Entropy: 1.3710, ClipFrac: 0.352
+  Update - Policy Loss: -0.0409, Value Loss: 38.6627, Entropy: 1.4602, ClipFrac: 0.379
+  Update - Policy Loss: -0.0301, Value Loss: 71.0387, Entropy: 1.4046, ClipFrac: 0.352
+  Update - Policy Loss: -0.0248, Value Loss: 10.9262, Entropy: 1.3200, ClipFrac: 0.357
+  Update - Policy Loss: -0.0371, Value Loss: 61.6924, Entropy: 1.1807, ClipFrac: 0.376
+  Update - Policy Loss: -0.0392, Value Loss: 52.1636, Entropy: 1.2961, ClipFrac: 0.377
+  Update - Policy Loss: -0.0430, Value Loss: 34.7539, Entropy: 1.2183, ClipFrac: 0.392
+  Update - Policy Loss: -0.0331, Value Loss: 34.0428, Entropy: 1.5119, ClipFrac: 0.330
+  Update - Policy Loss: -0.0284, Value Loss: 76.1487, Entropy: 1.3274, ClipFrac: 0.324
+  Update - Policy Loss: -0.0362, Value Loss: 39.5494, Entropy: 1.2965, ClipFrac: 0.391
+  Update - Policy Loss: -0.0368, Value Loss: 22.8104, Entropy: 1.3815, ClipFrac: 0.340
+  Update - Policy Loss: -0.0378, Value Loss: 31.8119, Entropy: 1.3576, ClipFrac: 0.341
+  Update - Policy Loss: -0.0324, Value Loss: 92.7971, Entropy: 1.2552, ClipFrac: 0.318
+  Update - Policy Loss: -0.0375, Value Loss: 113.2586, Entropy: 1.2118, ClipFrac: 0.338
+  Update - Policy Loss: -0.0419, Value Loss: 55.1312, Entropy: 1.3079, ClipFrac: 0.394
+  Update - Policy Loss: -0.0281, Value Loss: 48.9736, Entropy: 1.4873, ClipFrac: 0.328
+  Update - Policy Loss: -0.0375, Value Loss: 48.4875, Entropy: 1.2886, ClipFrac: 0.337
+  Update - Policy Loss: -0.0308, Value Loss: 34.6740, Entropy: 1.3595, ClipFrac: 0.351
+  Update - Policy Loss: -0.0303, Value Loss: 113.2925, Entropy: 1.3113, ClipFrac: 0.333
+  Update - Policy Loss: -0.0300, Value Loss: 61.5958, Entropy: 1.4446, ClipFrac: 0.301
+  Update - Policy Loss: -0.0349, Value Loss: 72.0704, Entropy: 1.1849, ClipFrac: 0.340
+  Update - Policy Loss: -0.0266, Value Loss: 34.0544, Entropy: 1.6196, ClipFrac: 0.281
+  Update - Policy Loss: -0.0242, Value Loss: 41.7340, Entropy: 1.4938, ClipFrac: 0.282
+  Update - Policy Loss: -0.0188, Value Loss: 48.9129, Entropy: 1.5120, ClipFrac: 0.241
+  Update - Policy Loss: -0.0268, Value Loss: 69.3092, Entropy: 1.3500, ClipFrac: 0.240
+  Update - Policy Loss: -0.0276, Value Loss: 49.5138, Entropy: 1.4315, ClipFrac: 0.251
+  Update - Policy Loss: -0.0256, Value Loss: 33.7608, Entropy: 1.4029, ClipFrac: 0.240
+  Update - Policy Loss: -0.0308, Value Loss: 119.6279, Entropy: 0.9465, ClipFrac: 0.271
+  Update - Policy Loss: -0.0315, Value Loss: 29.9229, Entropy: 1.2546, ClipFrac: 0.336
+  Update - Policy Loss: -0.0285, Value Loss: 56.2094, Entropy: 1.1905, ClipFrac: 0.251
+  Update - Policy Loss: -0.0280, Value Loss: 57.4534, Entropy: 1.1232, ClipFrac: 0.247
+  Update - Policy Loss: -0.0314, Value Loss: 61.5628, Entropy: 1.0503, ClipFrac: 0.291
+  Update - Policy Loss: -0.0233, Value Loss: 26.6673, Entropy: 1.0126, ClipFrac: 0.287
+  Update - Policy Loss: -0.0293, Value Loss: 42.0854, Entropy: 1.1915, ClipFrac: 0.282
+  Update - Policy Loss: -0.0332, Value Loss: 47.4228, Entropy: 0.9677, ClipFrac: 0.276
+  Update - Policy Loss: -0.0366, Value Loss: 26.9246, Entropy: 1.0653, ClipFrac: 0.327
+  Update - Policy Loss: -0.0379, Value Loss: 16.1738, Entropy: 1.2553, ClipFrac: 0.379
+  Update - Policy Loss: -0.0387, Value Loss: 47.5812, Entropy: 1.2487, ClipFrac: 0.361
+  Update - Policy Loss: -0.0442, Value Loss: 48.9270, Entropy: 0.9862, ClipFrac: 0.414
+  Update - Policy Loss: -0.0314, Value Loss: 16.2945, Entropy: 1.1918, ClipFrac: 0.370
+  Update - Policy Loss: -0.0372, Value Loss: 14.4154, Entropy: 1.3488, ClipFrac: 0.367
+  Update - Policy Loss: -0.0299, Value Loss: 10.3261, Entropy: 1.2039, ClipFrac: 0.337
+  Update - Policy Loss: -0.0303, Value Loss: 14.8927, Entropy: 0.9296, ClipFrac: 0.292
+  Update - Policy Loss: -0.0325, Value Loss: 19.3763, Entropy: 1.3235, ClipFrac: 0.313
+  Update - Policy Loss: -0.0259, Value Loss: 29.1544, Entropy: 1.1942, ClipFrac: 0.377
+  Update - Policy Loss: -0.0330, Value Loss: 26.0409, Entropy: 1.4249, ClipFrac: 0.339
