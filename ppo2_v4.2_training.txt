@@ -1,0 +1,59 @@
+Using device: cuda
+Loaded checkpoint: checkpoints/ppo/ppo_episode_4050.pth
+  Update - Policy: 0.0002, Value: 1224.8338, Entropy: -1.0238, KL: 0.0104, Ent_Coef: 0.0279
+Episode 4050: Reward=532.80, Steps=432, Max X=3360
+
+  Update - Policy: 0.0021, Value: 1688.6629, Entropy: -0.9813, KL: 0.0046, Ent_Coef: 0.0279
+Episode 4051: Reward=41.20, Steps=110, Max X=763
+
+  Update - Policy: -0.0021, Value: 499.9243, Entropy: -1.0497, KL: 0.0077, Ent_Coef: 0.0279
+  Update - Policy: 0.0015, Value: 716.7214, Entropy: -1.1838, KL: 0.0002, Ent_Coef: 0.0279
+Episode 4052: Reward=722.25, Steps=611, Max X=3314
+
+  Update - Policy: -0.0127, Value: 566.3297, Entropy: -1.1018, KL: 0.0021, Ent_Coef: 0.0279
+Episode 4053: Reward=259.90, Steps=302, Max X=3018
+
+  Update - Policy: -0.0124, Value: 827.1804, Entropy: -1.0614, KL: 0.0052, Ent_Coef: 0.0279
+Episode 4054: Reward=302.80, Steps=278, Max X=2279
+
+  Update - Policy: 0.0063, Value: 2225.4785, Entropy: -1.0104, KL: 0.0017, Ent_Coef: 0.0279
+Episode 4055: Reward=249.00, Steps=214, Max X=791
+
+  Update - Policy: -0.0086, Value: 189.8716, Entropy: -1.0316, KL: 0.0061, Ent_Coef: 0.0279
+  Update - Policy: -0.0091, Value: 209.1549, Entropy: -1.1853, KL: 0.0016, Ent_Coef: 0.0278
+Episode 4056: Reward=898.45, Steps=625, Max X=3789
+
+  Update - Policy: -0.0115, Value: 60.0837, Entropy: -1.0424, KL: 0.0117, Ent_Coef: 0.0278
+  Update - Policy: -0.0608, Value: 155.1873, Entropy: -1.2218, KL: 0.0011, Ent_Coef: 0.0278
+Episode 4057: Reward=799.00, Steps=582, Max X=3780
+
+  Update - Policy: -0.0030, Value: 85.8799, Entropy: -1.0540, KL: 0.0059, Ent_Coef: 0.0278
+Episode 4058: Reward=659.50, Steps=574, Max X=3789
+
+  Update - Policy: -0.0050, Value: 825.3860, Entropy: -1.0921, KL: 0.0089, Ent_Coef: 0.0278
+Episode 4059: Reward=446.95, Steps=377, Max X=2415
+
+  Update - Policy: 0.0026, Value: 196.5184, Entropy: -1.2638, KL: 0.0047, Ent_Coef: 0.0278
+  Update - Policy: -0.0104, Value: 111.0953, Entropy: -1.2591, KL: 0.0028, Ent_Coef: 0.0278
+Episode 4060: Reward=634.05, Steps=693, Max X=3775
+
+  Update - Policy: -0.0171, Value: 1332.9000, Entropy: -1.1798, KL: 0.0052, Ent_Coef: 0.0278
+Episode 4061: Reward=185.45, Steps=191, Max X=2234
+
+  Update - Policy: -0.0089, Value: 166.9542, Entropy: -1.2223, KL: 0.0092, Ent_Coef: 0.0278
+  Update - Policy: 0.0261, Value: 229.0101, Entropy: -1.3557, KL: 0.0018, Ent_Coef: 0.0278
+Episode 4062: Reward=641.45, Steps=659, Max X=3774
+
+  Update - Policy: -0.0055, Value: 110.8167, Entropy: -1.0994, KL: 0.0044, Ent_Coef: 0.0278
+Episode 4063: Reward=384.75, Steps=297, Max X=3785
+
+  Update - Policy: -0.0005, Value: 163.9340, Entropy: -0.8959, KL: 0.0036, Ent_Coef: 0.0278
+Episode 4064: Reward=395.75, Steps=255, Max X=3774
+
+  Update - Policy: -0.0095, Value: 103.3913, Entropy: -1.0307, KL: 0.0098, Ent_Coef: 0.0278
+  Update - Policy: -0.0459, Value: 3867.2123, Entropy: -1.3325, KL: 0.0005, Ent_Coef: 0.0278
+Episode 4065: Reward=580.15, Steps=581, Max X=1880
+
+  Update - Policy: 0.0226, Value: 1113.5817, Entropy: -0.9399, KL: 0.0060, Ent_Coef: 0.0278
+Episode 4066: Reward=292.85, Steps=275, Max X=3354
+

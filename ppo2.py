@@ -15,8 +15,10 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {DEVICE}")
 
 # Environment
-NUMBER_OF_SEQUENTIAL_FRAMES = 6
+NUMBER_OF_SEQUENTIAL_FRAMES = 4
 ACTION_SIZE = 8  # 2^3 combinations of [RIGHT, JUMP, LEFT]
+os.environ['CUDA_VISIBLE_DEVICES'] = '1'
+torch.cuda.empty_cache()
 
 # PPO Hyperparameters
 LEARNING_RATE = 1e-4
@@ -25,8 +27,8 @@ GAE_LAMBDA = 0.95
 CLIP_EPSILON = 0.2
 # ENTROPY_COEF = 0.01
 ENTROPY_COEF_START = 0.1  # Much higher starting entropy
-ENTROPY_COEF_END = 0.01
-ENTROPY_DECAY = 0.9995  # Gradual decay
+ENTROPY_COEF_END = 0.02
+ENTROPY_DECAY = 0.9998  # Gradual decay
 VALUE_COEF = 0.5
 MAX_GRAD_NORM = 0.5
 N_EPISODES = 10000
@@ -35,7 +37,7 @@ N_EPOCHS = 4  # Epochs per update
 BATCH_SIZE = 64
 MAX_EPISODE_STEPS = 2500
 REWARD_HISTORY_SIZE = 100
-CHECKPOINT_FREQ = 200
+CHECKPOINT_FREQ = 50
 LOG_REWARD_DIR = "logs/ppo_rew"
 CHECKPOINT_DIR = "checkpoints/ppo"
 
@@ -53,7 +55,7 @@ class ActorCritic(nn.Module):
         
         # Shared convolutional layers (3 layers)
         self.conv = nn.Sequential(
-            nn.Conv2d(NUMBER_OF_SEQUENTIAL_FRAMES, 32, kernel_size=8, stride=4),
+            nn.Conv2d(NUMBER_OF_SEQUENTIAL_FRAMES*3, 32, kernel_size=8, stride=4),
             nn.ReLU(),
             nn.Conv2d(32, 64, kernel_size=4, stride=2),
             nn.ReLU(),
@@ -62,7 +64,7 @@ class ActorCritic(nn.Module):
         )
         
         # Calculate flattened size
-        conv_out_size = self._get_conv_out((NUMBER_OF_SEQUENTIAL_FRAMES, 60, 80))
+        conv_out_size = self._get_conv_out((NUMBER_OF_SEQUENTIAL_FRAMES*3, 60, 80))
         
         # Actor head (policy)
         self.actor = nn.Sequential(
@@ -302,7 +304,7 @@ class PPOAgent:
                     approx_kls.append(approx_kl.item())
             
             # Early stopping if KL divergence is too high
-            if np.mean(approx_kls) > 0.02:
+            if np.mean(approx_kls) > 0.1:
                 print(f"  Early stopping at epoch {epoch} due to high KL: {np.mean(approx_kls):.4f}")
                 break
 
@@ -366,9 +368,9 @@ def train():
     agent = PPOAgent(ACTION_SIZE, DEVICE)
     
     # Optional: Load checkpoint
-    agent.load('checkpoints/ppo/ppo_episode_200.pth')
-    loaded_episode = 200
-    
+    agent.load('checkpoints/ppo/ppo_episode_4050.pth')
+    loaded_episode = 4050
+
     reward_history = deque(maxlen=REWARD_HISTORY_SIZE)
     global_step = 0
     
@@ -412,10 +414,10 @@ def train():
             if should_update and len(agent.buffer.states) >= BATCH_SIZE:
                 losses = agent.update(state)
                 print(f"  Update - Policy: {losses['policy_loss']:.4f}, "
-                      f"Value: {losses['value_loss']:.4f}, "
-                      f"Entropy: {losses['entropy_loss']:.4f}, "
-                      f"KL: {losses['approx_kl']:.4f}, "
-                      f"Ent_Coef: {losses['entropy_coef']:.4f}")
+                    f"Value: {losses['value_loss']:.4f}, "
+                    f"Entropy: {losses['entropy_loss']:.4f}, "
+                    f"KL: {losses['approx_kl']:.4f}, "
+                    f"Ent_Coef: {losses['entropy_coef']:.4f}")
                 
                 # Clear CUDA cache after each update
                 if torch.cuda.is_available():
@@ -433,14 +435,16 @@ def train():
         
         print(f"Episode {episode + loaded_episode}: Reward={episode_reward:.2f}, Steps={episode_steps}, Max X={info['x']}\n")
         
+        # Log average reward every REWARD_HISTORY_SIZE episodes
         if len(reward_history) == REWARD_HISTORY_SIZE:
             avg_reward = sum(reward_history) / REWARD_HISTORY_SIZE
-            print(f"Average Reward (last {REWARD_HISTORY_SIZE}): {avg_reward:.2f}")
+            # print(f"Average Reward (last {REWARD_HISTORY_SIZE}): {avg_reward:.2f}")
             
             os.makedirs(LOG_REWARD_DIR, exist_ok=True)
             log_path = os.path.join(LOG_REWARD_DIR, "avg_reward.txt")
             with open(log_path, "a") as f:
-                f.write(f"Episode {episode + loaded_episode}; Average Reward: {avg_reward:.2f}\n")
+                f.write(f"Episode {episode+loaded_episode-49} to {episode + loaded_episode}; Average Reward: {avg_reward:.2f}\n")
+            reward_history.clear()
         
         # Save checkpoint
         if episode % CHECKPOINT_FREQ == 0 and episode > 0:
