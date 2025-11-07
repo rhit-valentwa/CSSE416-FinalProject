@@ -39,9 +39,9 @@ Episode 3700 to 3799; Average Reward: 320.12
 Episode 3800 to 3899; Average Reward: 382.03
 Episode 3900 to 3999; Average Reward: 306.58
 Episode 4100 to 4199; Average Reward: 311.84
-Episode 4200 to 4249; Average Reward: 341.95
-Episode 4300 to 4349; Average Reward: 340.51
-Episode 4400 to 4449; Average Reward: 303.02
-Episode 4500 to 4549; Average Reward: 328.79
-Episode 4600 to 4649; Average Reward: 55.64
-Episode 4700 to 4749; Average Reward: 150.52
+Episode 4200 to 4299; Average Reward: 341.95
+Episode 4300 to 4399; Average Reward: 340.51
+Episode 4400 to 4499; Average Reward: 303.02
+Episode 4500 to 4599; Average Reward: 328.79
+Episode 4600 to 4699; Average Reward: 55.64
+Episode 4700 to 4799; Average Reward: 150.52

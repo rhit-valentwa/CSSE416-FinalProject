@@ -224,6 +224,10 @@ class PPOAgent:
         advantages = torch.FloatTensor(advantages).to(self.device)
         returns = torch.FloatTensor(returns).to(self.device)
 
+        # Ensure returns is 1D
+        if returns.dim() > 1:
+            returns = returns.view(-1)
+
         return advantages, returns
     
     def update(self, next_state):
@@ -296,7 +300,12 @@ class PPOAgent:
                 # value_losses_unclipped = (curr_values - batch_returns) ** 2
                 # value_losses_clipped = (value_pred_clipped - batch_returns) ** 2
                 # value_loss = 0.5 * torch.max(value_losses_unclipped, value_losses_clipped).mean()
-                value_loss = F.mse_loss(curr_values, batch_returns)
+                # value_loss = F.mse_loss(curr_values, batch_returns)
+                if curr_values.dim() == 1 and batch_returns.dim() == 1:
+                    value_loss = F.mse_loss(curr_values, batch_returns)
+                else:
+                    # Force both to be 1D
+                    value_loss = F.mse_loss(curr_values.view(-1), batch_returns.view(-1))
                 
                 # Entropy bonus
                 entropy_loss = -entropy.mean()
@@ -320,7 +329,7 @@ class PPOAgent:
                     approx_kls.append(approx_kl.item())
             
             # Early stopping if KL divergence is too high
-            if np.mean(approx_kls) > 0.1:
+            if np.mean(approx_kls) > 0.2:
                 print(f"  Early stopping at epoch {epoch} due to high KL: {np.mean(approx_kls):.4f}")
                 break
 
@@ -341,7 +350,7 @@ class PPOAgent:
     
     def save(self, episode):
         os.makedirs(CHECKPOINT_DIR, exist_ok=True)
-        checkpoint_path = os.path.join(CHECKPOINT_DIR, f'ppo_episode_{episode}.pth')
+        checkpoint_path = os.path.join(CHECKPOINT_DIR, f'ppo_v4_episode_{episode}.pth')
         torch.save({
             'episode': episode,
             'policy_state_dict': self.policy.state_dict(),
@@ -384,7 +393,7 @@ def train():
     agent = PPOAgent(ACTION_SIZE, DEVICE)
     
     # Optional: Load checkpoint
-    agent.load('checkpoints/ppo/ppo_episode_4050.pth')
+    agent.load('checkpoints/ppo/ppo_v4_episode_4050.pth')
     loaded_episode = 4050
 
     reward_history = deque(maxlen=REWARD_HISTORY_SIZE)
