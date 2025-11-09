@@ -199,7 +199,7 @@ for episode in range(N_EPISODES):
         action = agent.select_action(state, env)
         next_state, reward, terminated, truncated, info = env.step(action)
         done = terminated or truncated
-        # next_state = torch.FloatTensor(next_state).to(DEVICE)
+        next_state = torch.FloatTensor(next_state).to(DEVICE)
         
         # agent.store_transition(state, action, reward, next_state, done)
         
