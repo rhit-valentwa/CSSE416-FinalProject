@@ -3,3 +3,4 @@ swig
 gymnasium
 copier
 torch
+matplotlib
