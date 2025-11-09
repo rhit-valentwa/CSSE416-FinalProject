@@ -178,12 +178,13 @@ class DQNAgent:
         self.optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
         self.epsilon = checkpoint.get('epsilon', self.epsilon)
 
+
 # =============================
 # Training Loop
 # =============================
 env = MarioLevelEnv(render_mode="human", number_of_sequential_frames=NUMBER_OF_SEQUENTIAL_FRAMES)
 agent = DQNAgent(ACTION_SIZE, DEVICE)
-agent.load('checkpoints/oct_27_night_episode_1500_save.pth')
+agent.load('checkpoints/solid_saves/better_4000.pth')
 
 reward_history = deque(maxlen=REWARD_HISTORY_SIZE)
 
@@ -198,14 +199,14 @@ for episode in range(N_EPISODES):
         action = agent.select_action(state, env)
         next_state, reward, terminated, truncated, info = env.step(action)
         done = terminated or truncated
-        next_state = torch.FloatTensor(next_state).to(DEVICE)
+        # next_state = torch.FloatTensor(next_state).to(DEVICE)
         
-        agent.store_transition(state, action, reward, next_state, done)
+        # agent.store_transition(state, action, reward, next_state, done)
         
         # Only train if we have enough experiences
-        if len(agent.replay_buffer) >= MIN_REPLAY_SIZE:
-            agent.train_step()
-            agent.update_target_network()  # Soft update every step
+        # if len(agent.replay_buffer) >= MIN_REPLAY_SIZE:
+            # agent.train_step()
+            # agent.update_target_network()  # Soft update every step
         
         total_reward += reward
         state = next_state
@@ -214,7 +215,7 @@ for episode in range(N_EPISODES):
             break
     
     # Decay epsilon AFTER each episode
-    agent.decay_epsilon()
+    # agent.decay_epsilon()
     
     reward_history.append(total_reward)
     
@@ -225,16 +226,16 @@ for episode in range(N_EPISODES):
         avg_reward = sum(reward_history)/REWARD_HISTORY_SIZE
         print(f"Episode {episode}; Average Reward: {avg_reward:.2f}")
         
-        import os
-        os.makedirs(LOG_REWARD_DIR, exist_ok=True)
-        log_path = os.path.join(LOG_REWARD_DIR, "avg_reward.txt")
-        with open(log_path, "a") as f:
-            f.write(f"Episode {episode}; Average Reward: {avg_reward:.2f}\n")
+        # import os
+        # os.makedirs(LOG_REWARD_DIR, exist_ok=True)
+        # log_path = os.path.join(LOG_REWARD_DIR, "avg_reward.txt")
+        # with open(log_path, "a") as f:
+        #     f.write(f"Episode {episode}; Average Reward: {avg_reward:.2f}\n")
     
     if episode % 10 == 0:
         torch.cuda.empty_cache()
         import gc
         gc.collect()
     
-    if episode % CHECKPOINT_FREQ == 0 and episode > 0:
-        agent.save(episode)
+    # if episode % CHECKPOINT_FREQ == 0 and episode > 0:
+    #     agent.save(episode)
