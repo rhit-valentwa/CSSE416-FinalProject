@@ -327,13 +327,13 @@
   function renderBars(probs){
     const bars = $('#bars');
     bars.innerHTML = '';
-    const entries = Object.entries(probs).sort((a, b) => b[1] - a[1]);
+    const entries = Object.entries(probs).sort((a, b) => a[1] - b[1]);
     entries.forEach(([k, v]) => {
       const row = document.createElement('div'); row.className = 'barrow';
       const name = document.createElement('div'); name.textContent = k;
-      const pct = document.createElement('div'); pct.textContent = Math.round(v * 100) + '%'; pct.style.textAlign = 'right';
+      const pct = document.createElement('div'); pct.textContent = Math.round((1-v) * 100) + '%'; pct.style.textAlign = 'right';
       const bar = document.createElement('div'); bar.className = 'bar';
-      const fill = document.createElement('div'); fill.style.width = Math.max(0, Math.min(100, v * 100)) + '%';
+      const fill = document.createElement('div'); fill.style.width = Math.max(0, Math.min(100, (1-v) * 100)) + '%';
       bar.appendChild(fill);
       const left = document.createElement('div'); left.appendChild(name); left.appendChild(bar);
       row.appendChild(left); row.appendChild(pct);
