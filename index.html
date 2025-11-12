@@ -154,9 +154,10 @@
 
   async function autoLoad() {
     const params = new URLSearchParams(location.search);
-    const file1 = params.get('file1') || 'https://mario.rocks/captures/replay_ep00006.json';
+    const file1 = params.get('file1') || 'https://mario.rocks/captures/episode-0.json';
+    const file2 = params.get('file2') || 'https://mario.rocks/captures/episode-1.json';
 
-    const files = [file1];
+    const files = [file1, file2];
     let loadedCount = 0;
 
     state.episodes.length = 0;
