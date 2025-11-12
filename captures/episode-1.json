@@ -1,0 +1,3713 @@
+{
+  "run": "episode-1",
+  "epsilon": 0.05,
+  "policy": "q_softmax",
+  "frames": [
+    {
+      "step": 0,
+      "x": 113,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000000.png",
+      "probs": {
+        "Idle": 0.02128441259264946,
+        "Right": 0.001122315414249897,
+        "Jump": 0.00015327648725360632,
+        "Jump+Right": 0.0006432830123230815,
+        "Left": 0.913611114025116,
+        "Left+Right": 0.005479149520397186,
+        "Left+Jump": 1.0967294201691402e-06,
+        "Left+Jump+Right": 0.057705387473106384
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 1,
+      "x": 118,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000001.png",
+      "probs": {
+        "Idle": 0.22773239016532898,
+        "Right": 0.05781394615769386,
+        "Jump": 0.011946613900363445,
+        "Jump+Right": 0.24180661141872406,
+        "Left": 0.256030797958374,
+        "Left+Right": 0.026164770126342773,
+        "Left+Jump": 0.1508162021636963,
+        "Left+Jump+Right": 0.02768869139254093
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 2,
+      "x": 114,
+      "y": 456,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000002.png",
+      "probs": {
+        "Idle": 0.09375717490911484,
+        "Right": 0.02668376825749874,
+        "Jump": 0.027905523777008057,
+        "Jump+Right": 0.48053213953971863,
+        "Left": 0.1897534281015396,
+        "Left+Right": 0.005559866316616535,
+        "Left+Jump": 0.11594085395336151,
+        "Left+Jump+Right": 0.05986729636788368
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 3,
+      "x": 112,
+      "y": 419,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000003.png",
+      "probs": {
+        "Idle": 0.25400978326797485,
+        "Right": 0.006578912492841482,
+        "Jump": 0.011138975620269775,
+        "Jump+Right": 0.21844284236431122,
+        "Left": 0.04907402768731117,
+        "Left+Right": 0.00656607560813427,
+        "Left+Jump": 0.38923826813697815,
+        "Left+Jump+Right": 0.06495104730129242
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 4,
+      "x": 115,
+      "y": 386,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000004.png",
+      "probs": {
+        "Idle": 0.17859990894794464,
+        "Right": 0.004297119099646807,
+        "Jump": 0.03189733624458313,
+        "Jump+Right": 0.08172908425331116,
+        "Left": 0.14843551814556122,
+        "Left+Right": 0.0029728056397289038,
+        "Left+Jump": 0.5282125473022461,
+        "Left+Jump+Right": 0.02385575883090496
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 5,
+      "x": 124,
+      "y": 359,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000005.png",
+      "probs": {
+        "Idle": 0.18503600358963013,
+        "Right": 0.011852804571390152,
+        "Jump": 0.12862522900104523,
+        "Jump+Right": 0.0863390788435936,
+        "Left": 0.19643554091453552,
+        "Left+Right": 0.006788031663745642,
+        "Left+Jump": 0.33429092168807983,
+        "Left+Jump+Right": 0.05063236132264137
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 6,
+      "x": 138,
+      "y": 337,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000006.png",
+      "probs": {
+        "Idle": 0.13781820237636566,
+        "Right": 0.008466440252959728,
+        "Jump": 0.24270664155483246,
+        "Jump+Right": 0.021995147690176964,
+        "Left": 0.25022000074386597,
+        "Left+Right": 0.003881782293319702,
+        "Left+Jump": 0.31174612045288086,
+        "Left+Jump+Right": 0.023165667429566383
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 7,
+      "x": 157,
+      "y": 320,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000007.png",
+      "probs": {
+        "Idle": 0.11262097209692001,
+        "Right": 0.00933122355490923,
+        "Jump": 0.2596156895160675,
+        "Jump+Right": 0.035935454070568085,
+        "Left": 0.24680642783641815,
+        "Left+Right": 0.004664907231926918,
+        "Left+Jump": 0.29537057876586914,
+        "Left+Jump+Right": 0.035654712468385696
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 8,
+      "x": 181,
+      "y": 307,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000008.png",
+      "probs": {
+        "Idle": 0.05393175035715103,
+        "Right": 0.015540136955678463,
+        "Jump": 0.1942334771156311,
+        "Jump+Right": 0.13842320442199707,
+        "Left": 0.11449801921844482,
+        "Left+Right": 0.007154638413339853,
+        "Left+Jump": 0.39719343185424805,
+        "Left+Jump+Right": 0.07902536541223526
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 9,
+      "x": 205,
+      "y": 300,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000009.png",
+      "probs": {
+        "Idle": 0.05635880306363106,
+        "Right": 0.005002738907933235,
+        "Jump": 0.22584772109985352,
+        "Jump+Right": 0.0922897532582283,
+        "Left": 0.14896678924560547,
+        "Left+Right": 0.004263948183506727,
+        "Left+Jump": 0.41305893659591675,
+        "Left+Jump+Right": 0.05421131104230881
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 10,
+      "x": 229,
+      "y": 298,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000010.png",
+      "probs": {
+        "Idle": 0.01856607012450695,
+        "Right": 0.0009086320060305297,
+        "Jump": 0.14922760426998138,
+        "Jump+Right": 0.008815876208245754,
+        "Left": 0.08405981957912445,
+        "Left+Right": 0.0009741952526383102,
+        "Left+Jump": 0.7153224349021912,
+        "Left+Jump+Right": 0.02212526649236679
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 11,
+      "x": 253,
+      "y": 304,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000011.png",
+      "probs": {
+        "Idle": 0.044484611600637436,
+        "Right": 0.002571204211562872,
+        "Jump": 0.25098636746406555,
+        "Jump+Right": 0.03024989739060402,
+        "Left": 0.11869874596595764,
+        "Left+Right": 0.0025513507425785065,
+        "Left+Jump": 0.5183648467063904,
+        "Left+Jump+Right": 0.03209293633699417
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 12,
+      "x": 277,
+      "y": 326,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000012.png",
+      "probs": {
+        "Idle": 0.07063810527324677,
+        "Right": 1.9962322767241858e-05,
+        "Jump": 0.11260410398244858,
+        "Jump+Right": 2.832287282217294e-05,
+        "Left": 0.4202176332473755,
+        "Left+Right": 0.00016959334607236087,
+        "Left+Jump": 0.39627882838249207,
+        "Left+Jump+Right": 4.3409207137301564e-05
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 13,
+      "x": 301,
+      "y": 364,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000013.png",
+      "probs": {
+        "Idle": 0.0715058222413063,
+        "Right": 0.0006685082917101681,
+        "Jump": 0.17598223686218262,
+        "Jump+Right": 0.0010035804007202387,
+        "Left": 0.2040308713912964,
+        "Left+Right": 0.003759948769584298,
+        "Left+Jump": 0.5419973134994507,
+        "Left+Jump+Right": 0.0010516790207475424
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 14,
+      "x": 325,
+      "y": 408,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000014.png",
+      "probs": {
+        "Idle": 0.033153705298900604,
+        "Right": 0.0004670461639761925,
+        "Jump": 0.1715477854013443,
+        "Jump+Right": 0.0010284374002367258,
+        "Left": 0.3186015784740448,
+        "Left+Right": 0.0008786763064563274,
+        "Left+Jump": 0.47309520840644836,
+        "Left+Jump+Right": 0.0012276521883904934
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 15,
+      "x": 349,
+      "y": 452,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000015.png",
+      "probs": {
+        "Idle": 0.25868523120880127,
+        "Right": 0.0033973674289882183,
+        "Jump": 0.13397496938705444,
+        "Jump+Right": 0.07049650698900223,
+        "Left": 0.29074111580848694,
+        "Left+Right": 0.0027237036265432835,
+        "Left+Jump": 0.23165051639080048,
+        "Left+Jump+Right": 0.008330662734806538
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 16,
+      "x": 373,
+      "y": 496,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000016.png",
+      "probs": {
+        "Idle": 0.06807264685630798,
+        "Right": 0.007256942801177502,
+        "Jump": 0.20935243368148804,
+        "Jump+Right": 0.19279977679252625,
+        "Left": 0.49472618103027344,
+        "Left+Right": 0.0045436350628733635,
+        "Left+Jump": 0.019419992342591286,
+        "Left+Jump+Right": 0.0038284603506326675
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 17,
+      "x": 397,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000017.png",
+      "probs": {
+        "Idle": 0.06059781461954117,
+        "Right": 0.0017950497567653656,
+        "Jump": 0.14935527741909027,
+        "Jump+Right": 0.012094459496438503,
+        "Left": 0.38653603196144104,
+        "Left+Right": 0.0008063807035796344,
+        "Left+Jump": 0.38528767228126526,
+        "Left+Jump+Right": 0.003527323016896844
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 18,
+      "x": 421,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000018.png",
+      "probs": {
+        "Idle": 0.08469388633966446,
+        "Right": 0.0002674561401363462,
+        "Jump": 0.06280484050512314,
+        "Jump+Right": 0.0012058833381161094,
+        "Left": 0.5718775987625122,
+        "Left+Right": 0.0008394819451496005,
+        "Left+Jump": 0.27731943130493164,
+        "Left+Jump+Right": 0.0009913877584040165
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 19,
+      "x": 445,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000019.png",
+      "probs": {
+        "Idle": 0.01595473103225231,
+        "Right": 1.6893429346964695e-05,
+        "Jump": 0.017941124737262726,
+        "Jump+Right": 3.198968624928966e-05,
+        "Left": 0.7210432291030884,
+        "Left+Right": 4.3700703827198595e-05,
+        "Left+Jump": 0.24480655789375305,
+        "Left+Jump+Right": 0.00016182367107830942
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 20,
+      "x": 469,
+      "y": 453,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000020.png",
+      "probs": {
+        "Idle": 0.04183032736182213,
+        "Right": 0.000129878128063865,
+        "Jump": 0.07161982357501984,
+        "Jump+Right": 0.0001799496094463393,
+        "Left": 0.18976141512393951,
+        "Left+Right": 1.4975414160289802e-05,
+        "Left+Jump": 0.6962824463844299,
+        "Left+Jump+Right": 0.00018122268375009298
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 21,
+      "x": 493,
+      "y": 414,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000021.png",
+      "probs": {
+        "Idle": 0.2326456755399704,
+        "Right": 0.010257360525429249,
+        "Jump": 0.3731876015663147,
+        "Jump+Right": 0.07355230301618576,
+        "Left": 0.09299017488956451,
+        "Left+Right": 0.001644839416258037,
+        "Left+Jump": 0.139190673828125,
+        "Left+Jump+Right": 0.07653132826089859
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 22,
+      "x": 517,
+      "y": 380,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000022.png",
+      "probs": {
+        "Idle": 0.03983413428068161,
+        "Right": 0.0008283726056106389,
+        "Jump": 0.1528816819190979,
+        "Jump+Right": 0.00598421273753047,
+        "Left": 0.0246258731931448,
+        "Left+Right": 0.0009879890130832791,
+        "Left+Jump": 0.5574629306793213,
+        "Left+Jump+Right": 0.21739479899406433
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 23,
+      "x": 541,
+      "y": 351,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000023.png",
+      "probs": {
+        "Idle": 0.07764383405447006,
+        "Right": 0.00026087090373039246,
+        "Jump": 0.6660082936286926,
+        "Jump+Right": 0.08623814582824707,
+        "Left": 0.022208701819181442,
+        "Left+Right": 0.0005591147928498685,
+        "Left+Jump": 0.1281185746192932,
+        "Left+Jump+Right": 0.018962517380714417
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 24,
+      "x": 565,
+      "y": 326,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000024.png",
+      "probs": {
+        "Idle": 0.08108383417129517,
+        "Right": 1.0780428056023084e-05,
+        "Jump": 0.11006671190261841,
+        "Jump+Right": 0.001036388915963471,
+        "Left": 0.020293299108743668,
+        "Left+Right": 7.483150170628505e-07,
+        "Left+Jump": 0.7853374481201172,
+        "Left+Jump+Right": 0.002170857507735491
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 25,
+      "x": 589,
+      "y": 307,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000025.png",
+      "probs": {
+        "Idle": 0.07574526965618134,
+        "Right": 7.324548641918227e-05,
+        "Jump": 0.07743746042251587,
+        "Jump+Right": 0.027362048625946045,
+        "Left": 0.034033916890621185,
+        "Left+Right": 0.00013285323802847415,
+        "Left+Jump": 0.7381221652030945,
+        "Left+Jump+Right": 0.04709306359291077
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 26,
+      "x": 613,
+      "y": 293,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000026.png",
+      "probs": {
+        "Idle": 0.0353948250412941,
+        "Right": 1.729873110889457e-05,
+        "Jump": 0.06299420446157455,
+        "Jump+Right": 0.04511207342147827,
+        "Left": 0.03810079023241997,
+        "Left+Right": 0.00022817228455096483,
+        "Left+Jump": 0.7665370106697083,
+        "Left+Jump+Right": 0.05161559581756592
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 27,
+      "x": 637,
+      "y": 283,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000027.png",
+      "probs": {
+        "Idle": 0.09502670168876648,
+        "Right": 0.0011552383657544851,
+        "Jump": 0.016131620854139328,
+        "Jump+Right": 0.021000469103455544,
+        "Left": 0.08233165740966797,
+        "Left+Right": 0.02469707280397415,
+        "Left+Jump": 0.15996751189231873,
+        "Left+Jump+Right": 0.599689781665802
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 28,
+      "x": 661,
+      "y": 278,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000028.png",
+      "probs": {
+        "Idle": 0.15354624390602112,
+        "Right": 0.0005185109912417829,
+        "Jump": 0.003366085235029459,
+        "Jump+Right": 0.0031333263032138348,
+        "Left": 0.05256933346390724,
+        "Left+Right": 0.019308513030409813,
+        "Left+Jump": 0.7658344507217407,
+        "Left+Jump+Right": 0.0017235357081517577
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 29,
+      "x": 685,
+      "y": 284,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000029.png",
+      "probs": {
+        "Idle": 0.6237119436264038,
+        "Right": 0.05192592367529869,
+        "Jump": 0.11065758019685745,
+        "Jump+Right": 0.027306316420435905,
+        "Left": 0.031032893806695938,
+        "Left+Right": 0.010845140554010868,
+        "Left+Jump": 0.1444568932056427,
+        "Left+Jump+Right": 6.330398173304275e-05
+      },
+      "actions": "Idle"
+    },
+    {
+      "step": 30,
+      "x": 709,
+      "y": 306,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000030.png",
+      "probs": {
+        "Idle": 0.15384873747825623,
+        "Right": 0.00015500960580538958,
+        "Jump": 0.05291779339313507,
+        "Jump+Right": 7.213016942841932e-05,
+        "Left": 0.6104364395141602,
+        "Left+Right": 3.0549294024240226e-05,
+        "Left+Jump": 0.18246027827262878,
+        "Left+Jump+Right": 7.907216058811173e-05
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 31,
+      "x": 733,
+      "y": 325,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000031.png",
+      "probs": {
+        "Idle": 3.4682598197832704e-05,
+        "Right": 2.0006288181662057e-08,
+        "Jump": 0.9953258037567139,
+        "Jump+Right": 1.2377531888319027e-08,
+        "Left": 0.00017900475359056145,
+        "Left+Right": 1.9194050082660397e-07,
+        "Left+Jump": 0.004459832329303026,
+        "Left+Jump+Right": 4.7068479602785374e-07
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 32,
+      "x": 757,
+      "y": 335,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000032.png",
+      "probs": {
+        "Idle": 0.20312151312828064,
+        "Right": 2.1000741980969906e-05,
+        "Jump": 0.0793084055185318,
+        "Jump+Right": 0.01473923958837986,
+        "Left": 0.47865593433380127,
+        "Left+Right": 0.00020726255024783313,
+        "Left+Jump": 0.21817708015441895,
+        "Left+Jump+Right": 0.005769503768533468
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 33,
+      "x": 781,
+      "y": 361,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000033.png",
+      "probs": {
+        "Idle": 0.2416783571243286,
+        "Right": 0.013202573172748089,
+        "Jump": 0.0012083277106285095,
+        "Jump+Right": 0.024544011801481247,
+        "Left": 0.545828640460968,
+        "Left+Right": 1.0407607987872325e-05,
+        "Left+Jump": 0.14141355454921722,
+        "Left+Jump+Right": 0.032114166766405106
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 34,
+      "x": 805,
+      "y": 402,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000034.png",
+      "probs": {
+        "Idle": 0.6168100237846375,
+        "Right": 0.00010875496809603646,
+        "Jump": 0.0002596663834992796,
+        "Jump+Right": 9.228505950886756e-05,
+        "Left": 0.05945779010653496,
+        "Left+Right": 4.994993651052937e-05,
+        "Left+Jump": 0.2980423867702484,
+        "Left+Jump+Right": 0.02517908811569214
+      },
+      "actions": "Idle"
+    },
+    {
+      "step": 35,
+      "x": 829,
+      "y": 446,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000035.png",
+      "probs": {
+        "Idle": 0.01810557022690773,
+        "Right": 6.8944336817367e-06,
+        "Jump": 0.58622145652771,
+        "Jump+Right": 0.024946803227066994,
+        "Left": 0.07660508155822754,
+        "Left+Right": 0.00011834208271466196,
+        "Left+Jump": 0.04236477613449097,
+        "Left+Jump+Right": 0.25163108110427856
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 36,
+      "x": 853,
+      "y": 490,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000036.png",
+      "probs": {
+        "Idle": 0.13197557628154755,
+        "Right": 0.00012948742369189858,
+        "Jump": 0.04660571739077568,
+        "Jump+Right": 0.12578602135181427,
+        "Left": 0.0012776770163327456,
+        "Left+Right": 0.0008900046232156456,
+        "Left+Jump": 0.6040418148040771,
+        "Left+Jump+Right": 0.08929368853569031
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 37,
+      "x": 877,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000037.png",
+      "probs": {
+        "Idle": 0.00154502980876714,
+        "Right": 0.0011498166713863611,
+        "Jump": 0.7583763003349304,
+        "Jump+Right": 0.1420474797487259,
+        "Left": 0.07712624222040176,
+        "Left+Right": 0.01759902574121952,
+        "Left+Jump": 0.0017228691140189767,
+        "Left+Jump+Right": 0.00043315711081959307
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 38,
+      "x": 901,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000038.png",
+      "probs": {
+        "Idle": 0.2909667491912842,
+        "Right": 1.6179745898625697e-07,
+        "Jump": 0.045257534831762314,
+        "Jump+Right": 0.0001551139575894922,
+        "Left": 0.4558451473712921,
+        "Left+Right": 2.4537432636861922e-06,
+        "Left+Jump": 0.2077416032552719,
+        "Left+Jump+Right": 3.11233670799993e-05
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 39,
+      "x": 925,
+      "y": 453,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000039.png",
+      "probs": {
+        "Idle": 0.019783511757850647,
+        "Right": 2.860909626178909e-05,
+        "Jump": 0.04456242546439171,
+        "Jump+Right": 0.0014282662887126207,
+        "Left": 0.32813069224357605,
+        "Left+Right": 0.000972418871242553,
+        "Left+Jump": 0.6036352515220642,
+        "Left+Jump+Right": 0.0014587938785552979
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 40,
+      "x": 949,
+      "y": 414,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000040.png",
+      "probs": {
+        "Idle": 0.08384598791599274,
+        "Right": 2.7427036911831237e-05,
+        "Jump": 0.3704768121242523,
+        "Jump+Right": 4.841586996917613e-05,
+        "Left": 0.004888022784143686,
+        "Left+Right": 6.755398499080911e-05,
+        "Left+Jump": 0.5405561327934265,
+        "Left+Jump+Right": 8.959286060417071e-05
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 41,
+      "x": 973,
+      "y": 431,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000041.png",
+      "probs": {
+        "Idle": 0.20865637063980103,
+        "Right": 0.010146194137632847,
+        "Jump": 0.31652629375457764,
+        "Jump+Right": 0.06379798799753189,
+        "Left": 0.0074526225216686726,
+        "Left+Right": 0.061428867280483246,
+        "Left+Jump": 0.2618655264377594,
+        "Left+Jump+Right": 0.07012614607810974
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 42,
+      "x": 997,
+      "y": 466,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000042.png",
+      "probs": {
+        "Idle": 0.34741464257240295,
+        "Right": 0.000361147423973307,
+        "Jump": 0.12955816090106964,
+        "Jump+Right": 0.012026905082166195,
+        "Left": 0.07857619971036911,
+        "Left+Right": 0.05822382867336273,
+        "Left+Jump": 0.3237173557281494,
+        "Left+Jump+Right": 0.05012166127562523
+      },
+      "actions": "Idle"
+    },
+    {
+      "step": 43,
+      "x": 1021,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000043.png",
+      "probs": {
+        "Idle": 0.23968982696533203,
+        "Right": 0.0015118070878088474,
+        "Jump": 0.21680621802806854,
+        "Jump+Right": 0.0058988407254219055,
+        "Left": 0.20636717975139618,
+        "Left+Right": 0.005307734943926334,
+        "Left+Jump": 0.31335949897766113,
+        "Left+Jump+Right": 0.01105889305472374
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 44,
+      "x": 1045,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000044.png",
+      "probs": {
+        "Idle": 0.05057515576481819,
+        "Right": 1.6415057189078652e-06,
+        "Jump": 0.03746059164404869,
+        "Jump+Right": 3.855480827041902e-06,
+        "Left": 0.8455770611763,
+        "Left+Right": 2.8395586468832335e-06,
+        "Left+Jump": 0.06637842208147049,
+        "Left+Jump+Right": 4.937425615025859e-07
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 45,
+      "x": 1069,
+      "y": 453,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000045.png",
+      "probs": {
+        "Idle": 0.23911531269550323,
+        "Right": 2.4157641291822074e-06,
+        "Jump": 0.04416713863611221,
+        "Jump+Right": 3.746979018615093e-06,
+        "Left": 0.13630618155002594,
+        "Left+Right": 3.048700705221563e-07,
+        "Left+Jump": 0.5804046988487244,
+        "Left+Jump+Right": 1.827587254865648e-07
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 46,
+      "x": 1093,
+      "y": 414,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000046.png",
+      "probs": {
+        "Idle": 0.04088444635272026,
+        "Right": 0.0006446217885240912,
+        "Jump": 0.7416760921478271,
+        "Jump+Right": 0.013217455707490444,
+        "Left": 0.0032137720845639706,
+        "Left+Right": 0.00019411841640248895,
+        "Left+Jump": 0.18806378543376923,
+        "Left+Jump+Right": 0.012105722911655903
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 47,
+      "x": 1117,
+      "y": 380,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000047.png",
+      "probs": {
+        "Idle": 0.004135482478886843,
+        "Right": 0.00022785468900110573,
+        "Jump": 0.88255774974823,
+        "Jump+Right": 0.013486267067492008,
+        "Left": 0.0024686558172106743,
+        "Left+Right": 0.000631724251434207,
+        "Left+Jump": 0.05113952234387398,
+        "Left+Jump+Right": 0.045352753251791
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 48,
+      "x": 1141,
+      "y": 351,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000048.png",
+      "probs": {
+        "Idle": 0.0017892754403874278,
+        "Right": 0.003072122111916542,
+        "Jump": 0.539499819278717,
+        "Jump+Right": 0.057888906449079514,
+        "Left": 0.00023789639817550778,
+        "Left+Right": 0.0012889240169897676,
+        "Left+Jump": 0.30195853114128113,
+        "Left+Jump+Right": 0.09426454454660416
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 49,
+      "x": 1165,
+      "y": 326,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000049.png",
+      "probs": {
+        "Idle": 0.010734292678534985,
+        "Right": 0.019939569756388664,
+        "Jump": 0.42421138286590576,
+        "Jump+Right": 0.27648645639419556,
+        "Left": 0.021056529134511948,
+        "Left+Right": 0.05740201473236084,
+        "Left+Jump": 0.0336102657020092,
+        "Left+Jump+Right": 0.1565595120191574
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 50,
+      "x": 1189,
+      "y": 312,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000050.png",
+      "probs": {
+        "Idle": 0.0800478383898735,
+        "Right": 0.0012530505191534758,
+        "Jump": 0.42071545124053955,
+        "Jump+Right": 0.02125592529773712,
+        "Left": 0.43691450357437134,
+        "Left+Right": 0.005813352297991514,
+        "Left+Jump": 0.015662141144275665,
+        "Left+Jump+Right": 0.018337739631533623
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 51,
+      "x": 1213,
+      "y": 314,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000051.png",
+      "probs": {
+        "Idle": 0.12352112680673599,
+        "Right": 0.05260468274354935,
+        "Jump": 0.13316340744495392,
+        "Jump+Right": 0.07438170909881592,
+        "Left": 0.3898988366127014,
+        "Left+Right": 0.004569970071315765,
+        "Left+Jump": 0.11658042669296265,
+        "Left+Jump+Right": 0.10527987033128738
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 52,
+      "x": 1237,
+      "y": 332,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000052.png",
+      "probs": {
+        "Idle": 0.11252781003713608,
+        "Right": 0.0023984236177057028,
+        "Jump": 0.00294453464448452,
+        "Jump+Right": 0.4517337381839752,
+        "Left": 0.024974610656499863,
+        "Left+Right": 0.05130873620510101,
+        "Left+Jump": 0.17133326828479767,
+        "Left+Jump+Right": 0.18277890980243683
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 53,
+      "x": 1261,
+      "y": 366,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000053.png",
+      "probs": {
+        "Idle": 0.7774486541748047,
+        "Right": 1.638024400563154e-06,
+        "Jump": 0.067901611328125,
+        "Jump+Right": 0.004733084701001644,
+        "Left": 0.03912850841879845,
+        "Left+Right": 0.00023604226589668542,
+        "Left+Jump": 0.1071605458855629,
+        "Left+Jump+Right": 0.0033899203408509493
+      },
+      "actions": "Idle"
+    },
+    {
+      "step": 54,
+      "x": 1285,
+      "y": 413,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000054.png",
+      "probs": {
+        "Idle": 0.3541768789291382,
+        "Right": 2.4033970476011746e-05,
+        "Jump": 0.1763121783733368,
+        "Jump+Right": 0.002647827146574855,
+        "Left": 0.02334410510957241,
+        "Left+Right": 0.0001545128907309845,
+        "Left+Jump": 0.442100465297699,
+        "Left+Jump+Right": 0.0012400650884956121
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 55,
+      "x": 1309,
+      "y": 461,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000055.png",
+      "probs": {
+        "Idle": 0.45343321561813354,
+        "Right": 0.00019544413953553885,
+        "Jump": 0.01139973383396864,
+        "Jump+Right": 0.055960968136787415,
+        "Left": 0.04787617549300194,
+        "Left+Right": 0.039367448538541794,
+        "Left+Jump": 0.17123940587043762,
+        "Left+Jump+Right": 0.22052758932113647
+      },
+      "actions": "Idle"
+    },
+    {
+      "step": 56,
+      "x": 1333,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000056.png",
+      "probs": {
+        "Idle": 0.0629197284579277,
+        "Right": 0.0034559445921331644,
+        "Jump": 0.0068007768131792545,
+        "Jump+Right": 0.11182817816734314,
+        "Left": 0.004157865419983864,
+        "Left+Right": 0.6503974795341492,
+        "Left+Jump": 0.011443856172263622,
+        "Left+Jump+Right": 0.14899612963199615
+      },
+      "actions": "Left+Right"
+    },
+    {
+      "step": 57,
+      "x": 1357,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000057.png",
+      "probs": {
+        "Idle": 0.16502508521080017,
+        "Right": 0.0028678029775619507,
+        "Jump": 0.039991945028305054,
+        "Jump+Right": 0.01233384944498539,
+        "Left": 0.7450734376907349,
+        "Left+Right": 0.006325714290142059,
+        "Left+Jump": 0.02587674930691719,
+        "Left+Jump+Right": 0.002505467738956213
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 58,
+      "x": 1381,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000058.png",
+      "probs": {
+        "Idle": 0.026152517646551132,
+        "Right": 6.291768841037992e-06,
+        "Jump": 0.221891850233078,
+        "Jump+Right": 2.139948037438444e-06,
+        "Left": 0.4732992947101593,
+        "Left+Right": 1.6592347265032004e-06,
+        "Left+Jump": 0.27864617109298706,
+        "Left+Jump+Right": 1.150480173350843e-07
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 59,
+      "x": 1405,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000059.png",
+      "probs": {
+        "Idle": 0.017568314447999,
+        "Right": 1.2941547538503073e-05,
+        "Jump": 0.0497368685901165,
+        "Jump+Right": 5.34079958924849e-07,
+        "Left": 0.9262029528617859,
+        "Left+Right": 1.9199009670956002e-07,
+        "Left+Jump": 0.00647822767496109,
+        "Left+Jump+Right": 5.953568305017143e-08
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 60,
+      "x": 1429,
+      "y": 453,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000060.png",
+      "probs": {
+        "Idle": 0.0281959380954504,
+        "Right": 8.815356704872102e-05,
+        "Jump": 0.6877269148826599,
+        "Jump+Right": 0.004628920461982489,
+        "Left": 0.007643920369446278,
+        "Left+Right": 1.4860224837320857e-06,
+        "Left+Jump": 0.2701738476753235,
+        "Left+Jump+Right": 0.0015407775063067675
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 61,
+      "x": 1453,
+      "y": 414,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000061.png",
+      "probs": {
+        "Idle": 2.2939222617424093e-05,
+        "Right": 3.1618544653611025e-06,
+        "Jump": 0.003177008591592312,
+        "Jump+Right": 0.012879002839326859,
+        "Left": 2.240449020973756e-06,
+        "Left+Right": 1.3925327380093222e-07,
+        "Left+Jump": 0.9796866178512573,
+        "Left+Jump+Right": 0.004228807985782623
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 62,
+      "x": 1477,
+      "y": 380,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000062.png",
+      "probs": {
+        "Idle": 6.522227977256989e-06,
+        "Right": 1.8062568329924034e-08,
+        "Jump": 0.0340685173869133,
+        "Jump+Right": 0.0007271139766089618,
+        "Left": 8.513109150953824e-07,
+        "Left+Right": 3.805568127290826e-08,
+        "Left+Jump": 0.964583694934845,
+        "Left+Jump+Right": 0.000613188894931227
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 63,
+      "x": 1501,
+      "y": 351,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000063.png",
+      "probs": {
+        "Idle": 6.309928135550535e-10,
+        "Right": 1.3781566166048975e-10,
+        "Jump": 0.1647954285144806,
+        "Jump+Right": 0.01670084521174431,
+        "Left": 5.044396012010566e-10,
+        "Left+Right": 8.211885615949654e-10,
+        "Left+Jump": 0.8058468103408813,
+        "Left+Jump+Right": 0.01265695784240961
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 64,
+      "x": 1525,
+      "y": 326,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000064.png",
+      "probs": {
+        "Idle": 2.1547441519942367e-06,
+        "Right": 7.2232650971670864e-09,
+        "Jump": 0.003637671237811446,
+        "Jump+Right": 0.002463926561176777,
+        "Left": 3.0256393301897333e-07,
+        "Left+Right": 5.294841232128533e-10,
+        "Left+Jump": 0.9927154183387756,
+        "Left+Jump+Right": 0.0011805103858932853
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 65,
+      "x": 1549,
+      "y": 312,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000065.png",
+      "probs": {
+        "Idle": 1.5939420336508192e-05,
+        "Right": 0.8836890459060669,
+        "Jump": 0.032759182155132294,
+        "Jump+Right": 0.0011618469143286347,
+        "Left": 0.0008542382856830955,
+        "Left+Right": 0.04202897846698761,
+        "Left+Jump": 3.2340321922674775e-05,
+        "Left+Jump+Right": 0.03945848345756531
+      },
+      "actions": "Right"
+    },
+    {
+      "step": 66,
+      "x": 1573,
+      "y": 314,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000066.png",
+      "probs": {
+        "Idle": 0.1345852017402649,
+        "Right": 0.06483335793018341,
+        "Jump": 0.15278449654579163,
+        "Jump+Right": 0.034349825233221054,
+        "Left": 0.40828651189804077,
+        "Left+Right": 0.0006382083520293236,
+        "Left+Jump": 0.033338744193315506,
+        "Left+Jump+Right": 0.17118364572525024
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 67,
+      "x": 1597,
+      "y": 332,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000067.png",
+      "probs": {
+        "Idle": 0.0027084029279649258,
+        "Right": 0.004826630000025034,
+        "Jump": 0.11966051906347275,
+        "Jump+Right": 0.0726841613650322,
+        "Left": 0.0030848917085677385,
+        "Left+Right": 0.2804182469844818,
+        "Left+Jump": 0.013273175805807114,
+        "Left+Jump+Right": 0.503343939781189
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 68,
+      "x": 1621,
+      "y": 366,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000068.png",
+      "probs": {
+        "Idle": 0.04719071462750435,
+        "Right": 0.03224418684840202,
+        "Jump": 0.23974931240081787,
+        "Jump+Right": 0.021273767575621605,
+        "Left": 0.3226475119590759,
+        "Left+Right": 0.14517587423324585,
+        "Left+Jump": 0.0492551214993,
+        "Left+Jump+Right": 0.1424635350704193
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 69,
+      "x": 1645,
+      "y": 369,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000069.png",
+      "probs": {
+        "Idle": 0.0428469181060791,
+        "Right": 1.2927681382279843e-05,
+        "Jump": 0.0343235582113266,
+        "Jump+Right": 4.036355676362291e-07,
+        "Left": 0.9220536351203918,
+        "Left+Right": 1.9147903003613465e-05,
+        "Left+Jump": 0.0007430267287418246,
+        "Left+Jump+Right": 3.8626998843938054e-07
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 70,
+      "x": 1669,
+      "y": 369,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000070.png",
+      "probs": {
+        "Idle": 0.00018154355348087847,
+        "Right": 9.339321850598825e-13,
+        "Jump": 8.057694685703609e-06,
+        "Jump+Right": 1.2623014883795386e-13,
+        "Left": 0.9328411817550659,
+        "Left+Right": 1.0564733116114056e-11,
+        "Left+Jump": 0.06696916371583939,
+        "Left+Jump+Right": 1.1434050321140754e-12
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 71,
+      "x": 1693,
+      "y": 324,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000071.png",
+      "probs": {
+        "Idle": 0.0008561477297917008,
+        "Right": 3.652472475943608e-13,
+        "Jump": 0.29527848958969116,
+        "Jump+Right": 2.89174464742129e-15,
+        "Left": 0.00026884034741669893,
+        "Left+Right": 3.861392594561863e-10,
+        "Left+Jump": 0.7035964727401733,
+        "Left+Jump+Right": 6.115660888404879e-15
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 72,
+      "x": 1717,
+      "y": 285,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000072.png",
+      "probs": {
+        "Idle": 0.00017361876962240785,
+        "Right": 5.3867253768657974e-08,
+        "Jump": 0.4748583436012268,
+        "Jump+Right": 4.753575922222808e-05,
+        "Left": 1.4326500604511239e-05,
+        "Left+Right": 8.060835554601908e-09,
+        "Left+Jump": 0.5180559754371643,
+        "Left+Jump+Right": 0.0068501983769237995
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 73,
+      "x": 1741,
+      "y": 251,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000073.png",
+      "probs": {
+        "Idle": 0.00016045001393649727,
+        "Right": 0.0004935124306939542,
+        "Jump": 0.09181777387857437,
+        "Jump+Right": 0.17187881469726562,
+        "Left": 6.007890078763012e-07,
+        "Left+Right": 1.236766911461018e-05,
+        "Left+Jump": 0.4807385504245758,
+        "Left+Jump+Right": 0.25489792227745056
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 74,
+      "x": 1765,
+      "y": 222,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000074.png",
+      "probs": {
+        "Idle": 0.00014353716687764972,
+        "Right": 3.759046012419276e-05,
+        "Jump": 0.8285662531852722,
+        "Jump+Right": 0.12870386242866516,
+        "Left": 2.49836418220184e-08,
+        "Left+Right": 6.943403008108362e-08,
+        "Left+Jump": 0.03067919798195362,
+        "Left+Jump+Right": 0.011869466863572598
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 75,
+      "x": 1789,
+      "y": 197,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000075.png",
+      "probs": {
+        "Idle": 0.0009922084864228964,
+        "Right": 0.0015752236358821392,
+        "Jump": 0.12994970381259918,
+        "Jump+Right": 0.6055571436882019,
+        "Left": 4.772903776029125e-05,
+        "Left+Right": 7.848614131944487e-07,
+        "Left+Jump": 0.008076177909970284,
+        "Left+Jump+Right": 0.25380101799964905
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 76,
+      "x": 1809,
+      "y": 178,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000076.png",
+      "probs": {
+        "Idle": 1.9613215218594604e-10,
+        "Right": 1.0191328891906437e-09,
+        "Jump": 0.17157939076423645,
+        "Jump+Right": 0.35261720418930054,
+        "Left": 2.967847495538578e-11,
+        "Left+Right": 1.3436854260362452e-06,
+        "Left+Jump": 0.330193430185318,
+        "Left+Jump+Right": 0.14560866355895996
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 77,
+      "x": 1830,
+      "y": 164,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000077.png",
+      "probs": {
+        "Idle": 3.1440973543794826e-05,
+        "Right": 8.675097546984034e-07,
+        "Jump": 0.3049090802669525,
+        "Jump+Right": 0.021417779847979546,
+        "Left": 2.3817135570425307e-06,
+        "Left+Right": 8.188113497453742e-06,
+        "Left+Jump": 0.6514094471931458,
+        "Left+Jump+Right": 0.022220730781555176
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 78,
+      "x": 1854,
+      "y": 154,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000078.png",
+      "probs": {
+        "Idle": 0.0014766661915928125,
+        "Right": 7.284910680027679e-06,
+        "Jump": 0.11631868034601212,
+        "Jump+Right": 0.0020201504230499268,
+        "Left": 0.04707738012075424,
+        "Left+Right": 0.00022418495791498572,
+        "Left+Jump": 0.8316953182220459,
+        "Left+Jump+Right": 0.001180322840809822
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 79,
+      "x": 1878,
+      "y": 149,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000079.png",
+      "probs": {
+        "Idle": 0.00545918382704258,
+        "Right": 0.0007773785619065166,
+        "Jump": 0.5344906449317932,
+        "Jump+Right": 0.007871157489717007,
+        "Left": 0.04660360515117645,
+        "Left+Right": 0.0011269788956269622,
+        "Left+Jump": 0.40335625410079956,
+        "Left+Jump+Right": 0.0003148570831399411
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 80,
+      "x": 1902,
+      "y": 155,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000080.png",
+      "probs": {
+        "Idle": 0.007254331838339567,
+        "Right": 4.727755253952637e-07,
+        "Jump": 0.18697184324264526,
+        "Jump+Right": 0.005795142147690058,
+        "Left": 0.7704726457595825,
+        "Left+Right": 0.0004096238117199391,
+        "Left+Jump": 0.028903236612677574,
+        "Left+Jump+Right": 0.00019276175589766353
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 81,
+      "x": 1926,
+      "y": 177,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000081.png",
+      "probs": {
+        "Idle": 0.014557695016264915,
+        "Right": 0.000513494829647243,
+        "Jump": 0.5979716181755066,
+        "Jump+Right": 0.0067579844035208225,
+        "Left": 0.10871940106153488,
+        "Left+Right": 0.0003244110266678035,
+        "Left+Jump": 0.26759272813796997,
+        "Left+Jump+Right": 0.003562729340046644
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 82,
+      "x": 1950,
+      "y": 215,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000082.png",
+      "probs": {
+        "Idle": 0.027552558109164238,
+        "Right": 0.04730098322033882,
+        "Jump": 0.6340981721878052,
+        "Jump+Right": 0.02184447832405567,
+        "Left": 0.08331530541181564,
+        "Left+Right": 2.5570227080606855e-05,
+        "Left+Jump": 0.1783541440963745,
+        "Left+Jump+Right": 0.007508810143917799
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 83,
+      "x": 1974,
+      "y": 263,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000083.png",
+      "probs": {
+        "Idle": 0.7174848318099976,
+        "Right": 0.00447461474686861,
+        "Jump": 0.23005090653896332,
+        "Jump+Right": 0.027221940457820892,
+        "Left": 2.7384692657506093e-05,
+        "Left+Right": 0.0003551300906110555,
+        "Left+Jump": 0.01066644862294197,
+        "Left+Jump+Right": 0.009718731977045536
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 84,
+      "x": 1998,
+      "y": 311,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000084.png",
+      "probs": {
+        "Idle": 0.07398193329572678,
+        "Right": 0.0002661455364432186,
+        "Jump": 0.055871766060590744,
+        "Jump+Right": 0.3574683368206024,
+        "Left": 0.4728753864765167,
+        "Left+Right": 0.01012297160923481,
+        "Left+Jump": 0.029349053278565407,
+        "Left+Jump+Right": 6.436558032874018e-05
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 85,
+      "x": 2022,
+      "y": 326,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000085.png",
+      "probs": {
+        "Idle": 0.00030774230253882706,
+        "Right": 1.4236082961360808e-06,
+        "Jump": 0.9687551856040955,
+        "Jump+Right": 0.0009229360148310661,
+        "Left": 7.088956044754013e-05,
+        "Left+Right": 3.936110260838177e-06,
+        "Left+Jump": 0.029765376821160316,
+        "Left+Jump+Right": 0.00017251193639822304
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 86,
+      "x": 2046,
+      "y": 326,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000086.png",
+      "probs": {
+        "Idle": 0.0016548868734389544,
+        "Right": 1.4356173494434188e-07,
+        "Jump": 0.011927668936550617,
+        "Jump+Right": 8.787515639596677e-07,
+        "Left": 0.0003305842983536422,
+        "Left+Right": 4.520956409237442e-08,
+        "Left+Jump": 0.9860596060752869,
+        "Left+Jump+Right": 2.6241796149406582e-05
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 87,
+      "x": 2070,
+      "y": 329,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000087.png",
+      "probs": {
+        "Idle": 0.005702020134776831,
+        "Right": 1.9403363182846078e-07,
+        "Jump": 0.03548024594783783,
+        "Jump+Right": 1.2520025848061778e-05,
+        "Left": 0.01751795783638954,
+        "Left+Right": 1.1199614164070226e-05,
+        "Left+Jump": 0.9411888122558594,
+        "Left+Jump+Right": 8.6991123680491e-05
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 88,
+      "x": 2094,
+      "y": 347,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000088.png",
+      "probs": {
+        "Idle": 0.256780207157135,
+        "Right": 0.005379303824156523,
+        "Jump": 0.48490968346595764,
+        "Jump+Right": 0.006387691013514996,
+        "Left": 0.044019825756549835,
+        "Left+Right": 0.01892807148396969,
+        "Left+Jump": 0.1489444226026535,
+        "Left+Jump+Right": 0.03465081751346588
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 89,
+      "x": 2118,
+      "y": 381,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000089.png",
+      "probs": {
+        "Idle": 0.6155800819396973,
+        "Right": 0.012844369746744633,
+        "Jump": 0.06426682323217392,
+        "Jump+Right": 0.006713990122079849,
+        "Left": 0.1960858255624771,
+        "Left+Right": 0.02644839882850647,
+        "Left+Jump": 0.011035432107746601,
+        "Left+Jump+Right": 0.06702504307031631
+      },
+      "actions": "Idle"
+    },
+    {
+      "step": 90,
+      "x": 2142,
+      "y": 425,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000090.png",
+      "probs": {
+        "Idle": 0.12909020483493805,
+        "Right": 0.013998552225530148,
+        "Jump": 0.08486896008253098,
+        "Jump+Right": 0.0019118639174848795,
+        "Left": 0.6329464316368103,
+        "Left+Right": 0.0018694575410336256,
+        "Left+Jump": 0.0850374773144722,
+        "Left+Jump+Right": 0.05027706176042557
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 91,
+      "x": 2166,
+      "y": 458,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000091.png",
+      "probs": {
+        "Idle": 0.02721460349857807,
+        "Right": 0.01268070936203003,
+        "Jump": 0.0029293494299054146,
+        "Jump+Right": 0.2399328351020813,
+        "Left": 0.44762471318244934,
+        "Left+Right": 0.25786638259887695,
+        "Left+Jump": 0.003026767633855343,
+        "Left+Jump+Right": 0.008724628947675228
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 92,
+      "x": 2190,
+      "y": 433,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000092.png",
+      "probs": {
+        "Idle": 0.004495972767472267,
+        "Right": 0.005649548955261707,
+        "Jump": 0.015147610567510128,
+        "Jump+Right": 0.8397733569145203,
+        "Left": 0.004924918059259653,
+        "Left+Right": 0.0034431866370141506,
+        "Left+Jump": 0.006547993514686823,
+        "Left+Jump+Right": 0.12001735717058182
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 93,
+      "x": 2210,
+      "y": 413,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000093.png",
+      "probs": {
+        "Idle": 0.004259972833096981,
+        "Right": 0.014490683563053608,
+        "Jump": 0.17537282407283783,
+        "Jump+Right": 0.04041502997279167,
+        "Left": 0.0009422395378351212,
+        "Left+Right": 0.006046702619642019,
+        "Left+Jump": 0.043933071196079254,
+        "Left+Jump+Right": 0.7145395278930664
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 94,
+      "x": 2228,
+      "y": 398,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000094.png",
+      "probs": {
+        "Idle": 0.006181798875331879,
+        "Right": 0.005644589196890593,
+        "Jump": 0.17173457145690918,
+        "Jump+Right": 0.015486122108995914,
+        "Left": 0.00026496953796595335,
+        "Left+Right": 0.0014414450852200389,
+        "Left+Jump": 0.04582985118031502,
+        "Left+Jump+Right": 0.7534165978431702
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 95,
+      "x": 2244,
+      "y": 388,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000095.png",
+      "probs": {
+        "Idle": 0.00597277982160449,
+        "Right": 1.3857630619895644e-05,
+        "Jump": 0.33060184121131897,
+        "Jump+Right": 0.21565258502960205,
+        "Left": 0.012462024576961994,
+        "Left+Right": 1.9722732758964412e-05,
+        "Left+Jump": 0.20488108694553375,
+        "Left+Jump+Right": 0.23039615154266357
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 96,
+      "x": 2263,
+      "y": 383,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000096.png",
+      "probs": {
+        "Idle": 0.037041183561086655,
+        "Right": 0.008567535318434238,
+        "Jump": 0.029526401311159134,
+        "Jump+Right": 0.0072991857305169106,
+        "Left": 0.30712804198265076,
+        "Left+Right": 0.009510640986263752,
+        "Left+Jump": 0.49975186586380005,
+        "Left+Jump+Right": 0.10117505490779877
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 97,
+      "x": 2283,
+      "y": 384,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000097.png",
+      "probs": {
+        "Idle": 4.897207972476281e-08,
+        "Right": 1.1810415978530386e-09,
+        "Jump": 0.9968773126602173,
+        "Jump+Right": 6.963878695387393e-05,
+        "Left": 0.0010842264164239168,
+        "Left+Right": 4.008685664302902e-06,
+        "Left+Jump": 0.0017672465182840824,
+        "Left+Jump+Right": 0.0001975788763957098
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 98,
+      "x": 2303,
+      "y": 398,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000098.png",
+      "probs": {
+        "Idle": 9.886211955745239e-06,
+        "Right": 2.028718171231958e-07,
+        "Jump": 0.715878427028656,
+        "Jump+Right": 0.0019427742809057236,
+        "Left": 0.27028605341911316,
+        "Left+Right": 0.004316551610827446,
+        "Left+Jump": 4.3564141378737986e-05,
+        "Left+Jump+Right": 0.007522566244006157
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 99,
+      "x": 2321,
+      "y": 428,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000099.png",
+      "probs": {
+        "Idle": 0.004981687758117914,
+        "Right": 7.799647573847324e-05,
+        "Jump": 0.0001389589160680771,
+        "Jump+Right": 1.1852499483211432e-05,
+        "Left": 4.331643594923662e-06,
+        "Left+Right": 0.9938696622848511,
+        "Left+Jump": 2.516092081350507e-07,
+        "Left+Jump+Right": 0.0009152416023425758
+      },
+      "actions": "Left+Right"
+    },
+    {
+      "step": 100,
+      "x": 2337,
+      "y": 471,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000100.png",
+      "probs": {
+        "Idle": 0.2729731798171997,
+        "Right": 0.0004844243230763823,
+        "Jump": 0.0002740108175203204,
+        "Jump+Right": 0.0030358838848769665,
+        "Left": 0.00845169834792614,
+        "Left+Right": 0.7137659788131714,
+        "Left+Jump": 1.2669625751630074e-14,
+        "Left+Jump+Right": 0.0010149095905944705
+      },
+      "actions": "Left+Right"
+    },
+    {
+      "step": 101,
+      "x": 2353,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000101.png",
+      "probs": {
+        "Idle": 0.0011947642778977752,
+        "Right": 0.0001501046644989401,
+        "Jump": 1.471344967285404e-05,
+        "Jump+Right": 0.00015373465430457145,
+        "Left": 0.0006754996720701456,
+        "Left+Right": 0.0006206305115483701,
+        "Left+Jump": 0.9971873164176941,
+        "Left+Jump+Right": 3.241005515519646e-06
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 102,
+      "x": 2372,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000102.png",
+      "probs": {
+        "Idle": 0.1935550719499588,
+        "Right": 0.002440368290990591,
+        "Jump": 0.030839629471302032,
+        "Jump+Right": 0.0012286304263398051,
+        "Left": 0.4016958177089691,
+        "Left+Right": 5.716995656257495e-05,
+        "Left+Jump": 0.37003692984580994,
+        "Left+Jump+Right": 0.00014633205137215555
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 103,
+      "x": 2393,
+      "y": 453,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000103.png",
+      "probs": {
+        "Idle": 0.23174364864826202,
+        "Right": 0.00024853984359651804,
+        "Jump": 0.01258128136396408,
+        "Jump+Right": 0.25844982266426086,
+        "Left": 0.022571034729480743,
+        "Left+Right": 0.0001021672214847058,
+        "Left+Jump": 0.47426071763038635,
+        "Left+Jump+Right": 4.2759587813634425e-05
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 104,
+      "x": 2413,
+      "y": 419,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000104.png",
+      "probs": {
+        "Idle": 1.8490658248992986e-07,
+        "Right": 0.8585776090621948,
+        "Jump": 1.0793750875731645e-12,
+        "Jump+Right": 4.834465698877466e-07,
+        "Left": 1.4240200130188896e-08,
+        "Left+Right": 0.14141350984573364,
+        "Left+Jump": 2.7965136268903734e-06,
+        "Left+Jump+Right": 5.452713139675325e-06
+      },
+      "actions": "Right"
+    },
+    {
+      "step": 105,
+      "x": 2415,
+      "y": 401,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000105.png",
+      "probs": {
+        "Idle": 1.039750892573946e-17,
+        "Right": 1.23533616062238e-12,
+        "Jump": 0.2557886838912964,
+        "Jump+Right": 0.7398104071617126,
+        "Left": 5.1556910265899134e-17,
+        "Left+Right": 4.0499389638404185e-20,
+        "Left+Jump": 0.004114049486815929,
+        "Left+Jump+Right": 0.0002869231684599072
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 106,
+      "x": 2411,
+      "y": 399,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000106.png",
+      "probs": {
+        "Idle": 2.8929109270863645e-14,
+        "Right": 7.932120932307996e-11,
+        "Jump": 0.22658328711986542,
+        "Jump+Right": 0.7490391731262207,
+        "Left": 5.721006350947744e-13,
+        "Left+Right": 1.534234843119861e-14,
+        "Left+Jump": 0.007984734140336514,
+        "Left+Jump+Right": 0.016392864286899567
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 107,
+      "x": 2406,
+      "y": 413,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000107.png",
+      "probs": {
+        "Idle": 1.423109269316214e-10,
+        "Right": 9.172814507962812e-09,
+        "Jump": 2.238911207541605e-07,
+        "Jump+Right": 0.9637004733085632,
+        "Left": 5.681189207962234e-08,
+        "Left+Right": 3.5497696362213338e-12,
+        "Left+Jump": 0.0009685897384770215,
+        "Left+Jump+Right": 0.035330627113580704
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 108,
+      "x": 2402,
+      "y": 443,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000108.png",
+      "probs": {
+        "Idle": 0.008754285052418709,
+        "Right": 0.0006996822776272893,
+        "Jump": 1.3834483979735523e-05,
+        "Jump+Right": 0.20792478322982788,
+        "Left": 0.713671088218689,
+        "Left+Right": 0.00029325965442694724,
+        "Left+Jump": 0.014628936536610126,
+        "Left+Jump+Right": 0.05401412025094032
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 109,
+      "x": 2399,
+      "y": 488,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000109.png",
+      "probs": {
+        "Idle": 0.02314375713467598,
+        "Right": 0.0010700492421165109,
+        "Jump": 3.453931867625215e-06,
+        "Jump+Right": 0.1441371887922287,
+        "Left": 0.7257608771324158,
+        "Left+Right": 0.0002486087614670396,
+        "Left+Jump": 0.05800079554319382,
+        "Left+Jump+Right": 0.04763522744178772
+      },
+      "actions": "Left"
+    },
+    {
+      "step": 110,
+      "x": 2395,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000110.png",
+      "probs": {
+        "Idle": 0.005483291111886501,
+        "Right": 0.0016600297531113029,
+        "Jump": 3.864935038677686e-08,
+        "Jump+Right": 0.5113061666488647,
+        "Left": 0.09199303388595581,
+        "Left+Right": 0.00011747367534553632,
+        "Left+Jump": 0.10047957301139832,
+        "Left+Jump+Right": 0.28896045684814453
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 111,
+      "x": 2390,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000111.png",
+      "probs": {
+        "Idle": 0.0005904332501813769,
+        "Right": 0.00039723978261463344,
+        "Jump": 4.834274907467018e-12,
+        "Jump+Right": 0.7317442297935486,
+        "Left": 0.023469893261790276,
+        "Left+Right": 3.5370190744288266e-05,
+        "Left+Jump": 0.1628313511610031,
+        "Left+Jump+Right": 0.08093149214982986
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 112,
+      "x": 2382,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000112.png",
+      "probs": {
+        "Idle": 0.0016744609456509352,
+        "Right": 0.0010322825983166695,
+        "Jump": 5.834064342735701e-10,
+        "Jump+Right": 0.6737860441207886,
+        "Left": 0.054796986281871796,
+        "Left+Right": 0.00023455754853785038,
+        "Left+Jump": 0.1002059206366539,
+        "Left+Jump+Right": 0.16826973855495453
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 113,
+      "x": 2371,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000113.png",
+      "probs": {
+        "Idle": 0.005422784481197596,
+        "Right": 0.0027871117927134037,
+        "Jump": 1.1272616973201366e-07,
+        "Jump+Right": 0.4010705053806305,
+        "Left": 0.17788709700107574,
+        "Left+Right": 0.0005083380383439362,
+        "Left+Jump": 0.16516759991645813,
+        "Left+Jump+Right": 0.24715647101402283
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 114,
+      "x": 2359,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000114.png",
+      "probs": {
+        "Idle": 0.007140972651541233,
+        "Right": 0.0069127194583415985,
+        "Jump": 4.135632025281666e-06,
+        "Jump+Right": 0.3726491332054138,
+        "Left": 0.11902588605880737,
+        "Left+Right": 0.0012590150581672788,
+        "Left+Jump": 0.04644719883799553,
+        "Left+Jump+Right": 0.44656097888946533
+      },
+      "actions": "Right"
+    },
+    {
+      "step": 115,
+      "x": 2343,
+      "y": 456,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000115.png",
+      "probs": {
+        "Idle": 0.004119459539651871,
+        "Right": 0.004364715423434973,
+        "Jump": 8.889626883501478e-07,
+        "Jump+Right": 0.3281542956829071,
+        "Left": 0.08866450190544128,
+        "Left+Right": 0.0004948981804773211,
+        "Left+Jump": 0.03317450359463692,
+        "Left+Jump+Right": 0.5410267114639282
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 116,
+      "x": 2326,
+      "y": 419,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000116.png",
+      "probs": {
+        "Idle": 0.0023164479061961174,
+        "Right": 0.008768100291490555,
+        "Jump": 1.724715161799395e-06,
+        "Jump+Right": 0.3306562304496765,
+        "Left": 0.04131769761443138,
+        "Left+Right": 0.00186672224663198,
+        "Left+Jump": 0.08695192635059357,
+        "Left+Jump+Right": 0.5281211137771606
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 117,
+      "x": 2306,
+      "y": 386,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000117.png",
+      "probs": {
+        "Idle": 0.004214337095618248,
+        "Right": 0.02090957947075367,
+        "Jump": 9.326750296168029e-05,
+        "Jump+Right": 0.12033732980489731,
+        "Left": 0.06057961657643318,
+        "Left+Right": 0.007507596164941788,
+        "Left+Jump": 0.2640911638736725,
+        "Left+Jump+Right": 0.5222671031951904
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 118,
+      "x": 2286,
+      "y": 359,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000118.png",
+      "probs": {
+        "Idle": 0.003724818816408515,
+        "Right": 0.020698480308055878,
+        "Jump": 0.0004039689083583653,
+        "Jump+Right": 0.10519900172948837,
+        "Left": 0.021363016217947006,
+        "Left+Right": 0.00912872701883316,
+        "Left+Jump": 0.42594990134239197,
+        "Left+Jump+Right": 0.413532018661499
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 119,
+      "x": 2266,
+      "y": 337,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000119.png",
+      "probs": {
+        "Idle": 0.0037728932220488787,
+        "Right": 0.014281180687248707,
+        "Jump": 6.838488388893893e-07,
+        "Jump+Right": 0.4967900514602661,
+        "Left": 0.07448969781398773,
+        "Left+Right": 0.005519344471395016,
+        "Left+Jump": 0.05996750667691231,
+        "Left+Jump+Right": 0.3451786935329437
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 120,
+      "x": 2243,
+      "y": 320,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000120.png",
+      "probs": {
+        "Idle": 0.0012459151912480593,
+        "Right": 0.0014136175159364939,
+        "Jump": 4.31433666570058e-10,
+        "Jump+Right": 0.4755542278289795,
+        "Left": 0.02909099869430065,
+        "Left+Right": 0.00021624675719067454,
+        "Left+Jump": 0.28204473853111267,
+        "Left+Jump+Right": 0.21043425798416138
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 121,
+      "x": 2221,
+      "y": 307,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000121.png",
+      "probs": {
+        "Idle": 0.002403539838269353,
+        "Right": 0.0013002777704969049,
+        "Jump": 2.512417449906934e-05,
+        "Jump+Right": 0.012460799887776375,
+        "Left": 0.11860240995883942,
+        "Left+Right": 0.00020247313659638166,
+        "Left+Jump": 0.8432500958442688,
+        "Left+Jump+Right": 0.021755224093794823
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 122,
+      "x": 2201,
+      "y": 300,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000122.png",
+      "probs": {
+        "Idle": 0.0010921609355136752,
+        "Right": 0.0005940694827586412,
+        "Jump": 0.004935826174914837,
+        "Jump+Right": 0.0009251951123587787,
+        "Left": 0.08459880203008652,
+        "Left+Right": 0.00016493190196342766,
+        "Left+Jump": 0.9004504680633545,
+        "Left+Jump+Right": 0.007238572929054499
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 123,
+      "x": 2185,
+      "y": 298,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000123.png",
+      "probs": {
+        "Idle": 0.005529829766601324,
+        "Right": 0.0029361979104578495,
+        "Jump": 0.02185688726603985,
+        "Jump+Right": 0.006527175661176443,
+        "Left": 0.1702522188425064,
+        "Left+Right": 0.0008814316825009882,
+        "Left+Jump": 0.7580275535583496,
+        "Left+Jump+Right": 0.03398874029517174
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 124,
+      "x": 2170,
+      "y": 304,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000124.png",
+      "probs": {
+        "Idle": 0.0077068014070391655,
+        "Right": 0.00726731913164258,
+        "Jump": 0.003976818639785051,
+        "Jump+Right": 0.04887451231479645,
+        "Left": 0.10527487844228745,
+        "Left+Right": 0.003427499905228615,
+        "Left+Jump": 0.7847608923912048,
+        "Left+Jump+Right": 0.03871132805943489
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 125,
+      "x": 2158,
+      "y": 326,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000125.png",
+      "probs": {
+        "Idle": 0.017084116116166115,
+        "Right": 0.008542331866919994,
+        "Jump": 0.03646019473671913,
+        "Jump+Right": 0.04923504218459129,
+        "Left": 0.2278064787387848,
+        "Left+Right": 0.003241016762331128,
+        "Left+Jump": 0.530434250831604,
+        "Left+Jump+Right": 0.12719646096229553
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 126,
+      "x": 2146,
+      "y": 364,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000126.png",
+      "probs": {
+        "Idle": 0.01401501428335905,
+        "Right": 0.08786818385124207,
+        "Jump": 0.029545094817876816,
+        "Jump+Right": 0.15921072661876678,
+        "Left": 0.15212871134281158,
+        "Left+Right": 0.012521447613835335,
+        "Left+Jump": 0.04265462979674339,
+        "Left+Jump+Right": 0.5020561218261719
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 127,
+      "x": 2130,
+      "y": 408,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000127.png",
+      "probs": {
+        "Idle": 0.008874870836734772,
+        "Right": 0.07927607744932175,
+        "Jump": 0.04907364025712013,
+        "Jump+Right": 0.0934029072523117,
+        "Left": 0.04973930865526199,
+        "Left+Right": 0.005545961670577526,
+        "Left+Jump": 0.10932077467441559,
+        "Left+Jump+Right": 0.6047664880752563
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 128,
+      "x": 2113,
+      "y": 452,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000128.png",
+      "probs": {
+        "Idle": 0.013685994781553745,
+        "Right": 0.06674885004758835,
+        "Jump": 0.0972658321261406,
+        "Jump+Right": 0.0569419339299202,
+        "Left": 0.06881096959114075,
+        "Left+Right": 0.005087541416287422,
+        "Left+Jump": 0.15334786474704742,
+        "Left+Jump+Right": 0.5381109714508057
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 129,
+      "x": 2093,
+      "y": 496,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000129.png",
+      "probs": {
+        "Idle": 0.024227719753980637,
+        "Right": 0.08906868100166321,
+        "Jump": 0.07674569636583328,
+        "Jump+Right": 0.09484206140041351,
+        "Left": 0.14542900025844574,
+        "Left+Right": 0.010197483003139496,
+        "Left+Jump": 0.057016897946596146,
+        "Left+Jump+Right": 0.502472460269928
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 130,
+      "x": 2070,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000130.png",
+      "probs": {
+        "Idle": 0.024544330313801765,
+        "Right": 0.0756930485367775,
+        "Jump": 0.0015539368614554405,
+        "Jump+Right": 0.2639771103858948,
+        "Left": 0.1377248913049698,
+        "Left+Right": 0.009924829937517643,
+        "Left+Jump": 0.0492468923330307,
+        "Left+Jump+Right": 0.43733498454093933
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 131,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000131.png",
+      "probs": {
+        "Idle": 0.017091529443860054,
+        "Right": 0.05377577990293503,
+        "Jump": 0.00025959641789086163,
+        "Jump+Right": 0.3697913885116577,
+        "Left": 0.11777116358280182,
+        "Left+Right": 0.010131805203855038,
+        "Left+Jump": 0.11883620917797089,
+        "Left+Jump+Right": 0.3123425543308258
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 132,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000132.png",
+      "probs": {
+        "Idle": 0.022954627871513367,
+        "Right": 0.12130207568407059,
+        "Jump": 0.07119891792535782,
+        "Jump+Right": 0.1300349235534668,
+        "Left": 0.06079474836587906,
+        "Left+Right": 0.01556699350476265,
+        "Left+Jump": 0.2248001992702484,
+        "Left+Jump+Right": 0.353347510099411
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 133,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000133.png",
+      "probs": {
+        "Idle": 0.019706832244992256,
+        "Right": 0.10697394609451294,
+        "Jump": 0.07739214599132538,
+        "Jump+Right": 0.13575080037117004,
+        "Left": 0.06484635174274445,
+        "Left+Right": 0.010768670588731766,
+        "Left+Jump": 0.23130427300930023,
+        "Left+Jump+Right": 0.35325703024864197
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 134,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000134.png",
+      "probs": {
+        "Idle": 0.020626071840524673,
+        "Right": 0.1274634450674057,
+        "Jump": 0.07348819077014923,
+        "Jump+Right": 0.12011780589818954,
+        "Left": 0.08504510670900345,
+        "Left+Right": 0.013420616276562214,
+        "Left+Jump": 0.1603832095861435,
+        "Left+Jump+Right": 0.39945557713508606
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 135,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000135.png",
+      "probs": {
+        "Idle": 0.0252446960657835,
+        "Right": 0.12322404980659485,
+        "Jump": 0.059316013008356094,
+        "Jump+Right": 0.10677342116832733,
+        "Left": 0.1257234811782837,
+        "Left+Right": 0.015264094807207584,
+        "Left+Jump": 0.13763427734375,
+        "Left+Jump+Right": 0.4068199694156647
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 136,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000136.png",
+      "probs": {
+        "Idle": 0.012127620168030262,
+        "Right": 0.05529666692018509,
+        "Jump": 0.0016951531870290637,
+        "Jump+Right": 0.17126654088497162,
+        "Left": 0.06745690107345581,
+        "Left+Right": 0.008165738545358181,
+        "Left+Jump": 0.11981900781393051,
+        "Left+Jump+Right": 0.5641723275184631
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 137,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000137.png",
+      "probs": {
+        "Idle": 0.014433247037231922,
+        "Right": 0.08711138367652893,
+        "Jump": 0.03253922611474991,
+        "Jump+Right": 0.1006186231970787,
+        "Left": 0.11380030959844589,
+        "Left+Right": 0.010432585142552853,
+        "Left+Jump": 0.15288522839546204,
+        "Left+Jump+Right": 0.48817944526672363
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 138,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000138.png",
+      "probs": {
+        "Idle": 0.012497893534600735,
+        "Right": 0.04359997436404228,
+        "Jump": 0.024270743131637573,
+        "Jump+Right": 0.06069164723157883,
+        "Left": 0.13749054074287415,
+        "Left+Right": 0.005336621310561895,
+        "Left+Jump": 0.33494505286216736,
+        "Left+Jump+Right": 0.3811675012111664
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 139,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000139.png",
+      "probs": {
+        "Idle": 0.009455923922359943,
+        "Right": 0.025869518518447876,
+        "Jump": 0.009093395434319973,
+        "Jump+Right": 0.04891301691532135,
+        "Left": 0.08811306953430176,
+        "Left+Right": 0.0038542659021914005,
+        "Left+Jump": 0.3716554343700409,
+        "Left+Jump+Right": 0.44304534792900085
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 140,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000140.png",
+      "probs": {
+        "Idle": 0.014326903037726879,
+        "Right": 0.02595217153429985,
+        "Jump": 0.0011396153131499887,
+        "Jump+Right": 0.09597337990999222,
+        "Left": 0.15732571482658386,
+        "Left+Right": 0.004271106794476509,
+        "Left+Jump": 0.22295759618282318,
+        "Left+Jump+Right": 0.4780535399913788
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 141,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000141.png",
+      "probs": {
+        "Idle": 0.008988563902676105,
+        "Right": 0.023280788213014603,
+        "Jump": 2.6484503905521706e-05,
+        "Jump+Right": 0.2571048140525818,
+        "Left": 0.058432407677173615,
+        "Left+Right": 0.005026225931942463,
+        "Left+Jump": 0.09582854062318802,
+        "Left+Jump+Right": 0.5513122081756592
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 142,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000142.png",
+      "probs": {
+        "Idle": 0.012600824236869812,
+        "Right": 0.039572153240442276,
+        "Jump": 0.0002017371152760461,
+        "Jump+Right": 0.22891347110271454,
+        "Left": 0.07583053410053253,
+        "Left+Right": 0.008767178282141685,
+        "Left+Jump": 0.1369890719652176,
+        "Left+Jump+Right": 0.4971250295639038
+      },
+      "actions": "Left+Jump+Right"
+    },
+    {
+      "step": 143,
+      "x": 2059,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000143.png",
+      "probs": {
+        "Idle": 0.009042778983712196,
+        "Right": 0.016769571229815483,
+        "Jump": 0.00042778471834026277,
+        "Jump+Right": 0.11294826120138168,
+        "Left": 0.0777941420674324,
+        "Left+Right": 0.0053963130339980125,
+        "Left+Jump": 0.477923184633255,
+        "Left+Jump+Right": 0.29969796538352966
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 144,
+      "x": 2064,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000144.png",
+      "probs": {
+        "Idle": 0.0027305344119668007,
+        "Right": 0.00894338358193636,
+        "Jump": 2.1579035092145205e-05,
+        "Jump+Right": 0.11757611483335495,
+        "Left": 0.0335993617773056,
+        "Left+Right": 0.003101853420957923,
+        "Left+Jump": 0.6273815035820007,
+        "Left+Jump+Right": 0.20664554834365845
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 145,
+      "x": 2072,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000145.png",
+      "probs": {
+        "Idle": 0.002574432175606489,
+        "Right": 0.007465639151632786,
+        "Jump": 8.781069482211024e-06,
+        "Jump+Right": 0.13817329704761505,
+        "Left": 0.03883761912584305,
+        "Left+Right": 0.001998860388994217,
+        "Left+Jump": 0.596882164478302,
+        "Left+Jump+Right": 0.2140592485666275
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 146,
+      "x": 2069,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000146.png",
+      "probs": {
+        "Idle": 0.0015388603787869215,
+        "Right": 0.003813775721937418,
+        "Jump": 2.0972542813524342e-08,
+        "Jump+Right": 0.36889758706092834,
+        "Left": 0.029467778280377388,
+        "Left+Right": 0.0007782635511830449,
+        "Left+Jump": 0.3342592120170593,
+        "Left+Jump+Right": 0.2612445056438446
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 147,
+      "x": 2064,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000147.png",
+      "probs": {
+        "Idle": 0.0026231477968394756,
+        "Right": 0.005113275721669197,
+        "Jump": 1.1530521959457474e-07,
+        "Jump+Right": 0.3704403340816498,
+        "Left": 0.10572722554206848,
+        "Left+Right": 0.0012626588577404618,
+        "Left+Jump": 0.18536178767681122,
+        "Left+Jump+Right": 0.3294714093208313
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 148,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000148.png",
+      "probs": {
+        "Idle": 0.0014457972720265388,
+        "Right": 0.0027238274924457073,
+        "Jump": 3.812500537492269e-09,
+        "Jump+Right": 0.6263372302055359,
+        "Left": 0.04769812151789665,
+        "Left+Right": 0.0006418134435079992,
+        "Left+Jump": 0.13836067914962769,
+        "Left+Jump+Right": 0.18279258906841278
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 149,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000149.png",
+      "probs": {
+        "Idle": 0.001280119875445962,
+        "Right": 0.002307587070390582,
+        "Jump": 1.6302257321854086e-09,
+        "Jump+Right": 0.6216412782669067,
+        "Left": 0.05031149834394455,
+        "Left+Right": 0.0003656540939118713,
+        "Left+Jump": 0.1584276258945465,
+        "Left+Jump+Right": 0.16566631197929382
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 150,
+      "x": 2059,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000150.png",
+      "probs": {
+        "Idle": 0.001199250458739698,
+        "Right": 0.0017227819189429283,
+        "Jump": 3.786661817439807e-10,
+        "Jump+Right": 0.6910542249679565,
+        "Left": 0.02549908496439457,
+        "Left+Right": 0.00020571300410665572,
+        "Left+Jump": 0.08311855047941208,
+        "Left+Jump+Right": 0.19720040261745453
+      },
+      "actions": "Left+Jump"
+    },
+    {
+      "step": 151,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000151.png",
+      "probs": {
+        "Idle": 0.0009197178296744823,
+        "Right": 0.0017731812549754977,
+        "Jump": 1.1985229475541814e-10,
+        "Jump+Right": 0.7468854188919067,
+        "Left": 0.014967446215450764,
+        "Left+Right": 0.00019793408864643425,
+        "Left+Jump": 0.05618825927376747,
+        "Left+Jump+Right": 0.17906798422336578
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 152,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000152.png",
+      "probs": {
+        "Idle": 0.0006201319047249854,
+        "Right": 0.0004910140414722264,
+        "Jump": 8.627134596983499e-12,
+        "Jump+Right": 0.8255417346954346,
+        "Left": 0.02343597635626793,
+        "Left+Right": 5.424028859124519e-05,
+        "Left+Jump": 0.05168333277106285,
+        "Left+Jump+Right": 0.09817354381084442
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 153,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000153.png",
+      "probs": {
+        "Idle": 0.00013978409697301686,
+        "Right": 0.0002219609305029735,
+        "Jump": 2.4086024841274423e-10,
+        "Jump+Right": 0.8948913812637329,
+        "Left": 0.006525565404444933,
+        "Left+Right": 1.451313255529385e-05,
+        "Left+Jump": 0.02430097386240959,
+        "Left+Jump+Right": 0.07390575110912323
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 154,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000154.png",
+      "probs": {
+        "Idle": 4.597245424520224e-05,
+        "Right": 0.00016176750068552792,
+        "Jump": 6.260516549616568e-09,
+        "Jump+Right": 0.8901962041854858,
+        "Left": 0.001612371183000505,
+        "Left+Right": 6.4895107243501116e-06,
+        "Left+Jump": 0.016295308247208595,
+        "Left+Jump+Right": 0.09168188273906708
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 155,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000155.png",
+      "probs": {
+        "Idle": 0.0015415995148941875,
+        "Right": 0.0015730606392025948,
+        "Jump": 1.0648260939660759e-08,
+        "Jump+Right": 0.7921362519264221,
+        "Left": 0.02478429302573204,
+        "Left+Right": 0.00024080635921563953,
+        "Left+Jump": 0.025442592799663544,
+        "Left+Jump+Right": 0.15428130328655243
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 156,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000156.png",
+      "probs": {
+        "Idle": 0.002699751639738679,
+        "Right": 0.002569721546024084,
+        "Jump": 4.246338747293521e-08,
+        "Jump+Right": 0.6638814210891724,
+        "Left": 0.05103704705834389,
+        "Left+Right": 0.00035105293500237167,
+        "Left+Jump": 0.07743604481220245,
+        "Left+Jump+Right": 0.2020249217748642
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 157,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000157.png",
+      "probs": {
+        "Idle": 0.0033632300328463316,
+        "Right": 0.0020158598199486732,
+        "Jump": 6.401706542646934e-08,
+        "Jump+Right": 0.7094751000404358,
+        "Left": 0.07927241921424866,
+        "Left+Right": 0.00025515235029160976,
+        "Left+Jump": 0.06064131483435631,
+        "Left+Jump+Right": 0.14497680962085724
+      },
+      "actions": "Jump"
+    },
+    {
+      "step": 158,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000158.png",
+      "probs": {
+        "Idle": 0.005199668928980827,
+        "Right": 0.003627185709774494,
+        "Jump": 3.080601516103343e-07,
+        "Jump+Right": 0.644729733467102,
+        "Left": 0.08774735778570175,
+        "Left+Right": 0.00047024732339195907,
+        "Left+Jump": 0.047974586486816406,
+        "Left+Jump+Right": 0.21025098860263824
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 159,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000159.png",
+      "probs": {
+        "Idle": 0.007397753186523914,
+        "Right": 0.0051328036934137344,
+        "Jump": 5.169104611013609e-07,
+        "Jump+Right": 0.614115297794342,
+        "Left": 0.07876043766736984,
+        "Left+Right": 0.0007066120742820203,
+        "Left+Jump": 0.06013943627476692,
+        "Left+Jump+Right": 0.23374724388122559
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 160,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000160.png",
+      "probs": {
+        "Idle": 0.006216281093657017,
+        "Right": 0.004011634271591902,
+        "Jump": 3.2982629250000173e-07,
+        "Jump+Right": 0.6212636232376099,
+        "Left": 0.073737733066082,
+        "Left+Right": 0.0006023207097314298,
+        "Left+Jump": 0.058402594178915024,
+        "Left+Jump+Right": 0.2357654869556427
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 161,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000161.png",
+      "probs": {
+        "Idle": 0.004368980880826712,
+        "Right": 0.004718015901744366,
+        "Jump": 6.284984266358151e-08,
+        "Jump+Right": 0.656628429889679,
+        "Left": 0.049095381051301956,
+        "Left+Right": 0.0004983386606909335,
+        "Left+Jump": 0.07416229695081711,
+        "Left+Jump+Right": 0.21052855253219604
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 162,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000162.png",
+      "probs": {
+        "Idle": 0.0020296440925449133,
+        "Right": 0.0034246277064085007,
+        "Jump": 5.67617064461956e-09,
+        "Jump+Right": 0.7132263779640198,
+        "Left": 0.017860179767012596,
+        "Left+Right": 0.00036500178975984454,
+        "Left+Jump": 0.05618477985262871,
+        "Left+Jump+Right": 0.20690932869911194
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 163,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000163.png",
+      "probs": {
+        "Idle": 0.002762556541711092,
+        "Right": 0.004514898173511028,
+        "Jump": 8.170722765044047e-09,
+        "Jump+Right": 0.7039334177970886,
+        "Left": 0.025928376242518425,
+        "Left+Right": 0.0004762663156725466,
+        "Left+Jump": 0.03158685564994812,
+        "Left+Jump+Right": 0.23079757392406464
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 164,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000164.png",
+      "probs": {
+        "Idle": 0.0032435711473226547,
+        "Right": 0.005218446720391512,
+        "Jump": 1.0569948472038959e-08,
+        "Jump+Right": 0.686942458152771,
+        "Left": 0.03324687108397484,
+        "Left+Right": 0.0005778252962045372,
+        "Left+Jump": 0.03264065459370613,
+        "Left+Jump+Right": 0.23813018202781677
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 165,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000165.png",
+      "probs": {
+        "Idle": 0.004056431818753481,
+        "Right": 0.006388288456946611,
+        "Jump": 2.2588501735754107e-08,
+        "Jump+Right": 0.6832391619682312,
+        "Left": 0.044552404433488846,
+        "Left+Right": 0.0007206061854958534,
+        "Left+Jump": 0.024687660858035088,
+        "Left+Jump+Right": 0.23635542392730713
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 166,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000166.png",
+      "probs": {
+        "Idle": 0.0032268082723021507,
+        "Right": 0.0069936830550432205,
+        "Jump": 2.1586908260928794e-08,
+        "Jump+Right": 0.7117115259170532,
+        "Left": 0.0295872762799263,
+        "Left+Right": 0.0007088682032190263,
+        "Left+Jump": 0.02347986213862896,
+        "Left+Jump+Right": 0.22429196536540985
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 167,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000167.png",
+      "probs": {
+        "Idle": 0.004127841908484697,
+        "Right": 0.006731609348207712,
+        "Jump": 1.1279704636990573e-07,
+        "Jump+Right": 0.6754921674728394,
+        "Left": 0.032291118055582047,
+        "Left+Right": 0.0009224806562997401,
+        "Left+Jump": 0.012254455126821995,
+        "Left+Jump+Right": 0.2681802213191986
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 168,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000168.png",
+      "probs": {
+        "Idle": 0.004647758323699236,
+        "Right": 0.008241644129157066,
+        "Jump": 3.341319541050325e-07,
+        "Jump+Right": 0.5755313038825989,
+        "Left": 0.04443645104765892,
+        "Left+Right": 0.0009322664118371904,
+        "Left+Jump": 0.0449095144867897,
+        "Left+Jump+Right": 0.3213006854057312
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 169,
+      "x": 2056,
+      "y": 498,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000169.png",
+      "probs": {
+        "Idle": 0.00491074426099658,
+        "Right": 0.007276016287505627,
+        "Jump": 3.305726181679347e-07,
+        "Jump+Right": 0.5616515278816223,
+        "Left": 0.04808622971177101,
+        "Left+Right": 0.0009739723172970116,
+        "Left+Jump": 0.07665420323610306,
+        "Left+Jump+Right": 0.3004469573497772
+      },
+      "actions": "Idle"
+    },
+    {
+      "step": 170,
+      "x": 2056,
+      "y": 476,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000170.png",
+      "probs": {
+        "Idle": 0.004886636044830084,
+        "Right": 0.007004163693636656,
+        "Jump": 2.7382225198380183e-07,
+        "Jump+Right": 0.5541219711303711,
+        "Left": 0.05005098506808281,
+        "Left+Right": 0.0009467396303080022,
+        "Left+Jump": 0.0836063101887703,
+        "Left+Jump+Right": 0.29938286542892456
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 171,
+      "x": 2056,
+      "y": 476,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000171.png",
+      "probs": {
+        "Idle": 0.0043548233807086945,
+        "Right": 0.007395945955067873,
+        "Jump": 2.0573514802890713e-07,
+        "Jump+Right": 0.5732398629188538,
+        "Left": 0.04374923184514046,
+        "Left+Right": 0.0009514889679849148,
+        "Left+Jump": 0.06997404247522354,
+        "Left+Jump+Right": 0.30033430457115173
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 172,
+      "x": 2056,
+      "y": 476,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000172.png",
+      "probs": {
+        "Idle": 0.004807484336197376,
+        "Right": 0.009672194719314575,
+        "Jump": 8.003846119208902e-07,
+        "Jump+Right": 0.5703679323196411,
+        "Left": 0.0454738475382328,
+        "Left+Right": 0.0014352104626595974,
+        "Left+Jump": 0.0629744678735733,
+        "Left+Jump+Right": 0.3052680194377899
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 173,
+      "x": 2056,
+      "y": 476,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000173.png",
+      "probs": {
+        "Idle": 0.004799575544893742,
+        "Right": 0.010224311612546444,
+        "Jump": 1.0272141253153677e-06,
+        "Jump+Right": 0.5726011991500854,
+        "Left": 0.04449920728802681,
+        "Left+Right": 0.0015514325350522995,
+        "Left+Jump": 0.06100352481007576,
+        "Left+Jump+Right": 0.30531972646713257
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 174,
+      "x": 2056,
+      "y": 476,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000174.png",
+      "probs": {
+        "Idle": 0.004593330435454845,
+        "Right": 0.009050434455275536,
+        "Jump": 4.3230662072346604e-07,
+        "Jump+Right": 0.6031057238578796,
+        "Left": 0.03652678802609444,
+        "Left+Right": 0.0014235120033845305,
+        "Left+Jump": 0.04531151056289673,
+        "Left+Jump+Right": 0.2999882996082306
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 175,
+      "x": 2056,
+      "y": 476,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000175.png",
+      "probs": {
+        "Idle": 0.004505569580942392,
+        "Right": 0.009742756374180317,
+        "Jump": 5.062955779067124e-07,
+        "Jump+Right": 0.5945963263511658,
+        "Left": 0.03538339585065842,
+        "Left+Right": 0.0014483302365988493,
+        "Left+Jump": 0.034973837435245514,
+        "Left+Jump+Right": 0.3193492889404297
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 176,
+      "x": 2056,
+      "y": 476,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000176.png",
+      "probs": {
+        "Idle": 0.0046268366277217865,
+        "Right": 0.00928052794188261,
+        "Jump": 3.7993100931998924e-07,
+        "Jump+Right": 0.6034125089645386,
+        "Left": 0.03603922203183174,
+        "Left+Right": 0.0013625038554891944,
+        "Left+Jump": 0.029516415670514107,
+        "Left+Jump+Right": 0.31576162576675415
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 177,
+      "x": 2056,
+      "y": 476,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000177.png",
+      "probs": {
+        "Idle": 0.005033338442444801,
+        "Right": 0.00975783634930849,
+        "Jump": 4.15092955563523e-07,
+        "Jump+Right": 0.5905668139457703,
+        "Left": 0.042576685547828674,
+        "Left+Right": 0.0013782863970845938,
+        "Left+Jump": 0.026588575914502144,
+        "Left+Jump+Right": 0.32409805059432983
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 178,
+      "x": 2056,
+      "y": 476,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000178.png",
+      "probs": {
+        "Idle": 0.005188639275729656,
+        "Right": 0.010221056640148163,
+        "Jump": 5.631687258755846e-07,
+        "Jump+Right": 0.5762749910354614,
+        "Left": 0.04808732867240906,
+        "Left+Right": 0.001441404689103365,
+        "Left+Jump": 0.03156484290957451,
+        "Left+Jump+Right": 0.32722121477127075
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 179,
+      "x": 2056,
+      "y": 436,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000179.png",
+      "probs": {
+        "Idle": 0.005345294252038002,
+        "Right": 0.009861097671091557,
+        "Jump": 5.521528123608732e-07,
+        "Jump+Right": 0.5788163542747498,
+        "Left": 0.050361551344394684,
+        "Left+Right": 0.0014483359409496188,
+        "Left+Jump": 0.0380549356341362,
+        "Left+Jump+Right": 0.31611189246177673
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 180,
+      "x": 2056,
+      "y": 404,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000180.png",
+      "probs": {
+        "Idle": 0.004894300363957882,
+        "Right": 0.010288134217262268,
+        "Jump": 8.28238739813969e-07,
+        "Jump+Right": 0.5538236498832703,
+        "Left": 0.0457354411482811,
+        "Left+Right": 0.0014387391274794936,
+        "Left+Jump": 0.056669097393751144,
+        "Left+Jump+Right": 0.32714974880218506
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 181,
+      "x": 2056,
+      "y": 380,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000181.png",
+      "probs": {
+        "Idle": 0.004570757504552603,
+        "Right": 0.009889601729810238,
+        "Jump": 3.8888040876372543e-07,
+        "Jump+Right": 0.6019027829170227,
+        "Left": 0.05575549975037575,
+        "Left+Right": 0.0014071668265387416,
+        "Left+Jump": 0.06933485716581345,
+        "Left+Jump+Right": 0.2571389973163605
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 182,
+      "x": 2056,
+      "y": 364,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000182.png",
+      "probs": {
+        "Idle": 0.004458380863070488,
+        "Right": 0.008815421722829342,
+        "Jump": 1.8082850772316306e-07,
+        "Jump+Right": 0.5972878932952881,
+        "Left": 0.04696773737668991,
+        "Left+Right": 0.001260637305676937,
+        "Left+Jump": 0.06388556212186813,
+        "Left+Jump+Right": 0.27732422947883606
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 183,
+      "x": 2056,
+      "y": 356,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000183.png",
+      "probs": {
+        "Idle": 0.0042789471335709095,
+        "Right": 0.008786395192146301,
+        "Jump": 2.6820663379112375e-07,
+        "Jump+Right": 0.5712234377861023,
+        "Left": 0.04302371293306351,
+        "Left+Right": 0.0012602692004293203,
+        "Left+Jump": 0.07451432943344116,
+        "Left+Jump+Right": 0.2969125807285309
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 184,
+      "x": 2056,
+      "y": 356,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000184.png",
+      "probs": {
+        "Idle": 0.004359778948128223,
+        "Right": 0.008658954873681068,
+        "Jump": 4.011998555597529e-07,
+        "Jump+Right": 0.5793295502662659,
+        "Left": 0.046312540769577026,
+        "Left+Right": 0.0012178001925349236,
+        "Left+Jump": 0.07667754590511322,
+        "Left+Jump+Right": 0.283443421125412
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 185,
+      "x": 2056,
+      "y": 364,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000185.png",
+      "probs": {
+        "Idle": 0.0042488472536206245,
+        "Right": 0.008679178543388844,
+        "Jump": 5.245734655545675e-07,
+        "Jump+Right": 0.578445315361023,
+        "Left": 0.04634356498718262,
+        "Left+Right": 0.001261430443264544,
+        "Left+Jump": 0.07712803035974503,
+        "Left+Jump+Right": 0.2838931083679199
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 186,
+      "x": 2056,
+      "y": 380,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000186.png",
+      "probs": {
+        "Idle": 0.00404954282566905,
+        "Right": 0.008471066132187843,
+        "Jump": 2.924569457718462e-07,
+        "Jump+Right": 0.6006753444671631,
+        "Left": 0.03184337168931961,
+        "Left+Right": 0.0013059766497462988,
+        "Left+Jump": 0.04950697347521782,
+        "Left+Jump+Right": 0.3041474521160126
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 187,
+      "x": 2056,
+      "y": 404,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000187.png",
+      "probs": {
+        "Idle": 0.004003216978162527,
+        "Right": 0.008493971079587936,
+        "Jump": 1.527956214886217e-07,
+        "Jump+Right": 0.6212478876113892,
+        "Left": 0.03171340003609657,
+        "Left+Right": 0.001175950630567968,
+        "Left+Jump": 0.03329779580235481,
+        "Left+Jump+Right": 0.300067663192749
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 188,
+      "x": 2056,
+      "y": 436,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000188.png",
+      "probs": {
+        "Idle": 0.004146324936300516,
+        "Right": 0.008220699615776539,
+        "Jump": 1.1177894521097187e-07,
+        "Jump+Right": 0.648631751537323,
+        "Left": 0.037327565252780914,
+        "Left+Right": 0.0011177916312590241,
+        "Left+Jump": 0.03197915479540825,
+        "Left+Jump+Right": 0.26857659220695496
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 189,
+      "x": 2056,
+      "y": 476,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000189.png",
+      "probs": {
+        "Idle": 0.0045725335367023945,
+        "Right": 0.008353644981980324,
+        "Jump": 1.5570768141515146e-07,
+        "Jump+Right": 0.6041889786720276,
+        "Left": 0.03861449286341667,
+        "Left+Right": 0.0010802047327160835,
+        "Left+Jump": 0.03272072598338127,
+        "Left+Jump+Right": 0.31046929955482483
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 190,
+      "x": 2056,
+      "y": 524,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000190.png",
+      "probs": {
+        "Idle": 0.00508840661495924,
+        "Right": 0.009827785193920135,
+        "Jump": 4.065064160840848e-07,
+        "Jump+Right": 0.5831978917121887,
+        "Left": 0.04716918617486954,
+        "Left+Right": 0.001351939863525331,
+        "Left+Jump": 0.03465535491704941,
+        "Left+Jump+Right": 0.31870901584625244
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 191,
+      "x": 2056,
+      "y": 580,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000191.png",
+      "probs": {
+        "Idle": 0.005089364945888519,
+        "Right": 0.009061290882527828,
+        "Jump": 3.349158816945419e-07,
+        "Jump+Right": 0.5866729021072388,
+        "Left": 0.046082377433776855,
+        "Left+Right": 0.0012541488977149129,
+        "Left+Jump": 0.0413798950612545,
+        "Left+Jump+Right": 0.3104596436023712
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 192,
+      "x": 2056,
+      "y": 644,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000192.png",
+      "probs": {
+        "Idle": 0.004835508298128843,
+        "Right": 0.009537498466670513,
+        "Jump": 5.192959520172735e-07,
+        "Jump+Right": 0.5638168454170227,
+        "Left": 0.04743412509560585,
+        "Left+Right": 0.001299157738685608,
+        "Left+Jump": 0.05575477331876755,
+        "Left+Jump+Right": 0.3173215687274933
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 193,
+      "x": 2056,
+      "y": 716,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000193.png",
+      "probs": {
+        "Idle": 0.004782623145729303,
+        "Right": 0.008972962386906147,
+        "Jump": 4.992367053091584e-07,
+        "Jump+Right": 0.5685451030731201,
+        "Left": 0.04919388145208359,
+        "Left+Right": 0.0012974401470273733,
+        "Left+Jump": 0.07126281410455704,
+        "Left+Jump+Right": 0.29594460129737854
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 194,
+      "x": 2056,
+      "y": 796,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000194.png",
+      "probs": {
+        "Idle": 0.00468726409599185,
+        "Right": 0.009132239036262035,
+        "Jump": 5.644599241350079e-07,
+        "Jump+Right": 0.5726205706596375,
+        "Left": 0.04654251039028168,
+        "Left+Right": 0.0013266506139189005,
+        "Left+Jump": 0.07248242199420929,
+        "Left+Jump+Right": 0.29320773482322693
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 195,
+      "x": 2056,
+      "y": 884,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000195.png",
+      "probs": {
+        "Idle": 0.004466214217245579,
+        "Right": 0.009018835611641407,
+        "Jump": 5.0533117246232e-07,
+        "Jump+Right": 0.5768747329711914,
+        "Left": 0.04406562075018883,
+        "Left+Right": 0.0012936879647895694,
+        "Left+Jump": 0.07232233136892319,
+        "Left+Jump+Right": 0.2919580340385437
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 196,
+      "x": 2056,
+      "y": 980,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000196.png",
+      "probs": {
+        "Idle": 0.004471230320632458,
+        "Right": 0.00907620508223772,
+        "Jump": 4.903338322037598e-07,
+        "Jump+Right": 0.5844461917877197,
+        "Left": 0.0420621894299984,
+        "Left+Right": 0.0013004281790927052,
+        "Left+Jump": 0.06590205430984497,
+        "Left+Jump+Right": 0.29274120926856995
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 197,
+      "x": 2056,
+      "y": 1084,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000197.png",
+      "probs": {
+        "Idle": 0.004494578577578068,
+        "Right": 0.009114278480410576,
+        "Jump": 5.068439463684626e-07,
+        "Jump+Right": 0.5835224390029907,
+        "Left": 0.04221672564744949,
+        "Left+Right": 0.0013066804967820644,
+        "Left+Jump": 0.06598490476608276,
+        "Left+Jump+Right": 0.29335981607437134
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 198,
+      "x": 2056,
+      "y": 1196,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000198.png",
+      "probs": {
+        "Idle": 0.004309121519327164,
+        "Right": 0.008208906278014183,
+        "Jump": 2.7195488883080543e-07,
+        "Jump+Right": 0.6132779717445374,
+        "Left": 0.03282150626182556,
+        "Left+Right": 0.001223052735440433,
+        "Left+Jump": 0.048181723803281784,
+        "Left+Jump+Right": 0.2919774651527405
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 199,
+      "x": 2056,
+      "y": 1316,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000199.png",
+      "probs": {
+        "Idle": 0.004305722191929817,
+        "Right": 0.00864540133625269,
+        "Jump": 2.8880739932901633e-07,
+        "Jump+Right": 0.6061448454856873,
+        "Left": 0.03344754874706268,
+        "Left+Right": 0.0012097315629944205,
+        "Left+Jump": 0.03726677969098091,
+        "Left+Jump+Right": 0.30897971987724304
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 200,
+      "x": 2056,
+      "y": 1444,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000200.png",
+      "probs": {
+        "Idle": 0.004419793374836445,
+        "Right": 0.008236121386289597,
+        "Jump": 2.167681145692768e-07,
+        "Jump+Right": 0.6151891350746155,
+        "Left": 0.03403323143720627,
+        "Left+Right": 0.0011382881784811616,
+        "Left+Jump": 0.031483761966228485,
+        "Left+Jump+Right": 0.30549946427345276
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 201,
+      "x": 2056,
+      "y": 1580,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000201.png",
+      "probs": {
+        "Idle": 0.004786350764334202,
+        "Right": 0.008647146634757519,
+        "Jump": 2.3576176033657248e-07,
+        "Jump+Right": 0.6037009954452515,
+        "Left": 0.04006951302289963,
+        "Left+Right": 0.0011420740047469735,
+        "Left+Jump": 0.02822341024875641,
+        "Left+Jump+Right": 0.31343021988868713
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 202,
+      "x": 2056,
+      "y": 1724,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000202.png",
+      "probs": {
+        "Idle": 0.0049688080325722694,
+        "Right": 0.009058788418769836,
+        "Jump": 3.1765324592925026e-07,
+        "Jump+Right": 0.5858758687973022,
+        "Left": 0.044716328382492065,
+        "Left+Right": 0.001198524609208107,
+        "Left+Jump": 0.03427264466881752,
+        "Left+Jump+Right": 0.3199087977409363
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 203,
+      "x": 2056,
+      "y": 1876,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000203.png",
+      "probs": {
+        "Idle": 0.005114692263305187,
+        "Right": 0.008738035336136818,
+        "Jump": 3.1198226224660175e-07,
+        "Jump+Right": 0.5885229110717773,
+        "Left": 0.046961404383182526,
+        "Left+Right": 0.0012048400240018964,
+        "Left+Jump": 0.04115404188632965,
+        "Left+Jump+Right": 0.3083038032054901
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 204,
+      "x": 2056,
+      "y": 2036,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000204.png",
+      "probs": {
+        "Idle": 0.004955905023962259,
+        "Right": 0.009461943991482258,
+        "Jump": 5.318360081218998e-07,
+        "Jump+Right": 0.5637116432189941,
+        "Left": 0.04987751692533493,
+        "Left+Right": 0.001284527126699686,
+        "Left+Jump": 0.0557367205619812,
+        "Left+Jump+Right": 0.3149711489677429
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 205,
+      "x": 2056,
+      "y": 2204,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000205.png",
+      "probs": {
+        "Idle": 0.004829138517379761,
+        "Right": 0.008892722427845001,
+        "Jump": 5.032084118283819e-07,
+        "Jump+Right": 0.5660721063613892,
+        "Left": 0.05033613741397858,
+        "Left+Right": 0.0012854652013629675,
+        "Left+Jump": 0.07362072169780731,
+        "Left+Jump+Right": 0.2949632406234741
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 206,
+      "x": 2056,
+      "y": 2380,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000206.png",
+      "probs": {
+        "Idle": 0.004611766431480646,
+        "Right": 0.009062251076102257,
+        "Jump": 5.277169634609891e-07,
+        "Jump+Right": 0.5739836096763611,
+        "Left": 0.04557744413614273,
+        "Left+Right": 0.0013161217793822289,
+        "Left+Jump": 0.07266160100698471,
+        "Left+Jump+Right": 0.2927866578102112
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 207,
+      "x": 2056,
+      "y": 2564,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000207.png",
+      "probs": {
+        "Idle": 0.004491541534662247,
+        "Right": 0.009013413451611996,
+        "Jump": 5.079874654256855e-07,
+        "Jump+Right": 0.5757982730865479,
+        "Left": 0.044356778264045715,
+        "Left+Right": 0.0012917862040922046,
+        "Left+Jump": 0.07222151756286621,
+        "Left+Jump+Right": 0.29282620549201965
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 208,
+      "x": 2056,
+      "y": 2756,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000208.png",
+      "probs": {
+        "Idle": 0.004491541534662247,
+        "Right": 0.009013413451611996,
+        "Jump": 5.079874654256855e-07,
+        "Jump+Right": 0.5757982730865479,
+        "Left": 0.044356778264045715,
+        "Left+Right": 0.0012917862040922046,
+        "Left+Jump": 0.07222151756286621,
+        "Left+Jump+Right": 0.29282620549201965
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 209,
+      "x": 2056,
+      "y": 2956,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000209.png",
+      "probs": {
+        "Idle": 0.004494578577578068,
+        "Right": 0.009114278480410576,
+        "Jump": 5.068439463684626e-07,
+        "Jump+Right": 0.5835224390029907,
+        "Left": 0.04221672564744949,
+        "Left+Right": 0.0013066804967820644,
+        "Left+Jump": 0.06598490476608276,
+        "Left+Jump+Right": 0.29335981607437134
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 210,
+      "x": 2056,
+      "y": 3164,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000210.png",
+      "probs": {
+        "Idle": 0.004309121519327164,
+        "Right": 0.008208906278014183,
+        "Jump": 2.7195488883080543e-07,
+        "Jump+Right": 0.6132779717445374,
+        "Left": 0.03282150626182556,
+        "Left+Right": 0.001223052735440433,
+        "Left+Jump": 0.048181723803281784,
+        "Left+Jump+Right": 0.2919774651527405
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 211,
+      "x": 2056,
+      "y": 3380,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000211.png",
+      "probs": {
+        "Idle": 0.004305722191929817,
+        "Right": 0.00864540133625269,
+        "Jump": 2.8880739932901633e-07,
+        "Jump+Right": 0.6061448454856873,
+        "Left": 0.03344754874706268,
+        "Left+Right": 0.0012097315629944205,
+        "Left+Jump": 0.03726677969098091,
+        "Left+Jump+Right": 0.30897971987724304
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 212,
+      "x": 2056,
+      "y": 3604,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000212.png",
+      "probs": {
+        "Idle": 0.004419793374836445,
+        "Right": 0.008236121386289597,
+        "Jump": 2.167681145692768e-07,
+        "Jump+Right": 0.6151891350746155,
+        "Left": 0.03403323143720627,
+        "Left+Right": 0.0011382881784811616,
+        "Left+Jump": 0.031483761966228485,
+        "Left+Jump+Right": 0.30549946427345276
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 213,
+      "x": 2056,
+      "y": 3836,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000213.png",
+      "probs": {
+        "Idle": 0.004786350764334202,
+        "Right": 0.008647146634757519,
+        "Jump": 2.3576176033657248e-07,
+        "Jump+Right": 0.6037009954452515,
+        "Left": 0.04006951302289963,
+        "Left+Right": 0.0011420740047469735,
+        "Left+Jump": 0.02822341024875641,
+        "Left+Jump+Right": 0.31343021988868713
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 214,
+      "x": 2056,
+      "y": 4076,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000214.png",
+      "probs": {
+        "Idle": 0.0049645924009382725,
+        "Right": 0.00911722145974636,
+        "Jump": 3.2499957569598337e-07,
+        "Jump+Right": 0.5891333818435669,
+        "Left": 0.043887168169021606,
+        "Left+Right": 0.001203589723445475,
+        "Left+Jump": 0.032183099538087845,
+        "Left+Jump+Right": 0.3195106089115143
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 215,
+      "x": 2056,
+      "y": 4324,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000215.png",
+      "probs": {
+        "Idle": 0.005114692263305187,
+        "Right": 0.008738035336136818,
+        "Jump": 3.1198226224660175e-07,
+        "Jump+Right": 0.5885229110717773,
+        "Left": 0.046961404383182526,
+        "Left+Right": 0.0012048400240018964,
+        "Left+Jump": 0.04115404188632965,
+        "Left+Jump+Right": 0.3083038032054901
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 216,
+      "x": 2056,
+      "y": 4580,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000216.png",
+      "probs": {
+        "Idle": 0.004955905023962259,
+        "Right": 0.009461943991482258,
+        "Jump": 5.318360081218998e-07,
+        "Jump+Right": 0.5637116432189941,
+        "Left": 0.04987751692533493,
+        "Left+Right": 0.001284527126699686,
+        "Left+Jump": 0.0557367205619812,
+        "Left+Jump+Right": 0.3149711489677429
+      },
+      "actions": "Jump+Right"
+    },
+    {
+      "step": 217,
+      "x": 2056,
+      "y": 4844,
+      "frame_path": "captures\\episode-1\\episode-1_frame_000217.png",
+      "probs": {
+        "Idle": 0.004829138517379761,
+        "Right": 0.008892722427845001,
+        "Jump": 5.032084118283819e-07,
+        "Jump+Right": 0.5660721063613892,
+        "Left": 0.05033613741397858,
+        "Left+Right": 0.0012854652013629675,
+        "Left+Jump": 0.07362072169780731,
+        "Left+Jump+Right": 0.2949632406234741
+      },
+      "actions": "Jump+Right"
+    }
+  ]
+}

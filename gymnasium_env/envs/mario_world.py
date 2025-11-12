@@ -219,6 +219,7 @@ class MarioLevelEnv(gym.Env):
     def render(self):
         """Render the environment."""
         if self.render_mode == "human":
+            frame = self._frame()
             for event in pg.event.get():
                 if event.type == pg.QUIT:
                     pass
@@ -227,6 +228,10 @@ class MarioLevelEnv(gym.Env):
         elif self.render_mode == "rgb_array":
             return self._frame()
 
+    def render_fullframe(self):
+        """Render the full frame without resizing or grayscaling."""
+        rgb = np.transpose(pg.surfarray.array3d(self.surface), (1, 0, 2))
+        return rgb
 
     def close(self):
         """Close the environment and clean up resources."""

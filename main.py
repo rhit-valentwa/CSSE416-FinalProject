@@ -5,6 +5,7 @@ from collections import deque
 import random
 import numpy as np
 from gymnasium_env.envs.mario_world import MarioLevelEnv
+import log
 
 # =============================
 # CONSTANTS & HYPERPARAMETERS
@@ -88,6 +89,13 @@ def index_to_multibinary(index):
         index & 1
     ])
 
+def try_render_rgb(env):
+    """Return an RGB numpy array if available, else None."""
+    try:
+        print(env.render())
+        return env.render()  # works when env was created with render_mode="rgb_array"
+    except Exception:
+        return None
 
 # =============================
 # DQNAgent Class
@@ -193,6 +201,9 @@ for episode in range(N_EPISODES):
     state = torch.FloatTensor(state).to(DEVICE)
     total_reward = 0
     steps_in_episode = 0
+
+    ep_logger = log.EpisodeLogger(run_id=f"episode-{episode}", epsilon=float(agent.epsilon), unique=True)
+
     
     while True:
         steps_in_episode += 1
@@ -200,7 +211,29 @@ for episode in range(N_EPISODES):
         next_state, reward, terminated, truncated, info = env.step(action)
         done = terminated or truncated
         next_state = torch.FloatTensor(next_state).to(DEVICE)
+
+        with torch.no_grad():
+            q_vals = agent.q_network(state.unsqueeze(0)).squeeze(0)  # shape [8]
+
+        # >>> get (x, y) if your env exposes them; else they'll be None
+        x = info.get("x") if isinstance(info, dict) else None
+        y = info.get("y") if isinstance(info, dict) else None
+
+        # >>> convert taken action bits to 0..7 index for the label
+        action_idx = int(multibinary_to_index(action))
+
+        # >>> optional frame grab (works if env is rgb_array)
+        frame_arr = env.render_fullframe()  # returns np.ndarray or None
         
+        ep_logger.log_step(
+            step=steps_in_episode - 1,
+            action_index=action_idx,
+            q_values=q_vals,   # logits; logger will softmax them
+            frame=frame_arr,   # can be None if not available
+            x=x,
+            y=y,
+        )
+
         # agent.store_transition(state, action, reward, next_state, done)
         
         # Only train if we have enough experiences
@@ -218,6 +251,9 @@ for episode in range(N_EPISODES):
     # agent.decay_epsilon()
     
     reward_history.append(total_reward)
+
+    out_path = ep_logger.save()
+    print(f"[logger] wrote {out_path}")
     
     # Print every episode for debugging
     print(f"Episode {episode}: Reward={total_reward:.2f}, Steps={steps_in_episode}, Epsilon={agent.epsilon:.4f}")
