@@ -16,21 +16,21 @@
       <a href="#citations">Citations</a>
     </nav>
   </header>
-
+ 
   <main>
     <section id="home" class="panel">
       <h2>Home</h2>
-
+ 
       <p>We sought out to create a reinforced neural network to play through the original NES Mario, level 1-1. Our dataset was dynamically generated frames from a Python implementation of the original NES Mario as inputs.</p>
-
-      <p>The amount of frames our model got to train off of depended on the round. A single playthrough of the level played will take at least 29.33 seconds, as this was the world record through 1-1 achieved on 10/23/2025. Rounding up for simpler calculations, 30 seconds * 60 frames per second = 1,800 frame inputs for our dataset for that single attempt to beat the level. We feed in six frames at a time to give the model the ability to learn velocity, so the number of input features is 6 channels (6 grayscale images) * 60 rows * 80 columns = 28800.  Through reinforcement learning our model seeks to find a policy that maximizes the reward function by repeatedly playing. The model is rewarded based on different criteria depending on how Mario performs in the level.</p>
-
+ 
+      <p>The amount of frames our model got to train off of depended on the round. A single playthrough of the level played will take at least 29.33 seconds, as this was the world record through 1-1 achieved on 10/23/2025. Rounding up for simpler calculations, 30 seconds * 60 frames per second = 1,800 frame inputs for our dataset for that single attempt to beat the level. We feed in six frames at a time to give the model the ability to learn velocity, so the number of inputfeatures is 6 channels (6 grayscale images) * 60 rows * 80 columns = 28800.  Through reinforcement learning our model seeks to find a policy that maximizes the reward function by repeatedly playing. The model is rewarded based on different criteria depending on how Mario performs in the level.</p>
+ 
       <p>The problem of beating Mario boils down to a classification problem based on the current game state, using the game's rendered display to determine the next action for Mario (jump, left, or right). More exactly, multiclassification (multi-binary) as our action space allows the model to move horizontally and jump simultaneously (by the RL agent predicting up, right/left as classes at the same time).</p>
     </section>
-
+ 
     <section id="play" class="panel">
       <h2>Mario Time</h2>
-
+ 
       <div class="play-area" style="display:grid; grid-template-columns: 1fr 300px; gap:16px; align-items:start">
         <!-- Viewer replaces the old #mycanvas -->
         <div class="viewer-wrap">
@@ -38,9 +38,9 @@
             <span class="pill" id="framePill">Frame –</span>
             <span class="stat" id="meta"></span>
           </div>
-
+ 
           <input id="slider" type="range" min="0" max="0" value="0" />
-
+ 
           <div class="viewer-canvas" style="color:white;">
             <canvas id="viewport" width="960" height="540"></canvas>
             <div id="hud" class="hud" style="display:none">
@@ -49,7 +49,7 @@
             </div>
           </div>
         </div>
-
+ 
         <aside class="controls">
           <table class="controls-table">
             <thead>
@@ -61,9 +61,9 @@
               <tr><td>Play/Pause</td><td>Space</td></tr>
             </tbody>
           </table>
-
+ 
           <div class="divider"></div>
-
+ 
           <div>
             <label>Episode</label>
             <select id="episodeSelect">
@@ -72,7 +72,7 @@
               <option value="2">Episode 3</option>
             </select>
           </div>
-
+ 
           <div class="row" style="margin-top:8px">
             <div>
               <label>FPS</label>
@@ -83,19 +83,19 @@
               <input id="zoom" type="number" value="100" min="25" max="200" step="5" />
             </div>
           </div>
-
+ 
           <div class="divider"></div>
           <label class="toggle"><input id="showProbs" type="checkbox" checked/> <span>Show action probabilities HUD</span></label>
-
+ 
           <div class="divider"></div>
           <div class="row">
             <button id="playBtn" class="btn primary">Play</button>
             <button id="pauseBtn" class="btn">Pause</button>
             <button id="resetBtn" class="btn">Reset</button>
           </div>
-
+ 
           <div class="stat" id="stats" style="margin-top:8px">Loading…</div>
-
+ 
           <p style="margin-top:12px; color:var(--muted); font-size:12px">
             Auto-loads <code>/captures/replay_ep00004.json</code>, <code>_05.json</code>, <code>_06.json</code>.
           </p>
@@ -105,7 +105,7 @@
         </aside>
       </div>
     </section>
-
+ 
     <section id="model" class="panel">
       <h2>How the model works</h2>
       <p><b>TLDR:</b></p>
@@ -114,11 +114,11 @@
         <li>Algorithms: DDQN baseline & PPO experimentation.</li>
         <li>Rewards: movement-based (dx), coins/enemies, win/lose, time penalty; examples in docs.</li>
       </ul>
-
+ 
       <p>TLDR aside, lets get into some of the details!</p>
       <p>Maybe break into more sections, model, training DDQN vs PPO, other ideas.</p>
     </section>
-
+ 
     <section id="citations" class="panel">
       <h2>Citations</h2>
       <ul>
@@ -130,16 +130,16 @@
       </ul>
     </section>
   </main>
-
+ 
   <footer class="site-footer">
     <small>Alex Schieltz, William Valentine, Tristan Cohen-Rider, Pei-Jen Chen | Rose-Hulman Institute of Technology</small>
   </footer>
-
+ 
   <!-- Action Probabilities Viewer (integrated) -->
   <script>
   const $ = (sel) => document.querySelector(sel);
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
-
+ 
   const state = {
     current: 0,
     playing: false,
@@ -147,18 +147,18 @@
     episodes: [],
     currentEpisode: 0
   };
-
+ 
   // Auto-load on page load
   window.addEventListener('load', autoLoad);
-
+ 
   async function autoLoad() {
     const params = new URLSearchParams(location.search);
     const file1 = params.get('file1') || 'https://mario.rocks/captures/episode-0.json';
     const file2 = params.get('file2') || 'https://mario.rocks/captures/episode-1.json';
-
+ 
     const files = [file1, file2];
     let loadedCount = 0;
-
+ 
     state.episodes.length = 0;
     for (let i = 0; i < files.length; i++) {
       try {
@@ -173,7 +173,7 @@
         state.episodes.push({ name: `Episode ${i+1} (not found)`, frames: [] });
       }
     }
-
+ 
     if (loadedCount > 0) {
       state.currentEpisode = 0;
       updateEpisodeSelector();
@@ -184,7 +184,7 @@
       $('#stats').textContent = 'No data found. Add ?file1=replay1.json&file2=...';
     }
   }
-
+ 
   async function loadReplayData(data) {
     const frames = [];
     for (const r of (data.frames || [])) {
@@ -200,7 +200,7 @@
     }
     return frames;
   }
-
+ 
   function loadImage(path) {
     return new Promise((resolve) => {
       const img = new Image();
@@ -215,23 +215,23 @@
       else { const c = document.createElement('canvas'); c.width=c.height=1; img.src = c.toDataURL(); }
     });
   }
-
+ 
   // --- Controls wiring
   $('#resetBtn').addEventListener('click', () => { state.current = 0; $('#slider').value = 0; render(); });
   $('#playBtn').addEventListener('click', () => { state.playing = true; loop(); });
   $('#pauseBtn').addEventListener('click', () => { state.playing = false; cancelAnimationFrame(state.raf); });
-
+ 
   $('#episodeSelect').addEventListener('change', (e) => {
     state.currentEpisode = Number(e.target.value);
     state.current = 0;
     updateSlider();
     render();
   });
-
+ 
   $('#slider').addEventListener('input', e => { state.current = Number(e.target.value); render(); });
   $('#zoom').addEventListener('input', render);
   $('#showProbs').addEventListener('change', render);
-
+ 
   document.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight') step(1);
     if (e.key === 'ArrowLeft') step(-1);
@@ -241,7 +241,7 @@
       if (state.playing) loop(); else cancelAnimationFrame(state.raf);
     }
   });
-
+ 
   function updateEpisodeSelector() {
     const sel = $('#episodeSelect');
     if (!sel) return;
@@ -252,7 +252,7 @@
       sel.appendChild(opt);
     });
   }
-
+ 
   function updateSlider() {
     const ep = state.episodes[state.currentEpisode];
     if (!ep) return;
@@ -260,12 +260,12 @@
     $('#slider').value = 0;
     state.current = 0;
   }
-
+ 
   function getCurrentFrames() {
     const ep = state.episodes[state.currentEpisode];
     return ep ? ep.frames : [];
   }
-
+ 
   function loop(){
     cancelAnimationFrame(state.raf);
     if(!state.playing) return;
@@ -278,7 +278,7 @@
     };
     state.raf = requestAnimationFrame(tick);
   }
-
+ 
   function step(d){
     const frames = getCurrentFrames();
     const n = frames.length;
@@ -287,7 +287,7 @@
     $('#slider').value = String(state.current);
     render();
   }
-
+ 
   function render(){
     const vp = $('#viewport');
     const dpr = devicePixelRatio || 1;
@@ -298,11 +298,11 @@
     const ctx = vp.getContext('2d');
     ctx.imageSmoothingEnabled = false;
     ctx.clearRect(0, 0, vp.width, vp.height);
-
+ 
     const frames = getCurrentFrames();
     if(!frames.length) return;
     const f = frames[state.current]; if(!f) return;
-
+ 
     // Draw frame
     const scale = Math.min(vp.width / (f.w * zoom), vp.height / (f.h * zoom));
     const drawW = Math.round(f.w * scale * zoom);
@@ -310,29 +310,48 @@
     const dx = Math.floor((vp.width - drawW) / 2);
     const dy = Math.floor((vp.height - drawH) / 2);
     ctx.drawImage(f.img, 0, 0, f.w, f.h, dx, dy, drawW, drawH);
-
+ 
     // HUD
     const hud = $('#hud');
     const showProbs = $('#showProbs')?.checked;
     const probs = f.probs || null;
     if (showProbs && probs){ hud.style.display = 'block'; renderBars(probs); }
     else { hud.style.display = 'none'; }
-
+ 
     const ep = state.episodes[state.currentEpisode];
     $('#framePill').textContent = `Frame ${state.current + 1} / ${frames.length}`;
     $('#meta').textContent = `${ep?.name || 'Episode'} — ${f.name} — x≈${Math.round(f.worldX)}`;
   }
-
+ 
   function renderBars(probs){
     const bars = $('#bars');
     bars.innerHTML = '';
-    const entries = Object.entries(probs).sort((a, b) => a[1] - b[1]);
+    const entries = Object.entries(probs);
+   
+    names = [
+      ["Idle", "Idle"],
+      ["Right", "Left"],
+      ["Jump", "Jump"],
+      ["Jump+Right", "Jump+Left"],
+      ["Left", "Right"],
+      ["Left+Right", "Right+Right"],
+      ["Left+Jump", "Right+Jump"],
+      ["Left+Jump+Right", "Right+Jump+Left"],
+    ]
+   
     entries.forEach(([k, v]) => {
       const row = document.createElement('div'); row.className = 'barrow';
+ 
+      for (let i = 0; i < names.length; i++) {
+        if (k === names[i][0]) {
+          k = names[i][1];
+          break;
+        }
+      }
       const name = document.createElement('div'); name.textContent = k;
-      const pct = document.createElement('div'); pct.textContent = Math.round((1-v) * 100) + '%'; pct.style.textAlign = 'right';
+      const pct = document.createElement('div'); pct.textContent = Math.round(v * 100) + '%'; pct.style.textAlign = 'right';
       const bar = document.createElement('div'); bar.className = 'bar';
-      const fill = document.createElement('div'); fill.style.width = Math.max(0, Math.min(100, (1-v) * 100)) + '%';
+      const fill = document.createElement('div'); fill.style.width = Math.max(0, Math.min(100, v * 100)) + '%';
       bar.appendChild(fill);
       const left = document.createElement('div'); left.appendChild(name); left.appendChild(bar);
       row.appendChild(left); row.appendChild(pct);
@@ -340,7 +359,7 @@
     });
   }
   </script>
-
+ 
   <script>(function () {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function (e) {
