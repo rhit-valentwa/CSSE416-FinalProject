@@ -236,7 +236,7 @@ for episode in range(N_EPISODES):
 
         # agent.store_transition(state, action, reward, next_state, done)
         
-        # Only train if we have enough experiences
+        # Training 
         # if len(agent.replay_buffer) >= MIN_REPLAY_SIZE:
             # agent.train_step()
             # agent.update_target_network()  # Soft update every step
