@@ -225,14 +225,14 @@ for episode in range(N_EPISODES):
         # >>> optional frame grab (works if env is rgb_array)
         frame_arr = env.render_fullframe()  # returns np.ndarray or None
         
-        ep_logger.log_step(
-            step=steps_in_episode - 1,
-            action_index=action_idx,
-            q_values=q_vals,   # logits; logger will softmax them
-            frame=frame_arr,   # can be None if not available
-            x=x,
-            y=y,
-        )
+        # ep_logger.log_step(
+        #     step=steps_in_episode - 1,
+        #     action_index=action_idx,
+        #     q_values=q_vals,   # logits; logger will softmax them
+        #     frame=frame_arr,   # can be None if not available
+        #     x=x,
+        #     y=y,
+        # )
 
         # agent.store_transition(state, action, reward, next_state, done)
         
@@ -252,7 +252,7 @@ for episode in range(N_EPISODES):
     
     reward_history.append(total_reward)
 
-    out_path = ep_logger.save()
+    # out_path = ep_logger.save()
     print(f"[logger] wrote {out_path}")
     
     # Print every episode for debugging

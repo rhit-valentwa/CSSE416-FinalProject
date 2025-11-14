@@ -41,7 +41,10 @@
  
           <input id="slider" type="range" min="0" max="0" value="0" />
  
-          <div class="viewer-canvas" style="color:white;">
+         <div class="viewer-canvas" style="color:white;">
+            <!-- Hidden video: used as the pixel source -->
+            <video id="video" crossorigin="anonymous" style="display:none"></video>
+
             <canvas id="viewport" width="960" height="540"></canvas>
             <div id="hud" class="hud" style="display:none">
               <h3>Action probabilities</h3>
@@ -136,10 +139,19 @@
   </footer>
  
   <!-- Action Probabilities Viewer (integrated) -->
-  <script>
+<script>
   const $ = (sel) => document.querySelector(sel);
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
- 
+
+  function deriveVideoUrl(jsonUrl) {
+    // Replace .json with .mp4 by default
+    if (jsonUrl.endsWith('.json')) {
+      return jsonUrl.slice(0, -5) + '.mp4';
+    }
+    // fallback – just append .mp4
+    return jsonUrl + '.mp4';
+  }
+
   const state = {
     current: 0,
     playing: false,
@@ -147,18 +159,28 @@
     episodes: [],
     currentEpisode: 0
   };
- 
+
+  function initVideoForCurrentEpisode() {
+    const ep = state.episodes[state.currentEpisode];
+    const video = $('#video');
+    if (!ep || !video || !ep.videoUrl) return;
+
+    video.src = ep.videoUrl;
+    video.pause();
+    video.currentTime = 0;
+  }
+
   // Auto-load on page load
   window.addEventListener('load', autoLoad);
- 
+
   async function autoLoad() {
     const params = new URLSearchParams(location.search);
     const file1 = params.get('file1') || 'https://mario.rocks/captures/episode-0.json';
     const file2 = params.get('file2') || 'https://mario.rocks/captures/episode-1.json';
- 
+
     const files = [file1, file2];
     let loadedCount = 0;
- 
+
     state.episodes.length = 0;
     for (let i = 0; i < files.length; i++) {
       try {
@@ -166,33 +188,36 @@
         if (!res.ok) throw new Error('fetch failed');
         const data = await res.json();
         const frames = await loadReplayData(data);
-        state.episodes.push({ name: data.run || `Episode ${i+1}`, frames });
+        const videoUrl = deriveVideoUrl(files[i]); // derive from JSON URL
+
+        state.episodes.push({
+          name: data.run || `Episode ${i+1}`,
+          frames,
+          videoUrl
+        });
         loadedCount++;
       } catch (err) {
         console.warn('Failed to load', files[i], err);
-        state.episodes.push({ name: `Episode ${i+1} (not found)`, frames: [] });
+        state.episodes.push({ name: `Episode ${i+1} (not found)`, frames: [], videoUrl: '' });
       }
     }
- 
+
     if (loadedCount > 0) {
       state.currentEpisode = 0;
       updateEpisodeSelector();
       updateSlider();
+      initVideoForCurrentEpisode();
       render();
       $('#stats').textContent = `Loaded ${loadedCount} of 3 episodes`;
     } else {
       $('#stats').textContent = 'No data found. Add ?file1=replay1.json&file2=...';
     }
   }
- 
+
   async function loadReplayData(data) {
     const frames = [];
     for (const r of (data.frames || [])) {
-      const img = await loadImage(r.frame_path);
       frames.push({
-        img,
-        w: img.naturalWidth || 1,
-        h: img.naturalHeight || 1,
         name: r.frame_path?.split('/').pop() || 'frame',
         worldX: Number.isFinite(r.x) ? r.x : 0,
         probs: r.probs || null
@@ -200,38 +225,40 @@
     }
     return frames;
   }
- 
-  function loadImage(path) {
-    return new Promise((resolve) => {
-      const img = new Image();
-      img.decoding = 'async';
-      img.crossOrigin = 'anonymous';
-      img.onload = () => resolve(img);
-      img.onerror = () => {
-        const c = document.createElement('canvas'); c.width=c.height=1;
-        const blank = new Image(); blank.src = c.toDataURL(); resolve(blank);
-      };
-      if (path) img.src = 'https://mario.rocks/' + path;
-      else { const c = document.createElement('canvas'); c.width=c.height=1; img.src = c.toDataURL(); }
-    });
-  }
- 
+
   // --- Controls wiring
-  $('#resetBtn').addEventListener('click', () => { state.current = 0; $('#slider').value = 0; render(); });
-  $('#playBtn').addEventListener('click', () => { state.playing = true; loop(); });
-  $('#pauseBtn').addEventListener('click', () => { state.playing = false; cancelAnimationFrame(state.raf); });
- 
+  $('#resetBtn').addEventListener('click', () => {
+    state.current = 0;
+    $('#slider').value = 0;
+    setVideoTimeForFrame(0);
+  });
+
+  $('#playBtn').addEventListener('click', () => {
+    state.playing = true;
+    loop();
+  });
+
+  $('#pauseBtn').addEventListener('click', () => {
+    state.playing = false;
+    cancelAnimationFrame(state.raf);
+  });
+
   $('#episodeSelect').addEventListener('change', (e) => {
     state.currentEpisode = Number(e.target.value);
     state.current = 0;
     updateSlider();
-    render();
+    initVideoForCurrentEpisode();
+    setVideoTimeForFrame(0);
   });
- 
-  $('#slider').addEventListener('input', e => { state.current = Number(e.target.value); render(); });
+
+  $('#slider').addEventListener('input', e => {
+    state.current = Number(e.target.value);
+    setVideoTimeForFrame(state.current);
+  });
+
   $('#zoom').addEventListener('input', render);
   $('#showProbs').addEventListener('change', render);
- 
+
   document.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight') step(1);
     if (e.key === 'ArrowLeft') step(-1);
@@ -241,7 +268,7 @@
       if (state.playing) loop(); else cancelAnimationFrame(state.raf);
     }
   });
- 
+
   function updateEpisodeSelector() {
     const sel = $('#episodeSelect');
     if (!sel) return;
@@ -252,7 +279,7 @@
       sel.appendChild(opt);
     });
   }
- 
+
   function updateSlider() {
     const ep = state.episodes[state.currentEpisode];
     if (!ep) return;
@@ -260,12 +287,20 @@
     $('#slider').value = 0;
     state.current = 0;
   }
- 
+
   function getCurrentFrames() {
     const ep = state.episodes[state.currentEpisode];
     return ep ? ep.frames : [];
   }
- 
+
+  function setVideoTimeForFrame(frameIndex) {
+    const fps = clamp(Number($('#fps')?.value) || 12, 1, 60);
+    const video = $('#video');
+    if (!video) return;
+    video.pause(); // we drive frames manually
+    video.currentTime = frameIndex / fps;
+  }
+
   function loop(){
     cancelAnimationFrame(state.raf);
     if(!state.playing) return;
@@ -278,16 +313,16 @@
     };
     state.raf = requestAnimationFrame(tick);
   }
- 
+
   function step(d){
     const frames = getCurrentFrames();
     const n = frames.length;
     if(!n) return;
     state.current = clamp(state.current + d, 0, n - 1);
     $('#slider').value = String(state.current);
-    render();
+    setVideoTimeForFrame(state.current);
   }
- 
+
   function render(){
     const vp = $('#viewport');
     const dpr = devicePixelRatio || 1;
@@ -298,36 +333,48 @@
     const ctx = vp.getContext('2d');
     ctx.imageSmoothingEnabled = false;
     ctx.clearRect(0, 0, vp.width, vp.height);
- 
+
     const frames = getCurrentFrames();
     if(!frames.length) return;
     const f = frames[state.current]; if(!f) return;
- 
-    // Draw frame
-    const scale = Math.min(vp.width / (f.w * zoom), vp.height / (f.h * zoom));
-    const drawW = Math.round(f.w * scale * zoom);
-    const drawH = Math.round(f.h * scale * zoom);
+
+    const video = $('#video');
+    if (!video || !video.videoWidth || !video.videoHeight) return;
+
+    // Draw current frame from video
+    const srcW = video.videoWidth;
+    const srcH = video.videoHeight;
+    const scale = Math.min(vp.width / (srcW * zoom), vp.height / (srcH * zoom));
+    const drawW = Math.round(srcW * scale * zoom);
+    const drawH = Math.round(srcH * scale * zoom);
     const dx = Math.floor((vp.width - drawW) / 2);
     const dy = Math.floor((vp.height - drawH) / 2);
-    ctx.drawImage(f.img, 0, 0, f.w, f.h, dx, dy, drawW, drawH);
- 
+    ctx.drawImage(video, 0, 0, srcW, srcH, dx, dy, drawW, drawH);
+
     // HUD
     const hud = $('#hud');
     const showProbs = $('#showProbs')?.checked;
     const probs = f.probs || null;
     if (showProbs && probs){ hud.style.display = 'block'; renderBars(probs); }
     else { hud.style.display = 'none'; }
- 
+
     const ep = state.episodes[state.currentEpisode];
     $('#framePill').textContent = `Frame ${state.current + 1} / ${frames.length}`;
     $('#meta').textContent = `${ep?.name || 'Episode'} — ${f.name} — x≈${Math.round(f.worldX)}`;
   }
- 
+
+  const video = $('#video');
+  if (video) {
+    video.addEventListener('seeked', () => {
+      render();
+    });
+  }
+
   function renderBars(probs){
     const bars = $('#bars');
     bars.innerHTML = '';
     const entries = Object.entries(probs);
-   
+
     names = [
       ["Idle", "Idle"],
       ["Right", "Left"],
@@ -337,11 +384,11 @@
       ["Left+Right", "Right+Right"],
       ["Left+Jump", "Right+Jump"],
       ["Left+Jump+Right", "Right+Jump+Left"],
-    ]
-   
+    ];
+
     entries.forEach(([k, v]) => {
       const row = document.createElement('div'); row.className = 'barrow';
- 
+
       for (let i = 0; i < names.length; i++) {
         if (k === names[i][0]) {
           k = names[i][1];
@@ -358,7 +405,8 @@
       bars.appendChild(row);
     });
   }
-  </script>
+</script>
+
  
   <script>(function () {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
