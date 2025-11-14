@@ -138,7 +138,7 @@
     <small>Alex Schieltz, William Valentine, Tristan Cohen-Rider, Pei-Jen Chen | Rose-Hulman Institute of Technology</small>
   </footer>
  
-  <!-- Action Probabilities Viewer (integrated) -->
+ <!-- Action Probabilities Viewer (integrated) -->
 <script>
   const $ = (sel) => document.querySelector(sel);
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -163,8 +163,12 @@
   function initVideoForCurrentEpisode() {
     const ep = state.episodes[state.currentEpisode];
     const video = $('#video');
-    if (!ep || !video || !ep.videoUrl) return;
+    if (!ep || !video || !ep.videoUrl) {
+      console.warn('No video URL for episode', state.currentEpisode, ep);
+      return;
+    }
 
+    console.log('Using video URL:', ep.videoUrl);
     video.src = ep.videoUrl;
     video.pause();
     video.currentTime = 0;
@@ -207,8 +211,7 @@
       updateEpisodeSelector();
       updateSlider();
       initVideoForCurrentEpisode();
-      render();
-      $('#stats').textContent = `Loaded ${loadedCount} of 3 episodes`;
+      $('#stats').textContent = `Loaded ${loadedCount} of ${files.length} episodes`;
     } else {
       $('#stats').textContent = 'No data found. Add ?file1=replay1.json&file2=...';
     }
@@ -339,6 +342,7 @@
     const f = frames[state.current]; if(!f) return;
 
     const video = $('#video');
+    // Wait until we know the video dimensions
     if (!video || !video.videoWidth || !video.videoHeight) return;
 
     // Draw current frame from video
@@ -365,8 +369,19 @@
 
   const video = $('#video');
   if (video) {
+    // When the video has its metadata (width/height/duration), do an initial seek+render
+    video.addEventListener('loadedmetadata', () => {
+      console.log('Video metadata:', video.videoWidth, video.videoHeight);
+      setVideoTimeForFrame(state.current);
+    });
+
+    // Whenever seeking completes (slider, step, reset), redraw the canvas
     video.addEventListener('seeked', () => {
       render();
+    });
+
+    video.addEventListener('error', (e) => {
+      console.error('Video error', video.error);
     });
   }
 
@@ -375,7 +390,7 @@
     bars.innerHTML = '';
     const entries = Object.entries(probs);
 
-    names = [
+    const names = [
       ["Idle", "Idle"],
       ["Right", "Left"],
       ["Jump", "Jump"],
