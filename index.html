@@ -76,17 +76,6 @@
             </select>
           </div>
  
-          <div class="row" style="margin-top:8px">
-            <div>
-              <label>FPS</label>
-              <input id="fps" type="number" value="12" min="1" max="60" step="1" />
-            </div>
-            <div>
-              <label>Zoom (%)</label>
-              <input id="zoom" type="number" value="100" min="25" max="200" step="5" />
-            </div>
-          </div>
- 
           <div class="divider"></div>
           <label class="toggle"><input id="showProbs" type="checkbox" checked/> <span>Show action probabilities HUD</span></label>
  
@@ -259,7 +248,6 @@
     setVideoTimeForFrame(state.current);
   });
 
-  $('#zoom').addEventListener('input', render);
   $('#showProbs').addEventListener('change', render);
 
   document.addEventListener('keydown', e => {
@@ -297,7 +285,7 @@
   }
 
   function setVideoTimeForFrame(frameIndex) {
-    const fps = clamp(Number($('#fps')?.value) || 12, 1, 60);
+    const fps = 30;
     const video = $('#video');
     if (!video) return;
     video.pause(); // we drive frames manually
@@ -307,7 +295,7 @@
   function loop(){
     cancelAnimationFrame(state.raf);
     if(!state.playing) return;
-    const fps = clamp(Number($('#fps')?.value) || 12, 1, 60);
+    const fps = 30;
     const delay = 1000/fps;
     let last = performance.now();
     const tick = (now) => {
@@ -330,7 +318,7 @@
     const vp = $('#viewport');
     const dpr = devicePixelRatio || 1;
     const cssW = vp.clientWidth, cssH = vp.clientHeight;
-    const zoom = clamp((Number($('#zoom')?.value) || 100) / 100, 0.25, 2);
+    const zoom = 100;
     vp.width = Math.round(cssW * dpr);
     vp.height = Math.round(cssH * dpr);
     const ctx = vp.getContext('2d');
