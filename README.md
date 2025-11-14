@@ -1,9 +1,13 @@
 # CSSE416-FinalProject
 This repository serves as the primary storage location for all code relating to the CSSE416: Deep Learning final project "Super Learning Bros".
-  
+
+## Important Notes
+- We included the source code for https://github.com/justinmeister Mario-Level-1. We did *not* comment this code as this is not code we created or modified (with the exception of fixing a bug with how mario jumped).
+- We are assuming you are testing the code on a Rose-Hulman Laptop and not a Linux server (like Gebru) or a Mac device. As such our code and instructions have been designed with Windows 11 in mind (and treat Linux as more of a second-class citizen, we never tested any code on MacOS).
+
 ## Main DQN Training Script (`main.py`)
 
-This file implements a Deep Q-Network (DQN) agent to train on the custom Mario environment (`MarioLevelEnv`).
+This file implements a Double Deep Q-Network (DDQN) agent to train on the custom Mario environment (`MarioLevelEnv`).
 
 ### Features
 - PyTorch-based DQN agent with target network and experience replay
@@ -15,7 +19,10 @@ This file implements a Deep Q-Network (DQN) agent to train on the custom Mario e
 
 ### Usage
 1. Ensure dependencies are installed (see `requirements.txt` in `mario_game/`).
-2. Run the training script:
+	a. You can acheive this by running `pip install -r requirements.txt`
+	b. We would highly recommend installing the CUDA verison of torch as we make extensive use of GPU optimizations
+	c. You may install CUDA torch using this command `pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121`
+2. Run the training and display script:
 	```powershell
 	python main.py
 	```

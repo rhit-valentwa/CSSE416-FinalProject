@@ -1,4 +1,3 @@
-# ===== step_logger.py =====
 from __future__ import annotations
 from pathlib import Path
 from typing import Optional, Dict, List
@@ -14,12 +13,7 @@ except ImportError:
 import torch
 import torch.nn.functional as F
 
-
-# Fixed 3-bit action space -> 8 actions
-# Bit order: [Right, Jump, Left] to match your index_to_multibinary()
-# Adjust names or bit order here if your mapping differs.
 ACTION_BITS = ["Left", "Jump", "Right"]
-
 
 def multibinary_to_label(bits: np.ndarray) -> str:
     """Turn [r, j, l] like [1,1,0] into 'Right+Jump' (or 'Idle' if all zeros)."""
@@ -35,7 +29,7 @@ def all_action_labels() -> List[str]:
     return labels
 
 
-ALL_LABELS = all_action_labels()  # index-aligned list of 8 labels
+ALL_LABELS = all_action_labels()
 
 
 class EpisodeLogger:
@@ -113,8 +107,6 @@ class EpisodeLogger:
         if resume:
             self._step_offset = self._find_max_existing_index() + 1
 
-    # ---------- internals ----------
-
     def _find_max_existing_index(self) -> int:
         """Scan capture_dir and find the largest frame index for this prefix."""
         # Matches <prefix>_frame_000123.png
@@ -150,7 +142,7 @@ class EpisodeLogger:
 
             Image.fromarray(arr).save(fpath)
 
-        # Return Windows-style path (for your schema)
+        # Return Windows-style path
         return str(fpath).replace("/", "\\")
 
     @torch.no_grad()
@@ -163,14 +155,9 @@ class EpisodeLogger:
         Given 8 Q-values, return softmax probs over the 8 combined-action labels.
         q_values: 1D tensor of shape [8]
         """
-        if q_values.ndim != 1 or q_values.numel() != 8:
-            raise ValueError("q_values must be a 1D tensor with 8 elements.")
-
         logits = q_values / float(max(temperature, 1e-8))
         probs = F.softmax(logits, dim=0).cpu().numpy().astype(float)
         return {label: float(p) for label, p in zip(ALL_LABELS, probs)}
-
-    # ---------- public API ----------
 
     def log_step(
         self,
@@ -187,8 +174,6 @@ class EpisodeLogger:
         - frame: RGB array for saving. If None, image saving is skipped.
         - x/y: optional coordinates (falls back to None if not provided)
         """
-        if not (0 <= action_index < 8):
-            raise ValueError("action_index must be in [0,7]")
 
         # Save image (or synthesize a path even if None)
         frame_path = self._save_frame_image(step, frame)

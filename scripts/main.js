@@ -1,3 +1,4 @@
+// Enable smooth scrolling for in-page anchor links
 (function () {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function (e) {
