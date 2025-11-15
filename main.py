@@ -36,10 +36,11 @@ if PRINT_DEVICE:
 
 
 class DQN(nn.Module):
-    """Convolutional Q-network matching the original DQN paper architecture."""
-    
+    """Convolutional Q-network approximating Q(s, a) over stacked frames."""
+
     def __init__(self, action_size):
         super().__init__()
+        # Convolutional feature extractor (similar to Atari DQN)
         self.conv = nn.Sequential(
             nn.Conv2d(NUMBER_OF_SEQUENTIAL_FRAMES, 32, kernel_size=8, stride=4),
             nn.ReLU(),
@@ -48,23 +49,29 @@ class DQN(nn.Module):
             nn.Conv2d(64, 64, kernel_size=3, stride=1),
             nn.ReLU()
         )
+        # We assume env returns (60, 80) grayscale frames, stacked along channel dimension
         conv_out_size = self._get_conv_out((NUMBER_OF_SEQUENTIAL_FRAMES, 60, 80))
+
+        # Fully connected layers mapping features -> Q-values for each discrete action
         self.fc = nn.Sequential(
             nn.Linear(conv_out_size, 512),
             nn.ReLU(),
             nn.Linear(512, action_size)
         )
-    
+
     def _get_conv_out(self, shape):
-        """Calculate flattened conv output size."""
+        """Calculate flattened conv output size for a given (C, H, W) input shape."""
         o = self.conv(torch.zeros(1, *shape))
         return int(np.prod(o.size()))
-    
-    def forward(self, x):
-        conv_out = self.conv(x)
-        conv_out = conv_out.view(x.size(0), -1)
-        return self.fc(conv_out)
 
+    def forward(self, x):
+        """
+        Forward pass: images -> conv features -> flattened -> fully connected -> Q-values.
+        """
+        conv_out = self.conv(x)                  # (B, C', H', W')
+        conv_out = conv_out.view(x.size(0), -1)  # Flatten to (B, N)
+        q_values = self.fc(conv_out)             # (B, action_size)
+        return q_values
 
 class ReplayBuffer:
     """Circular buffer for experience replay."""
@@ -205,58 +212,49 @@ agent.load('checkpoints/solid_saves/better_4000.pth')
 reward_history = deque(maxlen=REWARD_HISTORY_SIZE)
 
 for episode in range(N_EPISODES):
+    # Reset environment and initialize episode state
     state, _ = env.reset()
     state = torch.FloatTensor(state).to(DEVICE)
     total_reward = 0
     steps_in_episode = 0
 
-    #ep_logger = log.EpisodeLogger(run_id=f"episode-{episode}", epsilon=float(agent.epsilon), unique=True)
-
     while True:
         steps_in_episode += 1
+
+        # Choose action (epsilon-greedy) and step environment
         action = agent.select_action(state, env)
         next_state, reward, terminated, truncated, info = env.step(action)
         done = terminated or truncated
         next_state = torch.FloatTensor(next_state).to(DEVICE)
 
+        # log Q-values for current state (for logging)
         with torch.no_grad():
             q_vals = agent.q_network(state.unsqueeze(0)).squeeze(0)
 
+        # Extract some extra info from the environment (position, frame and action index)
         x = info.get("x") if isinstance(info, dict) else None
         y = info.get("y") if isinstance(info, dict) else None
         action_idx = int(multibinary_to_index(action))
         frame_arr = env.render_fullframe()
-        
-        # ep_logger.log_step(
-        #     step=steps_in_episode - 1,
-        #     action_index=action_idx,
-        #     q_values=q_vals,
-        #     frame=frame_arr,
-        #     x=x,
-        #     y=y,
-        # )
 
+        # Store transition and train agent (currently commented out for evaluation)
         # agent.store_transition(state, action, reward, next_state, done)
-        
         # if len(agent.replay_buffer) >= MIN_REPLAY_SIZE:
         #     agent.train_step()
         #     agent.update_target_network()
-        
+
         total_reward += reward
         state = next_state
-        
+
         if done:
             break
-    
-    # agent.decay_epsilon()
-    
+
+    # agent.decay_epsilon()  # Uncomment for training runs to slowly reduce exploration
+
     reward_history.append(total_reward)
 
-    # out_path = ep_logger.save()
-    # print(f"[logger] wrote {out_path}")
-    
     print(f"Episode {episode}: Reward={total_reward:.2f}, Steps={steps_in_episode}, Epsilon={agent.epsilon:.4f}")
-    
+
     if len(reward_history) == REWARD_HISTORY_SIZE:
         avg_reward = sum(reward_history)/REWARD_HISTORY_SIZE
         print(f"Episode {episode}; Average Reward: {avg_reward:.2f}")
