@@ -21,7 +21,7 @@ This repository serves as the primary storage location for all code relating to 
 - Replay buffer and epsilon-greedy exploration
 - Model checkpointing and reward logging (commented for easy activation)
 
-### Usage
+### Usage (Tested on Python 3.12, will likely work on different versions of Python)
 1. Ensure dependencies are installed (see `requirements.txt` in `mario_game/`).
 	a. We would highly recommend installing the CUDA verison of torch as we make extensive use of GPU optimizations
 	b. You may install CUDA torch using this command `pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121`
